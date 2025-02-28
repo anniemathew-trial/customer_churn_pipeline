@@ -10332,3 +10332,59 @@ Traceback (most recent call last):
 NameError: name 'model_evaluation_task' is not defined
 [2025-02-28T17:57:40.064+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
 [2025-02-28T17:57:40.093+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.048 seconds
+[2025-02-28T17:58:10.265+0000] {processor.py:157} INFO - Started process (PID=43592) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:58:10.266+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T17:58:10.267+0000] {logging_mixin.py:154} INFO - [2025-02-28T17:58:10.267+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:58:10.277+0000] {logging_mixin.py:154} INFO - [2025-02-28T17:58:10.276+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/customer_churn.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/customer_churn.py", line 109, in <module>
+    feature_store_task >> model_training_task >> model_evaluation_task
+NameError: name 'model_evaluation_task' is not defined
+[2025-02-28T17:58:10.277+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:58:10.303+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.041 seconds
+[2025-02-28T17:58:40.507+0000] {processor.py:157} INFO - Started process (PID=43608) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:58:40.510+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T17:58:40.511+0000] {logging_mixin.py:154} INFO - [2025-02-28T17:58:40.511+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:58:40.524+0000] {logging_mixin.py:154} INFO - [2025-02-28T17:58:40.523+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/customer_churn.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/customer_churn.py", line 109, in <module>
+    feature_store_task >> model_training_task >> model_evaluation_task
+NameError: name 'model_evaluation_task' is not defined
+[2025-02-28T17:58:40.524+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:58:40.549+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.048 seconds
+[2025-02-28T17:59:10.724+0000] {processor.py:157} INFO - Started process (PID=43613) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:59:10.728+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T17:59:10.729+0000] {logging_mixin.py:154} INFO - [2025-02-28T17:59:10.729+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:59:10.738+0000] {logging_mixin.py:154} INFO - [2025-02-28T17:59:10.737+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/customer_churn.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/customer_churn.py", line 109, in <module>
+    feature_store_task >> model_training_task >> model_evaluation_task
+NameError: name 'model_evaluation_task' is not defined
+[2025-02-28T17:59:10.739+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:59:10.778+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.058 seconds
+[2025-02-28T17:59:41.008+0000] {processor.py:157} INFO - Started process (PID=43618) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:59:41.012+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T17:59:41.014+0000] {logging_mixin.py:154} INFO - [2025-02-28T17:59:41.013+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:59:41.024+0000] {logging_mixin.py:154} INFO - [2025-02-28T17:59:41.023+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/customer_churn.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/customer_churn.py", line 109, in <module>
+    feature_store_task >> model_training_task >> model_evaluation_task
+NameError: name 'model_evaluation_task' is not defined
+[2025-02-28T17:59:41.025+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T17:59:41.048+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.044 seconds
