@@ -1,0 +1,15 @@
+Column,Data Type,Missing Count,Missing Percentage,Unique Count,Min,Max,Mean,Median,Remarks
+RowNumber,int64,0,0.0,10000,1.0,10000.0,5000.5,5000.5,9900 rows have 'RowNumber' > 100.
+CustomerId,int64,0,0.0,10000,15565701.0,15815690.0,15690940.5694,15690738.0,CustomerId has 10000 potential outlier rows.10000 rows have 'CustomerId' > 100.
+Surname,object,0,0.0,2932,,,,,
+CreditScore,int64,0,0.0,460,350.0,850.0,650.5288,652.0,CreditScore has 9690 potential outlier rows.10000 rows have 'CreditScore' > 100.
+Geography,object,0,0.0,3,,,,,
+Gender,object,0,0.0,2,,,,,
+Age,int64,0,0.0,70,18.0,92.0,38.9218,37.0,Age has 2894 potential outlier rows.
+Tenure,int64,0,0.0,11,0.0,10.0,5.0128,5.0,
+Balance,float64,0,0.0,6382,0.0,250898.09,76485.889288,97198.54000000001,6383 rows have 'Balance' > 100.
+NumOfProducts,int64,0,0.0,4,1.0,4.0,1.5302,1.0,NumOfProducts has 60 potential outlier rows.
+HasCrCard,int64,0,0.0,2,0.0,1.0,0.7055,1.0,
+IsActiveMember,int64,0,0.0,2,0.0,1.0,0.5151,1.0,
+EstimatedSalary,float64,0,0.0,9999,11.58,199992.48,100090.239881,100193.915,9996 rows have 'EstimatedSalary' > 100.
+Exited,int64,0,0.0,2,0.0,1.0,0.2037,0.0,Exited has 2037 potential outlier rows.
