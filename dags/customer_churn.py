@@ -16,7 +16,7 @@ with DAG(
     catchup=False,
 ) as dag:
     pull_task = BashOperator(
-        task_id="pull",
+        task_id="pull_latest_codes",
 	bash_command="cd /opt/airflow && dvc pull && git pull",
     )
     # Data ingestion and raw data storage to Amazon S3 using DVC
@@ -101,18 +101,6 @@ with DAG(
                             dvc add /opt/airflow/models/model.pki && \
                             git add /opt/airflow/models/model.pki.dvc && \
                             git commit -m "Trained model version" -a && \
-                            dvc push && git push
-                        """
-    )
-    model_evaluation_task = BashOperator(
-            task_id = 'model_evaluation_task',
-            bash_command = """
-	    		cd /opt/airflow
-                            dvc pull /opt/airflow/models/model.pkl 
-                            python /opt/airflow/executables/model_evaluation.py && \
-                            dvc add /opt/airflow/reports/evaluation.csv && \
-                            git add /opt/airflow/reports/evaluation.csv.dvc && \
-                            git commit -m "Updated model evaluation report" -a && \
                             dvc push && git push
                         """
     )
