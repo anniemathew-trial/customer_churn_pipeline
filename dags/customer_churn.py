@@ -17,7 +17,7 @@ with DAG(
 ) as dag:
     pull_task = BashOperator(
         task_id="pull",
-	bash_command="cd /opt/airflow && dvc pull && git pull",
+	bash_command="cd /opt/airflow && dvc pull && git pull --rebase",
     )
     # Data ingestion and raw data storage to Amazon S3 using DVC
     data_ingestion_task = BashOperator(
