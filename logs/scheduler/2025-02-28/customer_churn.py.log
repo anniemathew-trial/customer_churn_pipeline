@@ -1943,3 +1943,118 @@ NameError: name 'dvc_pull_task' is not defined
 [2025-02-28T06:44:48.462+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:44:48.461+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-02-28T06:44:48.492+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:44:48.491+0000] {dag.py:3722} INFO - Setting next_dagrun for customer_churn_ml_pipeline to 2025-02-27T08:00:00+00:00, run_after=2025-02-28T08:00:00+00:00
 [2025-02-28T06:44:48.512+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.104 seconds
+[2025-02-28T06:47:12.734+0000] {processor.py:157} INFO - Started process (PID=11355) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:47:12.736+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T06:47:12.739+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:47:12.738+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:47:12.763+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:47:12.758+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/customer_churn.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/customer_churn.py", line 18, in <module>
+    pull_task = BashOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 150, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to BashOperator (task_id: pull). Invalid arguments were:
+**kwargs: {'user': 'airflow'}
+[2025-02-28T06:47:12.764+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:47:12.969+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.244 seconds
+[2025-02-28T06:47:43.175+0000] {processor.py:157} INFO - Started process (PID=11362) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:47:43.175+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T06:47:43.176+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:47:43.176+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:47:43.183+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:47:43.181+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/customer_churn.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/customer_churn.py", line 18, in <module>
+    pull_task = BashOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 150, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to BashOperator (task_id: pull). Invalid arguments were:
+**kwargs: {'user': 'airflow'}
+[2025-02-28T06:47:43.183+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:47:43.205+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.033 seconds
+[2025-02-28T06:48:17.500+0000] {processor.py:157} INFO - Started process (PID=11588) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:48:17.502+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T06:48:17.503+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:48:17.503+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:48:17.521+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:48:17.518+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/customer_churn.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/customer_churn.py", line 18, in <module>
+    pull_task = BashOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 150, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to BashOperator (task_id: pull). Invalid arguments were:
+**kwargs: {'user': 'airflow'}
+[2025-02-28T06:48:17.522+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:48:17.574+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.081 seconds
+[2025-02-28T06:48:47.742+0000] {processor.py:157} INFO - Started process (PID=11594) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:48:47.743+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T06:48:47.744+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:48:47.744+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:48:47.753+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:48:47.751+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/customer_churn.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/customer_churn.py", line 18, in <module>
+    pull_task = BashOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 150, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to BashOperator (task_id: pull). Invalid arguments were:
+**kwargs: {'user': 'airflow'}
+[2025-02-28T06:48:47.754+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:48:47.783+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.045 seconds
+[2025-02-28T06:49:18.047+0000] {processor.py:157} INFO - Started process (PID=11599) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:49:18.048+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T06:49:18.049+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:49:18.048+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:49:18.057+0000] {logging_mixin.py:154} INFO - [2025-02-28T06:49:18.056+0000] {dagbag.py:346} ERROR - Failed to import: /opt/airflow/dags/customer_churn.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 342, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/customer_churn.py", line 18, in <module>
+    pull_task = BashOperator(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 150, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 794, in __init__
+    raise AirflowException(
+airflow.exceptions.AirflowException: Invalid arguments were passed to BashOperator (task_id: pull). Invalid arguments were:
+**kwargs: {'user': 'airflow'}
+[2025-02-28T06:49:18.058+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T06:49:18.084+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.040 seconds

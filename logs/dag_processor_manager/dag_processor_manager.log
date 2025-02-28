@@ -2408,3 +2408,55 @@ File Path                            PID    Runtime      # DAGs    # Errors  Las
 /opt/airflow/dags/customer_churn.py                           1           0  0.22s           2025-02-28T06:44:18
 ================================================================================
 [2025-02-28T06:44:58.581+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
+[2025-02-28T06:47:12.568+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2025-02-28T06:47:12.570+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-02-28T06:47:12.570+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-02-28T06:47:12.571+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-02-28T06:47:12.575+0000] {manager.py:758} INFO - There are 1 files in /opt/airflow/dags
+[2025-02-28T06:47:12.808+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/customer_churn.py  11355  0.10s             0           0
+================================================================================
+[2025-02-28T06:47:42.988+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/customer_churn.py                           0           1  0.30s           2025-02-28T06:47:13
+================================================================================
+[2025-02-28T06:47:56.762+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
+[2025-02-28T06:48:17.394+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2025-02-28T06:48:17.396+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-02-28T06:48:17.396+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-02-28T06:48:17.397+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-02-28T06:48:17.402+0000] {manager.py:758} INFO - There are 1 files in /opt/airflow/dags
+[2025-02-28T06:48:17.557+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/customer_churn.py  11588  0.08s             0           0
+================================================================================
+[2025-02-28T06:48:47.734+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/customer_churn.py  11594  0.00s             0           1  0.11s           2025-02-28T06:48:17
+================================================================================
+[2025-02-28T06:49:18.040+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/customer_churn.py  11599  0.00s             0           1  0.07s           2025-02-28T06:48:47
+================================================================================
+[2025-02-28T06:49:33.309+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
