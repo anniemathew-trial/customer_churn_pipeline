@@ -75,7 +75,7 @@ with DAG(
 			cd /opt/airflow
                         dvc pull /opt/airflow/data/transformed
                         python /opt/airflow/executables/data_storage.py && \
-                        git commit -m "Updated stored data version" -A && \
+                        git commit -m "Updated stored data version" -a && \
                         dvc push && git push
                     """
     )
