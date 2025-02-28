@@ -11,13 +11,13 @@ import pyodbc
 
 
 def feature_store():
-    server = "127.0.0.1,1433"
+    server = "dmml_customer_churn_setup-sqlserver-1,1433"
     database = "customer_churn_db"
     username = "sa"
-    password = "1StrongPwd!!"
+    password = "NewPASS1234"
 
     logging.info("Connecting to Database")
-    connection = pyodbc.connect(f'DRIVER={{SQL SERVER}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
+    connection = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
     logging.info("Connecting to Database Successfull")
     _ = connection.cursor()
        
