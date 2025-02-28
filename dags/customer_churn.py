@@ -22,7 +22,7 @@ with DAG(
                         dvc add /opt/airflow/data/raw && \
                         git add /opt/airflow/data/raw.dvc && \
                         git commit -m "Updated raw data version" -a && \
-                        dvc push
+                        dvc push && git push
                     """,
     )
     
