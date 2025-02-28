@@ -600,3 +600,16 @@ File Path                            PID    Runtime      # DAGs    # Errors  Las
 /opt/airflow/dags/customer_churn.py                           1           0  0.36s           2025-02-28T04:48:23
 ================================================================================
 [2025-02-28T04:49:04.018+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
+[2025-02-28T04:49:25.038+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2025-02-28T04:49:25.039+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-02-28T04:49:25.039+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-02-28T04:49:25.039+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-02-28T04:49:25.041+0000] {manager.py:758} INFO - There are 1 files in /opt/airflow/dags
+[2025-02-28T04:49:25.117+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/customer_churn.py   8685  0.04s             0           0
+================================================================================
