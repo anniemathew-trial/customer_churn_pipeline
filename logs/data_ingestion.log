@@ -100,3 +100,9 @@
 2025-02-28 07:23:52,714 : INFO : Connecting to Database Successfull
 2025-02-28 07:23:52,714 : INFO : Reading data from database.
 2025-02-28 07:23:53,182 : INFO : Data from Database ingested successfully!
+2025-02-28 07:27:51,132 : INFO : Reading data from CSV file customer_data.csv
+2025-02-28 07:27:51,350 : INFO : Data from CSV customer_data.csv ingested successfully!
+2025-02-28 07:27:51,350 : INFO : Connecting to Database
+2025-02-28 07:27:51,400 : INFO : Connecting to Database Successfull
+2025-02-28 07:27:51,400 : INFO : Reading data from database.
+2025-02-28 07:27:52,167 : INFO : Data from Database ingested successfully!
