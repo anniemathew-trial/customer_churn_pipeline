@@ -1,0 +1,38 @@
+2025-02-28 07:24:12,583 : INFO : Starting data validation
+2025-02-28 07:24:12,585 : ERROR : Error validating  data: [Errno 2] No such file or directory: 'data/raw/customer_data.csv'
+2025-02-28 07:28:08,743 : INFO : Starting data validation
+2025-02-28 07:28:08,771 : INFO : Running validation on data received from S3
+2025-02-28 07:28:08,903 : INFO : Saving metrics to S3
+2025-02-28 07:28:08,908 : INFO : Metrics saved to: csv_validation_report.csv
+2025-02-28 07:55:41,151 : INFO : Starting data validation
+2025-02-28 07:55:41,177 : INFO : Running validation on data received from S3
+2025-02-28 07:55:41,308 : INFO : Saving metrics to S3
+2025-02-28 07:55:41,312 : INFO : Metrics saved to: csv_validation_report.csv
+2025-02-28 07:58:21,719 : INFO : Starting data validation
+2025-02-28 07:58:21,764 : INFO : Running validation on data received from S3
+2025-02-28 07:58:21,976 : INFO : Saving metrics to S3
+2025-02-28 07:58:21,988 : INFO : Metrics saved to: csv_validation_report.csv
+2025-02-28 08:00:24,870 : INFO : Starting data validation
+2025-02-28 08:00:24,903 : INFO : Running validation on data received from S3
+2025-02-28 08:00:25,040 : INFO : Saving metrics to S3
+2025-02-28 08:00:25,044 : INFO : Metrics saved to: csv_validation_report.csv
+2025-02-28 08:00:51,506 : INFO : Starting data validation
+2025-02-28 08:00:51,547 : INFO : Running validation on data received from S3
+2025-02-28 08:00:51,702 : INFO : Saving metrics to S3
+2025-02-28 08:00:51,706 : INFO : Metrics saved to: csv_validation_report.csv
+2025-02-28 08:03:31,921 : INFO : Starting data validation
+2025-02-28 08:03:31,960 : INFO : Running validation on data received from S3
+2025-02-28 08:03:32,140 : INFO : Saving metrics to S3
+2025-02-28 08:03:32,147 : INFO : Metrics saved to: csv_validation_report.csv
+2025-02-28 08:08:49,986 : INFO : Starting data validation
+2025-02-28 08:08:50,046 : INFO : Running validation on data received from S3
+2025-02-28 08:08:50,242 : INFO : Saving metrics to S3
+2025-02-28 08:08:50,246 : INFO : Metrics saved to: csv_validation_report.csv
+2025-02-28 08:17:11,588 : INFO : Starting data validation
+2025-02-28 08:17:11,616 : INFO : Running validation on data received from S3
+2025-02-28 08:17:11,768 : INFO : Saving metrics to S3
+2025-02-28 08:17:11,773 : INFO : Metrics saved to: csv_validation_report.csv
+2025-02-28 09:03:28,110 : INFO : Starting data validation
+2025-02-28 09:03:28,161 : INFO : Running validation on data received from S3
+2025-02-28 09:03:28,405 : INFO : Saving metrics to S3
+2025-02-28 09:03:28,417 : INFO : Metrics saved to: csv_validation_report.csv

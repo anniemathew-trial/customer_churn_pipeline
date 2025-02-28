@@ -1,0 +1,27 @@
+[2025-02-28T07:58:37.903+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-02-28T07:57:56.761089+00:00 [queued]>
+[2025-02-28T07:58:37.912+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-02-28T07:57:56.761089+00:00 [queued]>
+[2025-02-28T07:58:37.913+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-02-28T07:58:37.929+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_preparation_task> on 2025-02-28 07:57:56.761089+00:00
+[2025-02-28T07:58:37.934+0000] {standard_task_runner.py:57} INFO - Started process 5052 to run task
+[2025-02-28T07:58:37.937+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_preparation_task', 'manual__2025-02-28T07:57:56.761089+00:00', '--job-id', '83', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmp4zsnz2db']
+[2025-02-28T07:58:37.939+0000] {standard_task_runner.py:85} INFO - Job 83: Subtask data_preparation_task
+[2025-02-28T07:58:37.963+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-28T07:58:38.009+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-02-28T07:57:56.761089+00:00 [running]> on host 4470298645d8
+[2025-02-28T07:58:38.115+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_preparation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-28T07:57:56.761089+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-28T07:57:56.761089+00:00'
+[2025-02-28T07:58:38.116+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-02-28T07:58:38.118+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/executables/data_preparation.py &&                         dvc add /opt/***/data/cleaned &&                         dvc add /opt/***/visualization &&                         git add /opt/***/data/cleaned.dvc &&                         git add /opt/***/visualization.dvc &&                         git commit -m "Updated cleaned data version" &&                         dvc push\n                    ']
+[2025-02-28T07:58:38.126+0000] {subprocess.py:86} INFO - Output:
+[2025-02-28T07:58:41.288+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-02-28T07:58:41.289+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_preparation.py", line 5, in <module>
+[2025-02-28T07:58:41.289+0000] {subprocess.py:93} INFO -     import seaborn as sns
+[2025-02-28T07:58:41.290+0000] {subprocess.py:93} INFO - ModuleNotFoundError: No module named 'seaborn'
+[2025-02-28T07:58:41.567+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-02-28T07:58:41.593+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-02-28T07:58:41.603+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_preparation_task, execution_date=20250228T075756, start_date=20250228T075837, end_date=20250228T075841
+[2025-02-28T07:58:41.633+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 83 for task data_preparation_task (Bash command failed. The command returned a non-zero exit code 1.; 5052)
+[2025-02-28T07:58:41.648+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-02-28T07:58:41.702+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,88 @@
+[2025-02-28T08:16:52.887+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-02-28T08:16:44.276454+00:00 [queued]>
+[2025-02-28T08:16:52.906+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-02-28T08:16:44.276454+00:00 [queued]>
+[2025-02-28T08:16:52.906+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-02-28T08:16:52.933+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_ingestion_task> on 2025-02-28 08:16:44.276454+00:00
+[2025-02-28T08:16:52.938+0000] {standard_task_runner.py:57} INFO - Started process 6621 to run task
+[2025-02-28T08:16:52.943+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_ingestion_task', 'manual__2025-02-28T08:16:44.276454+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpjq8av131']
+[2025-02-28T08:16:52.948+0000] {standard_task_runner.py:85} INFO - Job 102: Subtask data_ingestion_task
+[2025-02-28T08:16:52.984+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-28T08:16:53.056+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-02-28T08:16:44.276454+00:00 [running]> on host 4470298645d8
+[2025-02-28T08:16:53.219+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_ingestion_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-28T08:16:44.276454+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-28T08:16:44.276454+00:00'
+[2025-02-28T08:16:53.220+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-02-28T08:16:53.221+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/executables/data_ingestion.py && \t\t\tcd /opt/*** && \t\t\tgit rm -r --cached \'data/raw\'\n\t\t\tgit commit -m "stop tracking data/raw"\n                        dvc add /opt/***/data/raw &&                         git add /opt/***/data/raw.dvc &&                         git commit -m "Updated raw data version" -a &&                         dvc push && git push\n                    ']
+[2025-02-28T08:16:53.234+0000] {subprocess.py:86} INFO - Output:
+[2025-02-28T08:16:55.246+0000] {subprocess.py:93} INFO - /opt/***/executables/data_ingestion.py:46: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-02-28T08:16:55.247+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
+[2025-02-28T08:16:55.374+0000] {subprocess.py:93} INFO - fatal: pathspec 'data/raw' did not match any files
+[2025-02-28T08:16:55.379+0000] {subprocess.py:93} INFO - On branch main
+[2025-02-28T08:16:55.380+0000] {subprocess.py:93} INFO - Your branch is ahead of 'origin/main' by 2 commits.
+[2025-02-28T08:16:55.380+0000] {subprocess.py:93} INFO -   (use "git push" to publish your local commits)
+[2025-02-28T08:16:55.381+0000] {subprocess.py:93} INFO - 
+[2025-02-28T08:16:55.381+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-02-28T08:16:55.381+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-02-28T08:16:55.381+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-02-28T08:16:55.382+0000] {subprocess.py:93} INFO - 	modified:   .gitignore
+[2025-02-28T08:16:55.382+0000] {subprocess.py:93} INFO - 	modified:   dags/__pycache__/customer_churn.cpython-38.pyc
+[2025-02-28T08:16:55.382+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-02-28T08:16:55.382+0000] {subprocess.py:93} INFO - 	modified:   logs/data_ingestion.log
+[2025-02-28T08:16:55.382+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-02-28/customer_churn.py.log
+[2025-02-28T08:16:55.383+0000] {subprocess.py:93} INFO - 
+[2025-02-28T08:16:55.383+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-02-28T08:16:55.383+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-02-28T08:16:55.383+0000] {subprocess.py:93} INFO - 	data/.gitignore
+[2025-02-28T08:16:55.383+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T03:47:06.239601+00:00/
+[2025-02-28T08:16:55.384+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T03:56:07.184589+00:00/
+[2025-02-28T08:16:55.384+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T04:01:35.537178+00:00/
+[2025-02-28T08:16:55.384+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T04:03:50.126562+00:00/
+[2025-02-28T08:16:55.384+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T04:07:47.368418+00:00/
+[2025-02-28T08:16:55.384+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T04:09:55.332256+00:00/
+[2025-02-28T08:16:55.385+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T04:35:17.945041+00:00/
+[2025-02-28T08:16:55.385+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T04:42:35.414349+00:00/
+[2025-02-28T08:16:55.385+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T04:45:15.524968+00:00/
+[2025-02-28T08:16:55.385+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T04:48:28.220767+00:00/
+[2025-02-28T08:16:55.385+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T04:49:39.209814+00:00/
+[2025-02-28T08:16:55.385+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:13:38.375524+00:00/
+[2025-02-28T08:16:55.386+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:15:09.828715+00:00/
+[2025-02-28T08:16:55.386+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:16:05.640644+00:00/
+[2025-02-28T08:16:55.386+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:20:05.962007+00:00/
+[2025-02-28T08:16:55.386+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:23:17.901354+00:00/
+[2025-02-28T08:16:55.386+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:30:38.840749+00:00/
+[2025-02-28T08:16:55.386+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:31:26.133976+00:00/
+[2025-02-28T08:16:55.387+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:33:59.963538+00:00/
+[2025-02-28T08:16:55.387+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:35:19.175368+00:00/
+[2025-02-28T08:16:55.387+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:38:43.211772+00:00/
+[2025-02-28T08:16:55.387+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:39:45.877421+00:00/
+[2025-02-28T08:16:55.387+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:40:03.580016+00:00/
+[2025-02-28T08:16:55.388+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:42:00.286071+00:00/
+[2025-02-28T08:16:55.388+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T06:44:02.334349+00:00/
+[2025-02-28T08:16:55.388+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T07:23:40.154132+00:00/
+[2025-02-28T08:16:55.388+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T07:27:40.803071+00:00/
+[2025-02-28T08:16:55.388+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T07:55:16.560593+00:00/
+[2025-02-28T08:16:55.388+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T07:57:56.761089+00:00/
+[2025-02-28T08:16:55.389+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T08:00:15.478008+00:00/
+[2025-02-28T08:16:55.389+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T08:03:05.741011+00:00/
+[2025-02-28T08:16:55.389+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T08:08:17.929456+00:00/
+[2025-02-28T08:16:55.389+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-02-28T08:16:44.276454+00:00/
+[2025-02-28T08:16:55.389+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=scheduled__2025-02-27T08:00:00+00:00/
+[2025-02-28T08:16:55.390+0000] {subprocess.py:93} INFO - 	logs/data_preparation.log
+[2025-02-28T08:16:55.390+0000] {subprocess.py:93} INFO - 	logs/data_validation.log
+[2025-02-28T08:16:55.390+0000] {subprocess.py:93} INFO - 	reports/.gitignore
+[2025-02-28T08:16:55.390+0000] {subprocess.py:93} INFO - 
+[2025-02-28T08:16:55.390+0000] {subprocess.py:93} INFO - no changes added to commit (use "git add" and/or "git commit -a")
+[2025-02-28T08:16:56.852+0000] {subprocess.py:93} INFO - 
+[2025-02-28T08:16:56.853+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-02-28T08:16:56.854+0000] {subprocess.py:93} INFO - 
+[2025-02-28T08:16:56.855+0000] {subprocess.py:93} INFO - 	git add data/raw.dvc
+[2025-02-28T08:16:56.855+0000] {subprocess.py:93} INFO - 
+[2025-02-28T08:16:56.855+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-02-28T08:16:56.855+0000] {subprocess.py:93} INFO - 
+[2025-02-28T08:16:56.855+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
+[2025-02-28T08:16:57.146+0000] {subprocess.py:93} INFO - [main 30f6e6c] Updated raw data version
+[2025-02-28T08:16:57.146+0000] {subprocess.py:93} INFO -  5 files changed, 273 insertions(+)
+[2025-02-28T08:17:02.424+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-02-28T08:17:04.162+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-02-28T08:17:04.163+0000] {subprocess.py:93} INFO -    ae5979e..30f6e6c  main -> main
+[2025-02-28T08:17:04.173+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-02-28T08:17:04.266+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250228T081644, start_date=20250228T081652, end_date=20250228T081704
+[2025-02-28T08:17:04.344+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-02-28T08:17:04.419+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,25 @@
+[2025-02-28T08:09:26.098+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_transformation_task manual__2025-02-28T08:08:17.929456+00:00 [queued]>
+[2025-02-28T08:09:26.118+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_transformation_task manual__2025-02-28T08:08:17.929456+00:00 [queued]>
+[2025-02-28T08:09:26.118+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-02-28T08:09:26.145+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_transformation_task> on 2025-02-28 08:08:17.929456+00:00
+[2025-02-28T08:09:26.151+0000] {standard_task_runner.py:57} INFO - Started process 6073 to run task
+[2025-02-28T08:09:26.156+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_transformation_task', 'manual__2025-02-28T08:08:17.929456+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpdfyl3b1r']
+[2025-02-28T08:09:26.160+0000] {standard_task_runner.py:85} INFO - Job 100: Subtask data_transformation_task
+[2025-02-28T08:09:26.201+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-28T08:09:26.275+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_transformation_task manual__2025-02-28T08:08:17.929456+00:00 [running]> on host 4470298645d8
+[2025-02-28T08:09:26.475+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_transformation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-28T08:08:17.929456+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-28T08:08:17.929456+00:00'
+[2025-02-28T08:09:26.477+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-02-28T08:09:26.478+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/***\n                        dvc pull /opt/***/data/cleaned\n                        python /opt/***/executables/data_transformation.py &&                         dvc add /opt/***/data/transformed &&                         git add /opt/***/data/transformed.dvc &&                         git commit -m "Updated transformed data version" &&                         dvc push\n                    ']
+[2025-02-28T08:09:26.492+0000] {subprocess.py:86} INFO - Output:
+[2025-02-28T08:09:30.330+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-02-28T08:09:30.783+0000] {subprocess.py:93} INFO - python: can't open file '/opt/***/executables/data_transformation.py': [Errno 2] No such file or directory
+[2025-02-28T08:09:30.787+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-02-28T08:09:30.805+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-02-28T08:09:30.812+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_transformation_task, execution_date=20250228T080817, start_date=20250228T080926, end_date=20250228T080930
+[2025-02-28T08:09:30.834+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 100 for task data_transformation_task (Bash command failed. The command returned a non-zero exit code 2.; 6073)
+[2025-02-28T08:09:30.875+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-02-28T08:09:30.915+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
