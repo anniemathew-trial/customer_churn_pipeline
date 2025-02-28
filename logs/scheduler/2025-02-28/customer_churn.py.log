@@ -4326,3 +4326,10 @@ airflow.exceptions.AirflowException: Invalid arguments were passed to BashOperat
 [2025-02-28T10:03:18.298+0000] {logging_mixin.py:154} INFO - [2025-02-28T10:03:18.297+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-02-28T10:03:18.323+0000] {logging_mixin.py:154} INFO - [2025-02-28T10:03:18.322+0000] {dag.py:3722} INFO - Setting next_dagrun for customer_churn_ml_pipeline to 2025-02-28T08:00:00+00:00, run_after=2025-03-01T08:00:00+00:00
 [2025-02-28T10:03:18.348+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.116 seconds
+[2025-02-28T10:03:48.445+0000] {processor.py:157} INFO - Started process (PID=13886) to work on /opt/airflow/dags/customer_churn.py
+[2025-02-28T10:03:48.446+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-02-28T10:03:48.447+0000] {logging_mixin.py:154} INFO - [2025-02-28T10:03:48.446+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-02-28T10:03:48.467+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_churn_ml_pipeline']) retrieved from /opt/airflow/dags/customer_churn.py
+[2025-02-28T10:03:48.519+0000] {logging_mixin.py:154} INFO - [2025-02-28T10:03:48.519+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-02-28T10:03:48.554+0000] {logging_mixin.py:154} INFO - [2025-02-28T10:03:48.554+0000] {dag.py:3722} INFO - Setting next_dagrun for customer_churn_ml_pipeline to 2025-02-28T08:00:00+00:00, run_after=2025-03-01T08:00:00+00:00
+[2025-02-28T10:03:48.583+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.143 seconds
