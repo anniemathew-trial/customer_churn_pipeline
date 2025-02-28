@@ -17,7 +17,7 @@ logging.getLogger("").addHandler(console)
 def data_storage(csv_filename):
     try:
         
-        server = "127.0.0.1,1433"
+        server = "dmml_customer_churn_setup-sqlserver-1,1433"
         database = "dmml_assignment"
         username = "sa"
         password = "NewPASS1234"
