@@ -1,0 +1,18 @@
+2025-02-27 17:26:14,823 : INFO : Reading data from CSV file customer_data.csv
+2025-02-27 17:26:14,837 : INFO : Reading data from CSV file customer_data.csv
+2025-02-27 17:26:14,906 : ERROR : Error ingesting CSV: [Errno 13] Permission denied: '/opt/airflow/data/raw'
+2025-02-27 17:26:14,908 : INFO : Connecting to Database
+2025-02-27 17:26:14,912 : ERROR : Error ingesting CSV: [Errno 13] Permission denied: '/opt/airflow/data/raw'
+2025-02-27 17:26:14,913 : INFO : Connecting to Database
+2025-02-27 17:26:15,068 : INFO : Connecting to Database Successfull
+2025-02-27 17:26:15,069 : INFO : Reading data from database.
+2025-02-27 17:26:15,072 : INFO : Connecting to Database Successfull
+2025-02-27 17:26:15,073 : INFO : Reading data from database.
+2025-02-27 17:26:15,772 : ERROR : Error ingesting database: [Errno 13] Permission denied: '/opt/airflow/data/raw'
+2025-02-27 17:26:15,789 : ERROR : Error ingesting database: [Errno 13] Permission denied: '/opt/airflow/data/raw'
+2025-02-28 03:00:02,580 : INFO : Reading data from CSV file customer_data.csv
+2025-02-28 03:00:02,792 : INFO : Data from CSV customer_data.csv ingested successfully!
+2025-02-28 03:00:02,792 : INFO : Connecting to Database
+2025-02-28 03:00:02,840 : INFO : Connecting to Database Successfull
+2025-02-28 03:00:02,840 : INFO : Reading data from database.
+2025-02-28 03:00:04,089 : INFO : Data from Database ingested successfully!
