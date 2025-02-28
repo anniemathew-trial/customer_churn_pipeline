@@ -85,7 +85,7 @@ with DAG(
         bash_command = """
 			cd /opt/airflow/customer_churn_stats/feature_repo && \
                         feast apply && \
-                        feast materialize-incremental $(date -u +"%Y-%m-%dT%H:%M:%S")
+                        feast materialize-incremental $(date -u +'%Y-%m-%dT%H:%M:%S') && \
                         git commit -m "Updated feature store" -a && \
                         git push
                     """
