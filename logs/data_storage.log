@@ -4,3 +4,7 @@
 2025-02-28 09:59:50,941 : ERROR : Error storing data: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL SERVER' : file not found (0) (SQLDriverConnect)")
 2025-02-28 10:04:39,749 : INFO : Connecting to Database
 2025-02-28 10:04:39,753 : ERROR : Error storing data: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL SERVER' : file not found (0) (SQLDriverConnect)")
+2025-02-28 10:07:23,778 : INFO : Connecting to Database
+2025-02-28 10:07:23,826 : INFO : Connecting to Database Successfull
+2025-02-28 10:07:23,827 : INFO : Reading Initial DB Setup Script
+2025-02-28 10:07:23,827 : ERROR : Error storing data: [Errno 2] No such file or directory: 'dbScripts/initial_setup.sql'
