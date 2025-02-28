@@ -36,12 +36,15 @@ with DAG(
     data_validation_task = BashOperator(
         task_id = 'data_validation_task',
         bash_command = """
+			cd /opt/airflow
                         dvc pull /opt/airflow/data/raw
                         python /opt/airflow/executables/data_validation.py && \
+			git rm -r --cached 'reports'
+			git commit -m "stop tracking reports"
                         dvc add /opt/airflow/reports/csv_validation_report.csv && \
                         git add /opt/airflow/reports/csv_validation_report.csv.dvc && \
                         git commit -m "Updated validation" && \
-                        dvc push
+                        dvc push && git push
                     """
     )
 
