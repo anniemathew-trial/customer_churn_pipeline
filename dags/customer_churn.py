@@ -21,7 +21,7 @@ with DAG(
         bash_command = """python /opt/airflow/executables/data_ingestion.py && \
                         dvc add /opt/airflow/data/raw && \
                         git add /opt/airflow/data/raw.dvc && \
-                        git commit -m "Updated raw data version" && \
+                        git commit -m "Updated raw data version" -a && \
                         dvc push
                     """,
     )
