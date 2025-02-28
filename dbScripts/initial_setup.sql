@@ -22,10 +22,10 @@ BEGIN
 		[Geography_Germany] [float] NOT NULL,
 		[Geography_Spain] [float]  NOT NULL,
 		[Gender_Male] [float] NOT NULL,  
-		[CreditScoreTenureRatio] [float] NOT NULL, 
-		[TenureAgeRatio] [float] NOT NULL, 
-		[BalanceSEstimatedalaryRatio] [float] NOT NULL, 
-		[BalanceAgeRatio] [float] NOT NULL
+		[CreditScoreTenureRatio] [decimal(38,20)] NOT NULL, 
+		[TenureAgeRatio] [decimal(38,20)] NOT NULL, 
+		[BalanceSEstimatedalaryRatio] [decimal(38,20)] NOT NULL, 
+		[BalanceAgeRatio] [decimal(38,20)] NOT NULL
 	)
 END
 
