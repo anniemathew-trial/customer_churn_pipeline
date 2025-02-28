@@ -86,8 +86,8 @@ with DAG(
 			cd /opt/airflow
                         feast init
                         python /opt/airflow/executables/feature_store.py && \
-                        dvc add /opt/airflow/data/features && \
-                        git add /opt/airflow/data/features.dvc && \
+                        dvc add /opt/airflow/data/curated && \
+                        git add /opt/airflow/data/curated.dvc && \
                         git commit -m "Updated feature store" -a && \
                         dvc push && git push
                     """
