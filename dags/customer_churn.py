@@ -50,7 +50,9 @@ with DAG(
 
     data_preparation_task = BashOperator(
         task_id = 'data_preparation_task',
-        bash_command = """python /opt/airflow/executables/data_preparation.py && \
+        bash_command = """
+			cd /opt/airflow
+			python /opt/airflow/executables/data_preparation.py && \
                         dvc add /opt/airflow/data/cleaned && \
                         dvc add /opt/airflow/visualization && \
                         git add /opt/airflow/data/cleaned.dvc && \
@@ -63,6 +65,7 @@ with DAG(
     data_transformation_task = BashOperator(
         task_id = 'data_transformation_task',
         bash_command = """
+			cd /opt/airflow
                         dvc pull /opt/airflow/data/cleaned
                         python /opt/airflow/executables/data_transformation.py && \
                         dvc add /opt/airflow/data/transformed && \
@@ -75,6 +78,7 @@ with DAG(
     data_storage_task = BashOperator(
         task_id = 'data_storage_task',
         bash_command = """
+			cd /opt/airflow
                         dvc pull /opt/airflow/data/transformed
                         python /opt/airflow/executables/data_storage.py && \
                         dvc add /opt/airflow/data/storage && \
@@ -87,6 +91,7 @@ with DAG(
     feature_store_task = BashOperator(
         task_id = 'feature_store_task',
         bash_command = """
+			cd /opt/airflow
                         feast init
                         python /opt/airflow/executables/feature_store.py && \
                         dvc add /opt/airflow/data/features && \
@@ -98,7 +103,9 @@ with DAG(
 
     model_training_task = BashOperator(
             task_id = 'model_training_task',
-            bash_command = """python /opt/airflow/executables/model_training.py && \
+            bash_command = """
+	    		cd /opt/airflow
+	    		    python /opt/airflow/executables/model_training.py && \
                             dvc add /opt/airflow/models/model.pki && \
                             git add /opt/airflow/models/model.pki.dvc && \
                             git commit -m "Trained model version" && \
@@ -108,6 +115,7 @@ with DAG(
     model_evaluation_task = BashOperator(
             task_id = 'model_evaluation_task',
             bash_command = """
+	    		cd /opt/airflow
                             dvc pull /opt/airflow/models/model.pkl 
                             python /opt/airflow/executables/model_evaluation.py && \
                             dvc add /opt/airflow/reports/evaluation.csv && \
