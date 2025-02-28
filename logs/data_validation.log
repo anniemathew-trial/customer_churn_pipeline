@@ -88,3 +88,7 @@
 2025-02-28 11:14:07,728 : INFO : Running validation on data received from S3
 2025-02-28 11:14:07,876 : INFO : Saving metrics to S3
 2025-02-28 11:14:07,879 : INFO : Metrics saved to: csv_validation_report.csv
+2025-02-28 18:09:38,973 : INFO : Starting data validation
+2025-02-28 18:09:39,004 : INFO : Running validation on data received from S3
+2025-02-28 18:09:39,143 : INFO : Saving metrics to S3
+2025-02-28 18:09:39,146 : INFO : Metrics saved to: csv_validation_report.csv
