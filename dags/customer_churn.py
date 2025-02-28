@@ -28,7 +28,7 @@ with DAG(
 			git commit -m "stop tracking data/raw"
                         dvc add /opt/airflow/data/raw && \
                         git add /opt/airflow/data/raw.dvc && \
-                        git commit -m "Updated raw data version" && \
+                        git commit -m "Updated raw data version" -a && \
                         dvc push
                     """,
     )
