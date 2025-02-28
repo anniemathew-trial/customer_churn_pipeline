@@ -1,6 +1,7 @@
 from sklearn.preprocessing import StandardScaler
 from pathlib import Path
 import pandas as pd
+import numpy as np
 import logging
 #create log file if it does not exist
 data_transformation_and_storage_log_file = "/opt/airflow/logs/data_transformation.log"
@@ -31,9 +32,24 @@ def data_transformation(output_path="customer_data.csv"):
 
         #Feature creation
         df['CreditScoreTenureRatio'] = df['CreditScore']/(df['Tenure'])
+        df['CreditScoreTenureRatio'].replace([np.inf, -np.inf], 0, inplace=True)        
+        df['CreditScoreTenureRatio'] = df['CreditScoreTenureRatio'].fillna(0)        
+        df['CreditScoreTenureRatio'] = df['CreditScoreTenureRatio'].astype('float')
+        
         df['TenureAgeRatio'] = df['Tenure']/(df['Age']) #standardizing tenure by age
+        df['TenureAgeRatio'].replace([np.inf, -np.inf], 0, inplace=True)        
+        df['TenureAgeRatio'] = df['TenureAgeRatio'].fillna(0)
+        df['TenureAgeRatio'] = df['TenureAgeRatio'].astype('float')
+        
         df['BalanceSEstimatedalaryRatio'] = df['Balance']/(df['EstimatedSalary'])
+        df['BalanceSEstimatedalaryRatio'].replace([np.inf, -np.inf], 0, inplace=True)        
+        df['BalanceSEstimatedalaryRatio'] = df['BalanceSEstimatedalaryRatio'].fillna(0)
+        df['BalanceSEstimatedalaryRatio'] = df['BalanceSEstimatedalaryRatio'].astype('float')
+        
         df['BalanceAgeRatio'] = df['Balance']/(df['Age'])
+        df['BalanceAgeRatio'].replace([np.inf, -np.inf], 0, inplace=True)        
+        df['BalanceAgeRatio'] = df['BalanceAgeRatio'].fillna(0)
+        df['BalanceAgeRatio'] = df['BalanceAgeRatio'].astype('float')
         
         logging.info("Scaling 'Tenure', 'Balance', 'EstimatedSalary'.")
         scaler = StandardScaler()
