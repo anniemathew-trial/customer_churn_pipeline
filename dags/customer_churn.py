@@ -58,7 +58,7 @@ with DAG(
                         git add /opt/airflow/data/cleaned.dvc && \
                         git add /opt/airflow/visualization.dvc && \
                         git commit -m "Updated cleaned data version" && \
-                        dvc push
+                        dvc push && git push
                     """
     )
 
@@ -71,7 +71,7 @@ with DAG(
                         dvc add /opt/airflow/data/transformed && \
                         git add /opt/airflow/data/transformed.dvc && \
                         git commit -m "Updated transformed data version" && \
-                        dvc push
+                        dvc push && git push
                     """
     )
 
@@ -84,7 +84,7 @@ with DAG(
                         dvc add /opt/airflow/data/storage && \
                         git add /opt/airflow/data/storage.dvc && \
                         git commit -m "Updated stored data version" && \
-                        dvc push
+                        dvc push && git push
                     """
     )
 
@@ -97,7 +97,7 @@ with DAG(
                         dvc add /opt/airflow/data/features && \
                         git add /opt/airflow/data/features.dvc && \
                         git commit -m "Updated feature store" && \
-                        dvc push
+                        dvc push && git push
                     """
     )
 
@@ -109,7 +109,7 @@ with DAG(
                             dvc add /opt/airflow/models/model.pki && \
                             git add /opt/airflow/models/model.pki.dvc && \
                             git commit -m "Trained model version" && \
-                            dvc push
+                            dvc push && git push
                         """
     )
     model_evaluation_task = BashOperator(
@@ -121,7 +121,7 @@ with DAG(
                             dvc add /opt/airflow/reports/evaluation.csv && \
                             git add /opt/airflow/reports/evaluation.csv.dvc && \
                             git commit -m "Updated model evaluation report" && \
-                            dvc push
+                            dvc push && git push
                         """
     )
 
