@@ -1,0 +1,32 @@
+[2025-02-28T09:23:58.189+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.pull manual__2025-02-28T09:23:57.532172+00:00 [queued]>
+[2025-02-28T09:23:58.201+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.pull manual__2025-02-28T09:23:57.532172+00:00 [queued]>
+[2025-02-28T09:23:58.201+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-02-28T09:23:58.222+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): pull> on 2025-02-28 09:23:57.532172+00:00
+[2025-02-28T09:23:58.226+0000] {standard_task_runner.py:57} INFO - Started process 10852 to run task
+[2025-02-28T09:23:58.230+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'pull', 'manual__2025-02-28T09:23:57.532172+00:00', '--job-id', '116', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpehus59lb']
+[2025-02-28T09:23:58.233+0000] {standard_task_runner.py:85} INFO - Job 116: Subtask pull
+[2025-02-28T09:23:58.262+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-28T09:23:58.313+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.pull manual__2025-02-28T09:23:57.532172+00:00 [running]> on host 4470298645d8
+[2025-02-28T09:23:58.444+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='pull' AIRFLOW_CTX_EXECUTION_DATE='2025-02-28T09:23:57.532172+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-28T09:23:57.532172+00:00'
+[2025-02-28T09:23:58.446+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-02-28T09:23:58.447+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/*** && dvc pull && git pull']
+[2025-02-28T09:23:58.465+0000] {subprocess.py:86} INFO - Output:
+[2025-02-28T09:24:01.181+0000] {subprocess.py:93} INFO - D       visualization/
+[2025-02-28T09:24:01.185+0000] {subprocess.py:93} INFO - 1 file deleted
+[2025-02-28T09:24:01.806+0000] {subprocess.py:93} INFO - hint: Pulling without specifying how to reconcile divergent branches is
+[2025-02-28T09:24:01.807+0000] {subprocess.py:93} INFO - hint: discouraged. You can squelch this message by running one of the following
+[2025-02-28T09:24:01.808+0000] {subprocess.py:93} INFO - hint: commands sometime before your next pull:
+[2025-02-28T09:24:01.808+0000] {subprocess.py:93} INFO - hint:
+[2025-02-28T09:24:01.809+0000] {subprocess.py:93} INFO - hint:   git config pull.rebase false  # merge (the default strategy)
+[2025-02-28T09:24:01.810+0000] {subprocess.py:93} INFO - hint:   git config pull.rebase true   # rebase
+[2025-02-28T09:24:01.810+0000] {subprocess.py:93} INFO - hint:   git config pull.ff only       # fast-forward only
+[2025-02-28T09:24:01.811+0000] {subprocess.py:93} INFO - hint:
+[2025-02-28T09:24:01.812+0000] {subprocess.py:93} INFO - hint: You can replace "git config" with "git config --global" to set a default
+[2025-02-28T09:24:01.812+0000] {subprocess.py:93} INFO - hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+[2025-02-28T09:24:01.813+0000] {subprocess.py:93} INFO - hint: or --ff-only on the command line to override the configured default per
+[2025-02-28T09:24:01.813+0000] {subprocess.py:93} INFO - hint: invocation.
+[2025-02-28T09:24:02.940+0000] {subprocess.py:93} INFO - Already up to date.
+[2025-02-28T09:24:02.942+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-02-28T09:24:03.011+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=pull, execution_date=20250228T092357, start_date=20250228T092358, end_date=20250228T092403
+[2025-02-28T09:24:03.066+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-02-28T09:24:03.134+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

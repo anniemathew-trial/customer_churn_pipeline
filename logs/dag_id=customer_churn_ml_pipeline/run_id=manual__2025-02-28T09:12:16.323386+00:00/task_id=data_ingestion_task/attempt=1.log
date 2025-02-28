@@ -1,0 +1,40 @@
+[2025-02-28T09:12:25.368+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-02-28T09:12:16.323386+00:00 [queued]>
+[2025-02-28T09:12:25.381+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-02-28T09:12:16.323386+00:00 [queued]>
+[2025-02-28T09:12:25.382+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-02-28T09:12:25.401+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_ingestion_task> on 2025-02-28 09:12:16.323386+00:00
+[2025-02-28T09:12:25.405+0000] {standard_task_runner.py:57} INFO - Started process 10225 to run task
+[2025-02-28T09:12:25.409+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_ingestion_task', 'manual__2025-02-28T09:12:16.323386+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmp79hj_ah5']
+[2025-02-28T09:12:25.411+0000] {standard_task_runner.py:85} INFO - Job 113: Subtask data_ingestion_task
+[2025-02-28T09:12:25.437+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-02-28T09:12:25.487+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-02-28T09:12:16.323386+00:00 [running]> on host 4470298645d8
+[2025-02-28T09:12:25.607+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_ingestion_task' AIRFLOW_CTX_EXECUTION_DATE='2025-02-28T09:12:16.323386+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-28T09:12:16.323386+00:00'
+[2025-02-28T09:12:25.608+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-02-28T09:12:25.609+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/executables/data_ingestion.py && \t\t\tcd /opt/*** && \t\t\tgit rm -r --cached \'data/raw\'\n\t\t\tgit commit -m "stop tracking data/raw"\n                        dvc add /opt/***/data/raw &&                         git add /opt/***/data/raw.dvc &&                         git commit -m "Updated raw data version" -a &&                         dvc push && git push\n                    ']
+[2025-02-28T09:12:25.619+0000] {subprocess.py:86} INFO - Output:
+[2025-02-28T09:12:27.751+0000] {subprocess.py:93} INFO - /opt/***/executables/data_ingestion.py:46: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-02-28T09:12:27.752+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
+[2025-02-28T09:12:27.948+0000] {subprocess.py:93} INFO - fatal: pathspec 'data/raw' did not match any files
+[2025-02-28T09:12:27.955+0000] {subprocess.py:93} INFO - error: insufficient permission for adding an object to repository database .git/objects
+[2025-02-28T09:12:27.957+0000] {subprocess.py:93} INFO - error: insufficient permission for adding an object to repository database .git/objects
+[2025-02-28T09:12:27.957+0000] {subprocess.py:93} INFO - error: Error building trees
+[2025-02-28T09:12:33.117+0000] {subprocess.py:93} INFO - 
+[2025-02-28T09:12:33.118+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-02-28T09:12:33.119+0000] {subprocess.py:93} INFO - 
+[2025-02-28T09:12:33.119+0000] {subprocess.py:93} INFO - 	git add data/raw.dvc
+[2025-02-28T09:12:33.120+0000] {subprocess.py:93} INFO - 
+[2025-02-28T09:12:33.120+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-02-28T09:12:33.121+0000] {subprocess.py:93} INFO - 
+[2025-02-28T09:12:33.121+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
+[2025-02-28T09:12:34.151+0000] {subprocess.py:93} INFO - error: insufficient permission for adding an object to repository database .git/objects
+[2025-02-28T09:12:34.153+0000] {subprocess.py:93} INFO - error: insufficient permission for adding an object to repository database .git/objects
+[2025-02-28T09:12:34.154+0000] {subprocess.py:93} INFO - error: Error building trees
+[2025-02-28T09:12:34.155+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-02-28T09:12:34.205+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-02-28T09:12:34.222+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250228T091216, start_date=20250228T091225, end_date=20250228T091234
+[2025-02-28T09:12:34.269+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 113 for task data_ingestion_task (Bash command failed. The command returned a non-zero exit code 1.; 10225)
+[2025-02-28T09:12:34.316+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-02-28T09:12:34.400+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
