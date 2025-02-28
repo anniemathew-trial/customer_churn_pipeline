@@ -15,10 +15,17 @@ with DAG(
     schedule_interval="0 8 * * *", # Daily at 8:00 AM UTC
     catchup=False,
 ) as dag:
+    dvc_pull_task = BashOperator(
+        task_id="dvc_pull",
+	bash_command="cd /opt/airflow && dvc pull",
+    )
     # Data ingestion and raw data storage to Amazon S3 using DVC
     data_ingestion_task = BashOperator(
         task_id = 'data_ingestion_task',
         bash_command = """python /opt/airflow/executables/data_ingestion.py && \
+			cd /opt/airflow && \
+			git rm -r --cached 'data/raw'
+			git commit -m "stop tracking data/raw"
                         dvc add /opt/airflow/data/raw && \
                         git add /opt/airflow/data/raw.dvc && \
                         git commit -m "Updated raw data version" && \
@@ -107,5 +114,5 @@ with DAG(
                         """
     )
 
-data_ingestion_task >> data_validation_task >> data_preparation_task >> data_transformation_task >> data_storage_task >> feature_store_task
+dvc_pull_task >> data_ingestion_task >> data_validation_task >> data_preparation_task >> data_transformation_task >> data_storage_task >> feature_store_task
 feature_store_task >> model_training_task >> model_evaluation_task

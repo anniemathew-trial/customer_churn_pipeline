@@ -1,0 +1,8 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = s3://dmmlassignmentbucket/dvc-storage
+    access_key_id = AKIA34AMCY3VLW34NUXM
+    secret_access_key = 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
+    region = us-east-1
+    endpointurl = https://s3.us-east-1.amazonaws.com
