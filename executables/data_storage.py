@@ -23,7 +23,7 @@ def data_storage(csv_filename):
         password = "NewPASS1234"
 
         logging.info("Connecting to Database")
-        connection = pyodbc.connect(f'DRIVER={{SQL SERVER}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
+        connection = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
         logging.info("Connecting to Database Successfull")
         cursor = connection.cursor()
 
