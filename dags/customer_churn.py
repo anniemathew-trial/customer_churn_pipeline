@@ -64,7 +64,7 @@ with DAG(
                         python /opt/airflow/executables/data_transformation.py && \
                         dvc add /opt/airflow/data/transformed && \
                         git add /opt/airflow/data/transformed.dvc && \
-                        git commit -m "Updated transformed data version" && \
+                        git commit -m "Updated transformed data version" -a && \
                         dvc push && git push
                     """
     )
@@ -77,7 +77,7 @@ with DAG(
                         python /opt/airflow/executables/data_storage.py && \
                         dvc add /opt/airflow/data/storage && \
                         git add /opt/airflow/data/storage.dvc && \
-                        git commit -m "Updated stored data version" && \
+                        git commit -m "Updated stored data version" -a && \
                         dvc push && git push
                     """
     )
@@ -90,7 +90,7 @@ with DAG(
                         python /opt/airflow/executables/feature_store.py && \
                         dvc add /opt/airflow/data/features && \
                         git add /opt/airflow/data/features.dvc && \
-                        git commit -m "Updated feature store" && \
+                        git commit -m "Updated feature store" -a && \
                         dvc push && git push
                     """
     )
@@ -102,7 +102,7 @@ with DAG(
 	    		    python /opt/airflow/executables/model_training.py && \
                             dvc add /opt/airflow/models/model.pki && \
                             git add /opt/airflow/models/model.pki.dvc && \
-                            git commit -m "Trained model version" && \
+                            git commit -m "Trained model version" -a && \
                             dvc push && git push
                         """
     )
@@ -114,7 +114,7 @@ with DAG(
                             python /opt/airflow/executables/model_evaluation.py && \
                             dvc add /opt/airflow/reports/evaluation.csv && \
                             git add /opt/airflow/reports/evaluation.csv.dvc && \
-                            git commit -m "Updated model evaluation report" && \
+                            git commit -m "Updated model evaluation report" -a && \
                             dvc push && git push
                         """
     )
