@@ -105,3 +105,12 @@
 2025-03-01 07:33:58,375 : INFO : Inserting data to database
 2025-03-01 07:34:04,239 : INFO : Executed script successfully !!
 2025-03-01 07:34:04,240 : INFO : Connection closed !!
+2025-03-01 08:01:06,569 : INFO : Connecting to Database
+2025-03-01 08:01:06,613 : INFO : Connecting to Database Successfull
+2025-03-01 08:01:06,613 : INFO : Reading Initial DB Setup Script
+2025-03-01 08:01:06,613 : INFO : Executing script to Database
+2025-03-01 08:01:06,637 : INFO : Executed script successfully !!
+2025-03-01 08:01:06,638 : INFO : Reading insert script template
+2025-03-01 08:01:06,638 : INFO : Inserting data to database
+2025-03-01 08:01:12,140 : INFO : Executed script successfully !!
+2025-03-01 08:01:12,141 : INFO : Connection closed !!
