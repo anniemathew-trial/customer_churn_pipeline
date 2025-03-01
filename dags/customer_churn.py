@@ -28,6 +28,7 @@ with DAG(
 			git commit -m "stop tracking data/raw"
                         dvc add /opt/airflow/data/raw && \
                         git add /opt/airflow/data/raw.dvc && \
+			git add logs &&\
                         git commit -m "Updated raw data version" -a && \
                         dvc push && git push
                     """,
@@ -39,6 +40,7 @@ with DAG(
 			cd /opt/airflow
                         dvc pull /opt/airflow/data/raw
                         python /opt/airflow/executables/data_validation.py && \
+			git add logs &&\
                         git commit -m "Updated validation" -a && \
                         dvc push && git push
                     """
@@ -51,6 +53,7 @@ with DAG(
 			python /opt/airflow/executables/data_preparation.py && \
                         dvc add /opt/airflow/data/cleaned && \
                         git add /opt/airflow/data/cleaned.dvc && \
+			git add logs &&\
                         git commit -m "Updated cleaned data version" -a && \
                         dvc push && git push
                     """
@@ -64,6 +67,7 @@ with DAG(
                         python /opt/airflow/executables/data_transformation.py && \
                         dvc add /opt/airflow/data/transformed && \
                         git add /opt/airflow/data/transformed.dvc && \
+			git add logs &&\
                         git commit -m "Updated transformed data version" -a && \
                         dvc push && git push
                     """
@@ -75,6 +79,7 @@ with DAG(
 			cd /opt/airflow
                         dvc pull /opt/airflow/data/transformed
                         python /opt/airflow/executables/data_storage.py && \
+			git add logs &&\
                         git commit -m "Updated stored data version" -a && \
                         dvc push && git push
                     """
@@ -86,6 +91,7 @@ with DAG(
 			cd /opt/airflow/customer_churn_stats/feature_repo && \
                         feast apply && \
                         feast materialize-incremental $(date -u +'%Y-%m-%dT%H:%M:%S') && \
+			git add logs &&\
                         git commit -m "Updated feature store" -a && \
                         git push
                     """
@@ -96,6 +102,8 @@ with DAG(
             bash_command = """
 	    		cd /opt/airflow
        			    python /opt/airflow/executables/model_training.py && \
+	      		    git add logs &&\
+	      		    git add mlruns &&\
                             git commit -m "Trained model version" -a && \                            
                         """
     )
