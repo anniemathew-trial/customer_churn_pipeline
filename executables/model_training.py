@@ -12,7 +12,7 @@ import pickle
 
 
 #create log file if it does not exist
-modelling_log_file = "/opt/airflow/logs/modelling.log"
+modelling_log_file = "/opt/airflow/logs/model_training.log"
 logging.root.handlers = []
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=modelling_log_file)
 
@@ -124,7 +124,9 @@ def register_best_model():
     
     
 try:    
+    logging.info("Starting model training")
     register_best_model()
+    logging.info("Finding Best model")
     runs = mlflow.search_runs()
     best_run = runs.sort_values(by="metrics.f1_score", ascending=False).iloc[0]
     best_accuracy = best_run["metrics.f1_score"]
