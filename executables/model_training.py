@@ -12,7 +12,7 @@ import pickle
 
 
 #create log file if it does not exist
-modelling_log_file = "C:\\Annie\\Trial/logs/modelling.log"
+modelling_log_file = "/opt/airflow/logs/modelling.log"
 logging.root.handlers = []
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=modelling_log_file)
 
