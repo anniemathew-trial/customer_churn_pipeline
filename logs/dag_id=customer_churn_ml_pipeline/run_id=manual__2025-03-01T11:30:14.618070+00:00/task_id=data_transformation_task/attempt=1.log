@@ -1,0 +1,25 @@
+[2025-03-01T11:31:12.791+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_transformation_task manual__2025-03-01T11:30:14.618070+00:00 [queued]>
+[2025-03-01T11:31:12.808+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_transformation_task manual__2025-03-01T11:30:14.618070+00:00 [queued]>
+[2025-03-01T11:31:12.809+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-01T11:31:12.831+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_transformation_task> on 2025-03-01 11:30:14.618070+00:00
+[2025-03-01T11:31:12.838+0000] {standard_task_runner.py:57} INFO - Started process 14877 to run task
+[2025-03-01T11:31:12.843+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_transformation_task', 'manual__2025-03-01T11:30:14.618070+00:00', '--job-id', '141', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmp1mkykzhh']
+[2025-03-01T11:31:12.846+0000] {standard_task_runner.py:85} INFO - Job 141: Subtask data_transformation_task
+[2025-03-01T11:31:12.876+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-01T11:31:12.943+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_transformation_task manual__2025-03-01T11:30:14.618070+00:00 [running]> on host 7e994a0ed489
+[2025-03-01T11:31:13.121+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_transformation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T11:30:14.618070+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T11:30:14.618070+00:00'
+[2025-03-01T11:31:13.123+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-01T11:31:13.124+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/***\n                        dvc pull /opt/***/data/cleaned\n                        python /opt/***/executables/data_transformation.py &&                         dvc add /opt/***/data/transformed &&                         git add /opt/***/data/transformed.dvc && \t\t\tgit add logs &&                        git commit -m "Updated transformed data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-01T11:31:13.139+0000] {subprocess.py:86} INFO - Output:
+[2025-03-01T11:31:17.263+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-01T11:31:19.876+0000] {subprocess.py:93} INFO - 2025-03-01 11:31:19,876 : INFO : Starting data preparation for csv.
+[2025-03-01T11:31:19.913+0000] {subprocess.py:93} INFO - 2025-03-01 11:31:19,912 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+[2025-03-01T11:31:19.921+0000] {subprocess.py:93} INFO - 2025-03-01 11:31:19,921 : INFO : Saving data to S3.
+[2025-03-01T11:31:22.372+0000] {subprocess.py:93} INFO - 
+[2025-03-01T11:31:22.372+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-03-01T11:31:22.373+0000] {subprocess.py:93} INFO - 
+[2025-03-01T11:31:22.373+0000] {subprocess.py:93} INFO - 	git add data/transformed.dvc
+[2025-03-01T11:31:22.373+0000] {subprocess.py:93} INFO - 
+[2025-03-01T11:31:22.373+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-03-01T11:31:22.374+0000] {subprocess.py:93} INFO - 
+[2025-03-01T11:31:22.374+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true

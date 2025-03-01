@@ -94,3 +94,6 @@
 2025-03-01 11:27:27,093 : INFO : Starting data preparation for csv.
 2025-03-01 11:27:27,126 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
 2025-03-01 11:27:27,136 : INFO : Saving data to S3.
+2025-03-01 11:31:19,876 : INFO : Starting data preparation for csv.
+2025-03-01 11:31:19,912 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-01 11:31:19,921 : INFO : Saving data to S3.
