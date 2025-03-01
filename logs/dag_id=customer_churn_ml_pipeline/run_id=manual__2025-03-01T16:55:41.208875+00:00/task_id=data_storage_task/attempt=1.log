@@ -1,0 +1,23 @@
+[2025-03-01T16:56:57.480+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_storage_task manual__2025-03-01T16:55:41.208875+00:00 [queued]>
+[2025-03-01T16:56:57.499+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_storage_task manual__2025-03-01T16:55:41.208875+00:00 [queued]>
+[2025-03-01T16:56:57.499+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-01T16:56:57.520+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_storage_task> on 2025-03-01 16:55:41.208875+00:00
+[2025-03-01T16:56:57.527+0000] {standard_task_runner.py:57} INFO - Started process 18198 to run task
+[2025-03-01T16:56:57.532+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_storage_task', 'manual__2025-03-01T16:55:41.208875+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpkme7fosj']
+[2025-03-01T16:56:57.535+0000] {standard_task_runner.py:85} INFO - Job 189: Subtask data_storage_task
+[2025-03-01T16:56:57.567+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-01T16:56:57.639+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_storage_task manual__2025-03-01T16:55:41.208875+00:00 [running]> on host 7e994a0ed489
+[2025-03-01T16:56:57.799+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_storage_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T16:55:41.208875+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T16:55:41.208875+00:00'
+[2025-03-01T16:56:57.801+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-01T16:56:57.802+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/***\n                        dvc pull /opt/***/data/transformed\n                        python /opt/***/executables/data_storage.py && \t\t\tgit add logs &&                        git commit -m "Updated stored data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-01T16:56:57.817+0000] {subprocess.py:86} INFO - Output:
+[2025-03-01T16:57:01.285+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-01T16:57:03.865+0000] {subprocess.py:93} INFO - 2025-03-01 16:57:03,865 : INFO : Connecting to Database
+[2025-03-01T16:57:03.926+0000] {subprocess.py:93} INFO - 2025-03-01 16:57:03,926 : INFO : Connecting to Database Successfull
+[2025-03-01T16:57:03.927+0000] {subprocess.py:93} INFO - 2025-03-01 16:57:03,926 : INFO : Reading Initial DB Setup Script
+[2025-03-01T16:57:03.928+0000] {subprocess.py:93} INFO - 2025-03-01 16:57:03,927 : INFO : Executing script to Database
+[2025-03-01T16:57:03.931+0000] {subprocess.py:93} INFO - 2025-03-01 16:57:03,930 : INFO : Executed script successfully !!
+[2025-03-01T16:57:03.931+0000] {subprocess.py:93} INFO - 2025-03-01 16:57:03,930 : INFO : Reading insert script template
+[2025-03-01T16:57:03.932+0000] {subprocess.py:93} INFO - 2025-03-01 16:57:03,931 : INFO : Inserting data to database
+[2025-03-01T16:57:13.763+0000] {subprocess.py:93} INFO - 2025-03-01 16:57:13,762 : INFO : Executed script successfully !!
+[2025-03-01T16:57:13.764+0000] {subprocess.py:93} INFO - 2025-03-01 16:57:13,764 : INFO : Connection closed !!
