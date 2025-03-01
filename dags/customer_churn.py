@@ -40,7 +40,8 @@ with DAG(
 			cd /opt/airflow
                         dvc pull /opt/airflow/data/raw
                         python /opt/airflow/executables/data_validation.py && \
-			git add logs &&\
+			git add logs &&\   
+			git add reports &&\
                         git commit -m "Updated validation" -a && \
                         dvc push && git push
                     """
@@ -53,7 +54,8 @@ with DAG(
 			python /opt/airflow/executables/data_preparation.py && \
                         dvc add /opt/airflow/data/cleaned && \
                         git add /opt/airflow/data/cleaned.dvc && \
-			git add logs &&\
+			git add logs &&\   
+			git add visualization &&\
                         git commit -m "Updated cleaned data version" -a && \
                         dvc push && git push
                     """
@@ -91,7 +93,6 @@ with DAG(
 			cd /opt/airflow/customer_churn_stats/feature_repo && \
                         feast apply && \
                         feast materialize-incremental $(date -u +'%Y-%m-%dT%H:%M:%S') && \
-			git add logs &&\
                         git commit -m "Updated feature store" -a && \
                         git push
                     """
