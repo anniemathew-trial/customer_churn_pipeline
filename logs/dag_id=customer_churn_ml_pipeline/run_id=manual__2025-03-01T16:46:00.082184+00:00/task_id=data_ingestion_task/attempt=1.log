@@ -1,0 +1,56 @@
+[2025-03-01T16:46:06.616+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-01T16:46:00.082184+00:00 [queued]>
+[2025-03-01T16:46:06.625+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-01T16:46:00.082184+00:00 [queued]>
+[2025-03-01T16:46:06.626+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-01T16:46:06.641+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_ingestion_task> on 2025-03-01 16:46:00.082184+00:00
+[2025-03-01T16:46:06.647+0000] {standard_task_runner.py:57} INFO - Started process 16857 to run task
+[2025-03-01T16:46:06.650+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_ingestion_task', 'manual__2025-03-01T16:46:00.082184+00:00', '--job-id', '169', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmp272zn6k9']
+[2025-03-01T16:46:06.653+0000] {standard_task_runner.py:85} INFO - Job 169: Subtask data_ingestion_task
+[2025-03-01T16:46:06.674+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-01T16:46:06.719+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-01T16:46:00.082184+00:00 [running]> on host 7e994a0ed489
+[2025-03-01T16:46:06.832+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_ingestion_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T16:46:00.082184+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T16:46:00.082184+00:00'
+[2025-03-01T16:46:06.834+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-01T16:46:06.834+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/executables/data_ingestion.py && \t\t\tcd /opt/*** && \t\t\tgit rm -r --cached \'data/raw\'\n\t\t\tgit commit -m "stop tracking data/raw"\n                        dvc add /opt/***/data/raw &&                         git add /opt/***/data/raw.dvc && \t\t\tgit add logs &&                        git commit -m "Updated raw data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-01T16:46:06.845+0000] {subprocess.py:86} INFO - Output:
+[2025-03-01T16:46:07.803+0000] {subprocess.py:93} INFO - 2025-03-01 16:46:07,803 : INFO : Reading data from CSV file customer_data.csv
+[2025-03-01T16:46:07.904+0000] {subprocess.py:93} INFO - 2025-03-01 16:46:07,903 : INFO : Data from CSV customer_data.csv ingested successfully!
+[2025-03-01T16:46:07.904+0000] {subprocess.py:93} INFO - 2025-03-01 16:46:07,904 : INFO : Connecting to Database
+[2025-03-01T16:46:07.926+0000] {subprocess.py:93} INFO - 2025-03-01 16:46:07,926 : INFO : Connecting to Database Successfull
+[2025-03-01T16:46:07.926+0000] {subprocess.py:93} INFO - 2025-03-01 16:46:07,926 : INFO : Reading data from database.
+[2025-03-01T16:46:08.382+0000] {subprocess.py:93} INFO - /opt/***/executables/data_ingestion.py:46: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-03-01T16:46:08.383+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
+[2025-03-01T16:46:08.383+0000] {subprocess.py:93} INFO - 2025-03-01 16:46:08,382 : INFO : Data from Database ingested successfully!
+[2025-03-01T16:46:08.499+0000] {subprocess.py:93} INFO - fatal: pathspec 'data/raw' did not match any files
+[2025-03-01T16:46:08.517+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-01T16:46:08.517+0000] {subprocess.py:93} INFO - Your branch is ahead of 'origin/main' by 2 commits.
+[2025-03-01T16:46:08.518+0000] {subprocess.py:93} INFO -   (use "git push" to publish your local commits)
+[2025-03-01T16:46:08.518+0000] {subprocess.py:93} INFO - 
+[2025-03-01T16:46:08.518+0000] {subprocess.py:93} INFO - Last command done (1 command done):
+[2025-03-01T16:46:08.518+0000] {subprocess.py:93} INFO -    pick 3c82e37 Initial Commit
+[2025-03-01T16:46:08.519+0000] {subprocess.py:93} INFO - No commands remaining.
+[2025-03-01T16:46:08.519+0000] {subprocess.py:93} INFO - You are currently editing a commit while rebasing branch 'master' on 'f6df714'.
+[2025-03-01T16:46:08.519+0000] {subprocess.py:93} INFO -   (use "git commit --amend" to amend the current commit)
+[2025-03-01T16:46:08.519+0000] {subprocess.py:93} INFO -   (use "git rebase --continue" once you are satisfied with your changes)
+[2025-03-01T16:46:08.520+0000] {subprocess.py:93} INFO - 
+[2025-03-01T16:46:08.520+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-01T16:46:08.520+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-01T16:46:08.521+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-01T16:46:08.521+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-01T16:46:08.521+0000] {subprocess.py:93} INFO - 	modified:   logs/data_ingestion.log
+[2025-03-01T16:46:08.522+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-01/customer_churn.py.log
+[2025-03-01T16:46:08.522+0000] {subprocess.py:93} INFO - 
+[2025-03-01T16:46:08.523+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-01T16:46:08.523+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-01T16:46:08.524+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/
+[2025-03-01T16:46:08.524+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-01T16:43:30.219387+00:00/task_id=feature_store_task/
+[2025-03-01T16:46:08.525+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-01T16:46:00.082184+00:00/
+[2025-03-01T16:46:08.525+0000] {subprocess.py:93} INFO - 	models/
+[2025-03-01T16:46:08.526+0000] {subprocess.py:93} INFO - 
+[2025-03-01T16:46:08.526+0000] {subprocess.py:93} INFO - no changes added to commit (use "git add" and/or "git commit -a")
+[2025-03-01T16:46:10.360+0000] {subprocess.py:93} INFO - 
+[2025-03-01T16:46:10.361+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-03-01T16:46:10.361+0000] {subprocess.py:93} INFO - 
+[2025-03-01T16:46:10.361+0000] {subprocess.py:93} INFO - 	git add data/raw.dvc
+[2025-03-01T16:46:10.361+0000] {subprocess.py:93} INFO - 
+[2025-03-01T16:46:10.361+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-03-01T16:46:10.362+0000] {subprocess.py:93} INFO - 
+[2025-03-01T16:46:10.362+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
