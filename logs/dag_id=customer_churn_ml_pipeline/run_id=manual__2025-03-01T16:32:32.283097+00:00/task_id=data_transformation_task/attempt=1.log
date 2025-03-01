@@ -23,3 +23,13 @@
 [2025-03-01T16:33:48.380+0000] {subprocess.py:93} INFO - To enable auto staging, run:
 [2025-03-01T16:33:48.381+0000] {subprocess.py:93} INFO - 
 [2025-03-01T16:33:48.381+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
+[2025-03-01T16:33:48.676+0000] {subprocess.py:93} INFO - [main 51f89b8] Updated transformed data version
+[2025-03-01T16:33:48.676+0000] {subprocess.py:93} INFO -  4 files changed, 45 insertions(+)
+[2025-03-01T16:33:48.676+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-01T16:32:32.283097+00:00/task_id=data_transformation_task/attempt=1.log
+[2025-03-01T16:33:54.744+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-01T16:33:58.745+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-01T16:33:58.745+0000] {subprocess.py:93} INFO -    370bedb..51f89b8  main -> main
+[2025-03-01T16:33:58.750+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-01T16:33:58.797+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_transformation_task, execution_date=20250301T163232, start_date=20250301T163340, end_date=20250301T163358
+[2025-03-01T16:33:58.851+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-01T16:33:58.902+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
