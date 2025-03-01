@@ -443,3 +443,74 @@ tags.mlflow.log-model.history    [{"run_id": "a9effb053ac343b8a6e623608fe551ef".
 Name: 2, dtype: object
 2025-03-01 16:58:38,222 : INFO : Registering best model runs:/a9effb053ac343b8a6e623608fe551ef/upset-doe-702_model
 2025-03-01 16:58:38,290 : INFO : Completed model training & registration !!
+2025-03-01 17:07:49,032 : INFO : Starting model training
+2025-03-01 17:07:49,073 : INFO : Registry cache expired, so refreshing
+2025-03-01 17:07:49,098 : INFO : Getting data
+2025-03-01 17:07:49,103 : INFO : Start and End Range: 1 to 1000
+2025-03-01 17:07:49,668 : INFO : New Start and End Range: 1001 to 2000
+2025-03-01 17:07:49,669 : INFO : Start and End Range: 1001 to 2000
+2025-03-01 17:07:50,085 : INFO : New Start and End Range: 3001 to 4000
+2025-03-01 17:07:50,086 : INFO : Start and End Range: 3001 to 4000
+2025-03-01 17:07:50,640 : INFO : New Start and End Range: 7001 to 8000
+2025-03-01 17:07:50,641 : INFO : Start and End Range: 7001 to 8000
+2025-03-01 17:07:50,991 : INFO : New Start and End Range: 15001 to 16000
+2025-03-01 17:07:50,991 : INFO : Start and End Range: 15001 to 16000
+2025-03-01 17:07:51,442 : INFO : New Start and End Range: 31001 to 32000
+2025-03-01 17:07:51,442 : INFO : Start and End Range: 31001 to 32000
+2025-03-01 17:07:51,754 : INFO : New Start and End Range: 63001 to 64000
+2025-03-01 17:07:51,754 : INFO : Start and End Range: 63001 to 64000
+2025-03-01 17:07:52,275 : INFO : New Start and End Range: 127001 to 128000
+2025-03-01 17:07:52,276 : INFO : Start and End Range: 127001 to 128000
+2025-03-01 17:07:52,779 : INFO : New Start and End Range: 255001 to 256000
+2025-03-01 17:07:52,780 : INFO : Start and End Range: 255001 to 256000
+2025-03-01 17:07:53,198 : INFO : New Start and End Range: 511001 to 512000
+2025-03-01 17:07:53,199 : INFO : Start and End Range: 511001 to 512000
+2025-03-01 17:07:53,437 : INFO : Stoping at Start and End Range: 511001 to 512000
+2025-03-01 17:07:53,438 : INFO : Created feature data
+2025-03-01 17:07:53,444 : INFO :    Id  Age  ...  EstimatedSalary  CreditScoreTenureRatio
+0   1   42  ...         0.021886                   310.0
+1   2   41  ...         0.216534                   608.0
+2   3   42  ...         0.240687                    63.0
+3   4   39  ...        -0.108918                   699.0
+4   5   43  ...        -0.365276                   425.0
+
+[5 rows x 17 columns]
+2025-03-01 17:07:53,530 : INFO : received feature data
+2025-03-01 17:07:53,536 : INFO : Models defined
+2025-03-01 17:07:53,537 : INFO : Training model RandomForest
+2025-03-01 17:07:55,535 : INFO : Predicting model RandomForest
+2025-03-01 17:07:55,581 : INFO : Calculating accuracy RandomForest
+2025-03-01 17:08:00,530 : INFO : Logged model RandomForest
+2025-03-01 17:08:00,578 : INFO : Training model LogisticRegression
+2025-03-01 17:08:00,744 : INFO : Predicting model LogisticRegression
+2025-03-01 17:08:00,750 : INFO : Calculating accuracy LogisticRegression
+2025-03-01 17:08:05,389 : INFO : Logged model LogisticRegression
+2025-03-01 17:08:05,430 : INFO : Training model SVM
+2025-03-01 17:08:13,933 : INFO : Predicting model SVM
+2025-03-01 17:08:14,296 : INFO : Calculating accuracy SVM
+2025-03-01 17:08:18,099 : INFO : Logged model SVM
+2025-03-01 17:08:18,122 : INFO : Starting best model registration
+2025-03-01 17:08:18,123 : INFO : Finding Best model
+2025-03-01 17:08:18,254 : INFO : Selected best model : run_id                                            a9effb053ac343b8a6e623608fe551ef
+experiment_id                                                                    0
+status                                                                    FINISHED
+artifact_uri                     mlflow-artifacts:/0/a9effb053ac343b8a6e623608f...
+start_time                                        2025-03-01 16:58:12.616000+00:00
+end_time                                          2025-03-01 16:58:18.683000+00:00
+metrics.accuracy                                                          0.946637
+metrics.recall                                                            0.757835
+metrics.precision                                                         0.960289
+metrics.f1_score                                                          0.847134
+params.model_type                                                     RandomForest
+params.tags.mlflow.runName                                            RandomForest
+params.runName                                                                None
+params.run_name                                                               None
+tags.mlflow.source.git.commit             0506bcca4be63734d8783c76a38cb0a1e2b59d45
+tags.mlflow.runName                                                  upset-doe-702
+tags.mlflow.source.name                 /opt/airflow/executables/model_training.py
+tags.mlflow.log-model.history    [{"run_id": "a9effb053ac343b8a6e623608fe551ef"...
+tags.mlflow.user                                                           airflow
+tags.mlflow.source.type                                                      LOCAL
+Name: 8, dtype: object
+2025-03-01 17:08:18,255 : INFO : Registering best model runs:/a9effb053ac343b8a6e623608fe551ef/RandomForest_model
+2025-03-01 17:08:18,335 : INFO : Completed model training & registration !!

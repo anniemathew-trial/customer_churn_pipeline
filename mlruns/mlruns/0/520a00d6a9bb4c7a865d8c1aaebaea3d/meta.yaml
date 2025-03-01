@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/520a00d6a9bb4c7a865d8c1aaebaea3d/artifacts
+end_time: 1740848434472
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 520a00d6a9bb4c7a865d8c1aaebaea3d
+run_name: monumental-slug-982
+run_uuid: 520a00d6a9bb4c7a865d8c1aaebaea3d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740848412765
+status: 3
+tags: []
+user_id: AnnieThampyMathew
