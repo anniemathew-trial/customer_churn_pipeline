@@ -95,11 +95,9 @@ with DAG(
             task_id = 'model_training_task',
             bash_command = """
 	    		cd /opt/airflow
+       			    mlflow ui --host 0.0.0.0 --port 5000
 	    		    python /opt/airflow/executables/model_training.py && \
-                            dvc add /opt/airflow/models/model.pki && \
-                            git add /opt/airflow/models/model.pki.dvc && \
-                            git commit -m "Trained model version" -a && \
-                            dvc push && git push
+                            git commit -m "Trained model version" -a && \                            
                         """
     )
 
