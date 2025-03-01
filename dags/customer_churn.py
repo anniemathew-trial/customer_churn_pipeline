@@ -95,8 +95,7 @@ with DAG(
             task_id = 'model_training_task',
             bash_command = """
 	    		cd /opt/airflow
-       			    mlflow ui --host 0.0.0.0 --port 5000
-	    		    python /opt/airflow/executables/model_training.py && \
+       			    python /opt/airflow/executables/model_training.py && \
                             git commit -m "Trained model version" -a && \                            
                         """
     )
