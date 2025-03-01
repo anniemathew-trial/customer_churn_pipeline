@@ -118,6 +118,7 @@ def train_log_models():
 def register_best_model():
     logging.info("Finding Best model")
     runs = mlflow.search_runs()
+    logging.info(f"Selected best model : {runs}")
     best_run = runs.sort_values(by="metrics.f1_score", ascending=False).iloc[0]
     best_accuracy = best_run["metrics.f1_score"]
     best_model = best_run["model_type"]
@@ -125,7 +126,6 @@ def register_best_model():
     with open("models/best_model.txt", "w") as f:
         f.write(f"Best Run ID: {best_run_id}, Best Model: {best_model}, Best Accuracy:{best_accuracy}")
     model_uri = f"runs:/{best_run_id}/{best_model}_model"
-    logging.info(f"Selected best model : {model_uri})
     logging.info(f"Registering best model {model_uri}")
     mlflow.register_model(model_uri, "Best_ML_Model")
     
