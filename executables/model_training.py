@@ -116,16 +116,6 @@ def train_log_models():
             
     
 def register_best_model():
-    best_model, best_run_id, _ = train_log_models()
-    model_uri = f"runs:/{best_run_id}/{best_model}_model"
-    logging.info(f"Registering best model {model_uri}")
-    mlflow.register_model(model_uri, "Best_ML_Model")
-    
-    
-    
-try:    
-    logging.info("Starting model training")
-    register_best_model()
     logging.info("Finding Best model")
     runs = mlflow.search_runs()
     best_run = runs.sort_values(by="metrics.f1_score", ascending=False).iloc[0]
@@ -134,7 +124,18 @@ try:
     best_run_id = best_run["run_id"]
     with open("models/best_model.txt", "w") as f:
         f.write(f"Best Run ID: {best_run_id}, Best Model: {best_model}, Best Accuracy:{best_accuracy}")
-    logging.info("Completed model training !!")
+    model_uri = f"runs:/{best_run_id}/{best_model}_model"
+    logging.info(f"Registering best model {model_uri}")
+    mlflow.register_model(model_uri, "Best_ML_Model")
+    
+    
+    
+try:    
+    logging.info("Starting model training")
+    train_log_models()
+    logging.info("Starting best model registration")    
+    register_best_model()    
+    logging.info("Completed model training & registration !!")
 except Exception as e:
     print(str(e))
 
