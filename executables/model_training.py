@@ -139,7 +139,7 @@ try:
     register_best_model()    
     logging.info("Completed model training & registration !!")
 except Exception as e:
-    print(str(e))
+    print(f"Error in model training: {str(e)}")
 
 
 
