@@ -306,3 +306,69 @@ tags.mlflow.source.type                                                      LOC
 tags.mlflow.user                                                           airflow
 tags.mlflow.runName                                              serious-goose-819
 Name: 14, dtype: object
+2025-03-01 16:53:33,969 : INFO : Starting model training
+2025-03-01 16:53:33,988 : INFO : Registry cache expired, so refreshing
+2025-03-01 16:53:34,000 : INFO : Getting data
+2025-03-01 16:53:34,000 : INFO : Start and End Range: 1 to 1000
+2025-03-01 16:53:34,439 : INFO : New Start and End Range: 1001 to 2000
+2025-03-01 16:53:34,439 : INFO : Start and End Range: 1001 to 2000
+2025-03-01 16:53:34,796 : INFO : New Start and End Range: 3001 to 4000
+2025-03-01 16:53:34,797 : INFO : Start and End Range: 3001 to 4000
+2025-03-01 16:53:35,304 : INFO : New Start and End Range: 7001 to 8000
+2025-03-01 16:53:35,305 : INFO : Start and End Range: 7001 to 8000
+2025-03-01 16:53:36,105 : INFO : New Start and End Range: 15001 to 16000
+2025-03-01 16:53:36,106 : INFO : Start and End Range: 15001 to 16000
+2025-03-01 16:53:36,878 : INFO : New Start and End Range: 31001 to 32000
+2025-03-01 16:53:36,880 : INFO : Start and End Range: 31001 to 32000
+2025-03-01 16:53:37,619 : INFO : New Start and End Range: 63001 to 64000
+2025-03-01 16:53:37,621 : INFO : Start and End Range: 63001 to 64000
+2025-03-01 16:53:38,269 : INFO : New Start and End Range: 127001 to 128000
+2025-03-01 16:53:38,270 : INFO : Start and End Range: 127001 to 128000
+2025-03-01 16:53:38,881 : INFO : New Start and End Range: 255001 to 256000
+2025-03-01 16:53:38,882 : INFO : Start and End Range: 255001 to 256000
+2025-03-01 16:53:38,981 : INFO : Stoping at Start and End Range: 255001 to 256000
+2025-03-01 16:53:38,982 : INFO : Created feature data
+2025-03-01 16:53:38,986 : INFO :    Id   Balance  ...  Exited  BalanceSEstimatedalaryRatio
+0   1 -1.225848  ...       1                          0.0
+1   2  0.117350  ...       0                          1.0
+2   3  1.333053  ...       1                          1.0
+3   4 -1.225848  ...       0                          0.0
+4   5  0.785728  ...       0                          2.0
+
+[5 rows x 17 columns]
+2025-03-01 16:53:39,052 : INFO : received feature data
+2025-03-01 16:53:39,059 : INFO : Models defined
+2025-03-01 16:53:39,060 : INFO : Training model RandomForest
+2025-03-01 16:53:41,876 : INFO : Predicting model RandomForest
+2025-03-01 16:53:41,941 : INFO : Calculating accuracy RandomForest
+2025-03-01 16:53:49,714 : INFO : Logged model RandomForest
+2025-03-01 16:53:49,774 : INFO : Training model LogisticRegression
+2025-03-01 16:53:49,888 : INFO : Predicting model LogisticRegression
+2025-03-01 16:53:49,900 : INFO : Calculating accuracy LogisticRegression
+2025-03-01 16:53:55,774 : INFO : Logged model LogisticRegression
+2025-03-01 16:53:55,797 : INFO : Training model SVM
+2025-03-01 16:54:08,845 : INFO : Predicting model SVM
+2025-03-01 16:54:09,196 : INFO : Calculating accuracy SVM
+2025-03-01 16:54:14,353 : INFO : Logged model SVM
+2025-03-01 16:54:14,378 : INFO : Starting best model registration
+2025-03-01 16:54:14,378 : INFO : Finding Best model
+2025-03-01 16:54:14,513 : INFO : Selected best model : run_id                                            f23d8bcd016b4000999b5283af03225a
+experiment_id                                                                    0
+status                                                                    FINISHED
+artifact_uri                     mlflow-artifacts:/0/f23d8bcd016b4000999b5283af...
+start_time                                        2025-03-01 11:21:29.110000+00:00
+end_time                                          2025-03-01 11:21:36.956000+00:00
+metrics.precision                                                         0.862963
+metrics.recall                                                            0.732704
+metrics.f1_score                                                          0.792517
+metrics.accuracy                                                          0.923702
+params.runName                                                                None
+params.model_type                                                     RandomForest
+params.run_name                                                               None
+tags.mlflow.log-model.history    [{"run_id": "f23d8bcd016b4000999b5283af03225a"...
+tags.mlflow.user                                                           airflow
+tags.mlflow.source.type                                                      LOCAL
+tags.mlflow.source.git.commit             337a9d36c17c94e08a0f24ce83c49d605845b533
+tags.mlflow.runName                                              serious-goose-819
+tags.mlflow.source.name                 /opt/airflow/executables/model_training.py
+Name: 17, dtype: object

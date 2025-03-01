@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/4fbc29bfdc7d446aa8c56a70f21638e4/artifacts
+end_time: 1740848054355
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4fbc29bfdc7d446aa8c56a70f21638e4
+run_name: tasteful-cod-240
+run_uuid: 4fbc29bfdc7d446aa8c56a70f21638e4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740848049215
+status: 3
+tags: []
+user_id: airflow
