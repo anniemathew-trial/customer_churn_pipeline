@@ -1,0 +1,23 @@
+[2025-03-01T10:09:57.690+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-01T10:08:22.088632+00:00 [queued]>
+[2025-03-01T10:09:57.715+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-01T10:08:22.088632+00:00 [queued]>
+[2025-03-01T10:09:57.716+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-01T10:09:57.768+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_validation_task> on 2025-03-01 10:08:22.088632+00:00
+[2025-03-01T10:09:57.776+0000] {standard_task_runner.py:57} INFO - Started process 9024 to run task
+[2025-03-01T10:09:57.784+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_validation_task', 'manual__2025-03-01T10:08:22.088632+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpj0ixsdg5']
+[2025-03-01T10:09:57.793+0000] {standard_task_runner.py:85} INFO - Job 66: Subtask data_validation_task
+[2025-03-01T10:09:57.865+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-01T10:09:58.016+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-01T10:08:22.088632+00:00 [running]> on host 7e994a0ed489
+[2025-03-01T10:09:58.293+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_validation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T10:08:22.088632+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T10:08:22.088632+00:00'
+[2025-03-01T10:09:58.295+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-01T10:09:58.297+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/***\n                        dvc pull /opt/***/data/raw\n                        python /opt/***/executables/data_validation.py &&                         git commit -m "Updated validation" -a &&                         dvc push && git push\n                    ']
+[2025-03-01T10:09:58.320+0000] {subprocess.py:86} INFO - Output:
+[2025-03-01T10:10:02.965+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-01T10:10:05.199+0000] {subprocess.py:93} INFO - [main 8968db7] Updated validation
+[2025-03-01T10:10:05.199+0000] {subprocess.py:93} INFO -  1 file changed, 4 insertions(+)
+[2025-03-01T10:10:14.093+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-01T10:10:16.525+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-01T10:10:16.525+0000] {subprocess.py:93} INFO -    35fcc22..8968db7  main -> main
+[2025-03-01T10:10:16.533+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-01T10:10:16.601+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_validation_task, execution_date=20250301T100822, start_date=20250301T100957, end_date=20250301T101016
+[2025-03-01T10:10:16.650+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-01T10:10:16.725+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
