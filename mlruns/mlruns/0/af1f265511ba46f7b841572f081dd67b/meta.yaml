@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/af1f265511ba46f7b841572f081dd67b/artifacts
+end_time: 1740828116752
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: af1f265511ba46f7b841572f081dd67b
+run_name: useful-seal-91
+run_uuid: af1f265511ba46f7b841572f081dd67b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740828111427
+status: 3
+tags: []
+user_id: airflow

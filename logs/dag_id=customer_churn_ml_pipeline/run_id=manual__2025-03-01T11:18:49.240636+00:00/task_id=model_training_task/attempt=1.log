@@ -1,0 +1,75 @@
+[2025-03-01T11:21:11.258+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-01T11:18:49.240636+00:00 [queued]>
+[2025-03-01T11:21:11.269+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-01T11:18:49.240636+00:00 [queued]>
+[2025-03-01T11:21:11.269+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-01T11:21:11.286+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): model_training_task> on 2025-03-01 11:18:49.240636+00:00
+[2025-03-01T11:21:11.291+0000] {standard_task_runner.py:57} INFO - Started process 13734 to run task
+[2025-03-01T11:21:11.294+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'model_training_task', 'manual__2025-03-01T11:18:49.240636+00:00', '--job-id', '127', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpyv5wksu_']
+[2025-03-01T11:21:11.296+0000] {standard_task_runner.py:85} INFO - Job 127: Subtask model_training_task
+[2025-03-01T11:21:11.317+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-01T11:21:11.358+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-01T11:18:49.240636+00:00 [running]> on host 7e994a0ed489
+[2025-03-01T11:21:11.472+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='model_training_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T11:18:49.240636+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T11:18:49.240636+00:00'
+[2025-03-01T11:21:11.473+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-01T11:21:11.474+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t    \t\tcd /opt/***\n       \t\t\t    python /opt/***/executables/model_training.py && \t      \t\t    git add logs &&\t      \t\t    git add mlruns &&                            git commit -m "Trained model version" -a && \\                            \n                        ']
+[2025-03-01T11:21:11.484+0000] {subprocess.py:86} INFO - Output:
+[2025-03-01T11:21:20.997+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:64: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-01T11:21:20.999+0000] {subprocess.py:93} INFO -   @validator("togetherai_api_key", pre=True)
+[2025-03-01T11:21:20.999+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:372: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-01T11:21:21.000+0000] {subprocess.py:93} INFO -   @root_validator(skip_on_failure=True)
+[2025-03-01T11:21:21.000+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/pydantic/_internal/_config.py:267: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-01T11:21:21.001+0000] {subprocess.py:93} INFO -   warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+[2025-03-01T11:21:21.001+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:20,997 : INFO : Starting model training
+[2025-03-01T11:21:21.126+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:21,126 : INFO : Registry cache expired, so refreshing
+[2025-03-01T11:21:21.163+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:21,163 : INFO : Getting data
+[2025-03-01T11:21:21.165+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:21,164 : INFO : Start and End Range: 1 to 1000
+[2025-03-01T11:21:22.473+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:22,472 : INFO : New Start and End Range: 1001 to 2000
+[2025-03-01T11:21:22.474+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:22,473 : INFO : Start and End Range: 1001 to 2000
+[2025-03-01T11:21:23.059+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:23,058 : INFO : New Start and End Range: 3001 to 4000
+[2025-03-01T11:21:23.059+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:23,059 : INFO : Start and End Range: 3001 to 4000
+[2025-03-01T11:21:23.648+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:23,648 : INFO : New Start and End Range: 7001 to 8000
+[2025-03-01T11:21:23.649+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:23,648 : INFO : Start and End Range: 7001 to 8000
+[2025-03-01T11:21:24.104+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:24,103 : INFO : New Start and End Range: 15001 to 16000
+[2025-03-01T11:21:24.104+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:24,104 : INFO : Start and End Range: 15001 to 16000
+[2025-03-01T11:21:24.667+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:24,667 : INFO : New Start and End Range: 31001 to 32000
+[2025-03-01T11:21:24.668+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:24,668 : INFO : Start and End Range: 31001 to 32000
+[2025-03-01T11:21:25.203+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:25,203 : INFO : New Start and End Range: 63001 to 64000
+[2025-03-01T11:21:25.204+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:25,204 : INFO : Start and End Range: 63001 to 64000
+[2025-03-01T11:21:25.672+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:25,672 : INFO : New Start and End Range: 127001 to 128000
+[2025-03-01T11:21:25.673+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:25,672 : INFO : Start and End Range: 127001 to 128000
+[2025-03-01T11:21:26.198+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:26,197 : INFO : New Start and End Range: 255001 to 256000
+[2025-03-01T11:21:26.198+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:26,198 : INFO : Start and End Range: 255001 to 256000
+[2025-03-01T11:21:26.322+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:26,322 : INFO : Stoping at Start and End Range: 255001 to 256000
+[2025-03-01T11:21:26.323+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:26,322 : INFO : Created feature data
+[2025-03-01T11:21:26.416+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:26,327 : INFO :    Id  Age  HasCrCard  ...  Geography_Spain  Geography_Germany  Exited
+[2025-03-01T11:21:26.416+0000] {subprocess.py:93} INFO - 0   1   42          1  ...              0.0                0.0       1
+[2025-03-01T11:21:26.417+0000] {subprocess.py:93} INFO - 1   2   41          1  ...              1.0                0.0       0
+[2025-03-01T11:21:26.417+0000] {subprocess.py:93} INFO - 2   3   42          1  ...              0.0                0.0       1
+[2025-03-01T11:21:26.417+0000] {subprocess.py:93} INFO - 3   4   39          1  ...              0.0                0.0       0
+[2025-03-01T11:21:26.417+0000] {subprocess.py:93} INFO - 4   5   43          1  ...              1.0                0.0       0
+[2025-03-01T11:21:26.417+0000] {subprocess.py:93} INFO - 
+[2025-03-01T11:21:26.417+0000] {subprocess.py:93} INFO - [5 rows x 17 columns]
+[2025-03-01T11:21:26.418+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:26,417 : INFO : received feature data
+[2025-03-01T11:21:26.422+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:26,422 : INFO : Models defined
+[2025-03-01T11:21:26.423+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:26,422 : INFO : Training model RandomForest
+[2025-03-01T11:21:28.911+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:28,911 : INFO : Predicting model RandomForest
+[2025-03-01T11:21:28.960+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:28,959 : INFO : Calculating accuracy RandomForest
+[2025-03-01T11:21:36.669+0000] {subprocess.py:93} INFO - 2025/03/01 11:21:36 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-01T11:21:36.909+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:36,908 : INFO : Logged model RandomForest
+[2025-03-01T11:21:36.991+0000] {subprocess.py:93} INFO - 2025/03/01 11:21:36 INFO mlflow.tracking._tracking_service.client: 🏃 View run serious-goose-819 at: http://localhost:5000/#/experiments/0/runs/f23d8bcd016b4000999b5283af03225a.
+[2025-03-01T11:21:36.992+0000] {subprocess.py:93} INFO - 2025/03/01 11:21:36 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-01T11:21:37.014+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:37,014 : INFO : Training model LogisticRegression
+[2025-03-01T11:21:38.791+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:38,790 : INFO : Predicting model LogisticRegression
+[2025-03-01T11:21:38.798+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:38,797 : INFO : Calculating accuracy LogisticRegression
+[2025-03-01T11:21:44.163+0000] {subprocess.py:93} INFO - 2025/03/01 11:21:44 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-01T11:21:44.216+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:44,215 : INFO : Logged model LogisticRegression
+[2025-03-01T11:21:44.227+0000] {subprocess.py:93} INFO - 2025/03/01 11:21:44 INFO mlflow.tracking._tracking_service.client: 🏃 View run bustling-gnat-548 at: http://localhost:5000/#/experiments/0/runs/ada543cd1cc84415b752fb9d97757948.
+[2025-03-01T11:21:44.227+0000] {subprocess.py:93} INFO - 2025/03/01 11:21:44 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-01T11:21:44.236+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:44,235 : INFO : Training model SVM
+[2025-03-01T11:21:51.089+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:51,088 : INFO : Predicting model SVM
+[2025-03-01T11:21:51.402+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:51,401 : INFO : Calculating accuracy SVM
+[2025-03-01T11:21:56.675+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+[2025-03-01T11:21:56.676+0000] {subprocess.py:93} INFO -   _warn_prf(average, modifier, msg_start, len(result))
+[2025-03-01T11:21:56.676+0000] {subprocess.py:93} INFO - 2025/03/01 11:21:56 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-01T11:21:56.751+0000] {subprocess.py:93} INFO - 2025-03-01 11:21:56,750 : INFO : Logged model SVM
+[2025-03-01T11:21:56.767+0000] {subprocess.py:93} INFO - 2025/03/01 11:21:56 INFO mlflow.tracking._tracking_service.client: 🏃 View run useful-seal-91 at: http://localhost:5000/#/experiments/0/runs/af1f265511ba46f7b841572f081dd67b.
+[2025-03-01T11:21:56.767+0000] {subprocess.py:93} INFO - 2025/03/01 11:21:56 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-01T11:21:56.779+0000] {subprocess.py:93} INFO - cannot unpack non-iterable NoneType object
