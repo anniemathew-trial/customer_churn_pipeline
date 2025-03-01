@@ -87,3 +87,47 @@
 2025-03-01 11:21:51,088 : INFO : Predicting model SVM
 2025-03-01 11:21:51,401 : INFO : Calculating accuracy SVM
 2025-03-01 11:21:56,750 : INFO : Logged model SVM
+2025-03-01 11:28:42,101 : INFO : Starting model training
+2025-03-01 11:28:42,126 : INFO : Registry cache expired, so refreshing
+2025-03-01 11:28:42,141 : INFO : Getting data
+2025-03-01 11:28:42,142 : INFO : Start and End Range: 1 to 1000
+2025-03-01 11:28:42,696 : INFO : New Start and End Range: 1001 to 2000
+2025-03-01 11:28:42,697 : INFO : Start and End Range: 1001 to 2000
+2025-03-01 11:28:43,072 : INFO : New Start and End Range: 3001 to 4000
+2025-03-01 11:28:43,073 : INFO : Start and End Range: 3001 to 4000
+2025-03-01 11:28:43,594 : INFO : New Start and End Range: 7001 to 8000
+2025-03-01 11:28:43,595 : INFO : Start and End Range: 7001 to 8000
+2025-03-01 11:28:44,038 : INFO : New Start and End Range: 15001 to 16000
+2025-03-01 11:28:44,038 : INFO : Start and End Range: 15001 to 16000
+2025-03-01 11:28:44,557 : INFO : New Start and End Range: 31001 to 32000
+2025-03-01 11:28:44,557 : INFO : Start and End Range: 31001 to 32000
+2025-03-01 11:28:44,944 : INFO : New Start and End Range: 63001 to 64000
+2025-03-01 11:28:44,945 : INFO : Start and End Range: 63001 to 64000
+2025-03-01 11:28:45,338 : INFO : New Start and End Range: 127001 to 128000
+2025-03-01 11:28:45,339 : INFO : Start and End Range: 127001 to 128000
+2025-03-01 11:28:45,733 : INFO : New Start and End Range: 255001 to 256000
+2025-03-01 11:28:45,733 : INFO : Start and End Range: 255001 to 256000
+2025-03-01 11:28:45,821 : INFO : Stoping at Start and End Range: 255001 to 256000
+2025-03-01 11:28:45,821 : INFO : Created feature data
+2025-03-01 11:28:45,825 : INFO :    Id  CreditScoreTenureRatio  ...  IsActiveMember  NumOfProducts
+0   1                   310.0  ...               1              1
+1   2                   608.0  ...               1              1
+2   3                    63.0  ...               1              3
+3   4                   699.0  ...               1              2
+4   5                   425.0  ...               1              1
+
+[5 rows x 17 columns]
+2025-03-01 11:28:45,878 : INFO : received feature data
+2025-03-01 11:28:45,890 : INFO : Models defined
+2025-03-01 11:28:45,890 : INFO : Training model RandomForest
+2025-03-01 11:28:47,643 : INFO : Predicting model RandomForest
+2025-03-01 11:28:47,694 : INFO : Calculating accuracy RandomForest
+2025-03-01 11:28:53,739 : INFO : Logged model RandomForest
+2025-03-01 11:28:53,786 : INFO : Training model LogisticRegression
+2025-03-01 11:28:53,867 : INFO : Predicting model LogisticRegression
+2025-03-01 11:28:53,872 : INFO : Calculating accuracy LogisticRegression
+2025-03-01 11:28:57,781 : INFO : Logged model LogisticRegression
+2025-03-01 11:28:57,809 : INFO : Training model SVM
+2025-03-01 11:29:03,628 : INFO : Predicting model SVM
+2025-03-01 11:29:03,934 : INFO : Calculating accuracy SVM
+2025-03-01 11:29:08,580 : INFO : Logged model SVM
