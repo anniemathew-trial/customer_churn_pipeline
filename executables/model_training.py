@@ -125,6 +125,7 @@ def register_best_model():
     with open("models/best_model.txt", "w") as f:
         f.write(f"Best Run ID: {best_run_id}, Best Model: {best_model}, Best Accuracy:{best_accuracy}")
     model_uri = f"runs:/{best_run_id}/{best_model}_model"
+    logging.info(f"Selected best model : {model_uri})
     logging.info(f"Registering best model {model_uri}")
     mlflow.register_model(model_uri, "Best_ML_Model")
     
