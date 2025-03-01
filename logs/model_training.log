@@ -177,3 +177,67 @@
 2025-03-01 11:32:59,126 : INFO : Logged model SVM
 2025-03-01 11:32:59,145 : INFO : Starting best model registration
 2025-03-01 11:32:59,145 : INFO : Finding Best model
+2025-03-01 16:35:05,317 : INFO : Starting model training
+2025-03-01 16:35:05,345 : INFO : Registry cache expired, so refreshing
+2025-03-01 16:35:05,357 : INFO : Getting data
+2025-03-01 16:35:05,358 : INFO : Start and End Range: 1 to 1000
+2025-03-01 16:35:05,831 : INFO : New Start and End Range: 1001 to 2000
+2025-03-01 16:35:05,832 : INFO : Start and End Range: 1001 to 2000
+2025-03-01 16:35:06,191 : INFO : New Start and End Range: 3001 to 4000
+2025-03-01 16:35:06,192 : INFO : Start and End Range: 3001 to 4000
+2025-03-01 16:35:06,726 : INFO : New Start and End Range: 7001 to 8000
+2025-03-01 16:35:06,726 : INFO : Start and End Range: 7001 to 8000
+2025-03-01 16:35:07,204 : INFO : New Start and End Range: 15001 to 16000
+2025-03-01 16:35:07,205 : INFO : Start and End Range: 15001 to 16000
+2025-03-01 16:35:07,842 : INFO : New Start and End Range: 31001 to 32000
+2025-03-01 16:35:07,843 : INFO : Start and End Range: 31001 to 32000
+2025-03-01 16:35:08,212 : INFO : New Start and End Range: 63001 to 64000
+2025-03-01 16:35:08,213 : INFO : Start and End Range: 63001 to 64000
+2025-03-01 16:35:08,723 : INFO : New Start and End Range: 127001 to 128000
+2025-03-01 16:35:08,724 : INFO : Start and End Range: 127001 to 128000
+2025-03-01 16:35:09,039 : INFO : New Start and End Range: 255001 to 256000
+2025-03-01 16:35:09,040 : INFO : Start and End Range: 255001 to 256000
+2025-03-01 16:35:09,134 : INFO : Stoping at Start and End Range: 255001 to 256000
+2025-03-01 16:35:09,134 : INFO : Created feature data
+2025-03-01 16:35:09,140 : INFO :    Id  Geography_Germany  HasCrCard  ...  BalanceAgeRatio  Gender_Male  Age
+0   1                0.0          1  ...              0.0          0.0   42
+1   2                0.0          1  ...           2044.0          0.0   41
+2   3                0.0          1  ...           3801.0          0.0   42
+3   4                0.0          1  ...              0.0          0.0   39
+4   5                0.0          1  ...           2919.0          0.0   43
+
+[5 rows x 17 columns]
+2025-03-01 16:35:09,196 : INFO : received feature data
+2025-03-01 16:35:09,201 : INFO : Models defined
+2025-03-01 16:35:09,201 : INFO : Training model RandomForest
+2025-03-01 16:35:11,103 : INFO : Predicting model RandomForest
+2025-03-01 16:35:11,157 : INFO : Calculating accuracy RandomForest
+2025-03-01 16:35:16,687 : INFO : Logged model RandomForest
+2025-03-01 16:35:16,746 : INFO : Training model LogisticRegression
+2025-03-01 16:35:17,323 : INFO : Predicting model LogisticRegression
+2025-03-01 16:35:17,341 : INFO : Calculating accuracy LogisticRegression
+2025-03-01 16:35:22,549 : INFO : Logged model LogisticRegression
+2025-03-01 16:35:22,571 : INFO : Training model SVM
+2025-03-01 16:35:29,050 : INFO : Predicting model SVM
+2025-03-01 16:35:29,480 : INFO : Calculating accuracy SVM
+2025-03-01 16:35:36,950 : INFO : Logged model SVM
+2025-03-01 16:35:36,980 : INFO : Starting best model registration
+2025-03-01 16:35:36,980 : INFO : Finding Best model
+2025-03-01 16:35:37,157 : INFO : Selected best model :                               run_id  ...             tags.mlflow.source.git.commit
+0   31b6ff75408a4a4088dbfbb08554a7fb  ...  17797c316cd1da5e6a9d6e8823ae01536f7794f7
+1   05c7e75ec4f140cdaef383256eb1648a  ...  17797c316cd1da5e6a9d6e8823ae01536f7794f7
+2   c6e10d0100ef4f2cbcca867e03dcee1f  ...  17797c316cd1da5e6a9d6e8823ae01536f7794f7
+3   1bfe6def3be94223babc37f8c0573af7  ...  1115908d56a710b62fd9d4579bdebc3ed66c019c
+4   860d504205154bb69c3aed025ce3be35  ...  1115908d56a710b62fd9d4579bdebc3ed66c019c
+5   4c1bcb3d6c004b11a2ffd2b7c1ea8633  ...  1115908d56a710b62fd9d4579bdebc3ed66c019c
+6   fb1087c91f394303b5afba9934e3e75e  ...  380ccb818639e7680f610abb785828b53ed651c6
+7   9b7496c619de4395b4709b790219b0e0  ...  380ccb818639e7680f610abb785828b53ed651c6
+8   f5353f8b292143e2819ba81e2782ee61  ...  380ccb818639e7680f610abb785828b53ed651c6
+9   af1f265511ba46f7b841572f081dd67b  ...  337a9d36c17c94e08a0f24ce83c49d605845b533
+10  ada543cd1cc84415b752fb9d97757948  ...  337a9d36c17c94e08a0f24ce83c49d605845b533
+11  f23d8bcd016b4000999b5283af03225a  ...  337a9d36c17c94e08a0f24ce83c49d605845b533
+12  8cec931d29444fff8bed27757f6c1fe5  ...  5a00e23dff9d5500892c5a26638bf3c2d1cec3be
+13  b2726f7c00db49e58f4a175215d9ce63  ...  5a00e23dff9d5500892c5a26638bf3c2d1cec3be
+14  9dae6e3c1d9d400a82fb27f9d3f4c0e8  ...  5a00e23dff9d5500892c5a26638bf3c2d1cec3be
+
+[15 rows x 17 columns]
