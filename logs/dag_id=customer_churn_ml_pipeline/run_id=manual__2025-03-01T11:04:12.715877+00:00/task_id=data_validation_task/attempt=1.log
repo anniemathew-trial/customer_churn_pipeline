@@ -1,0 +1,19 @@
+[2025-03-01T11:04:33.486+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-01T11:04:12.715877+00:00 [queued]>
+[2025-03-01T11:04:33.527+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-01T11:04:12.715877+00:00 [queued]>
+[2025-03-01T11:04:33.528+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-01T11:04:33.578+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_validation_task> on 2025-03-01 11:04:12.715877+00:00
+[2025-03-01T11:04:33.592+0000] {standard_task_runner.py:57} INFO - Started process 12364 to run task
+[2025-03-01T11:04:33.596+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_validation_task', 'manual__2025-03-01T11:04:12.715877+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmp2ok7_e4g']
+[2025-03-01T11:04:33.605+0000] {standard_task_runner.py:85} INFO - Job 106: Subtask data_validation_task
+[2025-03-01T11:04:33.657+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-01T11:04:33.774+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-01T11:04:12.715877+00:00 [running]> on host 7e994a0ed489
+[2025-03-01T11:04:34.068+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_validation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T11:04:12.715877+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-01T11:04:12.715877+00:00'
+[2025-03-01T11:04:34.072+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-01T11:04:34.075+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/***\n                        dvc pull /opt/***/data/raw\n                        python /opt/***/executables/data_validation.py && \t\t\tgit add logs &&\\   \n\t\t\tgit add reports &&                        git commit -m "Updated validation" -a &&                         dvc push && git push\n                    ']
+[2025-03-01T11:04:34.105+0000] {subprocess.py:86} INFO - Output:
+[2025-03-01T11:04:40.415+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-01T11:04:42.125+0000] {subprocess.py:93} INFO - 2025-03-01 11:04:42,125 : INFO : Starting data validation
+[2025-03-01T11:04:42.150+0000] {subprocess.py:93} INFO - 2025-03-01 11:04:42,149 : INFO : Running validation on data received from S3
+[2025-03-01T11:04:42.275+0000] {subprocess.py:93} INFO - 2025-03-01 11:04:42,275 : INFO : Saving metrics to S3
+[2025-03-01T11:04:42.277+0000] {subprocess.py:93} INFO - 2025-03-01 11:04:42,277 : INFO : Metrics saved to: csv_validation_report.csv
+[2025-03-01T11:04:42.383+0000] {subprocess.py:93} INFO - /bin/bash: line 4:  : command not found
