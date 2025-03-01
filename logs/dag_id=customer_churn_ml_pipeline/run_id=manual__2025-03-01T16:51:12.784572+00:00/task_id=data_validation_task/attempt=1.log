@@ -17,3 +17,13 @@
 [2025-03-01T16:51:37.668+0000] {subprocess.py:93} INFO - 2025-03-01 16:51:37,668 : INFO : Saving metrics to S3
 [2025-03-01T16:51:37.671+0000] {subprocess.py:93} INFO - 2025-03-01 16:51:37,671 : INFO : Metrics saved to: csv_validation_report.csv
 [2025-03-01T16:51:37.831+0000] {subprocess.py:93} INFO - /bin/bash: line 4:  : command not found
+[2025-03-01T16:51:37.897+0000] {subprocess.py:93} INFO - [main 75f5ecb] Updated validation
+[2025-03-01T16:51:37.898+0000] {subprocess.py:93} INFO -  5 files changed, 49 insertions(+)
+[2025-03-01T16:51:37.898+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-01T16:51:12.784572+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-01T16:51:43.426+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-01T16:51:45.526+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-01T16:51:45.527+0000] {subprocess.py:93} INFO -    2dffb7d..75f5ecb  main -> main
+[2025-03-01T16:51:45.536+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-01T16:51:45.575+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_validation_task, execution_date=20250301T165112, start_date=20250301T165131, end_date=20250301T165145
+[2025-03-01T16:51:45.596+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-01T16:51:45.630+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
