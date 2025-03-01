@@ -103,7 +103,7 @@ def train_log_models():
         recall = recall_score(y_test, y_pred)
         f_score = f1_score(y_test, y_pred)
         with mlflow.start_run():
-            mlflow.log_param("run_name", model_name)
+            mlflow.log_param("runName", model_name)
             mlflow.log_param("model_type", model_name)
             mlflow.log_metric("accuracy", accuracy)
             mlflow.log_metric("precision", precision)
@@ -122,7 +122,7 @@ def register_best_model():
     best_run = runs.sort_values(by="metrics.f1_score", ascending=False).iloc[0]
     logging.info(f"Selected best model : {best_run}")
     best_accuracy = best_run["metrics.f1_score"]
-    best_model = best_run["model_type"]
+    best_model = best_run["runName"]
     best_run_id = best_run["run_id"]
     with open("models/best_model.txt", "w") as f:
         f.write(f"Best Run ID: {best_run_id}, Best Model: {best_model}, Best Accuracy:{best_accuracy}")
