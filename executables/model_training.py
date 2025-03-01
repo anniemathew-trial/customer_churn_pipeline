@@ -134,6 +134,7 @@ try:
     best_run_id = best_run["run_id"]
     with open("models/best_model.txt", "w") as f:
         f.write(f"Best Run ID: {best_run_id}, Best Model: {best_model}, Best Accuracy:{best_accuracy}")
+    logging.info("Completed model training !!")
 except Exception as e:
     print(str(e))
 
