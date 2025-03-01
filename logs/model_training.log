@@ -1,1 +1,45 @@
 2025-03-01 11:06:50,400 : INFO : Starting model training
+2025-03-01 11:10:50,317 : INFO : Starting model training
+2025-03-01 11:10:50,335 : INFO : Registry cache expired, so refreshing
+2025-03-01 11:10:50,344 : INFO : Getting data
+2025-03-01 11:10:50,344 : INFO : Start and End Range: 1 to 1000
+2025-03-01 11:10:50,708 : INFO : New Start and End Range: 1001 to 2000
+2025-03-01 11:10:50,709 : INFO : Start and End Range: 1001 to 2000
+2025-03-01 11:10:50,959 : INFO : New Start and End Range: 3001 to 4000
+2025-03-01 11:10:50,960 : INFO : Start and End Range: 3001 to 4000
+2025-03-01 11:10:51,372 : INFO : New Start and End Range: 7001 to 8000
+2025-03-01 11:10:51,373 : INFO : Start and End Range: 7001 to 8000
+2025-03-01 11:10:51,754 : INFO : New Start and End Range: 15001 to 16000
+2025-03-01 11:10:51,755 : INFO : Start and End Range: 15001 to 16000
+2025-03-01 11:10:52,171 : INFO : New Start and End Range: 31001 to 32000
+2025-03-01 11:10:52,171 : INFO : Start and End Range: 31001 to 32000
+2025-03-01 11:10:52,470 : INFO : New Start and End Range: 63001 to 64000
+2025-03-01 11:10:52,471 : INFO : Start and End Range: 63001 to 64000
+2025-03-01 11:10:52,850 : INFO : New Start and End Range: 127001 to 128000
+2025-03-01 11:10:52,851 : INFO : Start and End Range: 127001 to 128000
+2025-03-01 11:10:53,115 : INFO : New Start and End Range: 255001 to 256000
+2025-03-01 11:10:53,116 : INFO : Start and End Range: 255001 to 256000
+2025-03-01 11:10:53,201 : INFO : Stoping at Start and End Range: 255001 to 256000
+2025-03-01 11:10:53,201 : INFO : Created feature data
+2025-03-01 11:10:53,205 : INFO :    Id  HasCrCard  ...  BalanceAgeRatio   Balance
+0   1          1  ...              0.0 -1.225848
+1   2          1  ...           2044.0  0.117350
+2   3          1  ...           3801.0  1.333053
+3   4          1  ...              0.0 -1.225848
+4   5          1  ...           2919.0  0.785728
+
+[5 rows x 17 columns]
+2025-03-01 11:10:53,254 : INFO : received feature data
+2025-03-01 11:10:53,261 : INFO : Models defined
+2025-03-01 11:10:53,261 : INFO : Training model RandomForest
+2025-03-01 11:10:55,024 : INFO : Predicting model RandomForest
+2025-03-01 11:10:55,068 : INFO : Calculating accuracy RandomForest
+2025-03-01 11:11:02,022 : INFO : Logged model RandomForest
+2025-03-01 11:11:02,071 : INFO : Training model LogisticRegression
+2025-03-01 11:11:02,316 : INFO : Predicting model LogisticRegression
+2025-03-01 11:11:02,321 : INFO : Calculating accuracy LogisticRegression
+2025-03-01 11:11:06,339 : INFO : Logged model LogisticRegression
+2025-03-01 11:11:06,358 : INFO : Training model SVM
+2025-03-01 11:11:14,405 : INFO : Predicting model SVM
+2025-03-01 11:11:14,807 : INFO : Calculating accuracy SVM
+2025-03-01 11:11:19,166 : INFO : Logged model SVM
