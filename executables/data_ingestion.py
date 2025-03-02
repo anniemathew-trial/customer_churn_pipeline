@@ -8,7 +8,7 @@ with open("settings.json", "r") as file:
         settings = json.load(file)
 today = time.strftime("%d-%m-%Y")
 #create log file if it does not exist
-ingestion_log_file = f"{settings["logging_base_path"]}/logs/data_ingestion.log"
+ingestion_log_file = f"{settings['logging_base_path']}/logs/data_ingestion.log"
 logging.root.handlers = []
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=ingestion_log_file)
 
@@ -24,7 +24,7 @@ logging.getLogger("").addHandler(console)
 def ingest_csv(filename):
     try:
         logging.info(f"Reading data from CSV file {filename}")
-        data = pd.read_csv(f"{settings["raw_data_path"]}/data/{filename}')
+        data = pd.read_csv(f"{settings['raw_data_path']}/data/{filename}')
         p = Path(f'/opt/airflow/data/raw/{today}/csv')
         p.mkdir(parents = True, exist_ok = True)
         data.to_csv(f"/opt/airflow/data/raw/{today}/csv/{filename}", index=False)
