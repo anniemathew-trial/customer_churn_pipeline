@@ -19,3 +19,15 @@
 [2025-03-02T08:54:26.330+0000] {subprocess.py:93} INFO - /opt/***/executables/data_ingestion.py:49: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
 [2025-03-02T08:54:26.330+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
 [2025-03-02T08:54:26.330+0000] {subprocess.py:93} INFO - 2025-03-02 08:54:26,329 : INFO : Data from Database ingested successfully!
+[2025-03-02T08:54:26.560+0000] {subprocess.py:93} INFO - [main 88505aa] Updated data ingestion
+[2025-03-02T08:54:26.561+0000] {subprocess.py:93} INFO -  7 files changed, 173 insertions(+)
+[2025-03-02T08:54:26.561+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:52:54.721028+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-02T08:54:26.561+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:52:54.721028+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-02T08:54:26.561+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:54:18.869047+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T08:54:26.561+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:54:18.869047+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T08:54:28.236+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T08:54:28.237+0000] {subprocess.py:93} INFO -    0579a4d..88505aa  main -> main
+[2025-03-02T08:54:28.246+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:54:28.331+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T085418, start_date=20250302T085424, end_date=20250302T085428
+[2025-03-02T08:54:28.405+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:54:28.542+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
