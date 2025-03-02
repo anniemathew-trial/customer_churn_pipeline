@@ -42,10 +42,8 @@ with DAG(
 			git rm -r --cached /opt/airflow/data/raw/$NOW/csv && \
 			git rm -r --cached /opt/airflow/data/raw/$NOW/database && \
 			git commit -m "stop tracking data/raw/$NOW" && \
-                        dvc add /opt/airflow/data/raw/$NOW/csv && \
-                        dvc add /opt/airflow/data/raw/$NOW/database && \
-                        git add /opt/airflow/data/raw/$NOW/csv.dvc && \
-                        git add /opt/airflow/data/raw/$NOW/database.dvc && \
+                        dvc add /opt/airflow/data/raw && \
+                        git add /opt/airflow/data/raw.dvc && \
 			git add logs &&\   
                         git commit -m "Updated raw data storage" -a && \
                         dvc push && git push
@@ -57,8 +55,7 @@ with DAG(
         bash_command = """
 			NOW=$(date '+%d-%m-%Y') &&\
 			cd /opt/airflow &&\
-                        dvc pull /opt/airflow/data/raw/$NOW/csv &&\
-                        dvc pull /opt/airflow/data/raw/$NOW/database &&\
+                        dvc pull /opt/airflow/data/raw
                         python /opt/airflow/executables/data_validation.py && \
 			git add logs &&\   
 			git add reports &&\
@@ -73,10 +70,8 @@ with DAG(
 			NOW=$(date '+%d-%m-%Y') &&\
 			cd /opt/airflow &&\
 			python /opt/airflow/executables/data_preparation.py && \
-                        dvc add /opt/airflow/data/cleaned/$NOW/csv && \
-                        dvc add /opt/airflow/data/cleaned/$NOW/database && \
-                        git add /opt/airflow/data/cleaned/$NOW/csv.dvc && \
-                        git add /opt/airflow/data/cleaned/$NOW/database.dvc && \
+                        dvc add /opt/airflow/data/cleaned && \
+                        git add /opt/airflow/data/cleaned.dvc && \
 			git add logs &&\   
 			git add visualization &&\
                         git commit -m "Updated cleaned data version" -a && \
@@ -89,13 +84,10 @@ with DAG(
         bash_command = """
 			NOW=$(date '+%d-%m-%Y') &&\
 			cd /opt/airflow &&\
-                        dvc pull /opt/airflow/data/cleaned/$NOW/csv &&\
-                        dvc pull /opt/airflow/data/cleaned/$NOW/database &&\
+                        dvc pull /opt/airflow/data/cleaned
                         python /opt/airflow/executables/data_transformation.py && \
-                        dvc add /opt/airflow/data/transformed/$NOW/csv && \
-                        dvc add /opt/airflow/data/transformed/$NOW/database && \
-                        git add /opt/airflow/data/transformed/$NOW/csv.dvc && \
-                        git add /opt/airflow/data/transformed/$NOW/database.dvc && \
+                        dvc add /opt/airflow/data/transformed && \
+                        git add /opt/airflow/data/transformed.dvc && \
 			git add logs &&\
                         git commit -m "Updated transformed data version" -a && \
                         dvc push && git push
@@ -107,8 +99,7 @@ with DAG(
         bash_command = """
 			NOW=$(date '+%d-%m-%Y') &&\
 			cd /opt/airflow
-                        dvc pull /opt/airflow/data/transformed/$NOW/csv &&\
-                        dvc pull /opt/airflow/data/transformed/$NOW/database &&\
+                        dvc pull /opt/airflow/data/transformed
                         python /opt/airflow/executables/data_storage.py && \
 			git add logs &&\
                         git commit -m "Updated stored data version" -a && \
