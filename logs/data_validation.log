@@ -220,3 +220,5 @@
 2025-03-02 06:38:24,353 : ERROR : Error validating  data: [Errno 2] No such file or directory: 'data/raw/customer_data.csv'
 2025-03-02 06:40:21,975 : INFO : Starting data validation
 2025-03-02 06:40:21,976 : ERROR : Error validating  data: [Errno 2] No such file or directory: 'data/raw/customer_data.csv'
+2025-03-02 06:46:30,646 : INFO : Starting data validation
+2025-03-02 06:46:30,647 : ERROR : Error validating  data: [Errno 2] No such file or directory: 'data/raw/customer_data.csv'
