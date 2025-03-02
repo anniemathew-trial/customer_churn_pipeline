@@ -205,3 +205,8 @@
 [2025-03-02T08:36:32.880+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/model_training.py", line 1, in <module>
 [2025-03-02T08:36:32.881+0000] {subprocess.py:93} INFO -     from feast import FeatureStore
 [2025-03-02T08:36:32.881+0000] {subprocess.py:93} INFO - ModuleNotFoundError: No module named 'feast'
+[2025-03-02T08:36:33.955+0000] {subprocess.py:93} INFO - Everything up-to-date
+[2025-03-02T08:36:33.962+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:36:34.012+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=model_training_task, execution_date=20250301T080000, start_date=20250302T083632, end_date=20250302T083634
+[2025-03-02T08:36:34.048+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:36:34.069+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

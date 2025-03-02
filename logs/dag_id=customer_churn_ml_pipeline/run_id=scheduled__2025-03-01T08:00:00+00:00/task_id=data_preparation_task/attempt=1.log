@@ -41,3 +41,16 @@
 [2025-03-02T08:36:32.879+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_preparation.py", line 1, in <module>
 [2025-03-02T08:36:32.880+0000] {subprocess.py:93} INFO -     from sklearn.preprocessing import StandardScaler
 [2025-03-02T08:36:32.880+0000] {subprocess.py:93} INFO - ModuleNotFoundError: No module named 'sklearn'
+[2025-03-02T08:36:32.985+0000] {subprocess.py:93} INFO - [main 9970081] Updated cleaned data version
+[2025-03-02T08:36:32.986+0000] {subprocess.py:93} INFO -  10 files changed, 134 insertions(+)
+[2025-03-02T08:36:36.741+0000] {subprocess.py:93} INFO - ERROR: failed to push data to the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
+[2025-03-02T08:36:37.017+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T08:36:37.044+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T08:36:37.049+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_preparation_task, execution_date=20250301T080000, start_date=20250302T083632, end_date=20250302T083637
+[2025-03-02T08:36:37.080+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 2 for task data_preparation_task (Bash command failed. The command returned a non-zero exit code 1.; 3599)
+[2025-03-02T08:36:37.105+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T08:36:37.137+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
