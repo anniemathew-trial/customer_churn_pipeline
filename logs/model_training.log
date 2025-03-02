@@ -888,3 +888,5 @@ Name: 11, dtype: object
 2025-03-02 12:52:43,095 : INFO : Stoping at Start and End Range: 1 to 1000
 2025-03-02 12:52:43,096 : INFO : Created feature data
 2025-03-02 12:52:43,096 : INFO : Total Data fetched: 0
+2025-03-02 13:19:02,022 : INFO : Starting model training
+2025-03-02 13:19:02,043 : INFO : Registry cache expired, so refreshing
