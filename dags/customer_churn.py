@@ -34,13 +34,10 @@ with DAG(
     raw_data_storage_task = BashOperator(
         task_id = 'raw_data_storage_task',
         bash_command = """
-			NOW=$(date '+%d-%m-%Y') &&\
 			cd /opt/airflow &&\
-                        dvc pull /opt/airflow/data/raw/$NOW/csv &&\
-                        dvc pull /opt/airflow/data/raw/$NOW/database &&\
                         python /opt/airflow/executables/raw_data_storage.py && \
-			git rm -r --cached /opt/airflow/data/raw/$NOW/csv && \
-			git rm -r --cached /opt/airflow/data/raw/$NOW/database && \
+			git rm -r --cached /opt/airflow/data/raw && \
+			git rm -r --cached /opt/airflow/data/raw && \
 			git commit -m "stop tracking data/raw/$NOW" && \
                         dvc add /opt/airflow/data/raw && \
                         git add /opt/airflow/data/raw.dvc && \
@@ -53,7 +50,6 @@ with DAG(
     data_validation_task = BashOperator(
         task_id = 'data_validation_task',
         bash_command = """
-			NOW=$(date '+%d-%m-%Y') &&\
 			cd /opt/airflow &&\
                         dvc pull /opt/airflow/data/raw
                         python /opt/airflow/executables/data_validation.py && \
@@ -67,7 +63,6 @@ with DAG(
     data_preparation_task = BashOperator(
         task_id = 'data_preparation_task',
         bash_command = """
-			NOW=$(date '+%d-%m-%Y') &&\
 			cd /opt/airflow &&\
 			python /opt/airflow/executables/data_preparation.py && \
                         dvc add /opt/airflow/data/cleaned && \
@@ -82,7 +77,6 @@ with DAG(
     data_transformation_task = BashOperator(
         task_id = 'data_transformation_task',
         bash_command = """
-			NOW=$(date '+%d-%m-%Y') &&\
 			cd /opt/airflow &&\
                         dvc pull /opt/airflow/data/cleaned
                         python /opt/airflow/executables/data_transformation.py && \
@@ -97,7 +91,6 @@ with DAG(
     data_storage_task = BashOperator(
         task_id = 'data_storage_task',
         bash_command = """
-			NOW=$(date '+%d-%m-%Y') &&\
 			cd /opt/airflow
                         dvc pull /opt/airflow/data/transformed
                         python /opt/airflow/executables/data_storage.py && \
@@ -130,4 +123,6 @@ with DAG(
                         """
     )
 
-pull_task >> data_ingestion_task >> raw_data_storage_task
+pull_task >> data_ingestion_task >> raw_data_storage_task >> data_validation_task
+data_validation_task >> data_preparation_task >> data_transformation_task
+data_transformation_task >> data_storage_task >> feature_store_task >> model_training_task
