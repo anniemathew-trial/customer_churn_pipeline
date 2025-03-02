@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 import logging
 import json
+import time
 
 with open("/opt/airflow/executables/settings.json", "r") as file:
         settings = json.load(file)
