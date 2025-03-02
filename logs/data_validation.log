@@ -238,3 +238,5 @@
 2025-03-02 09:27:20,161 : ERROR : Error validating  data: [Errno 2] No such file or directory: 'data/raw/customer_data.csv'
 2025-03-02 09:38:41,274 : INFO : Starting data validation
 2025-03-02 09:38:41,275 : ERROR : Error validating  data: [Errno 2] No such file or directory: 'data/raw/customer_data.csv'
+2025-03-02 09:42:08,074 : INFO : Starting data validation
+2025-03-02 09:42:08,074 : ERROR : Error validating  data: name 'today' is not defined
