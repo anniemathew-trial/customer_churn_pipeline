@@ -36,8 +36,6 @@ def ingest_csv(filename):
         
 def ingest_database():
     try:
-        with open("settings.json", "r") as file:
-            settings = json.load(file)
         password = settings["sql_pwd"]
         connection_string = settings["db_connection"]
 
