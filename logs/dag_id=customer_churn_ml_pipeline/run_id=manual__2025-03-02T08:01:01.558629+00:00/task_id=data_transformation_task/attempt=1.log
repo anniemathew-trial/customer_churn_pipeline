@@ -12,3 +12,14 @@
 [2025-03-02T08:01:07.575+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/*** &&                        dvc pull /opt/***/data/cleaned\n                        python /opt/***/executables/data_transformation.py &&                         dvc add /opt/***/data/transformed &&                         git add /opt/***/data/transformed.dvc && \t\t\tgit add logs &&                        git commit -m "Updated transformed data version" -a &&                         dvc push && git push\n                    ']
 [2025-03-02T08:01:07.691+0000] {subprocess.py:86} INFO - Output:
 [2025-03-02T08:01:18.143+0000] {subprocess.py:93} INFO - ERROR: failed to pull data from the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
+[2025-03-02T08:01:32.000+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:32,000 : INFO : Starting data preparation for csv.
+[2025-03-02T08:01:32.258+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:32,257 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+[2025-03-02T08:01:32.302+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:32,301 : INFO : Saving data to S3.
+[2025-03-02T08:01:45.619+0000] {subprocess.py:93} INFO - 
+[2025-03-02T08:01:45.620+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-03-02T08:01:45.623+0000] {subprocess.py:93} INFO - 
+[2025-03-02T08:01:45.624+0000] {subprocess.py:93} INFO - 	git add data/transformed.dvc
+[2025-03-02T08:01:45.625+0000] {subprocess.py:93} INFO - 
+[2025-03-02T08:01:45.627+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-03-02T08:01:45.628+0000] {subprocess.py:93} INFO - 
+[2025-03-02T08:01:45.628+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true

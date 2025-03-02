@@ -23,3 +23,16 @@
 [2025-03-02T08:01:28.249+0000] {subprocess.py:93} INFO - To enable auto staging, run:
 [2025-03-02T08:01:28.250+0000] {subprocess.py:93} INFO - 
 [2025-03-02T08:01:28.266+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
+[2025-03-02T08:01:29.961+0000] {subprocess.py:93} INFO - [main 7fa0652] Updated transformed data version
+[2025-03-02T08:01:29.962+0000] {subprocess.py:93} INFO -  4 files changed, 25 insertions(+)
+[2025-03-02T08:01:39.311+0000] {subprocess.py:93} INFO - ERROR: failed to push data to the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
+[2025-03-02T08:01:40.076+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T08:01:40.130+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T08:01:40.150+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_transformation_task, execution_date=20250301T080000, start_date=20250302T080047, end_date=20250302T080140
+[2025-03-02T08:01:40.209+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 298 for task data_transformation_task (Bash command failed. The command returned a non-zero exit code 1.; 7824)
+[2025-03-02T08:01:40.254+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T08:01:40.390+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -718,3 +718,42 @@ tags.mlflow.source.name                 /opt/airflow/executables/model_training.
 Name: 5, dtype: object
 2025-03-02 07:56:48,301 : INFO : Registering best model runs:/30a1116e1c3f468db3d1a757ec74b4c5/RandomForest_model
 2025-03-02 07:56:48,378 : INFO : Completed model training & registration !!
+2025-03-02 08:01:31,726 : INFO : Starting model training
+2025-03-02 08:01:31,784 : INFO : Registry cache expired, so refreshing
+2025-03-02 08:01:31,798 : INFO : Getting data
+2025-03-02 08:01:31,800 : INFO : Start and End Range: 1 to 1000
+2025-03-02 08:01:34,170 : INFO : New Start and End Range: 1001 to 2000
+2025-03-02 08:01:34,172 : INFO : Start and End Range: 1001 to 2000
+2025-03-02 08:01:36,026 : INFO : New Start and End Range: 3001 to 4000
+2025-03-02 08:01:36,032 : INFO : Start and End Range: 3001 to 4000
+2025-03-02 08:01:38,060 : INFO : New Start and End Range: 7001 to 8000
+2025-03-02 08:01:38,062 : INFO : Start and End Range: 7001 to 8000
+2025-03-02 08:01:39,437 : INFO : New Start and End Range: 15001 to 16000
+2025-03-02 08:01:39,440 : INFO : Start and End Range: 15001 to 16000
+2025-03-02 08:01:40,764 : INFO : New Start and End Range: 31001 to 32000
+2025-03-02 08:01:40,767 : INFO : Start and End Range: 31001 to 32000
+2025-03-02 08:01:41,735 : INFO : New Start and End Range: 63001 to 64000
+2025-03-02 08:01:41,737 : INFO : Start and End Range: 63001 to 64000
+2025-03-02 08:01:42,699 : INFO : New Start and End Range: 127001 to 128000
+2025-03-02 08:01:42,701 : INFO : Start and End Range: 127001 to 128000
+2025-03-02 08:01:44,103 : INFO : New Start and End Range: 255001 to 256000
+2025-03-02 08:01:44,104 : INFO : Start and End Range: 255001 to 256000
+2025-03-02 08:01:45,211 : INFO : New Start and End Range: 511001 to 512000
+2025-03-02 08:01:45,213 : INFO : Start and End Range: 511001 to 512000
+2025-03-02 08:01:45,245 : INFO : Starting model training
+2025-03-02 08:01:45,308 : INFO : Registry cache expired, so refreshing
+2025-03-02 08:01:45,324 : INFO : Getting data
+2025-03-02 08:01:45,325 : INFO : Start and End Range: 1 to 1000
+2025-03-02 08:01:45,944 : INFO : Stoping at Start and End Range: 511001 to 512000
+2025-03-02 08:01:45,946 : INFO : Created feature data
+2025-03-02 08:01:45,982 : INFO :    Id  Geography_Spain  NumOfProducts  ...  CreditScore  Age   Balance
+0   1              0.0              1  ...          619   42 -1.225848
+1   2              1.0              1  ...          608   41  0.117350
+2   3              0.0              3  ...          502   42  1.333053
+3   4              0.0              2  ...          699   39 -1.225848
+4   5              1.0              1  ...          850   43  0.785728
+
+[5 rows x 17 columns]
+2025-03-02 08:01:46,254 : INFO : received feature data
+2025-03-02 08:01:46,291 : INFO : Models defined
+2025-03-02 08:01:46,293 : INFO : Training model RandomForest

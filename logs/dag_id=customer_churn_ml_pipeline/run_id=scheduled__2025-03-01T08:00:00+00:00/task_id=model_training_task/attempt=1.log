@@ -11,3 +11,44 @@
 [2025-03-02T08:00:49.960+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-03-02T08:00:49.974+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t    \t\tcd /opt/***\n       \t\t\t    python /opt/***/executables/model_training.py && \t      \t\t    git add logs &&\t      \t\t    git add mlruns &&                            git commit -m "Trained model version" -a && \\    \n\t\t\t    git push\n                        ']
 [2025-03-02T08:00:50.078+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T08:01:31.727+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:64: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-02T08:01:31.728+0000] {subprocess.py:93} INFO -   @validator("togetherai_api_key", pre=True)
+[2025-03-02T08:01:31.729+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:372: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-02T08:01:31.730+0000] {subprocess.py:93} INFO -   @root_validator(skip_on_failure=True)
+[2025-03-02T08:01:31.730+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/pydantic/_internal/_config.py:267: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-02T08:01:31.731+0000] {subprocess.py:93} INFO -   warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+[2025-03-02T08:01:31.731+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:31,726 : INFO : Starting model training
+[2025-03-02T08:01:31.785+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:31,784 : INFO : Registry cache expired, so refreshing
+[2025-03-02T08:01:31.799+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:31,798 : INFO : Getting data
+[2025-03-02T08:01:31.801+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:31,800 : INFO : Start and End Range: 1 to 1000
+[2025-03-02T08:01:34.171+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:34,170 : INFO : New Start and End Range: 1001 to 2000
+[2025-03-02T08:01:34.173+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:34,172 : INFO : Start and End Range: 1001 to 2000
+[2025-03-02T08:01:36.026+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:36,026 : INFO : New Start and End Range: 3001 to 4000
+[2025-03-02T08:01:36.033+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:36,032 : INFO : Start and End Range: 3001 to 4000
+[2025-03-02T08:01:38.060+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:38,060 : INFO : New Start and End Range: 7001 to 8000
+[2025-03-02T08:01:38.062+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:38,062 : INFO : Start and End Range: 7001 to 8000
+[2025-03-02T08:01:39.437+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:39,437 : INFO : New Start and End Range: 15001 to 16000
+[2025-03-02T08:01:39.447+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:39,440 : INFO : Start and End Range: 15001 to 16000
+[2025-03-02T08:01:40.765+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:40,764 : INFO : New Start and End Range: 31001 to 32000
+[2025-03-02T08:01:40.767+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:40,767 : INFO : Start and End Range: 31001 to 32000
+[2025-03-02T08:01:41.735+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:41,735 : INFO : New Start and End Range: 63001 to 64000
+[2025-03-02T08:01:41.737+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:41,737 : INFO : Start and End Range: 63001 to 64000
+[2025-03-02T08:01:42.699+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:42,699 : INFO : New Start and End Range: 127001 to 128000
+[2025-03-02T08:01:42.702+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:42,701 : INFO : Start and End Range: 127001 to 128000
+[2025-03-02T08:01:44.103+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:44,103 : INFO : New Start and End Range: 255001 to 256000
+[2025-03-02T08:01:44.105+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:44,104 : INFO : Start and End Range: 255001 to 256000
+[2025-03-02T08:01:45.211+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:45,211 : INFO : New Start and End Range: 511001 to 512000
+[2025-03-02T08:01:45.214+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:45,213 : INFO : Start and End Range: 511001 to 512000
+[2025-03-02T08:01:45.945+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:45,944 : INFO : Stoping at Start and End Range: 511001 to 512000
+[2025-03-02T08:01:45.946+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:45,946 : INFO : Created feature data
+[2025-03-02T08:01:46.261+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:45,982 : INFO :    Id  Geography_Spain  NumOfProducts  ...  CreditScore  Age   Balance
+[2025-03-02T08:01:46.263+0000] {subprocess.py:93} INFO - 0   1              0.0              1  ...          619   42 -1.225848
+[2025-03-02T08:01:46.264+0000] {subprocess.py:93} INFO - 1   2              1.0              1  ...          608   41  0.117350
+[2025-03-02T08:01:46.265+0000] {subprocess.py:93} INFO - 2   3              0.0              3  ...          502   42  1.333053
+[2025-03-02T08:01:46.266+0000] {subprocess.py:93} INFO - 3   4              0.0              2  ...          699   39 -1.225848
+[2025-03-02T08:01:46.266+0000] {subprocess.py:93} INFO - 4   5              1.0              1  ...          850   43  0.785728
+[2025-03-02T08:01:46.267+0000] {subprocess.py:93} INFO - 
+[2025-03-02T08:01:46.267+0000] {subprocess.py:93} INFO - [5 rows x 17 columns]
+[2025-03-02T08:01:46.267+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:46,254 : INFO : received feature data
+[2025-03-02T08:01:46.292+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:46,291 : INFO : Models defined
+[2025-03-02T08:01:46.295+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:46,293 : INFO : Training model RandomForest

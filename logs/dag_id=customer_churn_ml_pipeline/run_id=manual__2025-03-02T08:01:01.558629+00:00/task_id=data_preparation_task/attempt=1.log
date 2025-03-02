@@ -17,3 +17,14 @@
 [2025-03-02T08:01:23.799+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: 'settings.json'
 [2025-03-02T08:01:25.317+0000] {subprocess.py:93} INFO - [main 9880bda] Updated cleaned data version
 [2025-03-02T08:01:25.317+0000] {subprocess.py:93} INFO -  11 files changed, 54 insertions(+)
+[2025-03-02T08:01:37.031+0000] {subprocess.py:93} INFO - ERROR: failed to push data to the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
+[2025-03-02T08:01:37.987+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T08:01:38.126+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T08:01:38.162+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_preparation_task, execution_date=20250302T080101, start_date=20250302T080105, end_date=20250302T080138
+[2025-03-02T08:01:38.349+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 305 for task data_preparation_task (Bash command failed. The command returned a non-zero exit code 1.; 7976)
+[2025-03-02T08:01:38.380+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T08:01:38.531+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
