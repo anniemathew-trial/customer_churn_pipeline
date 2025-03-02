@@ -1,7 +1,7 @@
 {
     "id" : "AKIA34AMCY3VLW34NUXM",
     "key" : "CUiv6YaaWDqfUbQnZzt2YHInUFDK297bv6Lso4sJ",
-    "db_connection":"DRIVER={{ODBC Driver 17 for SQL Server}};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=dmml_assignment;UID=sa;PWD=",
+    "db_connection":"DRIVER={ODBC Driver 17 for SQL Server};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=dmml_assignment;UID=sa;PWD=",
     "db_connection_storage":"DRIVER={{ODBC Driver 17 for SQL Server}};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=customer_churn_db;UID=sa;PWD=",
     "sql_pwd":"NewPASS1234",
     "logging_base_path":"/opt/airflow",
