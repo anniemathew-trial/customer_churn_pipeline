@@ -1,0 +1,36 @@
+[2025-03-02T10:58:16.212+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.pull_latest_codes manual__2025-03-02T10:58:14.792734+00:00 [queued]>
+[2025-03-02T10:58:16.226+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.pull_latest_codes manual__2025-03-02T10:58:14.792734+00:00 [queued]>
+[2025-03-02T10:58:16.226+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T10:58:16.248+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): pull_latest_codes> on 2025-03-02 10:58:14.792734+00:00
+[2025-03-02T10:58:16.253+0000] {standard_task_runner.py:57} INFO - Started process 14109 to run task
+[2025-03-02T10:58:16.257+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'pull_latest_codes', 'manual__2025-03-02T10:58:14.792734+00:00', '--job-id', '203', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpefpyti4x']
+[2025-03-02T10:58:16.260+0000] {standard_task_runner.py:85} INFO - Job 203: Subtask pull_latest_codes
+[2025-03-02T10:58:16.290+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T10:58:16.351+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.pull_latest_codes manual__2025-03-02T10:58:14.792734+00:00 [running]> on host 9113a5746a05
+[2025-03-02T10:58:16.498+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='pull_latest_codes' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T10:58:14.792734+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T10:58:14.792734+00:00'
+[2025-03-02T10:58:16.499+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T10:58:16.500+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/*** && dvc pull && git pull']
+[2025-03-02T10:58:16.511+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T10:58:20.721+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T10:58:21.036+0000] {subprocess.py:93} INFO - hint: Pulling without specifying how to reconcile divergent branches is
+[2025-03-02T10:58:21.036+0000] {subprocess.py:93} INFO - hint: discouraged. You can squelch this message by running one of the following
+[2025-03-02T10:58:21.036+0000] {subprocess.py:93} INFO - hint: commands sometime before your next pull:
+[2025-03-02T10:58:21.036+0000] {subprocess.py:93} INFO - hint:
+[2025-03-02T10:58:21.037+0000] {subprocess.py:93} INFO - hint:   git config pull.rebase false  # merge (the default strategy)
+[2025-03-02T10:58:21.037+0000] {subprocess.py:93} INFO - hint:   git config pull.rebase true   # rebase
+[2025-03-02T10:58:21.037+0000] {subprocess.py:93} INFO - hint:   git config pull.ff only       # fast-forward only
+[2025-03-02T10:58:21.037+0000] {subprocess.py:93} INFO - hint:
+[2025-03-02T10:58:21.037+0000] {subprocess.py:93} INFO - hint: You can replace "git config" with "git config --global" to set a default
+[2025-03-02T10:58:21.037+0000] {subprocess.py:93} INFO - hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+[2025-03-02T10:58:21.037+0000] {subprocess.py:93} INFO - hint: or --ff-only on the command line to override the configured default per
+[2025-03-02T10:58:21.038+0000] {subprocess.py:93} INFO - hint: invocation.
+[2025-03-02T10:58:22.200+0000] {subprocess.py:93} INFO - From https://github.com/anniemathew-trial/customer_churn_pipeline
+[2025-03-02T10:58:22.200+0000] {subprocess.py:93} INFO -    1b796b6..47bc45c  main       -> origin/main
+[2025-03-02T10:58:22.217+0000] {subprocess.py:93} INFO - Updating 1b796b6..47bc45c
+[2025-03-02T10:58:22.218+0000] {subprocess.py:93} INFO - Fast-forward
+[2025-03-02T10:58:22.220+0000] {subprocess.py:93} INFO -  executables/data_storage.py | 2 +-
+[2025-03-02T10:58:22.221+0000] {subprocess.py:93} INFO -  1 file changed, 1 insertion(+), 1 deletion(-)
+[2025-03-02T10:58:22.221+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T10:58:22.273+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=pull_latest_codes, execution_date=20250302T105814, start_date=20250302T105816, end_date=20250302T105822
+[2025-03-02T10:58:22.314+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T10:58:22.372+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

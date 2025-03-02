@@ -1,0 +1,40 @@
+[2025-03-02T10:55:40.432+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.feature_store_task manual__2025-03-02T10:53:51.269112+00:00 [queued]>
+[2025-03-02T10:55:40.453+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.feature_store_task manual__2025-03-02T10:53:51.269112+00:00 [queued]>
+[2025-03-02T10:55:40.454+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T10:55:40.485+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): feature_store_task> on 2025-03-02 10:53:51.269112+00:00
+[2025-03-02T10:55:40.492+0000] {standard_task_runner.py:57} INFO - Started process 14034 to run task
+[2025-03-02T10:55:40.497+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'feature_store_task', 'manual__2025-03-02T10:53:51.269112+00:00', '--job-id', '202', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpa7wvyblw']
+[2025-03-02T10:55:40.502+0000] {standard_task_runner.py:85} INFO - Job 202: Subtask feature_store_task
+[2025-03-02T10:55:40.538+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T10:55:40.619+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.feature_store_task manual__2025-03-02T10:53:51.269112+00:00 [running]> on host 9113a5746a05
+[2025-03-02T10:55:40.803+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='feature_store_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T10:53:51.269112+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T10:53:51.269112+00:00'
+[2025-03-02T10:55:40.805+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T10:55:40.806+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/***/customer_churn_stats/feature_repo &&                         feast apply &&                         feast materialize-incremental $(date -u +\'%Y-%m-%dT%H:%M:%S\') && \t\t\tgit add logs &&    \t\t\tgit status &&                         git commit -m "Updated feature store" -a &&                         git push\n                    ']
+[2025-03-02T10:55:40.821+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T10:55:48.781+0000] {subprocess.py:93} INFO - 2025-03-02 10:55:48,781 : INFO : Connecting to Database
+[2025-03-02T10:55:48.808+0000] {subprocess.py:93} INFO - 2025-03-02 10:55:48,807 : INFO : Connecting to Database Successfull
+[2025-03-02T10:55:48.808+0000] {subprocess.py:93} INFO - 2025-03-02 10:55:48,808 : INFO : Reading data from database.
+[2025-03-02T10:55:55.888+0000] {subprocess.py:93} INFO - /opt/***/customer_churn_stats/feature_repo/feature_store.py:36: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-03-02T10:55:55.889+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
+[2025-03-02T10:55:55.889+0000] {subprocess.py:93} INFO - 2025-03-02 10:55:55,887 : INFO : Data collection from database successfull!!
+[2025-03-02T10:55:55.889+0000] {subprocess.py:93} INFO - 2025-03-02 10:55:55,888 : INFO : Declaring an entity for the dataset
+[2025-03-02T10:55:55.889+0000] {subprocess.py:93} INFO - 2025-03-02 10:55:55,888 : INFO : Declaring the source for raw feature data
+[2025-03-02T10:55:55.889+0000] {subprocess.py:93} INFO - 2025-03-02 10:55:55,889 : INFO : Defining the features in a feature view
+[2025-03-02T10:55:55.891+0000] {subprocess.py:93} INFO - 2025-03-02 10:55:55,891 : INFO : Feature view creation successfull!!
+[2025-03-02T10:55:55.914+0000] {subprocess.py:93} INFO - No changes to registry
+[2025-03-02T10:55:55.915+0000] {subprocess.py:93} INFO - No changes to infrastructure
+[2025-03-02T10:56:07.620+0000] {subprocess.py:93} INFO - Materializing [1m[32m1[0m feature views to [1m[32m2025-03-02 10:55:57+00:00[0m into the [1m[32msqlite[0m online store.
+[2025-03-02T10:56:07.620+0000] {subprocess.py:93} INFO - 
+[2025-03-02T10:56:07.621+0000] {subprocess.py:93} INFO - [1m[32mcustomer_stats_fv[0m from [1m[32m2025-03-02 10:50:02+00:00[0m to [1m[32m2025-03-02 10:55:57+00:00[0m:
+[2025-03-02T10:56:07.629+0000] {subprocess.py:93} INFO - 0it [00:00, ?it/s]0it [00:00, ?it/s]
+[2025-03-02T10:56:08.367+0000] {subprocess.py:93} INFO - fatal: pathspec 'logs' did not match any files
+[2025-03-02T10:56:08.368+0000] {subprocess.py:97} INFO - Command exited with return code 128
+[2025-03-02T10:56:08.390+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 128.
+[2025-03-02T10:56:08.395+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=feature_store_task, execution_date=20250302T105351, start_date=20250302T105540, end_date=20250302T105608
+[2025-03-02T10:56:08.416+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 202 for task feature_store_task (Bash command failed. The command returned a non-zero exit code 128.; 14034)
+[2025-03-02T10:56:08.464+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T10:56:08.504+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
