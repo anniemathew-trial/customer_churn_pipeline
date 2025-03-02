@@ -19,3 +19,16 @@
 [2025-03-02T09:08:49.111+0000] {subprocess.py:93} INFO - /opt/***/executables/data_ingestion.py:49: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
 [2025-03-02T09:08:49.111+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
 [2025-03-02T09:08:49.112+0000] {subprocess.py:93} INFO - 2025-03-02 09:08:49,110 : INFO : Data from Database ingested successfully!
+[2025-03-02T09:08:49.334+0000] {subprocess.py:93} INFO - [main dcefdc5] Updated data ingestion
+[2025-03-02T09:08:49.335+0000] {subprocess.py:93} INFO -  8 files changed, 232 insertions(+)
+[2025-03-02T09:08:49.335+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:05:27.413872+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T09:08:49.335+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:05:27.413872+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-02T09:08:49.335+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:05:27.413872+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-02T09:08:49.335+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:08:40.294849+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T09:08:49.336+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:08:40.294849+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T09:08:52.271+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T09:08:52.272+0000] {subprocess.py:93} INFO -    c02e29d..dcefdc5  main -> main
+[2025-03-02T09:08:52.293+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T09:08:52.373+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T090840, start_date=20250302T090847, end_date=20250302T090852
+[2025-03-02T09:08:52.405+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T09:08:52.476+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
