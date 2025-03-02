@@ -23,3 +23,9 @@
 [2025-03-02T08:40:25.359+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=feature_store_task/attempt=1.log
 [2025-03-02T08:40:25.359+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=model_training_task/attempt=1.log
 [2025-03-02T08:40:25.359+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T08:40:29.870+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T08:40:31.333+0000] {subprocess.py:93} INFO - Everything up-to-date
+[2025-03-02T08:40:31.341+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:40:31.438+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_storage_task, execution_date=20250302T084020, start_date=20250302T084022, end_date=20250302T084031
+[2025-03-02T08:40:31.522+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:40:31.585+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

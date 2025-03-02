@@ -17,3 +17,6 @@
 [2025-03-02T08:40:27.199+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_validation.py", line 12, in <module>
 [2025-03-02T08:40:27.205+0000] {subprocess.py:93} INFO -     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_validation_log_file)
 [2025-03-02T08:40:27.206+0000] {subprocess.py:93} INFO - NameError: name 'data_validation_log_file' is not defined
+[2025-03-02T08:40:27.529+0000] {subprocess.py:93} INFO - [main 86d9597] Updated validation
+[2025-03-02T08:40:27.530+0000] {subprocess.py:93} INFO -  4 files changed, 33 insertions(+)
+[2025-03-02T08:40:32.507+0000] {subprocess.py:93} INFO - Everything is up to date.
