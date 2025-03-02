@@ -330,3 +330,11 @@
 2025-03-02 10:42:48,218 : INFO : Reading insert script template
 2025-03-02 10:42:48,219 : INFO : Inserting data to database
 2025-03-02 10:42:48,220 : ERROR : Error storing data: [Errno 2] No such file or directory: 'data/transformed/customer_data.csv'
+2025-03-02 10:49:36,810 : INFO : Connecting to Database
+2025-03-02 10:49:36,844 : INFO : Connecting to Database Successfull
+2025-03-02 10:49:36,844 : INFO : Reading Initial DB Setup Script
+2025-03-02 10:49:36,844 : INFO : Executing script to Database
+2025-03-02 10:49:36,846 : INFO : Executed script successfully !!
+2025-03-02 10:49:36,847 : INFO : Reading insert script template
+2025-03-02 10:49:36,847 : INFO : Inserting data to database
+2025-03-02 10:49:36,847 : ERROR : Error storing data: name 'today' is not defined
