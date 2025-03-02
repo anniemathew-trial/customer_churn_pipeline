@@ -48,7 +48,7 @@ def ingest_database():
         data = pd.read_sql(query, connection)
         
         connection.close()
-        p = Path('/opt/airflow/data/raw/{today}/database')
+        p = Path(f'/opt/airflow/data/raw/{today}/database')
         p.mkdir(parents = True, exist_ok = True)
         data.to_csv(f"/opt/airflow/data/raw/{today}/database/database_data.csv", index=False)
         logging.info("Data from Database ingested successfully!")
