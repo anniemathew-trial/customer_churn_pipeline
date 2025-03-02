@@ -12,7 +12,7 @@ with open("settings.json", "r") as file:
         settings = json.load(file)
 today = time.strftime("%d-%m-%Y")
 #create log file if it does not exist
-ingestion_log_file = f"{settings["logging_base_path"]}/logs/data_preparation.log"
+ingestion_log_file = f"{settings['logging_base_path']}/logs/data_preparation.log"
 logging.root.handlers = []
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_preparation_log_file)
 
