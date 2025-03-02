@@ -28,3 +28,13 @@
 [2025-03-02T10:22:06.832+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
 [2025-03-02T10:22:06.832+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/
 [2025-03-02T10:22:06.832+0000] {subprocess.py:93} INFO - 
+[2025-03-02T10:22:06.866+0000] {subprocess.py:93} INFO - [main b4c46b4] Updated stored data version
+[2025-03-02T10:22:06.866+0000] {subprocess.py:93} INFO -  4 files changed, 49 insertions(+)
+[2025-03-02T10:22:06.867+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T10:20:28.442634+00:00/task_id=data_storage_task/attempt=1.log
+[2025-03-02T10:22:12.610+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T10:22:14.316+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T10:22:14.317+0000] {subprocess.py:93} INFO -    5e44695..b4c46b4  main -> main
+[2025-03-02T10:22:14.322+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T10:22:14.375+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_storage_task, execution_date=20250302T102028, start_date=20250302T102159, end_date=20250302T102214
+[2025-03-02T10:22:14.405+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T10:22:14.456+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
