@@ -31,3 +31,13 @@
 [2025-03-02T09:51:57.463+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
 [2025-03-02T09:51:57.463+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:51:20.251514+00:00/task_id=data_validation_task/attempt=1.log
 [2025-03-02T09:51:57.464+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:51:57.479+0000] {subprocess.py:93} INFO - [main 6dcc3de] Updated validation
+[2025-03-02T09:51:57.480+0000] {subprocess.py:93} INFO -  3 files changed, 47 insertions(+)
+[2025-03-02T09:51:57.480+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:51:20.251514+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-02T09:52:01.310+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T09:52:03.119+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T09:52:03.120+0000] {subprocess.py:93} INFO -    cfb58ad..6dcc3de  main -> main
+[2025-03-02T09:52:03.124+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T09:52:03.167+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_validation_task, execution_date=20250302T095120, start_date=20250302T095152, end_date=20250302T095203
+[2025-03-02T09:52:03.192+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T09:52:03.235+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1600,3 +1600,5 @@
 2025-03-01 17:05:55,270 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2025-03-01 17:05:55,287 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2025-03-01 17:05:55,744 : INFO : Saved pdf in visualization/plots.pdf
+2025-03-02 09:52:06,634 : INFO : Starting data preparation for csv.
+2025-03-02 09:52:06,634 : ERROR : Error in preparing dataname 'csv_filename' is not defined
