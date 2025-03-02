@@ -582,3 +582,11 @@ tags.mlflow.runName                                                   RandomFore
 Name: 2, dtype: object
 2025-03-02 06:48:32,764 : INFO : Registering best model runs:/2a152ba9f91e4c7aae1782c0992e0d9c/RandomForest_model
 2025-03-02 06:48:32,840 : INFO : Completed model training & registration !!
+2025-03-02 07:53:58,855 : INFO : Starting model training
+2025-03-02 07:53:58,922 : INFO : Registry cache expired, so refreshing
+2025-03-02 07:53:58,961 : INFO : Getting data
+2025-03-02 07:53:58,963 : INFO : Start and End Range: 1 to 1000
+2025-03-02 07:54:00,722 : INFO : New Start and End Range: 1001 to 2000
+2025-03-02 07:54:00,724 : INFO : Start and End Range: 1001 to 2000
+2025-03-02 07:54:01,641 : INFO : New Start and End Range: 3001 to 4000
+2025-03-02 07:54:01,643 : INFO : Start and End Range: 3001 to 4000

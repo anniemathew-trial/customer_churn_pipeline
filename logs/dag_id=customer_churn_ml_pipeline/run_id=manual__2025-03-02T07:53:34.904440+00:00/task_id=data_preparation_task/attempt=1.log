@@ -17,3 +17,10 @@
 [2025-03-02T07:53:43.163+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: 'settings.json'
 [2025-03-02T07:53:44.701+0000] {subprocess.py:93} INFO - [main 397690e] Updated cleaned data version
 [2025-03-02T07:53:44.702+0000] {subprocess.py:93} INFO -  4 files changed, 2016 insertions(+)
+[2025-03-02T07:53:58.252+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T07:54:01.409+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T07:54:01.410+0000] {subprocess.py:93} INFO -    6c036b7..9ac23f8  main -> main
+[2025-03-02T07:54:01.420+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T07:54:01.555+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_preparation_task, execution_date=20250302T075334, start_date=20250302T075336, end_date=20250302T075401
+[2025-03-02T07:54:01.660+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T07:54:01.735+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
