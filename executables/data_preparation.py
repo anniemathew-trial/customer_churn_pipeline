@@ -66,13 +66,17 @@ def prepare_csv_data(output_path="customer_data.csv"):
            
         logging.info("Saving data to S3.")
         cleaned_file_path = f"data/cleaned/{today}/csv"
-        p = Path(cleaned_file_path)
+        p = Path(f"{settings['raw_data_path']}/{cleaned_file_path})
         p.mkdir(parents = True, exist_ok = True)
+        logging.info(f"Directory created at {settings['raw_data_path']}/{cleaned_file_path}")
         df.to_csv(f"{settings['raw_data_path']}/{cleaned_file_path}/{output_path}", index=False)       
         s3_client = boto3.client('s3', region_name='us-east-1')
+        logging.info("Connected to s3")        
         bucket_name = "dmmlassignmentbucket"
         s3_key = f"{cleaned_file_path}/{output_path}"
-        upload_file(cleaned_file_path, bucket_name, s3_key)        
+        upload_file(cleaned_file_path, bucket_name, s3_key)  
+        logging.info("File uploaded to S3")     
+        
         generate_report(df)
     except Exception as e:
         logging.error(f"Error in preparing data{str(e)}") 
