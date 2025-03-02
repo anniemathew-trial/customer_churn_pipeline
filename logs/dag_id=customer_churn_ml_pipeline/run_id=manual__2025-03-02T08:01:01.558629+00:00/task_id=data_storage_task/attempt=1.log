@@ -11,3 +11,5 @@
 [2025-03-02T08:01:06.915+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-03-02T08:01:06.931+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/***\n                        dvc pull /opt/***/data/transformed\n                        python /opt/***/executables/data_storage.py && \t\t\tgit add logs &&                        git commit -m "Updated stored data version" -a &&                         dvc push && git push\n                    ']
 [2025-03-02T08:01:07.111+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T08:01:17.066+0000] {subprocess.py:93} INFO - ERROR: failed to pull data from the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
+[2025-03-02T08:01:24.831+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:24,831 : ERROR : Error storing data: [Errno 2] No such file or directory: 'settings.json'

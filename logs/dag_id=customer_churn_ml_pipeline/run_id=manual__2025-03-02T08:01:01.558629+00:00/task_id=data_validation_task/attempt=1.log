@@ -11,3 +11,4 @@
 [2025-03-02T08:01:06.866+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-03-02T08:01:06.879+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/*** &&                        dvc pull /opt/***/data/raw\n                        python /opt/***/executables/data_validation.py && \t\t\tgit add logs &&\\   \n\t\t\tgit add reports &&                        git commit -m "Updated validation" -a &&                         dvc push && git push\n                    ']
 [2025-03-02T08:01:07.011+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T08:01:19.343+0000] {subprocess.py:93} INFO - ERROR: failed to pull data from the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.

@@ -11,3 +11,7 @@
 [2025-03-02T08:01:07.648+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-03-02T08:01:07.655+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/*** &&\t\t\tpython /opt/***/executables/data_preparation.py &&                         dvc add /opt/***/data/cleaned &&                         git add /opt/***/data/cleaned.dvc && \t\t\tgit add logs &&\\   \n\t\t\tgit add visualization &&                        git commit -m "Updated cleaned data version" -a &&                         dvc push && git push\n                    ']
 [2025-03-02T08:01:07.832+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T08:01:23.797+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-02T08:01:23.798+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_preparation.py", line 11, in <module>
+[2025-03-02T08:01:23.799+0000] {subprocess.py:93} INFO -     with open("settings.json", "r") as file:
+[2025-03-02T08:01:23.799+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: 'settings.json'
