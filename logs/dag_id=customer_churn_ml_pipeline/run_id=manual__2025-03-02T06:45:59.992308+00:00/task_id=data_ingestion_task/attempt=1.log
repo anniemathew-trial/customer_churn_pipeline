@@ -20,3 +20,16 @@
 [2025-03-02T06:46:09.376+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
 [2025-03-02T06:46:09.377+0000] {subprocess.py:93} INFO - 2025-03-02 06:46:09,375 : INFO : Data from Database ingested successfully!
 [2025-03-02T06:46:09.377+0000] {subprocess.py:93} INFO - DRIVER={ODBC Driver 17 for SQL Server};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=dmml_assignment;UID=sa;PWD=NewPASS1234
+[2025-03-02T06:46:09.633+0000] {subprocess.py:93} INFO - [main c02dec4] Updated data ingestion
+[2025-03-02T06:46:09.633+0000] {subprocess.py:93} INFO -  8 files changed, 351 insertions(+)
+[2025-03-02T06:46:09.634+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:39:50.917744+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T06:46:09.634+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:39:50.917744+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-02T06:46:09.634+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:39:50.917744+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-02T06:46:09.634+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:45:59.992308+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:46:09.635+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:45:59.992308+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:46:11.162+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T06:46:11.163+0000] {subprocess.py:93} INFO -    51d886f..c02dec4  main -> main
+[2025-03-02T06:46:11.179+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T06:46:11.225+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T064559, start_date=20250302T064606, end_date=20250302T064611
+[2025-03-02T06:46:11.249+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T06:46:11.285+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
