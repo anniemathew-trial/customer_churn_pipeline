@@ -50,7 +50,7 @@ def data_storage(csv_filename):
             insert_script = file.read()
 
         logging.info("Inserting data to database")
-        data_path = f"{settings['raw_data_path']}/data/transformed/{today}/csv/{output_path}"
+        data_path = f"{settings['raw_data_path']}/data/transformed/{today}/csv/{csv_filename}"
         df = pd.read_csv(data_path)
         data_tuples = df.to_records(index=False).tolist()
 
