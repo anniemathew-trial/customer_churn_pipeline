@@ -3,7 +3,7 @@ import boto3
 import time
 import json
 
-with open("settings.json", "r") as file:
+with open("/opt/airflow/executables/settings.json", "r") as file:
         settings = json.load(file)
 #create log file if it does not exist
 ingestion_log_file = f"{settings['logging_base_path']}\\logs\\data_ingestion.log"
