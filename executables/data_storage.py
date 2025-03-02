@@ -2,8 +2,11 @@ import pandas as pd
 import logging
 import pyodbc
 import json
+import time
 
-
+with open("/opt/airflow/executables/settings.json", "r") as file:
+        settings = json.load(file)
+today = time.strftime("%d-%m-%Y")
 #create log file if it does not exist
 storage_log_file = "/opt/airflow/logs/data_storage.log"
 logging.root.handlers = []
