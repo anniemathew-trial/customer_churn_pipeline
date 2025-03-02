@@ -47,3 +47,12 @@
 [2025-03-02T14:14:17.806+0000] {subprocess.py:93} INFO - 	customer_churn_pipeline/
 [2025-03-02T14:14:17.806+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
 [2025-03-02T14:14:17.806+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:14:17.893+0000] {subprocess.py:93} INFO - [main 64fd22c] Updated raw data storage
+[2025-03-02T14:14:17.894+0000] {subprocess.py:93} INFO -  5 files changed, 53 insertions(+)
+[2025-03-02T14:14:24.284+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T14:14:26.110+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T14:14:26.111+0000] {subprocess.py:93} INFO -    2b7ae66..64fd22c  main -> main
+[2025-03-02T14:14:26.126+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T14:14:26.170+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=raw_data_storage_task, execution_date=20250302T141345, start_date=20250302T141404, end_date=20250302T141426
+[2025-03-02T14:14:26.222+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T14:14:26.266+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
