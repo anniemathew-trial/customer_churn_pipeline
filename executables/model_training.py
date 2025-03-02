@@ -25,7 +25,7 @@ formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
 def retrieve_data_from_feast():
-    store = FeatureStore(repo_path="customer_churn_stats/feature_repo/")
+    store = FeatureStore(repo_path="/opt/airflow/customer_churn_stats/feature_repo/")
     logging.info("Getting data")
     data = []
     id_range_start = 1
