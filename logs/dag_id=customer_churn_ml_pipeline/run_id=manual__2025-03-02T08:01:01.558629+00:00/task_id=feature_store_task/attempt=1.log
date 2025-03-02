@@ -27,3 +27,11 @@
 [2025-03-02T08:02:24.486+0000] {subprocess.py:93} INFO - 
 [2025-03-02T08:02:24.486+0000] {subprocess.py:93} INFO - [1m[32mcustomer_stats_fv[0m from [1m[32m2025-03-02 08:01:54+00:00[0m to [1m[32m2025-03-02 08:02:01+00:00[0m:
 [2025-03-02T08:02:24.492+0000] {subprocess.py:93} INFO - 0it [00:00, ?it/s]0it [00:00, ?it/s]
+[2025-03-02T08:02:25.413+0000] {subprocess.py:93} INFO - [main 188b6d1] Updated feature store
+[2025-03-02T08:02:25.414+0000] {subprocess.py:93} INFO -  5 files changed, 26 insertions(+)
+[2025-03-02T08:02:27.038+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T08:02:27.038+0000] {subprocess.py:93} INFO -    5181c56..188b6d1  main -> main
+[2025-03-02T08:02:27.046+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:02:27.106+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=feature_store_task, execution_date=20250302T080101, start_date=20250302T080105, end_date=20250302T080227
+[2025-03-02T08:02:27.141+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:02:27.175+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

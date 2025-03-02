@@ -74,3 +74,5 @@
 [2025-03-02T08:02:22.235+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:22 INFO mlflow.tracking._tracking_service.client: 🏃 View run LogisticRegression at: http://localhost:5000/#/experiments/0/runs/ffc3393217e242d3a0b037e7b2df100b.
 [2025-03-02T08:02:22.236+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:22 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
 [2025-03-02T08:02:22.253+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:22,252 : INFO : Training model SVM
+[2025-03-02T08:02:33.405+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:33,404 : INFO : Predicting model SVM
+[2025-03-02T08:02:33.866+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:33,865 : INFO : Calculating accuracy SVM
