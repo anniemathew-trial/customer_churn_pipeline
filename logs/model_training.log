@@ -590,3 +590,38 @@ Name: 2, dtype: object
 2025-03-02 07:54:00,724 : INFO : Start and End Range: 1001 to 2000
 2025-03-02 07:54:01,641 : INFO : New Start and End Range: 3001 to 4000
 2025-03-02 07:54:01,643 : INFO : Start and End Range: 3001 to 4000
+2025-03-02 07:54:03,203 : INFO : New Start and End Range: 7001 to 8000
+2025-03-02 07:54:03,204 : INFO : Start and End Range: 7001 to 8000
+2025-03-02 07:54:03,871 : INFO : New Start and End Range: 15001 to 16000
+2025-03-02 07:54:03,872 : INFO : Start and End Range: 15001 to 16000
+2025-03-02 07:54:04,621 : INFO : New Start and End Range: 31001 to 32000
+2025-03-02 07:54:04,622 : INFO : Start and End Range: 31001 to 32000
+2025-03-02 07:54:05,345 : INFO : New Start and End Range: 63001 to 64000
+2025-03-02 07:54:05,347 : INFO : Start and End Range: 63001 to 64000
+2025-03-02 07:54:06,005 : INFO : New Start and End Range: 127001 to 128000
+2025-03-02 07:54:06,008 : INFO : Start and End Range: 127001 to 128000
+2025-03-02 07:54:06,654 : INFO : New Start and End Range: 255001 to 256000
+2025-03-02 07:54:06,655 : INFO : Start and End Range: 255001 to 256000
+2025-03-02 07:54:07,101 : INFO : New Start and End Range: 511001 to 512000
+2025-03-02 07:54:07,102 : INFO : Start and End Range: 511001 to 512000
+2025-03-02 07:54:07,465 : INFO : Stoping at Start and End Range: 511001 to 512000
+2025-03-02 07:54:07,465 : INFO : Created feature data
+2025-03-02 07:54:07,474 : INFO :    Id   Balance  HasCrCard  ...    Tenure  BalanceSEstimatedalaryRatio  CreditScore
+0   1 -1.225848          1  ... -1.041760                          0.0          619
+1   2  0.117350          1  ... -1.387538                          1.0          608
+2   3  1.333053          1  ...  1.032908                          1.0          502
+3   4 -1.225848          1  ... -1.387538                          0.0          699
+4   5  0.785728          1  ... -1.041760                          2.0          850
+
+[5 rows x 17 columns]
+2025-03-02 07:54:07,564 : INFO : received feature data
+2025-03-02 07:54:07,572 : INFO : Models defined
+2025-03-02 07:54:07,572 : INFO : Training model RandomForest
+2025-03-02 07:54:10,379 : INFO : Predicting model RandomForest
+2025-03-02 07:54:10,446 : INFO : Calculating accuracy RandomForest
+2025-03-02 07:54:18,505 : INFO : Logged model RandomForest
+2025-03-02 07:54:18,602 : INFO : Training model LogisticRegression
+2025-03-02 07:54:18,833 : INFO : Predicting model LogisticRegression
+2025-03-02 07:54:18,842 : INFO : Calculating accuracy LogisticRegression
+2025-03-02 07:54:24,148 : INFO : Logged model LogisticRegression
+2025-03-02 07:54:24,173 : INFO : Training model SVM

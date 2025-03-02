@@ -25,3 +25,52 @@
 [2025-03-02T07:54:00.724+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:00,724 : INFO : Start and End Range: 1001 to 2000
 [2025-03-02T07:54:01.641+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:01,641 : INFO : New Start and End Range: 3001 to 4000
 [2025-03-02T07:54:01.644+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:01,643 : INFO : Start and End Range: 3001 to 4000
+[2025-03-02T07:54:03.203+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:03,203 : INFO : New Start and End Range: 7001 to 8000
+[2025-03-02T07:54:03.204+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:03,204 : INFO : Start and End Range: 7001 to 8000
+[2025-03-02T07:54:03.871+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:03,871 : INFO : New Start and End Range: 15001 to 16000
+[2025-03-02T07:54:03.872+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:03,872 : INFO : Start and End Range: 15001 to 16000
+[2025-03-02T07:54:04.622+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:04,621 : INFO : New Start and End Range: 31001 to 32000
+[2025-03-02T07:54:04.622+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:04,622 : INFO : Start and End Range: 31001 to 32000
+[2025-03-02T07:54:05.345+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:05,345 : INFO : New Start and End Range: 63001 to 64000
+[2025-03-02T07:54:05.347+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:05,347 : INFO : Start and End Range: 63001 to 64000
+[2025-03-02T07:54:06.006+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:06,005 : INFO : New Start and End Range: 127001 to 128000
+[2025-03-02T07:54:06.009+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:06,008 : INFO : Start and End Range: 127001 to 128000
+[2025-03-02T07:54:06.655+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:06,654 : INFO : New Start and End Range: 255001 to 256000
+[2025-03-02T07:54:06.655+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:06,655 : INFO : Start and End Range: 255001 to 256000
+[2025-03-02T07:54:07.101+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:07,101 : INFO : New Start and End Range: 511001 to 512000
+[2025-03-02T07:54:07.102+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:07,102 : INFO : Start and End Range: 511001 to 512000
+[2025-03-02T07:54:07.466+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:07,465 : INFO : Stoping at Start and End Range: 511001 to 512000
+[2025-03-02T07:54:07.466+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:07,465 : INFO : Created feature data
+[2025-03-02T07:54:07.563+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:07,474 : INFO :    Id   Balance  HasCrCard  ...    Tenure  BalanceSEstimatedalaryRatio  CreditScore
+[2025-03-02T07:54:07.564+0000] {subprocess.py:93} INFO - 0   1 -1.225848          1  ... -1.041760                          0.0          619
+[2025-03-02T07:54:07.564+0000] {subprocess.py:93} INFO - 1   2  0.117350          1  ... -1.387538                          1.0          608
+[2025-03-02T07:54:07.564+0000] {subprocess.py:93} INFO - 2   3  1.333053          1  ...  1.032908                          1.0          502
+[2025-03-02T07:54:07.564+0000] {subprocess.py:93} INFO - 3   4 -1.225848          1  ... -1.387538                          0.0          699
+[2025-03-02T07:54:07.565+0000] {subprocess.py:93} INFO - 4   5  0.785728          1  ... -1.041760                          2.0          850
+[2025-03-02T07:54:07.565+0000] {subprocess.py:93} INFO - 
+[2025-03-02T07:54:07.565+0000] {subprocess.py:93} INFO - [5 rows x 17 columns]
+[2025-03-02T07:54:07.565+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:07,564 : INFO : received feature data
+[2025-03-02T07:54:07.572+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:07,572 : INFO : Models defined
+[2025-03-02T07:54:07.573+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:07,572 : INFO : Training model RandomForest
+[2025-03-02T07:54:10.379+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:10,379 : INFO : Predicting model RandomForest
+[2025-03-02T07:54:10.446+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:10,446 : INFO : Calculating accuracy RandomForest
+[2025-03-02T07:54:18.268+0000] {subprocess.py:93} INFO - 2025/03/02 07:54:18 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-02T07:54:18.505+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:18,505 : INFO : Logged model RandomForest
+[2025-03-02T07:54:18.590+0000] {subprocess.py:93} INFO - 2025/03/02 07:54:18 INFO mlflow.tracking._tracking_service.client: 🏃 View run RandomForest at: http://localhost:5000/#/experiments/0/runs/30a1116e1c3f468db3d1a757ec74b4c5.
+[2025-03-02T07:54:18.591+0000] {subprocess.py:93} INFO - 2025/03/02 07:54:18 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-02T07:54:18.603+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:18,602 : INFO : Training model LogisticRegression
+[2025-03-02T07:54:18.833+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+[2025-03-02T07:54:18.834+0000] {subprocess.py:93} INFO - STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+[2025-03-02T07:54:18.834+0000] {subprocess.py:93} INFO - 
+[2025-03-02T07:54:18.835+0000] {subprocess.py:93} INFO - Increase the number of iterations (max_iter) or scale the data as shown in:
+[2025-03-02T07:54:18.835+0000] {subprocess.py:93} INFO -     https://scikit-learn.org/stable/modules/preprocessing.html
+[2025-03-02T07:54:18.835+0000] {subprocess.py:93} INFO - Please also refer to the documentation for alternative solver options:
+[2025-03-02T07:54:18.836+0000] {subprocess.py:93} INFO -     https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+[2025-03-02T07:54:18.836+0000] {subprocess.py:93} INFO -   n_iter_i = _check_optimize_result(
+[2025-03-02T07:54:18.836+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:18,833 : INFO : Predicting model LogisticRegression
+[2025-03-02T07:54:18.843+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:18,842 : INFO : Calculating accuracy LogisticRegression
+[2025-03-02T07:54:24.078+0000] {subprocess.py:93} INFO - 2025/03/02 07:54:24 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-02T07:54:24.148+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:24,148 : INFO : Logged model LogisticRegression
+[2025-03-02T07:54:24.163+0000] {subprocess.py:93} INFO - 2025/03/02 07:54:24 INFO mlflow.tracking._tracking_service.client: 🏃 View run LogisticRegression at: http://localhost:5000/#/experiments/0/runs/3a33c58c539742469218a6a44c8be123.
+[2025-03-02T07:54:24.164+0000] {subprocess.py:93} INFO - 2025/03/02 07:54:24 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-02T07:54:24.173+0000] {subprocess.py:93} INFO - 2025-03-02 07:54:24,173 : INFO : Training model SVM
