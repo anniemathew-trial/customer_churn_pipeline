@@ -150,3 +150,5 @@
 2025-03-02 09:52:21,621 : ERROR : Failed data transformation: [Errno 2] No such file or directory: 'data/cleaned/customer_data.csv'
 2025-03-02 09:58:02,618 : INFO : Starting data preparation for csv.
 2025-03-02 09:58:02,619 : ERROR : Failed data transformation: [Errno 2] No such file or directory: 'data/cleaned/customer_data.csv'
+2025-03-02 10:03:36,245 : INFO : Starting data preparation for csv.
+2025-03-02 10:03:36,246 : ERROR : Failed data transformation: [Errno 2] No such file or directory: 'data/cleaned/customer_data.csv'
