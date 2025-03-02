@@ -625,3 +625,28 @@ Name: 2, dtype: object
 2025-03-02 07:54:18,842 : INFO : Calculating accuracy LogisticRegression
 2025-03-02 07:54:24,148 : INFO : Logged model LogisticRegression
 2025-03-02 07:54:24,173 : INFO : Training model SVM
+2025-03-02 07:54:32,709 : INFO : Predicting model SVM
+2025-03-02 07:54:33,141 : INFO : Calculating accuracy SVM
+2025-03-02 07:54:37,645 : INFO : Logged model SVM
+2025-03-02 07:54:37,668 : INFO : Starting best model registration
+2025-03-02 07:54:37,668 : INFO : Finding Best model
+2025-03-02 07:54:37,712 : INFO : Selected best model : run_id                                            30a1116e1c3f468db3d1a757ec74b4c5
+experiment_id                                                                    0
+status                                                                    FINISHED
+artifact_uri                     mlflow-artifacts:/0/30a1116e1c3f468db3d1a757ec...
+start_time                                        2025-03-02 07:54:10.649000+00:00
+end_time                                          2025-03-02 07:54:18.565000+00:00
+metrics.recall                                                            0.774929
+metrics.f1_score                                                          0.852665
+metrics.precision                                                         0.947735
+metrics.accuracy                                                          0.947749
+params.model_type                                                     RandomForest
+tags.mlflow.source.name                 /opt/airflow/executables/model_training.py
+tags.mlflow.source.git.commit             270c05278af3e38b6ddcaa5daf34ed7ef881fcdb
+tags.mlflow.source.type                                                      LOCAL
+tags.mlflow.user                                                           airflow
+tags.mlflow.log-model.history    [{"run_id": "30a1116e1c3f468db3d1a757ec74b4c5"...
+tags.mlflow.runName                                                   RandomForest
+Name: 2, dtype: object
+2025-03-02 07:54:37,713 : INFO : Registering best model runs:/30a1116e1c3f468db3d1a757ec74b4c5/RandomForest_model
+2025-03-02 07:54:37,785 : INFO : Completed model training & registration !!

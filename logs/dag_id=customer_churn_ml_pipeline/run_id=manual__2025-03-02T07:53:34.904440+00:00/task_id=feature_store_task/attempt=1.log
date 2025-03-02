@@ -27,3 +27,9 @@
 [2025-03-02T07:54:25.249+0000] {subprocess.py:93} INFO - 
 [2025-03-02T07:54:25.249+0000] {subprocess.py:93} INFO - [1m[32mcustomer_stats_fv[0m from [1m[32m2025-03-02 06:47:39+00:00[0m to [1m[32m2025-03-02 07:54:11+00:00[0m:
 [2025-03-02T07:54:25.256+0000] {subprocess.py:93} INFO - 0it [00:00, ?it/s]0it [00:00, ?it/s]
+[2025-03-02T07:54:26.170+0000] {subprocess.py:93} INFO - [main 2ed5295] Updated feature store
+[2025-03-02T07:54:26.170+0000] {subprocess.py:93} INFO -  5 files changed, 110 insertions(+)
+[2025-03-02T07:54:27.691+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T07:54:27.692+0000] {subprocess.py:93} INFO -    270c052..2ed5295  main -> main
+[2025-03-02T07:54:27.698+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T07:54:27.763+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=feature_store_task, execution_date=20250302T075334, start_date=20250302T075336, end_date=20250302T075427
