@@ -23,7 +23,7 @@ with DAG(
     data_ingestion_task = BashOperator(
         task_id = 'data_ingestion_task',
         bash_command = """python /opt/airflow/executables/data_ingestion.py && \
-			NOW = $(date '+%d-%m-%Y')
+			NOW=$(date '+%d-%m-%Y')
 			cd /opt/airflow && \
 			git rm -r --cached 'data/raw/$NOW/csv'
 			git rm -r --cached 'data/raw/$NOW/database'
