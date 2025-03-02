@@ -14,3 +14,35 @@
 [2025-03-02T06:15:27.544+0000] {subprocess.py:93} INFO - 2025-03-02 06:15:27,540 : INFO : Reading data from CSV file customer_data.csv
 [2025-03-02T06:15:27.682+0000] {subprocess.py:93} INFO - 2025-03-02 06:15:27,681 : INFO : Data from CSV customer_data.csv ingested successfully!
 [2025-03-02T06:15:27.682+0000] {subprocess.py:93} INFO - 2025-03-02 06:15:27,682 : ERROR : Error ingesting database: [Errno 2] No such file or directory: 'settings.json'
+[2025-03-02T06:15:27.940+0000] {subprocess.py:93} INFO - [main 568d40b] Updated data ingestion
+[2025-03-02T06:15:27.940+0000] {subprocess.py:93} INFO -  26 files changed, 1609 insertions(+)
+[2025-03-02T06:15:27.940+0000] {subprocess.py:93} INFO -  rewrite dags/__pycache__/customer_churn.cpython-38.pyc (68%)
+[2025-03-02T06:15:27.941+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:24:38.853557+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.941+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:24:38.853557+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.941+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:30:46.188794+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.942+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:30:46.188794+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.942+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:30:59.941220+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.942+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:30:59.941220+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.943+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:34:06.036147+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.943+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:34:06.036147+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.943+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:41:27.189335+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.944+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:41:27.189335+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.944+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:46:42.678085+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.944+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:46:42.678085+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.944+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:09:47.081120+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.945+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:09:47.081120+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.945+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:12:10.518287+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.946+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:12:10.518287+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.946+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:13:07.925008+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.946+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:13:07.925008+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.946+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:14:32.945096+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.947+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:14:32.945096+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.947+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:15:20.066703+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:15:27.947+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:15:20.066703+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:15:27.947+0000] {subprocess.py:93} INFO -  create mode 100644 logs/scheduler/2025-03-02/customer_churn.py.log
+[2025-03-02T06:15:29.516+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T06:15:29.517+0000] {subprocess.py:93} INFO -    975a291..568d40b  main -> main
+[2025-03-02T06:15:29.522+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T06:15:29.569+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T061520, start_date=20250302T061525, end_date=20250302T061529
+[2025-03-02T06:15:29.593+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T06:15:29.636+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
