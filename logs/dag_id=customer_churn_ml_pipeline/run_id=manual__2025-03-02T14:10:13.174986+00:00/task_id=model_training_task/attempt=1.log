@@ -1,0 +1,40 @@
+[2025-03-02T14:12:38.628+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-02T14:10:13.174986+00:00 [queued]>
+[2025-03-02T14:12:38.640+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-02T14:10:13.174986+00:00 [queued]>
+[2025-03-02T14:12:38.640+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T14:12:38.655+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): model_training_task> on 2025-03-02 14:10:13.174986+00:00
+[2025-03-02T14:12:38.660+0000] {standard_task_runner.py:57} INFO - Started process 5038 to run task
+[2025-03-02T14:12:38.662+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'model_training_task', 'manual__2025-03-02T14:10:13.174986+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpl0zq7um6']
+[2025-03-02T14:12:38.665+0000] {standard_task_runner.py:85} INFO - Job 15: Subtask model_training_task
+[2025-03-02T14:12:38.684+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T14:12:38.729+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-02T14:10:13.174986+00:00 [running]> on host 157237bff8f7
+[2025-03-02T14:12:38.828+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='model_training_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T14:10:13.174986+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T14:10:13.174986+00:00'
+[2025-03-02T14:12:38.829+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T14:12:38.830+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t    \t\tcd /opt/***\n       \t\t\t    python /opt/***/executables/model_training.py && \t      \t\t    git add logs && \t      \t\t    git add mlruns && \t        \t    git status &&                             git commit -m "Trained model version" -a && \\    \n\t\t\t    git push\n                        ']
+[2025-03-02T14:12:38.839+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T14:12:46.361+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:64: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-02T14:12:46.361+0000] {subprocess.py:93} INFO -   @validator("togetherai_api_key", pre=True)
+[2025-03-02T14:12:46.361+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:372: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-02T14:12:46.362+0000] {subprocess.py:93} INFO -   @root_validator(skip_on_failure=True)
+[2025-03-02T14:12:46.362+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/pydantic/_internal/_config.py:267: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-02T14:12:46.362+0000] {subprocess.py:93} INFO -   warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+[2025-03-02T14:12:46.362+0000] {subprocess.py:93} INFO - 2025-03-02 14:12:46,360 : INFO : Starting model training
+[2025-03-02T14:12:46.383+0000] {subprocess.py:93} INFO - 2025-03-02 14:12:46,383 : INFO : Registry cache expired, so refreshing
+[2025-03-02T14:12:46.396+0000] {subprocess.py:93} INFO - 2025-03-02 14:12:46,395 : INFO : Getting data
+[2025-03-02T14:12:46.396+0000] {subprocess.py:93} INFO - 2025-03-02 14:12:46,396 : INFO : Start and End Range: 1 to 1000
+[2025-03-02T14:12:46.403+0000] {subprocess.py:93} INFO - Error in model training: Feature view customer_stats_fv does not exist
+[2025-03-02T14:12:47.243+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-02T14:12:47.244+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-02T14:12:47.244+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:12:47.244+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-02T14:12:47.245+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-02T14:12:47.245+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:10:13.174986+00:00/task_id=feature_store_task/attempt=1.log
+[2025-03-02T14:12:47.245+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:10:13.174986+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-02T14:12:47.245+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-02T14:12:47.246+0000] {subprocess.py:93} INFO - 	modified:   logs/model_training.log
+[2025-03-02T14:12:47.246+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-02/customer_churn.py.log
+[2025-03-02T14:12:47.246+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:12:47.246+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-02T14:12:47.247+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-02T14:12:47.247+0000] {subprocess.py:93} INFO - 	customer_churn_pipeline/
+[2025-03-02T14:12:47.247+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-02T14:12:47.247+0000] {subprocess.py:93} INFO - 
