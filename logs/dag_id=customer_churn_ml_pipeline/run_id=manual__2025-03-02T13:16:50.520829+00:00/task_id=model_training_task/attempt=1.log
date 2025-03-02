@@ -35,3 +35,14 @@
 [2025-03-02T13:19:03.295+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/__pycache__/example_repo.cpython-38.pyc
 [2025-03-02T13:19:03.296+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/__pycache__/test_workflow.cpython-38.pyc
 [2025-03-02T13:19:03.296+0000] {subprocess.py:93} INFO - 
+[2025-03-02T13:19:03.314+0000] {subprocess.py:93} INFO - [main b094e7f] Trained model version
+[2025-03-02T13:19:03.315+0000] {subprocess.py:93} INFO -  3 files changed, 130 insertions(+)
+[2025-03-02T13:19:03.315+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T13:16:50.520829+00:00/task_id=feature_store_task/attempt=1.log
+[2025-03-02T13:19:03.315+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T13:16:50.520829+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-02T13:19:03.315+0000] {subprocess.py:93} INFO - /bin/bash: line 3:  : command not found
+[2025-03-02T13:19:06.007+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T13:19:06.008+0000] {subprocess.py:93} INFO -    7fa8cfe..b094e7f  main -> main
+[2025-03-02T13:19:06.012+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T13:19:06.052+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=model_training_task, execution_date=20250302T131650, start_date=20250302T131855, end_date=20250302T131906
+[2025-03-02T13:19:06.088+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T13:19:06.134+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
