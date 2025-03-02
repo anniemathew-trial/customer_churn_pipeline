@@ -13,3 +13,13 @@
 [2025-03-02T06:39:03.929+0000] {subprocess.py:86} INFO - Output:
 [2025-03-02T06:39:07.383+0000] {subprocess.py:93} INFO - Everything is up to date.
 [2025-03-02T06:39:08.760+0000] {subprocess.py:93} INFO - 2025-03-02 06:39:08,759 : ERROR : Error storing data: [Errno 2] No such file or directory: 'settings.json'
+[2025-03-02T06:39:08.940+0000] {subprocess.py:93} INFO - [main d72b1cc] Updated stored data version
+[2025-03-02T06:39:08.941+0000] {subprocess.py:93} INFO -  5 files changed, 46 insertions(+)
+[2025-03-02T06:39:08.941+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:37:55.944013+00:00/task_id=data_storage_task/attempt=1.log
+[2025-03-02T06:39:14.301+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T06:39:16.179+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T06:39:16.180+0000] {subprocess.py:93} INFO -    8b60157..d72b1cc  main -> main
+[2025-03-02T06:39:16.185+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T06:39:16.228+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_storage_task, execution_date=20250302T063755, start_date=20250302T063903, end_date=20250302T063916
+[2025-03-02T06:39:16.279+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T06:39:16.315+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
