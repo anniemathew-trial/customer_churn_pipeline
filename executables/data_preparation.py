@@ -40,8 +40,8 @@ def upload_file(file_name, bucket, object_name=None):
 def prepare_csv_data(output_path="customer_data.csv"):
     try:
         logging.info("Starting data preparation for csv.")
-        # Read data from Amazon S3 bucket
-        df = pd.read_csv(f'data/raw/{today}/csv/customer_data.csv')
+        data_path = f"{settings['raw_data_path']}/data/raw/{today}/csv/{csv_filename}"
+        df = pd.read_csv(data_path)
         
         logging.info("Handling 'Tenure', 'Balance', 'EstimatedSalary' empty data")
         numeric_columns = ['Tenure', 'Balance', 'EstimatedSalary'];
@@ -68,10 +68,10 @@ def prepare_csv_data(output_path="customer_data.csv"):
             
         logging.info("Saving data to S3.")
         cleaned_file_path = "data/cleaned/{today}/csv/{output_path}"
-        df.to_csv(cleaned_file_path, index=False)       
+        df.to_csv(f"{settings['raw_data_path']}/{cleaned_file_path}", index=False)       
         s3_client = boto3.client('s3', region_name='us-east-1')
         bucket_name = "dmmlassignmentbucket"
-        s3_key = f"data/cleaned/{today}/csv/{output_path}"
+        s3_key = cleaned_file_path
         upload_file(cleaned_file_path, bucket_name, s3_key)        
         generate_report(df)
     except Exception as e:
@@ -79,7 +79,7 @@ def prepare_csv_data(output_path="customer_data.csv"):
     
 def generate_report(data, pdf_filename = "visualization/plots.pdf"):   
     try:
-        p = Path('visualization')
+        p = Path(f"{settings['raw_data_path']/visualization")
         p.mkdir(parents = True, exist_ok = True)
         with PdfPages(pdf_filename) as pdf:
             logging.info("Creating Pie chart")            
