@@ -1,0 +1,40 @@
+[2025-03-02T09:52:03.843+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T09:51:20.251514+00:00 [queued]>
+[2025-03-02T09:52:03.856+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T09:51:20.251514+00:00 [queued]>
+[2025-03-02T09:52:03.856+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T09:52:03.876+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_preparation_task> on 2025-03-02 09:51:20.251514+00:00
+[2025-03-02T09:52:03.882+0000] {standard_task_runner.py:57} INFO - Started process 8397 to run task
+[2025-03-02T09:52:03.886+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_preparation_task', 'manual__2025-03-02T09:51:20.251514+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpzlcnjlwn']
+[2025-03-02T09:52:03.890+0000] {standard_task_runner.py:85} INFO - Job 106: Subtask data_preparation_task
+[2025-03-02T09:52:03.914+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T09:52:03.976+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T09:51:20.251514+00:00 [running]> on host 9113a5746a05
+[2025-03-02T09:52:04.097+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_preparation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T09:51:20.251514+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T09:51:20.251514+00:00'
+[2025-03-02T09:52:04.099+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T09:52:04.099+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/*** &&\t\t\tpython /opt/***/executables/data_preparation.py &&                         dvc add /opt/***/data/cleaned &&                         git add /opt/***/data/cleaned.dvc && \t\t\tgit add logs && \\   \n\t\t\tgit add visualization &&    \t\t\tgit status &&                         git commit -m "Updated cleaned data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-02T09:52:04.109+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T09:52:06.634+0000] {subprocess.py:93} INFO - 2025-03-02 09:52:06,634 : INFO : Starting data preparation for csv.
+[2025-03-02T09:52:06.634+0000] {subprocess.py:93} INFO - 2025-03-02 09:52:06,634 : ERROR : Error in preparing dataname 'csv_filename' is not defined
+[2025-03-02T09:52:08.859+0000] {subprocess.py:93} INFO - ERROR: output 'data/cleaned' does not exist: [Errno 2] No such file or directory: '/opt/***/data/cleaned'
+[2025-03-02T09:52:09.123+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-02T09:52:09.123+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-02T09:52:09.124+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:52:09.124+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-02T09:52:09.124+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-02T09:52:09.124+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-02T09:52:09.124+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:51:20.251514+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-02T09:52:09.125+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-02T09:52:09.125+0000] {subprocess.py:93} INFO - 	modified:   logs/data_preparation.log
+[2025-03-02T09:52:09.125+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:52:09.125+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-02T09:52:09.125+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-02T09:52:09.125+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:51:20.251514+00:00/task_id=data_preparation_task/
+[2025-03-02T09:52:09.126+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:52:09.126+0000] {subprocess.py:93} INFO - no changes added to commit (use "git add" and/or "git commit -a")
+[2025-03-02T09:52:09.204+0000] {subprocess.py:93} INFO - [main 2e8e1cc] Updated cleaned data version
+[2025-03-02T09:52:09.204+0000] {subprocess.py:93} INFO -  3 files changed, 20 insertions(+)
+[2025-03-02T09:52:13.922+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T09:52:15.959+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T09:52:15.960+0000] {subprocess.py:93} INFO -    6dcc3de..2e8e1cc  main -> main
+[2025-03-02T09:52:15.966+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T09:52:16.018+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_preparation_task, execution_date=20250302T095120, start_date=20250302T095203, end_date=20250302T095216
+[2025-03-02T09:52:16.071+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T09:52:16.146+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
