@@ -1,5 +1,5 @@
 artifact_uri: mlflow-artifacts:/0/99d7a480377c4d37acb5615b9f481ec9/artifacts
-end_time: null
+end_time: 1740902559434
 entry_point_name: ''
 experiment_id: '0'
 lifecycle_stage: active
@@ -10,6 +10,6 @@ source_name: ''
 source_type: 4
 source_version: ''
 start_time: 1740902553892
-status: 1
+status: 3
 tags: []
 user_id: airflow
