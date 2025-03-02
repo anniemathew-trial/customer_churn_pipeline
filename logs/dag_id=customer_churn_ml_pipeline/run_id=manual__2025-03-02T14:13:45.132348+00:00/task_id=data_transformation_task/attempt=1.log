@@ -15,3 +15,25 @@
 [2025-03-02T14:15:20.899+0000] {subprocess.py:93} INFO - 2025-03-02 14:15:20,899 : INFO : Starting data transformation for csv.
 [2025-03-02T14:15:20.940+0000] {subprocess.py:93} INFO - 2025-03-02 14:15:20,940 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
 [2025-03-02T14:15:20.948+0000] {subprocess.py:93} INFO - 2025-03-02 14:15:20,948 : INFO : Saving data to S3.
+[2025-03-02T14:15:27.460+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:15:27.461+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-03-02T14:15:27.461+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:15:27.461+0000] {subprocess.py:93} INFO - 	git add data/transformed.dvc
+[2025-03-02T14:15:27.462+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:15:27.462+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-03-02T14:15:27.462+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:15:27.462+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
+[2025-03-02T14:15:27.850+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-02T14:15:27.850+0000] {subprocess.py:93} INFO - Your branch is ahead of 'origin/main' by 1 commit.
+[2025-03-02T14:15:27.850+0000] {subprocess.py:93} INFO -   (use "git push" to publish your local commits)
+[2025-03-02T14:15:27.851+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:15:27.851+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-02T14:15:27.851+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-02T14:15:27.851+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:13:34.519458+00:00/task_id=data_transformation_task/attempt=1.log
+[2025-03-02T14:15:27.852+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:13:45.132348+00:00/task_id=data_transformation_task/attempt=1.log
+[2025-03-02T14:15:27.852+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:15:27.852+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-02T14:15:27.852+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-02T14:15:27.852+0000] {subprocess.py:93} INFO - 	customer_churn_pipeline/
+[2025-03-02T14:15:27.853+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-02T14:15:27.853+0000] {subprocess.py:93} INFO - 
