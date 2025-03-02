@@ -322,3 +322,11 @@
 2025-03-02 10:35:11,625 : ERROR : Error storing data: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib '{ODBC Driver 17 for SQL Server};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=customer_churn_db;UID=sa;PWD=NewPASS1234' : file not found (0) (SQLDriverConnect)")
 2025-03-02 10:37:48,847 : INFO : Connecting to Database
 2025-03-02 10:37:48,850 : ERROR : Error storing data: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib '{ODBC Driver 17 for SQL Server};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=customer_churn_db;UID=sa;PWD=NewPASS1234' : file not found (0) (SQLDriverConnect)")
+2025-03-02 10:42:48,080 : INFO : Connecting to Database
+2025-03-02 10:42:48,151 : INFO : Connecting to Database Successfull
+2025-03-02 10:42:48,151 : INFO : Reading Initial DB Setup Script
+2025-03-02 10:42:48,151 : INFO : Executing script to Database
+2025-03-02 10:42:48,218 : INFO : Executed script successfully !!
+2025-03-02 10:42:48,218 : INFO : Reading insert script template
+2025-03-02 10:42:48,219 : INFO : Inserting data to database
+2025-03-02 10:42:48,220 : ERROR : Error storing data: [Errno 2] No such file or directory: 'data/transformed/customer_data.csv'
