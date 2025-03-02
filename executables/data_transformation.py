@@ -71,17 +71,17 @@ def data_transformation(output_path="customer_data.csv"):
         logging.info("Scaling 'Tenure', 'Balance', 'EstimatedSalary'.")
         scaler = StandardScaler()
         df[['Tenure', 'Balance', 'EstimatedSalary']] = scaler.fit_transform(df[['Tenure', 'Balance', 'EstimatedSalary']]) 
-        
-        p = Path('data/transformed')
-        p.mkdir(parents = True, exist_ok = True)
-            
+              
         logging.info("Saving data to S3.")
-        df.to_csv(f"/opt/airflow/data/transformed/{today}/csv/{output_path}", index=False)
-
+        transformed_file_path = f"data/transformed/{today}/csv"
+        p = Path(cleaned_file_path)
+        p.mkdir(parents = True, exist_ok = True)
+        df.to_csv(f"{settings['raw_data_path']}/{transformed_file_path}/{output_path}", index=False)       
+        s3_client = boto3.client('s3', region_name='us-east-1')
         bucket_name = "dmmlassignmentbucket"
-        file_name = "customer_data.csv"
-        s3_key = f"data/transformed/{today}/csv/{file_name}"
-        upload_file(f"{settings['raw_data_path']}/data/transformed/{today}/csv/{file_name}", bucket_name, s3_key)
+        s3_key = f"{transformed_file_path}/{output_path}"
+        upload_file(transformed_file_path, bucket_name, s3_key)        
+
     except Exception as e:
         logging.error(f"Failed data transformation: {str(e)}")
     
