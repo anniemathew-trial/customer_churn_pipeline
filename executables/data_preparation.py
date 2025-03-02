@@ -64,13 +64,13 @@ def prepare_csv_data(output_path="customer_data.csv"):
         df[categorical_columns] = df[categorical_columns].astype('category')
            
         logging.info("Saving data to S3.")
-        cleaned_file_path = f"data/cleaned/{today}/csv/{output_path}"
+        cleaned_file_path = f"data/cleaned/{today}/csv"
         p = Path(cleaned_file_path)
         p.mkdir(parents = True, exist_ok = True)
-        df.to_csv(f"{settings['raw_data_path']}/{cleaned_file_path}", index=False)       
+        df.to_csv(f"{settings['raw_data_path']}/{cleaned_file_path}/{output_path}", index=False)       
         s3_client = boto3.client('s3', region_name='us-east-1')
         bucket_name = "dmmlassignmentbucket"
-        s3_key = cleaned_file_path
+        s3_key = f"{cleaned_file_path}/{output_path}"
         upload_file(cleaned_file_path, bucket_name, s3_key)        
         generate_report(df)
     except Exception as e:
