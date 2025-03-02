@@ -55,3 +55,12 @@ airflow.exceptions.AirflowException: Bash command failed. The command returned a
 [2025-03-02T08:36:32.707+0000] {subprocess.py:86} INFO - Output:
 [2025-03-02T08:36:36.545+0000] {subprocess.py:93} INFO - ERROR: failed to pull data from the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
 [2025-03-02T08:36:39.770+0000] {subprocess.py:93} INFO - 2025-03-02 08:36:39,770 : ERROR : Error storing data: [Errno 2] No such file or directory: 'settings.json'
+[2025-03-02T08:36:40.315+0000] {subprocess.py:93} INFO - [main 02f54ae] Updated stored data version
+[2025-03-02T08:36:40.316+0000] {subprocess.py:93} INFO -  8 files changed, 68 insertions(+)
+[2025-03-02T08:36:51.768+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T08:36:53.809+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T08:36:53.810+0000] {subprocess.py:93} INFO -    f2091b1..02f54ae  main -> main
+[2025-03-02T08:36:53.818+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:36:53.891+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_storage_task, execution_date=20250301T080000, start_date=20250302T083632, end_date=20250302T083653
+[2025-03-02T08:36:53.946+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:36:53.986+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
