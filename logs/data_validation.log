@@ -240,3 +240,7 @@
 2025-03-02 09:38:41,275 : ERROR : Error validating  data: [Errno 2] No such file or directory: 'data/raw/customer_data.csv'
 2025-03-02 09:42:08,074 : INFO : Starting data validation
 2025-03-02 09:42:08,074 : ERROR : Error validating  data: name 'today' is not defined
+2025-03-02 09:43:57,621 : INFO : Starting data validation
+2025-03-02 09:43:57,664 : INFO : Running validation on data received from S3
+2025-03-02 09:43:57,807 : INFO : Saving metrics to S3
+2025-03-02 09:43:57,810 : INFO : Metrics saved to: csv_validation_report.csv
