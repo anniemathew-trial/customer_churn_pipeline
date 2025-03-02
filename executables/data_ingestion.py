@@ -4,7 +4,7 @@ import logging
 import pyodbc
 import time
 
-with open("settings.json", "r") as file:
+with open("/opt/airflow/executables/settings.json", "r") as file:
         settings = json.load(file)
 today = time.strftime("%d-%m-%Y")
 #create log file if it does not exist
