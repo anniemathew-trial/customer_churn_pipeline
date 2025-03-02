@@ -37,3 +37,15 @@
 [2025-03-02T09:21:35.615+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
 [2025-03-02T09:21:35.615+0000] {subprocess.py:93} INFO - 	modified:   dags/__pycache__/customer_churn.cpython-38.pyc
 [2025-03-02T09:21:35.615+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:21:35.654+0000] {subprocess.py:93} INFO - [main 13fc11b] Updated data ingestion
+[2025-03-02T09:21:35.654+0000] {subprocess.py:93} INFO -  8 files changed, 287 insertions(+)
+[2025-03-02T09:21:35.655+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:16:19.982190+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T09:21:35.655+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:16:19.982190+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-02T09:21:35.655+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:21:26.749449+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T09:21:35.655+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:21:26.749449+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T09:21:37.641+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T09:21:37.642+0000] {subprocess.py:93} INFO -    4816fe5..13fc11b  main -> main
+[2025-03-02T09:21:37.654+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T09:21:37.731+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T092126, start_date=20250302T092133, end_date=20250302T092137
+[2025-03-02T09:21:37.780+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T09:21:37.851+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
