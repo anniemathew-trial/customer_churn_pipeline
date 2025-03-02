@@ -51,3 +51,31 @@
 [2025-03-02T14:14:55.435+0000] {subprocess.py:93} INFO - 2025-03-02 14:14:55,435 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 [2025-03-02T14:14:55.465+0000] {subprocess.py:93} INFO - 2025-03-02 14:14:55,465 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 [2025-03-02T14:14:56.099+0000] {subprocess.py:93} INFO - 2025-03-02 14:14:56,098 : INFO : Saved pdf in visualization/plots.pdf
+[2025-03-02T14:14:59.702+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:14:59.703+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-03-02T14:14:59.703+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:14:59.703+0000] {subprocess.py:93} INFO - 	git add data/cleaned.dvc
+[2025-03-02T14:14:59.704+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:14:59.704+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-03-02T14:14:59.704+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:14:59.704+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
+[2025-03-02T14:15:00.231+0000] {subprocess.py:93} INFO - /bin/bash: line 2:  : command not found
+[2025-03-02T14:15:00.291+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-02T14:15:00.291+0000] {subprocess.py:93} INFO - Your branch is ahead of 'origin/main' by 1 commit.
+[2025-03-02T14:15:00.292+0000] {subprocess.py:93} INFO -   (use "git push" to publish your local commits)
+[2025-03-02T14:15:00.292+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:15:00.293+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-02T14:15:00.293+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-02T14:15:00.294+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:13:34.519458+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T14:15:00.294+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:13:45.132348+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T14:15:00.294+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:15:00.295+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-02T14:15:00.295+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-02T14:15:00.296+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-02T14:15:00.306+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:13:45.132348+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T14:15:00.307+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:15:00.307+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-02T14:15:00.307+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-02T14:15:00.308+0000] {subprocess.py:93} INFO - 	customer_churn_pipeline/
+[2025-03-02T14:15:00.308+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-02T14:15:00.309+0000] {subprocess.py:93} INFO - 

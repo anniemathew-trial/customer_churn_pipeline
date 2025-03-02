@@ -84,3 +84,7 @@
 [2025-03-02T14:14:57.279+0000] {subprocess.py:93} INFO - 	customer_churn_pipeline/
 [2025-03-02T14:14:57.280+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
 [2025-03-02T14:14:57.280+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:14:57.386+0000] {subprocess.py:93} INFO - [main 8ee2040] Updated cleaned data version
+[2025-03-02T14:14:57.387+0000] {subprocess.py:93} INFO -  8 files changed, 249 insertions(+)
+[2025-03-02T14:14:57.387+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:13:34.519458+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T14:14:57.387+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:13:45.132348+00:00/task_id=data_preparation_task/attempt=1.log
