@@ -338,3 +338,11 @@
 2025-03-02 10:49:36,847 : INFO : Reading insert script template
 2025-03-02 10:49:36,847 : INFO : Inserting data to database
 2025-03-02 10:49:36,847 : ERROR : Error storing data: name 'today' is not defined
+2025-03-02 10:55:31,101 : INFO : Connecting to Database
+2025-03-02 10:55:31,131 : INFO : Connecting to Database Successfull
+2025-03-02 10:55:31,131 : INFO : Reading Initial DB Setup Script
+2025-03-02 10:55:31,131 : INFO : Executing script to Database
+2025-03-02 10:55:31,134 : INFO : Executed script successfully !!
+2025-03-02 10:55:31,134 : INFO : Reading insert script template
+2025-03-02 10:55:31,134 : INFO : Inserting data to database
+2025-03-02 10:55:31,135 : ERROR : Error storing data: name 'output_path' is not defined
