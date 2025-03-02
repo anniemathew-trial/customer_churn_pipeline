@@ -5886,3 +5886,10 @@
 [2025-03-02T15:26:38.445+0000] {logging_mixin.py:154} INFO - [2025-03-02T15:26:38.445+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-03-02T15:26:38.473+0000] {logging_mixin.py:154} INFO - [2025-03-02T15:26:38.473+0000] {dag.py:3722} INFO - Setting next_dagrun for customer_churn_ml_pipeline to 2025-03-02T08:00:00+00:00, run_after=2025-03-03T08:00:00+00:00
 [2025-03-02T15:26:38.498+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.124 seconds
+[2025-03-02T15:27:08.583+0000] {processor.py:157} INFO - Started process (PID=2211) to work on /opt/airflow/dags/customer_churn.py
+[2025-03-02T15:27:08.583+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/customer_churn.py for tasks to queue
+[2025-03-02T15:27:08.584+0000] {logging_mixin.py:154} INFO - [2025-03-02T15:27:08.584+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/customer_churn.py
+[2025-03-02T15:27:08.601+0000] {processor.py:839} INFO - DAG(s) dict_keys(['customer_churn_ml_pipeline']) retrieved from /opt/airflow/dags/customer_churn.py
+[2025-03-02T15:27:08.637+0000] {logging_mixin.py:154} INFO - [2025-03-02T15:27:08.636+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-03-02T15:27:08.663+0000] {logging_mixin.py:154} INFO - [2025-03-02T15:27:08.663+0000] {dag.py:3722} INFO - Setting next_dagrun for customer_churn_ml_pipeline to 2025-03-02T08:00:00+00:00, run_after=2025-03-03T08:00:00+00:00
+[2025-03-02T15:27:08.685+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/customer_churn.py took 0.107 seconds
