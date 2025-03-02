@@ -20,3 +20,8 @@
 [2025-03-02T08:40:27.529+0000] {subprocess.py:93} INFO - [main 86d9597] Updated validation
 [2025-03-02T08:40:27.530+0000] {subprocess.py:93} INFO -  4 files changed, 33 insertions(+)
 [2025-03-02T08:40:32.507+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T08:40:34.696+0000] {subprocess.py:93} INFO - Everything up-to-date
+[2025-03-02T08:40:34.702+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:40:34.758+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_validation_task, execution_date=20250302T084020, start_date=20250302T084022, end_date=20250302T084034
+[2025-03-02T08:40:34.790+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:40:34.819+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
