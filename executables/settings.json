@@ -1,0 +1,6 @@
+{
+    "id" : "AKIA34AMCY3VLW34NUXM",
+    "key" : "CUiv6YaaWDqfUbQnZzt2YHInUFDK297bv6Lso4sJ",
+    "db_connection":"DRIVER={{SQL SERVER}};SERVER=127.0.0.1,1433;DATABASE=dmml_assignment;UID=sa;PWD=",
+    "sql_pwd":"NewPASS1234"
+}
