@@ -16,3 +16,14 @@
 [2025-03-02T06:40:00.828+0000] {subprocess.py:93} INFO - 2025-03-02 06:40:00,828 : INFO : Connecting to Database
 [2025-03-02T06:40:00.830+0000] {subprocess.py:93} INFO - 2025-03-02 06:40:00,830 : ERROR : Error ingesting database: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib '{ODBC Driver 17 for SQL Server};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=dmml_assignment;UID=sa;PWD=NewPASS1234' : file not found (0) (SQLDriverConnect)")
 [2025-03-02T06:40:00.831+0000] {subprocess.py:93} INFO - DRIVER={{ODBC Driver 17 for SQL Server}};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=dmml_assignment;UID=sa;PWD=NewPASS1234
+[2025-03-02T06:40:01.000+0000] {subprocess.py:93} INFO - [main 52e2546] Updated data ingestion
+[2025-03-02T06:40:01.001+0000] {subprocess.py:93} INFO -  4 files changed, 106 insertions(+)
+[2025-03-02T06:40:01.002+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:37:55.944013+00:00/task_id=feature_store_task/attempt=1.log
+[2025-03-02T06:40:01.002+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:39:50.917744+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:40:01.003+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:39:50.917744+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:40:02.730+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T06:40:02.731+0000] {subprocess.py:93} INFO -    f117349..52e2546  main -> main
+[2025-03-02T06:40:02.745+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T06:40:02.795+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T063950, start_date=20250302T063958, end_date=20250302T064002
+[2025-03-02T06:40:02.817+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T06:40:02.855+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
