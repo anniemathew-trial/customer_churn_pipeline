@@ -1,0 +1,27 @@
+[2025-03-02T09:08:53.265+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.raw_data_storage_task manual__2025-03-02T09:08:40.294849+00:00 [queued]>
+[2025-03-02T09:08:53.276+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.raw_data_storage_task manual__2025-03-02T09:08:40.294849+00:00 [queued]>
+[2025-03-02T09:08:53.276+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T09:08:53.295+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): raw_data_storage_task> on 2025-03-02 09:08:40.294849+00:00
+[2025-03-02T09:08:53.298+0000] {standard_task_runner.py:57} INFO - Started process 5755 to run task
+[2025-03-02T09:08:53.301+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'raw_data_storage_task', 'manual__2025-03-02T09:08:40.294849+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpaukglo1y']
+[2025-03-02T09:08:53.303+0000] {standard_task_runner.py:85} INFO - Job 56: Subtask raw_data_storage_task
+[2025-03-02T09:08:53.332+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T09:08:53.416+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.raw_data_storage_task manual__2025-03-02T09:08:40.294849+00:00 [running]> on host 9113a5746a05
+[2025-03-02T09:08:53.556+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='raw_data_storage_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T09:08:40.294849+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T09:08:40.294849+00:00'
+[2025-03-02T09:08:53.557+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T09:08:53.559+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/*** &&                        python /opt/***/executables/raw_data_storage.py && \t\t\tgit rm -r --cached /opt/***/data/raw && \t\t\tgit rm -r --cached /opt/***/data/raw && \t\t\tgit commit -m "stop tracking data/raw/$NOW" &&                         dvc add /opt/***/data/raw &&                         git add /opt/***/data/raw.dvc && \t\t\tgit add logs &&\\   \n                        git commit -m "Updated raw data storage" -a &&                         dvc push && git push\n                    ']
+[2025-03-02T09:08:53.567+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T09:08:54.168+0000] {subprocess.py:93} INFO - 2025-03-02 09:08:54,167 : INFO : Starting Raw Data upload for CSV
+[2025-03-02T09:08:57.554+0000] {subprocess.py:93} INFO - 2025-03-02 09:08:57,554 : INFO : Upload completed for CSV.
+[2025-03-02T09:08:57.554+0000] {subprocess.py:93} INFO - 2025-03-02 09:08:57,554 : INFO : Starting Raw Data upload for Database
+[2025-03-02T09:09:00.051+0000] {subprocess.py:93} INFO - 2025-03-02 09:09:00,050 : INFO : Upload completed for database.
+[2025-03-02T09:09:00.170+0000] {subprocess.py:93} INFO - fatal: pathspec '/opt/***/data/raw' did not match any files
+[2025-03-02T09:09:00.183+0000] {subprocess.py:93} INFO - [main 17f47fa] Updated raw data storage
+[2025-03-02T09:09:00.183+0000] {subprocess.py:93} INFO -  2 files changed, 17 insertions(+)
+[2025-03-02T09:09:03.432+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T09:09:05.041+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T09:09:05.042+0000] {subprocess.py:93} INFO -    dcefdc5..17f47fa  main -> main
+[2025-03-02T09:09:05.053+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T09:09:05.102+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=raw_data_storage_task, execution_date=20250302T090840, start_date=20250302T090853, end_date=20250302T090905
+[2025-03-02T09:09:05.155+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T09:09:05.222+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
