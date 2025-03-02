@@ -130,6 +130,4 @@ with DAG(
                         """
     )
 
-pull_task >> data_ingestion_task >> raw_data_storage_task 
-##>> data_validation_task >> data_preparation_task >> data_transformation_task >> data_storage_task >> feature_store_task
-##feature_store_task >> model_training_task
+pull_task >> data_ingestion_task >> raw_data_storage_task
