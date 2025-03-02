@@ -176,3 +176,7 @@
 2025-03-02 10:37:29,691 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
 2025-03-02 10:37:29,700 : INFO : Saving data to S3.
 2025-03-02 10:37:29,700 : ERROR : Failed data transformation: name 'cleaned_file_path' is not defined
+2025-03-02 10:42:24,886 : INFO : Starting data transformation for csv.
+2025-03-02 10:42:24,925 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-02 10:42:24,934 : INFO : Saving data to S3.
+2025-03-02 10:42:25,162 : ERROR : Failed data transformation: name 'boto3' is not defined
