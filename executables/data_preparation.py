@@ -62,12 +62,11 @@ def prepare_csv_data(output_path="customer_data.csv"):
         logging.info("Making 'Geography', 'Gender', 'HasCrCard', 'IsActiveMember' as categorical")
         categorical_columns = ['Geography', 'Gender', 'HasCrCard', 'IsActiveMember']
         df[categorical_columns] = df[categorical_columns].astype('category')
-
-        p = Path('data/cleaned')
-        p.mkdir(parents = True, exist_ok = True)
-            
+           
         logging.info("Saving data to S3.")
         cleaned_file_path = f"data/cleaned/{today}/csv/{output_path}"
+        p = Path(cleaned_file_path)
+        p.mkdir(parents = True, exist_ok = True)
         df.to_csv(f"{settings['raw_data_path']}/{cleaned_file_path}", index=False)       
         s3_client = boto3.client('s3', region_name='us-east-1')
         bucket_name = "dmmlassignmentbucket"
