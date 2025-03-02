@@ -14,3 +14,17 @@
 [2025-03-02T06:21:18.017+0000] {subprocess.py:93} INFO - 2025-03-02 06:21:18,016 : INFO : Reading data from CSV file customer_data.csv
 [2025-03-02T06:21:18.126+0000] {subprocess.py:93} INFO - 2025-03-02 06:21:18,126 : INFO : Data from CSV customer_data.csv ingested successfully!
 [2025-03-02T06:21:18.127+0000] {subprocess.py:93} INFO - 2025-03-02 06:21:18,126 : ERROR : Error ingesting database: [Errno 2] No such file or directory: 'settings.json'
+[2025-03-02T06:21:18.331+0000] {subprocess.py:93} INFO - [main 7bf29fb] Updated data ingestion
+[2025-03-02T06:21:18.331+0000] {subprocess.py:93} INFO -  11 files changed, 315 insertions(+)
+[2025-03-02T06:21:18.335+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:15:20.066703+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T06:21:18.336+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:15:20.066703+00:00/task_id=data_transformation_task/attempt=1.log
+[2025-03-02T06:21:18.336+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:15:20.066703+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-02T06:21:18.336+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:15:20.066703+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-02T06:21:18.336+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:21:09.399789+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:21:18.337+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:21:09.399789+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:21:19.839+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T06:21:19.839+0000] {subprocess.py:93} INFO -    275149d..7bf29fb  main -> main
+[2025-03-02T06:21:19.845+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T06:21:19.890+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T062109, start_date=20250302T062116, end_date=20250302T062119
+[2025-03-02T06:21:19.950+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T06:21:20.006+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
