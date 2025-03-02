@@ -74,20 +74,19 @@ def generate_csv_data_quality_report(csv_filename, output_path="csv_validation_r
                 report_data.append([col, data_type, missing_count, missing_percentage, unique_count, None, None, None, None, remarks])
             else:
                 report_data.append([col, data_type, missing_count, missing_percentage, unique_count, None, None, None, None, remarks])
-    except Exception as e:
+        report_df = pd.DataFrame(report_data, columns=[
+          "Column", "Data Type", "Missing Count", "Missing Percentage", "Unique Count",
+          "Min", "Max", "Mean", "Median", "Remarks"
+        ])
+
+        logging.info("Saving metrics to S3")
+
+        p = Path('reports')
+        p.mkdir(parents = True, exist_ok = True)
+        report_df.to_csv(f"reports/{output_path}", index=False)
+        logging.info(f"Metrics saved to: {output_path}")
+   except Exception as e:
         logging.error(f"Error validating  data: {str(e)}")
-
-    report_df = pd.DataFrame(report_data, columns=[
-        "Column", "Data Type", "Missing Count", "Missing Percentage", "Unique Count",
-        "Min", "Max", "Mean", "Median", "Remarks"
-    ])
-
-    logging.info("Saving metrics to S3")
-
-    p = Path('reports')
-    p.mkdir(parents = True, exist_ok = True)
-    report_df.to_csv(f"reports/{output_path}", index=False)
-    logging.info(f"Metrics saved to: {output_path}")
 
 
 generate_csv_data_quality_report("customer_data.csv")
