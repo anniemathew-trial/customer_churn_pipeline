@@ -79,7 +79,7 @@ def data_transformation(output_path="customer_data.csv"):
         bucket_name = "dmmlassignmentbucket"
         file_name = "customer_data.csv"
         s3_key = f"data/transformed/{today}/csv/{file_name}"
-        upload_file(f"{settings["raw_data_path"]}/data/transformed/{today}/csv/{file_name}", bucket_name, s3_key)
+        upload_file(f"{settings['raw_data_path']}/data/transformed/{today}/csv/{file_name}", bucket_name, s3_key)
     except Exception as e:
         logging.error(f"Failed data transformation: {str(e)}")
     
