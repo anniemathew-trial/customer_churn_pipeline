@@ -57,3 +57,25 @@
 [2025-03-02T12:11:09.207+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/ada543cd1cc84415b752fb9d97757948/meta.yaml
 [2025-03-02T12:11:09.207+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/af1f265511ba46f7b841572f081dd67b/meta.yaml
 [2025-03-02T12:11:09.208+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/b2726f7c00db49e58f4a175215d9ce63/meta.yaml
+[2025-03-02T12:11:09.208+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/c6e10d0100ef4f2cbcca867e03dcee1f/meta.yaml
+[2025-03-02T12:11:09.208+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/d375ea16ea1143cdbb8900c62209bcc5/meta.yaml
+[2025-03-02T12:11:09.209+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/eef34841b5b448179cc0db3023976603/meta.yaml
+[2025-03-02T12:11:09.209+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/f0edea5fadd741b0b950b35cf48db90d/meta.yaml
+[2025-03-02T12:11:09.209+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/f23d8bcd016b4000999b5283af03225a/meta.yaml
+[2025-03-02T12:11:09.209+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/f5353f8b292143e2819ba81e2782ee61/meta.yaml
+[2025-03-02T12:11:09.209+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/0/fb1087c91f394303b5afba9934e3e75e/meta.yaml
+[2025-03-02T12:11:09.210+0000] {subprocess.py:93} INFO - 
+[2025-03-02T12:11:09.210+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-02T12:11:09.210+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-02T12:11:09.211+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/
+[2025-03-02T12:11:09.211+0000] {subprocess.py:93} INFO - 
+[2025-03-02T12:11:09.268+0000] {subprocess.py:93} INFO - [main af66fea] Updated stored data version
+[2025-03-02T12:11:09.268+0000] {subprocess.py:93} INFO -  34 files changed, 157 insertions(+), 30 deletions(-)
+[2025-03-02T12:11:09.269+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T12:09:01.135703+00:00/task_id=data_storage_task/attempt=1.log
+[2025-03-02T12:11:15.267+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T12:11:17.398+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T12:11:17.399+0000] {subprocess.py:93} INFO -    a653f16..af66fea  main -> main
+[2025-03-02T12:11:17.407+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T12:11:17.475+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_storage_task, execution_date=20250302T120901, start_date=20250302T121053, end_date=20250302T121117
+[2025-03-02T12:11:17.510+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T12:11:17.567+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
