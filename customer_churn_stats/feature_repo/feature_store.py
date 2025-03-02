@@ -10,9 +10,9 @@ import json
 with open("/opt/airflow/executables/settings.json", "r") as file:
         settings = json.load(file)
 #create log file if it does not exist
-data_transformation_log_file = f"{settings['logging_base_path']}/logs/feature_store.log"
+feature_store_log_file = f"{settings['logging_base_path']}/logs/feature_store.log"
 logging.root.handlers = []
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_transformation_log_file)
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=feature_store_log_file)
 
 # set up logging
 console = logging.StreamHandler()
