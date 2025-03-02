@@ -29,3 +29,5 @@
 [2025-03-02T08:01:16.888+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=scheduled__2025-03-01T08:00:00+00:00/task_id=feature_store_task/attempt=1.log
 [2025-03-02T08:01:16.889+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=scheduled__2025-03-01T08:00:00+00:00/task_id=model_training_task/attempt=1.log
 [2025-03-02T08:01:16.890+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=scheduled__2025-03-01T08:00:00+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T08:01:26.184+0000] {subprocess.py:93} INFO - ERROR: failed to push data to the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
+[2025-03-02T08:01:27.136+0000] {subprocess.py:97} INFO - Command exited with return code 1

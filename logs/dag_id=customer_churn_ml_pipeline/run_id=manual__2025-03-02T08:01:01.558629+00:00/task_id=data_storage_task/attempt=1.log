@@ -13,3 +13,5 @@
 [2025-03-02T08:01:07.111+0000] {subprocess.py:86} INFO - Output:
 [2025-03-02T08:01:17.066+0000] {subprocess.py:93} INFO - ERROR: failed to pull data from the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
 [2025-03-02T08:01:24.831+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:24,831 : ERROR : Error storing data: [Errno 2] No such file or directory: 'settings.json'
+[2025-03-02T08:01:25.445+0000] {subprocess.py:93} INFO - [main 2c189f9] Updated stored data version
+[2025-03-02T08:01:25.453+0000] {subprocess.py:93} INFO -  1 file changed, 2 insertions(+)

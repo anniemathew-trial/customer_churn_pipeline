@@ -12,3 +12,11 @@
 [2025-03-02T08:01:06.879+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/*** &&                        dvc pull /opt/***/data/raw\n                        python /opt/***/executables/data_validation.py && \t\t\tgit add logs &&\\   \n\t\t\tgit add reports &&                        git commit -m "Updated validation" -a &&                         dvc push && git push\n                    ']
 [2025-03-02T08:01:07.011+0000] {subprocess.py:86} INFO - Output:
 [2025-03-02T08:01:19.343+0000] {subprocess.py:93} INFO - ERROR: failed to pull data from the cloud - Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
+[2025-03-02T08:01:26.677+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:26,672 : INFO : Starting data validation
+[2025-03-02T08:01:26.678+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:26,674 : ERROR : Error validating  data: [Errno 2] No such file or directory: 'data/raw/customer_data.csv'
+[2025-03-02T08:01:26.679+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-02T08:01:26.679+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_validation.py", line 87, in <module>
+[2025-03-02T08:01:26.680+0000] {subprocess.py:93} INFO -     generate_csv_data_quality_report("customer_data.csv")
+[2025-03-02T08:01:26.681+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_validation.py", line 74, in generate_csv_data_quality_report
+[2025-03-02T08:01:26.682+0000] {subprocess.py:93} INFO -     report_df = pd.DataFrame(report_data, columns=[
+[2025-03-02T08:01:26.683+0000] {subprocess.py:93} INFO - UnboundLocalError: local variable 'report_data' referenced before assignment
