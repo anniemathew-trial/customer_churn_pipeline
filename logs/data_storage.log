@@ -307,3 +307,4 @@
 2025-03-02 06:47:18,367 : ERROR : Error storing data: [Errno 2] No such file or directory: 'settings.json'
 2025-03-02 07:53:50,776 : ERROR : Error storing data: [Errno 2] No such file or directory: 'settings.json'
 2025-03-02 07:55:53,448 : ERROR : Error storing data: [Errno 2] No such file or directory: 'settings.json'
+2025-03-02 08:01:16,066 : ERROR : Error storing data: [Errno 2] No such file or directory: 'settings.json'
