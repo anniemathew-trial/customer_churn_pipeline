@@ -160,3 +160,7 @@
 2025-03-02 10:15:58,681 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
 2025-03-02 10:15:58,689 : INFO : Saving data to S3.
 2025-03-02 10:15:58,690 : ERROR : Failed data transformation: Cannot save file into a non-existent directory: '/opt/airflow/data/transformed/02-03-2025/csv'
+2025-03-02 10:21:46,933 : INFO : Starting data transformation for csv.
+2025-03-02 10:21:47,011 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-02 10:21:47,029 : INFO : Saving data to S3.
+2025-03-02 10:21:47,030 : ERROR : Failed data transformation: name 'cleaned_file_path' is not defined
