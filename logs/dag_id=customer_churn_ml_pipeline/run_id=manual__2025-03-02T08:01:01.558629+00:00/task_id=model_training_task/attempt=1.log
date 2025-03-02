@@ -69,3 +69,8 @@
 [2025-03-02T08:02:13.299+0000] {subprocess.py:93} INFO -   n_iter_i = _check_optimize_result(
 [2025-03-02T08:02:13.299+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:13,295 : INFO : Predicting model LogisticRegression
 [2025-03-02T08:02:13.332+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:13,332 : INFO : Calculating accuracy LogisticRegression
+[2025-03-02T08:02:22.081+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:22 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-02T08:02:22.211+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:22,210 : INFO : Logged model LogisticRegression
+[2025-03-02T08:02:22.235+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:22 INFO mlflow.tracking._tracking_service.client: 🏃 View run LogisticRegression at: http://localhost:5000/#/experiments/0/runs/ffc3393217e242d3a0b037e7b2df100b.
+[2025-03-02T08:02:22.236+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:22 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-02T08:02:22.253+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:22,252 : INFO : Training model SVM

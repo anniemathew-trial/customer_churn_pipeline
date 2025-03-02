@@ -802,3 +802,5 @@ Name: 5, dtype: object
 2025-03-02 08:02:13,332 : INFO : Calculating accuracy LogisticRegression
 2025-03-02 08:02:13,842 : INFO : Logged model LogisticRegression
 2025-03-02 08:02:13,885 : INFO : Training model SVM
+2025-03-02 08:02:22,210 : INFO : Logged model LogisticRegression
+2025-03-02 08:02:22,252 : INFO : Training model SVM

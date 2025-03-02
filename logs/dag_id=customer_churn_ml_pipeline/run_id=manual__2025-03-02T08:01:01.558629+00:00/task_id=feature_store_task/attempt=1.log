@@ -23,3 +23,7 @@
 [2025-03-02T08:02:01.131+0000] {subprocess.py:93} INFO - No changes to infrastructure
 [2025-03-02T08:02:01.135+0000] {subprocess.py:93} INFO - /opt/***/customer_churn_stats/feature_repo/feature_store.py:21: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
 [2025-03-02T08:02:01.136+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
+[2025-03-02T08:02:24.485+0000] {subprocess.py:93} INFO - Materializing [1m[32m1[0m feature views to [1m[32m2025-03-02 08:02:01+00:00[0m into the [1m[32msqlite[0m online store.
+[2025-03-02T08:02:24.486+0000] {subprocess.py:93} INFO - 
+[2025-03-02T08:02:24.486+0000] {subprocess.py:93} INFO - [1m[32mcustomer_stats_fv[0m from [1m[32m2025-03-02 08:01:54+00:00[0m to [1m[32m2025-03-02 08:02:01+00:00[0m:
+[2025-03-02T08:02:24.492+0000] {subprocess.py:93} INFO - 0it [00:00, ?it/s]0it [00:00, ?it/s]
