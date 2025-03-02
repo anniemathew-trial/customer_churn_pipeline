@@ -40,7 +40,7 @@ def upload_file(file_name, bucket, object_name=None):
 def prepare_csv_data(output_path="customer_data.csv"):
     try:
         logging.info("Starting data preparation for csv.")
-        data_path = f"{settings['raw_data_path']}/data/raw/{today}/csv/{csv_filename}"
+        data_path = f"{settings['raw_data_path']}/data/raw/{today}/csv/{output_path}"
         df = pd.read_csv(data_path)
         
         logging.info("Handling 'Tenure', 'Balance', 'EstimatedSalary' empty data")
