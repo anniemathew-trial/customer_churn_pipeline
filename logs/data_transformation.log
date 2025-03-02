@@ -168,3 +168,7 @@
 2025-03-02 10:28:11,882 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
 2025-03-02 10:28:11,894 : INFO : Saving data to S3.
 2025-03-02 10:28:11,894 : ERROR : Failed data transformation: name 'cleaned_file_path' is not defined
+2025-03-02 10:34:51,738 : INFO : Starting data transformation for csv.
+2025-03-02 10:34:51,778 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-02 10:34:51,787 : INFO : Saving data to S3.
+2025-03-02 10:34:51,787 : ERROR : Failed data transformation: name 'cleaned_file_path' is not defined
