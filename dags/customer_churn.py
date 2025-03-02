@@ -23,11 +23,15 @@ with DAG(
     data_ingestion_task = BashOperator(
         task_id = 'data_ingestion_task',
         bash_command = """python /opt/airflow/executables/data_ingestion.py && \
+			NOW = $(date '+%d-%m-%Y')
 			cd /opt/airflow && \
-			git rm -r --cached 'data/raw'
-			git commit -m "stop tracking data/raw"
-                        dvc add /opt/airflow/data/raw && \
-                        git add /opt/airflow/data/raw.dvc && \
+			git rm -r --cached 'data/raw/$NOW/csv'
+			git rm -r --cached 'data/raw/$NOW/database'
+			git commit -m "stop tracking data/raw/$NOW"
+                        dvc add /opt/airflow/data/raw//$NOW/csv/customer_data.csv && \
+                        dvc add /opt/airflow/data/raw//$NOW/database/database_data.csv && \
+                        git add /opt/airflow/data/raw//$NOW/csv/customer_data.csv.dvc && \
+                        git add /opt/airflow/data/raw//$NOW/database/database_data.csv.dvc && \
 			git add logs &&\
                         git commit -m "Updated raw data version" -a && \
                         dvc push && git push
