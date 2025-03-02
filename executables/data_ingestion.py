@@ -3,6 +3,7 @@ import pandas as pd
 import logging
 import pyodbc
 import time
+import json
 
 with open("/opt/airflow/executables/settings.json", "r") as file:
         settings = json.load(file)
