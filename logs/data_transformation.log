@@ -144,3 +144,5 @@
 2025-03-02 08:01:32,301 : INFO : Saving data to S3.
 2025-03-02 09:44:19,765 : INFO : Starting data preparation for csv.
 2025-03-02 09:44:19,766 : ERROR : Failed data transformation: [Errno 2] No such file or directory: 'data/cleaned/customer_data.csv'
+2025-03-02 09:50:20,358 : INFO : Starting data preparation for csv.
+2025-03-02 09:50:20,359 : ERROR : Failed data transformation: [Errno 2] No such file or directory: 'data/cleaned/customer_data.csv'
