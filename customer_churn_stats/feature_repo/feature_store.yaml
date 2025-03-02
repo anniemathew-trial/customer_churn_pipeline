@@ -1,6 +1,6 @@
 project: customer_churn_stats
-registry: data/registry.db
+registry: /path/to/registry.db
 provider: local
 online_store:
-    path: data/online_store.db
+    path: /path/to/online_store.db
 entity_key_serialization_version: 2

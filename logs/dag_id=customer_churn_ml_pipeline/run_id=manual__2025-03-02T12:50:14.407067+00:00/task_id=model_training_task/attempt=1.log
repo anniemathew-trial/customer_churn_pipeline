@@ -40,3 +40,14 @@
 [2025-03-02T12:52:44.020+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
 [2025-03-02T12:52:44.020+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/
 [2025-03-02T12:52:44.020+0000] {subprocess.py:93} INFO - 
+[2025-03-02T12:52:44.035+0000] {subprocess.py:93} INFO - [main 9357d92] Trained model version
+[2025-03-02T12:52:44.035+0000] {subprocess.py:93} INFO -  4 files changed, 65 insertions(+)
+[2025-03-02T12:52:44.035+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T12:50:14.407067+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-02T12:52:44.035+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/meta.yaml
+[2025-03-02T12:52:44.036+0000] {subprocess.py:93} INFO - /bin/bash: line 3:  : command not found
+[2025-03-02T12:52:45.757+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T12:52:45.757+0000] {subprocess.py:93} INFO -    1a32f63..9357d92  main -> main
+[2025-03-02T12:52:45.765+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T12:52:45.821+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=model_training_task, execution_date=20250302T125014, start_date=20250302T125236, end_date=20250302T125245
+[2025-03-02T12:52:45.880+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T12:52:45.918+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
