@@ -1,0 +1,6 @@
+2025-03-02 10:16:31,799 : INFO : Connecting to Database
+2025-03-02 10:16:31,801 : INFO : Data collection from database failed {str(e)}!!
+2025-03-02 10:16:31,802 : INFO : Declaring an entity for the dataset
+2025-03-02 10:16:31,802 : INFO : Declaring the source for raw feature data
+2025-03-02 10:16:31,803 : INFO : Defining the features in a feature view
+2025-03-02 10:16:31,807 : INFO : Feature view creation successfull!!
