@@ -3,10 +3,14 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import logging
+import json
+
+with open("/opt/airflow/executables/settings.json", "r") as file:
+        settings = json.load(file)
 #create log file if it does not exist
-data_transformation_and_storage_log_file = "/opt/airflow/logs/data_transformation.log"
+data_transformation_log_file = f"{settings['logging_base_path']}/logs/data_transformation.log"
 logging.root.handlers = []
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_transformation_and_storage_log_file)
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_transformation_log_file)
 
 # set up logging
 console = logging.StreamHandler()
@@ -59,7 +63,7 @@ def data_transformation(output_path="customer_data.csv"):
         p.mkdir(parents = True, exist_ok = True)
             
         logging.info("Saving data to S3.")
-        df.to_csv(f"data/transformed/{output_path}", index=False)
+        df.to_csv(f"/opt/airflow/data/transformed/{today}/csv/{output_path}", index=False)
     except Exception as e:
         logging.error(f"Failed data transformation: {str(e)}")
     
