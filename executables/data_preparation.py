@@ -13,7 +13,7 @@ with open("/opt/airflow/executables/settings.json", "r") as file:
         settings = json.load(file)
 today = time.strftime("%d-%m-%Y")
 #create log file if it does not exist
-ingestion_log_file = f"{settings['logging_base_path']}/logs/data_preparation.log"
+data_preparation_log_file = f"{settings['logging_base_path']}/logs/data_preparation.log"
 logging.root.handlers = []
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_preparation_log_file)
 
@@ -79,7 +79,7 @@ def prepare_csv_data(output_path="customer_data.csv"):
     
 def generate_report(data, pdf_filename = "visualization/plots.pdf"):   
     try:
-        p = Path(f"{settings['raw_data_path']/visualization")
+        p = Path(f"{settings['raw_data_path']}/visualization")
         p.mkdir(parents = True, exist_ok = True)
         with PdfPages(pdf_filename) as pdf:
             logging.info("Creating Pie chart")            
