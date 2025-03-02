@@ -1,0 +1,28 @@
+[2025-03-02T09:44:15.481+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_transformation_task manual__2025-03-02T09:43:24.684111+00:00 [queued]>
+[2025-03-02T09:44:15.493+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_transformation_task manual__2025-03-02T09:43:24.684111+00:00 [queued]>
+[2025-03-02T09:44:15.493+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T09:44:15.511+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_transformation_task> on 2025-03-02 09:43:24.684111+00:00
+[2025-03-02T09:44:15.518+0000] {standard_task_runner.py:57} INFO - Started process 7828 to run task
+[2025-03-02T09:44:15.522+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_transformation_task', 'manual__2025-03-02T09:43:24.684111+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpa7b22vhv']
+[2025-03-02T09:44:15.526+0000] {standard_task_runner.py:85} INFO - Job 95: Subtask data_transformation_task
+[2025-03-02T09:44:15.548+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T09:44:15.619+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_transformation_task manual__2025-03-02T09:43:24.684111+00:00 [running]> on host 9113a5746a05
+[2025-03-02T09:44:15.746+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_transformation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T09:43:24.684111+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T09:43:24.684111+00:00'
+[2025-03-02T09:44:15.747+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T09:44:15.748+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/*** &&                        dvc pull /opt/***/data/cleaned\n                        python /opt/***/executables/data_transformation.py &&                         dvc add /opt/***/data/transformed &&                         git add /opt/***/data/transformed.dvc && \t\t\tgit add logs &&    \t\t\tgit status &&                         git commit -m "Updated transformed data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-02T09:44:15.758+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T09:44:17.340+0000] {subprocess.py:93} INFO - WARNING: failed to collect 'workspace', skipping
+[2025-03-02T09:44:17.341+0000] {subprocess.py:93} INFO - ERROR: failed to pull data from the cloud - '/opt/***/data/cleaned' does not exist as an output or a stage name in 'dvc.yaml': 'dvc.yaml' does not exist
+[2025-03-02T09:44:19.765+0000] {subprocess.py:93} INFO - 2025-03-02 09:44:19,765 : INFO : Starting data preparation for csv.
+[2025-03-02T09:44:19.766+0000] {subprocess.py:93} INFO - 2025-03-02 09:44:19,766 : ERROR : Failed data transformation: [Errno 2] No such file or directory: 'data/cleaned/customer_data.csv'
+[2025-03-02T09:44:21.705+0000] {subprocess.py:93} INFO - ERROR: output 'data/transformed' does not exist: [Errno 2] No such file or directory: '/opt/***/data/transformed'
+[2025-03-02T09:44:21.919+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T09:44:21.938+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T09:44:21.943+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_transformation_task, execution_date=20250302T094324, start_date=20250302T094415, end_date=20250302T094421
+[2025-03-02T09:44:21.964+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 95 for task data_transformation_task (Bash command failed. The command returned a non-zero exit code 1.; 7828)
+[2025-03-02T09:44:21.974+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T09:44:22.011+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
