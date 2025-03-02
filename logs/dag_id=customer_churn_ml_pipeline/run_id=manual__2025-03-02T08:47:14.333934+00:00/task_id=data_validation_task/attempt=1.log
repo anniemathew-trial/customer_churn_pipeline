@@ -17,3 +17,12 @@
 [2025-03-02T08:47:19.532+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_validation.py", line 12, in <module>
 [2025-03-02T08:47:19.533+0000] {subprocess.py:93} INFO -     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_validation_log_file)
 [2025-03-02T08:47:19.533+0000] {subprocess.py:93} INFO - NameError: name 'data_validation_log_file' is not defined
+[2025-03-02T08:47:19.694+0000] {subprocess.py:93} INFO - [main 695af30] Updated validation
+[2025-03-02T08:47:19.694+0000] {subprocess.py:93} INFO -  4 files changed, 29 insertions(+)
+[2025-03-02T08:47:22.282+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T08:47:24.396+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T08:47:24.397+0000] {subprocess.py:93} INFO -    ec79b3b..890a51d  main -> main
+[2025-03-02T08:47:24.406+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:47:24.482+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_validation_task, execution_date=20250302T084714, start_date=20250302T084715, end_date=20250302T084724
+[2025-03-02T08:47:24.533+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:47:24.577+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

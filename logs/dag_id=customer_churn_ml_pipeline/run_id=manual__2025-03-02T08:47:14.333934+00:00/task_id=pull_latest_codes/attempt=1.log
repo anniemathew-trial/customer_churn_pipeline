@@ -11,3 +11,25 @@
 [2025-03-02T08:47:15.773+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-03-02T08:47:15.774+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/*** && dvc pull && git pull']
 [2025-03-02T08:47:15.787+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T08:47:19.999+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T08:47:20.189+0000] {subprocess.py:93} INFO - hint: Pulling without specifying how to reconcile divergent branches is
+[2025-03-02T08:47:20.189+0000] {subprocess.py:93} INFO - hint: discouraged. You can squelch this message by running one of the following
+[2025-03-02T08:47:20.189+0000] {subprocess.py:93} INFO - hint: commands sometime before your next pull:
+[2025-03-02T08:47:20.190+0000] {subprocess.py:93} INFO - hint:
+[2025-03-02T08:47:20.190+0000] {subprocess.py:93} INFO - hint:   git config pull.rebase false  # merge (the default strategy)
+[2025-03-02T08:47:20.190+0000] {subprocess.py:93} INFO - hint:   git config pull.rebase true   # rebase
+[2025-03-02T08:47:20.191+0000] {subprocess.py:93} INFO - hint:   git config pull.ff only       # fast-forward only
+[2025-03-02T08:47:20.191+0000] {subprocess.py:93} INFO - hint:
+[2025-03-02T08:47:20.191+0000] {subprocess.py:93} INFO - hint: You can replace "git config" with "git config --global" to set a default
+[2025-03-02T08:47:20.191+0000] {subprocess.py:93} INFO - hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+[2025-03-02T08:47:20.191+0000] {subprocess.py:93} INFO - hint: or --ff-only on the command line to override the configured default per
+[2025-03-02T08:47:20.192+0000] {subprocess.py:93} INFO - hint: invocation.
+[2025-03-02T08:47:21.375+0000] {subprocess.py:93} INFO - From https://github.com/anniemathew-trial/customer_churn_pipeline
+[2025-03-02T08:47:21.375+0000] {subprocess.py:93} INFO -    a2ce05f..ec79b3b  main       -> origin/main
+[2025-03-02T08:47:21.417+0000] {subprocess.py:93} INFO - Merge made by the 'recursive' strategy.
+[2025-03-02T08:47:21.423+0000] {subprocess.py:93} INFO -  executables/raw_data_storage.py | 27 ++++++++++++++++++---------
+[2025-03-02T08:47:21.423+0000] {subprocess.py:93} INFO -  1 file changed, 18 insertions(+), 9 deletions(-)
+[2025-03-02T08:47:21.424+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:47:21.520+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=pull_latest_codes, execution_date=20250302T084714, start_date=20250302T084715, end_date=20250302T084721
+[2025-03-02T08:47:21.605+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:47:21.698+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
