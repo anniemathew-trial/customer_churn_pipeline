@@ -23,13 +23,11 @@ formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
 try:
-        server = "127.0.0.1,1433"
-        database = "customer_churn_db"
-        username = "sa"
-        password = "NewPASS1234"
+        password = settings["sql_pwd"]
+        connection_string = settings["db_connection_storage"]
 
         logging.info("Connecting to Database")
-        connection = pyodbc.connect(f'DRIVER={{SQL SERVER}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
+        connection = pyodbc.connect(connection_string + password)
         logging.info("Connecting to Database Successfull")
         _ = connection.cursor()
         
