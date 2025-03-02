@@ -21,6 +21,17 @@ formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
 
+def upload_file(file_name, bucket, object_name=None):
+    
+    if object_name is None:
+        object_name = file_name
+    s3_client = boto3.client(
+        's3', 
+        aws_access_key_id = settings["id"],
+        aws_secret_access_key = settings["key"],
+        region_name='us-east-1')
+    _ = s3_client.upload_file(file_name, bucket, object_name)
+        
 def data_transformation(output_path="customer_data.csv"):
     try:
         logging.info("Starting data preparation for csv.")
@@ -64,6 +75,11 @@ def data_transformation(output_path="customer_data.csv"):
             
         logging.info("Saving data to S3.")
         df.to_csv(f"/opt/airflow/data/transformed/{today}/csv/{output_path}", index=False)
+
+        bucket_name = "dmmlassignmentbucket"
+        file_name = "customer_data.csv"
+        s3_key = f"data/transformed/{today}/csv/{file_name}"
+        upload_file(f"{settings["raw_data_path"]}/data/transformed/{today}/csv/{file_name}", bucket_name, s3_key)
     except Exception as e:
         logging.error(f"Failed data transformation: {str(e)}")
     
