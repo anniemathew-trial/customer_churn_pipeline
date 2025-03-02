@@ -5,6 +5,7 @@ import numpy as np
 import logging
 import json
 import time
+import boto3
 
 with open("/opt/airflow/executables/settings.json", "r") as file:
         settings = json.load(file)
