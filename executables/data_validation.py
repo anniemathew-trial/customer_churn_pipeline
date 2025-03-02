@@ -23,7 +23,8 @@ logging.getLogger("").addHandler(console)
 def generate_csv_data_quality_report(csv_filename, output_path="csv_validation_report.csv"):
     try:
         logging.info("Starting data validation")
-        df = pd.read_csv(f"data/raw/{csv_filename}")
+        data_path = f"{settings['raw_data_path']}/data/raw/{today}/csv/{csv_filename}"
+        df = pd.read_csv(data_path)
         report_data = []
         logging.info("Running validation on data received from S3")
         
