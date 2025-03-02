@@ -1609,3 +1609,10 @@
 2025-03-02 09:57:43,852 : INFO : Making 'Geography', 'Gender', 'HasCrCard', 'IsActiveMember' as categorical
 2025-03-02 09:57:43,865 : INFO : Saving data to S3.
 2025-03-02 09:57:43,867 : ERROR : Error in preparing dataCannot save file into a non-existent directory: '/opt/airflow/data/cleaned/{today}/csv'
+2025-03-02 10:03:19,272 : INFO : Starting data preparation for csv.
+2025-03-02 10:03:19,291 : INFO : Handling 'Tenure', 'Balance', 'EstimatedSalary' empty data
+2025-03-02 10:03:19,291 : INFO : Handling 'Age' empty data
+2025-03-02 10:03:19,292 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+2025-03-02 10:03:19,294 : INFO : Making 'Geography', 'Gender', 'HasCrCard', 'IsActiveMember' as categorical
+2025-03-02 10:03:19,301 : INFO : Saving data to S3.
+2025-03-02 10:03:19,302 : ERROR : Error in preparing dataCannot save file into a non-existent directory: '/opt/airflow/data/cleaned/02-03-2025/csv'
