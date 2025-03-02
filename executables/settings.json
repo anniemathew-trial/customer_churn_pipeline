@@ -3,5 +3,7 @@
     "key" : "CUiv6YaaWDqfUbQnZzt2YHInUFDK297bv6Lso4sJ",
     "db_connection":"DRIVER={{SQL SERVER}};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=dmml_assignment;UID=sa;PWD=",
     "db_connection_storage":"DRIVER={{SQL SERVER}};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=customer_churn_db;UID=sa;PWD=",
-    "sql_pwd":"NewPASS1234"
+    "sql_pwd":"NewPASS1234",
+    "logging_base_path":"/opt/airflow",
+    "raw_data_path":"/opt/airflow"
 }
