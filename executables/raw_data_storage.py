@@ -36,4 +36,7 @@ s3_client = boto3.client('s3', region_name='us-east-1')
 bucket_name = "dmmlassignmentbucket"
 file_name = "customer_data.csv"
 s3_key = f"data/raw/{today}/csv/{file_name}"
-upload_file(f"{settings["raw_data_path"]}/data/{file_name}", bucket_name, s3_key)
+upload_file(f"{settings["raw_data_path"]}/data/raw/{today}/csv/{file_name}", bucket_name, s3_key)
+file_name = "database_data.csv"
+s3_key = f"data/raw/{today}/database/{file_name}"
+upload_file(f"{settings["raw_data_path"]}/data/raw/{today}/database/{file_name}", bucket_name, s3_key)
