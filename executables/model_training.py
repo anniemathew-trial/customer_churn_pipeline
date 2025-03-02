@@ -55,8 +55,10 @@ def retrieve_data_from_feast():
             entity_rows=entity_rows
         ).to_df()
         if features["Exited"].isna().any():
+            logging.info("Reached End of Data")
             features = features.dropna(subset = ["Exited"])
         if len(features) > 0:
+            logging.info(f"Data fetched: {len(features)}")
             data.append(features)
             id_range_start = id_range_start + id_range_end
             id_range_end = id_range_end + id_range_end
@@ -66,8 +68,9 @@ def retrieve_data_from_feast():
             logging.info(f"Stoping at Start and End Range: {id_range_start} to {id_range_end}")               
             break
     logging.info("Created feature data")
-    final_data = pd.concat(data, ignore_index = True)
-    logging.info(final_data.head())
+    logging.info(f"Total Data fetched: {len(data)}")
+    if len(data) > 0:    
+        final_data = pd.concat(data, ignore_index = True)
     return final_data
   
 def train_log_models():
