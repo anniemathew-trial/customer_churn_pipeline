@@ -66,7 +66,7 @@ def prepare_csv_data(output_path="customer_data.csv"):
            
         logging.info("Saving data to S3.")
         cleaned_file_path = f"data/cleaned/{today}/csv"
-        p = Path(f"{settings['raw_data_path']}/{cleaned_file_path})
+        p = Path(f"{settings['raw_data_path']}/{cleaned_file_path}")
         p.mkdir(parents = True, exist_ok = True)
         logging.info(f"Directory created at {settings['raw_data_path']}/{cleaned_file_path}")
         df.to_csv(f"{settings['raw_data_path']}/{cleaned_file_path}/{output_path}", index=False)       
