@@ -1,0 +1,64 @@
+[2025-03-02T03:24:48.496+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-02T03:24:38.853557+00:00 [queued]>
+[2025-03-02T03:24:48.521+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-02T03:24:38.853557+00:00 [queued]>
+[2025-03-02T03:24:48.521+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T03:24:48.555+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_ingestion_task> on 2025-03-02 03:24:38.853557+00:00
+[2025-03-02T03:24:48.561+0000] {standard_task_runner.py:57} INFO - Started process 795 to run task
+[2025-03-02T03:24:48.568+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_ingestion_task', 'manual__2025-03-02T03:24:38.853557+00:00', '--job-id', '203', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmp5tw5ur9n']
+[2025-03-02T03:24:48.574+0000] {standard_task_runner.py:85} INFO - Job 203: Subtask data_ingestion_task
+[2025-03-02T03:24:48.624+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T03:24:48.723+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-02T03:24:38.853557+00:00 [running]> on host 7e994a0ed489
+[2025-03-02T03:24:49.170+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_ingestion_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T03:24:38.853557+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T03:24:38.853557+00:00'
+[2025-03-02T03:24:49.184+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T03:24:49.187+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/executables/data_ingestion.py && \t\t\tNOW = $(date \'+%d-%m-%Y\')\n\t\t\tcd /opt/*** && \t\t\tgit rm -r --cached \'data/raw/$NOW/csv\'\n\t\t\tgit rm -r --cached \'data/raw/$NOW/database\'\n\t\t\tgit commit -m "stop tracking data/raw/$NOW"\n                        dvc add /opt/***/data/raw//$NOW/csv/customer_data.csv &&                         dvc add /opt/***/data/raw//$NOW/database/database_data.csv &&                         git add /opt/***/data/raw//$NOW/csv/customer_data.csv.dvc &&                         git add /opt/***/data/raw//$NOW/database/database_data.csv.dvc && \t\t\tgit add logs &&                        git commit -m "Updated raw data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-02T03:24:49.223+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T03:24:51.406+0000] {subprocess.py:93} INFO - 2025-03-02 03:24:51,396 : INFO : Reading data from CSV file customer_data.csv
+[2025-03-02T03:24:51.623+0000] {subprocess.py:93} INFO - 2025-03-02 03:24:51,623 : INFO : Data from CSV customer_data.csv ingested successfully!
+[2025-03-02T03:24:51.624+0000] {subprocess.py:93} INFO - 2025-03-02 03:24:51,623 : INFO : Connecting to Database
+[2025-03-02T03:24:51.752+0000] {subprocess.py:93} INFO - 2025-03-02 03:24:51,752 : INFO : Connecting to Database Successfull
+[2025-03-02T03:24:51.753+0000] {subprocess.py:93} INFO - 2025-03-02 03:24:51,752 : INFO : Reading data from database.
+[2025-03-02T03:24:52.731+0000] {subprocess.py:93} INFO - /opt/***/executables/data_ingestion.py:48: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-03-02T03:24:52.732+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
+[2025-03-02T03:24:52.733+0000] {subprocess.py:93} INFO - 2025-03-02 03:24:52,731 : INFO : Data from Database ingested successfully!
+[2025-03-02T03:24:53.177+0000] {subprocess.py:93} INFO - /bin/bash: line 1: NOW: command not found
+[2025-03-02T03:24:53.186+0000] {subprocess.py:93} INFO - fatal: pathspec 'data/raw/$NOW/csv' did not match any files
+[2025-03-02T03:24:53.193+0000] {subprocess.py:93} INFO - fatal: pathspec 'data/raw/$NOW/database' did not match any files
+[2025-03-02T03:24:53.253+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-02T03:24:53.254+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-02T03:24:53.255+0000] {subprocess.py:93} INFO - 
+[2025-03-02T03:24:53.255+0000] {subprocess.py:93} INFO - Last command done (1 command done):
+[2025-03-02T03:24:53.256+0000] {subprocess.py:93} INFO -    pick 3c82e37 Initial Commit
+[2025-03-02T03:24:53.257+0000] {subprocess.py:93} INFO - No commands remaining.
+[2025-03-02T03:24:53.257+0000] {subprocess.py:93} INFO - You are currently editing a commit while rebasing branch 'master' on 'f6df714'.
+[2025-03-02T03:24:53.258+0000] {subprocess.py:93} INFO -   (use "git commit --amend" to amend the current commit)
+[2025-03-02T03:24:53.258+0000] {subprocess.py:93} INFO -   (use "git rebase --continue" once you are satisfied with your changes)
+[2025-03-02T03:24:53.259+0000] {subprocess.py:93} INFO - 
+[2025-03-02T03:24:53.259+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-02T03:24:53.260+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-02T03:24:53.260+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-02T03:24:53.261+0000] {subprocess.py:93} INFO - 	modified:   ***-webserver.pid
+[2025-03-02T03:24:53.262+0000] {subprocess.py:93} INFO - 	modified:   dags/__pycache__/customer_churn.cpython-38.pyc
+[2025-03-02T03:24:53.263+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-01T17:05:10.374103+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-02T03:24:53.264+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-02T03:24:53.266+0000] {subprocess.py:93} INFO - 	modified:   logs/data_ingestion.log
+[2025-03-02T03:24:53.267+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-01/customer_churn.py.log
+[2025-03-02T03:24:53.268+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/latest
+[2025-03-02T03:24:53.269+0000] {subprocess.py:93} INFO - 
+[2025-03-02T03:24:53.270+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-02T03:24:53.271+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-02T03:24:53.271+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/
+[2025-03-02T03:24:53.272+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T03:24:38.853557+00:00/
+[2025-03-02T03:24:53.272+0000] {subprocess.py:93} INFO - 	logs/scheduler/2025-03-02/
+[2025-03-02T03:24:53.273+0000] {subprocess.py:93} INFO - 	models/
+[2025-03-02T03:24:53.273+0000] {subprocess.py:93} INFO - 
+[2025-03-02T03:24:53.274+0000] {subprocess.py:93} INFO - no changes added to commit (use "git add" and/or "git commit -a")
+[2025-03-02T03:24:56.729+0000] {subprocess.py:93} INFO - ERROR: [Errno 2] No such file or directory: '/opt/***/data/raw/csv/customer_data.csv'
+[2025-03-02T03:24:57.169+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T03:24:57.213+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T03:24:57.224+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T032438, start_date=20250302T032448, end_date=20250302T032457
+[2025-03-02T03:24:57.265+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 203 for task data_ingestion_task (Bash command failed. The command returned a non-zero exit code 1.; 795)
+[2025-03-02T03:24:57.291+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T03:24:57.357+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

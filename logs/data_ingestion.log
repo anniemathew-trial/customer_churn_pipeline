@@ -496,3 +496,6 @@
 2025-03-02 03:46:54,400 : INFO : Connecting to Database Successfull
 2025-03-02 03:46:54,400 : INFO : Reading data from database.
 2025-03-02 03:46:54,963 : INFO : Data from Database ingested successfully!
+2025-03-02 06:15:27,540 : INFO : Reading data from CSV file customer_data.csv
+2025-03-02 06:15:27,681 : INFO : Data from CSV customer_data.csv ingested successfully!
+2025-03-02 06:15:27,682 : ERROR : Error ingesting database: [Errno 2] No such file or directory: 'settings.json'
