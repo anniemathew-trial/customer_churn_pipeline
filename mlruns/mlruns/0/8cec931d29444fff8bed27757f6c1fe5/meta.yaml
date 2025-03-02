@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/8cec931d29444fff8bed27757f6c1fe5/artifacts
+deleted_time: 1740917459506
 end_time: 1740827479168
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 8cec931d29444fff8bed27757f6c1fe5
 run_name: glamorous-wren-518
 run_uuid: 8cec931d29444fff8bed27757f6c1fe5

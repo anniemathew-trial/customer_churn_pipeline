@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/c6e10d0100ef4f2cbcca867e03dcee1f/artifacts
+deleted_time: 1740917459451
 end_time: 1740846916716
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: c6e10d0100ef4f2cbcca867e03dcee1f
 run_name: painted-bat-116
 run_uuid: c6e10d0100ef4f2cbcca867e03dcee1f

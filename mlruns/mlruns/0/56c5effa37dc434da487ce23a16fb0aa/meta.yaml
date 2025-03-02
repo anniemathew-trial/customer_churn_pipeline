@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/56c5effa37dc434da487ce23a16fb0aa/artifacts
+deleted_time: 1740917459441
 end_time: 1740847711534
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 56c5effa37dc434da487ce23a16fb0aa
 run_name: invincible-mink-463
 run_uuid: 56c5effa37dc434da487ce23a16fb0aa

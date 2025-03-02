@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/4c1bcb3d6c004b11a2ffd2b7c1ea8633/artifacts
+deleted_time: 1740917459472
 end_time: 1740828763561
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 4c1bcb3d6c004b11a2ffd2b7c1ea8633
 run_name: omniscient-bug-224
 run_uuid: 4c1bcb3d6c004b11a2ffd2b7c1ea8633

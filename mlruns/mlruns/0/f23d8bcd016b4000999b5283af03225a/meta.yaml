@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/f23d8bcd016b4000999b5283af03225a/artifacts
+deleted_time: 1740917459497
 end_time: 1740828096956
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: f23d8bcd016b4000999b5283af03225a
 run_name: serious-goose-819
 run_uuid: f23d8bcd016b4000999b5283af03225a

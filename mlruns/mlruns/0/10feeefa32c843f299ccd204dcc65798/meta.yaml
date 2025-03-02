@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/10feeefa32c843f299ccd204dcc65798/artifacts
+deleted_time: 1740917459408
 end_time: 1740848302935
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 10feeefa32c843f299ccd204dcc65798
 run_name: wistful-shrike-705
 run_uuid: 10feeefa32c843f299ccd204dcc65798

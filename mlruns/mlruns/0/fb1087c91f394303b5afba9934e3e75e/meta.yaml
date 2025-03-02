@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/fb1087c91f394303b5afba9934e3e75e/artifacts
+deleted_time: 1740917459468
 end_time: 1740828548582
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: fb1087c91f394303b5afba9934e3e75e
 run_name: powerful-loon-993
 run_uuid: fb1087c91f394303b5afba9934e3e75e

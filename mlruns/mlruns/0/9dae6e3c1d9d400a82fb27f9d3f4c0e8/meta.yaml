@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/9dae6e3c1d9d400a82fb27f9d3f4c0e8/artifacts
+deleted_time: 1740917459515
 end_time: 1740827462047
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 9dae6e3c1d9d400a82fb27f9d3f4c0e8
 run_name: unleashed-moose-640
 run_uuid: 9dae6e3c1d9d400a82fb27f9d3f4c0e8

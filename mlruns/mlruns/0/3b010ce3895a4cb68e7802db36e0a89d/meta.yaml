@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/3b010ce3895a4cb68e7802db36e0a89d/artifacts
+deleted_time: 1740917459434
 end_time: 1740848035775
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 3b010ce3895a4cb68e7802db36e0a89d
 run_name: secretive-lamb-233
 run_uuid: 3b010ce3895a4cb68e7802db36e0a89d

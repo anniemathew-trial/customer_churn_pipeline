@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/f5353f8b292143e2819ba81e2782ee61/artifacts
+deleted_time: 1740917459489
 end_time: 1740828533767
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: f5353f8b292143e2819ba81e2782ee61
 run_name: chill-snail-235
 run_uuid: f5353f8b292143e2819ba81e2782ee61

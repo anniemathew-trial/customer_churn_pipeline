@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/9b59da5e995e4853bd2819c7cc49ed54/artifacts
+deleted_time: 1740917459391
 end_time: 1740848446152
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 9b59da5e995e4853bd2819c7cc49ed54
 run_name: adorable-foal-42
 run_uuid: 9b59da5e995e4853bd2819c7cc49ed54
