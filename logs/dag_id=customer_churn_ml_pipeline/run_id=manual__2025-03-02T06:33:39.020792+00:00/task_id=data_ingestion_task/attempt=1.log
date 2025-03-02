@@ -15,3 +15,16 @@
 [2025-03-02T06:34:12.410+0000] {subprocess.py:93} INFO - 2025-03-02 06:34:12,410 : INFO : Data from CSV customer_data.csv ingested successfully!
 [2025-03-02T06:34:12.411+0000] {subprocess.py:93} INFO - 2025-03-02 06:34:12,410 : INFO : Connecting to Database
 [2025-03-02T06:34:12.412+0000] {subprocess.py:93} INFO - 2025-03-02 06:34:12,412 : ERROR : Error ingesting database: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib '{{ODBC Driver 17 for SQL Server}' : file not found (0) (SQLDriverConnect)")
+[2025-03-02T06:34:12.582+0000] {subprocess.py:93} INFO - [main 5e86189] Updated data ingestion
+[2025-03-02T06:34:12.583+0000] {subprocess.py:93} INFO -  8 files changed, 335 insertions(+)
+[2025-03-02T06:34:12.583+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:25:26.490358+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T06:34:12.583+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:25:26.490358+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-02T06:34:12.583+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:25:26.490358+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-02T06:34:12.584+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:33:39.020792+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T06:34:12.584+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:33:39.020792+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T06:34:14.003+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T06:34:14.004+0000] {subprocess.py:93} INFO -    00356d5..5e86189  main -> main
+[2025-03-02T06:34:14.009+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T06:34:14.054+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T063339, start_date=20250302T063410, end_date=20250302T063414
+[2025-03-02T06:34:14.100+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T06:34:14.139+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
