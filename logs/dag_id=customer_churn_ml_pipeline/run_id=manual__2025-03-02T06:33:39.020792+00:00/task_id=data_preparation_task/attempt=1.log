@@ -1,0 +1,48 @@
+[2025-03-02T06:34:44.125+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T06:33:39.020792+00:00 [queued]>
+[2025-03-02T06:34:44.136+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T06:33:39.020792+00:00 [queued]>
+[2025-03-02T06:34:44.136+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T06:34:44.155+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_preparation_task> on 2025-03-02 06:33:39.020792+00:00
+[2025-03-02T06:34:44.160+0000] {standard_task_runner.py:57} INFO - Started process 4404 to run task
+[2025-03-02T06:34:44.163+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_preparation_task', 'manual__2025-03-02T06:33:39.020792+00:00', '--job-id', '255', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpya6dy5cb']
+[2025-03-02T06:34:44.165+0000] {standard_task_runner.py:85} INFO - Job 255: Subtask data_preparation_task
+[2025-03-02T06:34:44.187+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T06:34:44.232+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T06:33:39.020792+00:00 [running]> on host 7e994a0ed489
+[2025-03-02T06:34:44.358+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_preparation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T06:33:39.020792+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T06:33:39.020792+00:00'
+[2025-03-02T06:34:44.360+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T06:34:44.361+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/*** &&\t\t\tpython /opt/***/executables/data_preparation.py &&                         dvc add /opt/***/data/cleaned &&                         git add /opt/***/data/cleaned.dvc && \t\t\tgit add logs &&\\   \n\t\t\tgit add visualization &&                        git commit -m "Updated cleaned data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-02T06:34:44.372+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T06:34:47.157+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-02T06:34:47.157+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_preparation.py", line 11, in <module>
+[2025-03-02T06:34:47.158+0000] {subprocess.py:93} INFO -     with open("settings.json", "r") as file:
+[2025-03-02T06:34:47.158+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: 'settings.json'
+[2025-03-02T06:34:47.422+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-02T06:34:47.423+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-02T06:34:47.423+0000] {subprocess.py:93} INFO - 
+[2025-03-02T06:34:47.423+0000] {subprocess.py:93} INFO - Last command done (1 command done):
+[2025-03-02T06:34:47.423+0000] {subprocess.py:93} INFO -    pick 3c82e37 Initial Commit
+[2025-03-02T06:34:47.424+0000] {subprocess.py:93} INFO - No commands remaining.
+[2025-03-02T06:34:47.424+0000] {subprocess.py:93} INFO - You are currently editing a commit while rebasing branch 'master' on 'f6df714'.
+[2025-03-02T06:34:47.424+0000] {subprocess.py:93} INFO -   (use "git commit --amend" to amend the current commit)
+[2025-03-02T06:34:47.424+0000] {subprocess.py:93} INFO -   (use "git rebase --continue" once you are satisfied with your changes)
+[2025-03-02T06:34:47.424+0000] {subprocess.py:93} INFO - 
+[2025-03-02T06:34:47.424+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-02T06:34:47.424+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-02T06:34:47.425+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/
+[2025-03-02T06:34:47.425+0000] {subprocess.py:93} INFO - 	data/raw/02-03-2025/.gitignore
+[2025-03-02T06:34:47.425+0000] {subprocess.py:93} INFO - 	data/raw/02-03-2025/csv.dvc
+[2025-03-02T06:34:47.425+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:33:39.020792+00:00/task_id=data_preparation_task/
+[2025-03-02T06:34:47.426+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:33:39.020792+00:00/task_id=data_validation_task/
+[2025-03-02T06:34:47.426+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T06:33:39.020792+00:00/task_id=raw_data_storage_task/
+[2025-03-02T06:34:47.426+0000] {subprocess.py:93} INFO - 	models/
+[2025-03-02T06:34:47.426+0000] {subprocess.py:93} INFO - 
+[2025-03-02T06:34:47.426+0000] {subprocess.py:93} INFO - nothing added to commit but untracked files present (use "git add" to track)
+[2025-03-02T06:34:47.426+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T06:34:47.444+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T06:34:47.449+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_preparation_task, execution_date=20250302T063339, start_date=20250302T063444, end_date=20250302T063447
+[2025-03-02T06:34:47.468+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 255 for task data_preparation_task (Bash command failed. The command returned a non-zero exit code 1.; 4404)
+[2025-03-02T06:34:47.510+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T06:34:47.549+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

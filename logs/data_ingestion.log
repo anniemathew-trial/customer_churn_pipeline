@@ -514,3 +514,7 @@
 2025-03-02 06:34:12,410 : INFO : Data from CSV customer_data.csv ingested successfully!
 2025-03-02 06:34:12,410 : INFO : Connecting to Database
 2025-03-02 06:34:12,412 : ERROR : Error ingesting database: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib '{{ODBC Driver 17 for SQL Server}' : file not found (0) (SQLDriverConnect)")
+2025-03-02 06:38:03,318 : INFO : Reading data from CSV file customer_data.csv
+2025-03-02 06:38:03,449 : INFO : Data from CSV customer_data.csv ingested successfully!
+2025-03-02 06:38:03,449 : INFO : Connecting to Database
+2025-03-02 06:38:03,451 : ERROR : Error ingesting database: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib '{{ODBC Driver 17 for SQL Server}' : file not found (0) (SQLDriverConnect)")
