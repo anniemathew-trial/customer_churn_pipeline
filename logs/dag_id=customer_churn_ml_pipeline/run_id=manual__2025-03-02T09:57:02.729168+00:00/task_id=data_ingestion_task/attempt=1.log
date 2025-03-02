@@ -33,3 +33,15 @@
 [2025-03-02T09:57:11.369+0000] {subprocess.py:93} INFO - 	modified:   logs/data_transformation.log
 [2025-03-02T09:57:11.369+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-02/customer_churn.py.log
 [2025-03-02T09:57:11.369+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:57:11.414+0000] {subprocess.py:93} INFO - [main 0f63951] Updated data ingestion
+[2025-03-02T09:57:11.414+0000] {subprocess.py:93} INFO -  8 files changed, 300 insertions(+)
+[2025-03-02T09:57:11.415+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:51:20.251514+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T09:57:11.415+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:51:20.251514+00:00/task_id=data_transformation_task/attempt=1.log
+[2025-03-02T09:57:11.415+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:57:02.729168+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T09:57:11.415+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:57:02.729168+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T09:57:13.416+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T09:57:13.418+0000] {subprocess.py:93} INFO -    ff1b571..0f63951  main -> main
+[2025-03-02T09:57:13.439+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T09:57:13.526+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T095702, start_date=20250302T095709, end_date=20250302T095713
+[2025-03-02T09:57:13.552+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T09:57:13.598+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
