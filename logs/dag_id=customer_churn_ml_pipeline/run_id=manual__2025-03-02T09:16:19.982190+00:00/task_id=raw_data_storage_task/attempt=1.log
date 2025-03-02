@@ -40,3 +40,13 @@
 [2025-03-02T09:16:38.757+0000] {subprocess.py:93} INFO - 
 [2025-03-02T09:16:38.758+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
 [2025-03-02T09:16:39.026+0000] {subprocess.py:93} INFO - /bin/bash: line 4:  : command not found
+[2025-03-02T09:16:39.071+0000] {subprocess.py:93} INFO - [main f79e25c] Updated raw data storage
+[2025-03-02T09:16:39.071+0000] {subprocess.py:93} INFO -  5 files changed, 73 insertions(+)
+[2025-03-02T09:16:39.071+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:16:19.982190+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-02T09:16:42.645+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T09:16:44.490+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T09:16:44.491+0000] {subprocess.py:93} INFO -    bca0865..f79e25c  main -> main
+[2025-03-02T09:16:44.496+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T09:16:44.543+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=raw_data_storage_task, execution_date=20250302T091619, start_date=20250302T091630, end_date=20250302T091644
+[2025-03-02T09:16:44.568+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T09:16:44.639+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
