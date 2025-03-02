@@ -18,7 +18,7 @@ logging.getLogger("").addHandler(console)
 def data_storage(csv_filename):
     try:
         
-        with open("settings.json", "r") as file:
+        with open("/opt/airflow/executables/settings.json", "r") as file:
             settings = json.load(file)
         password = settings["sql_pwd"]
         connection_string = settings["db_connection_storage"]
