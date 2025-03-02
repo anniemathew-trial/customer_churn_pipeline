@@ -67,7 +67,7 @@ def prepare_csv_data(output_path="customer_data.csv"):
         p.mkdir(parents = True, exist_ok = True)
             
         logging.info("Saving data to S3.")
-        cleaned_file_path = "data/cleaned/{today}/csv/{output_path}"
+        cleaned_file_path = f"data/cleaned/{today}/csv/{output_path}"
         df.to_csv(f"{settings['raw_data_path']}/{cleaned_file_path}", index=False)       
         s3_client = boto3.client('s3', region_name='us-east-1')
         bucket_name = "dmmlassignmentbucket"
