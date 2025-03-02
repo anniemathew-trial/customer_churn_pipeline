@@ -36,9 +36,8 @@ with DAG(
         bash_command = """
 			cd /opt/airflow &&\
                         python /opt/airflow/executables/raw_data_storage.py && \
-			git rm -r --cached /opt/airflow/data/raw && \
-			git rm -r --cached /opt/airflow/data/raw && \
-			git commit -m "stop tracking data/raw/$NOW" && \
+			git rm -r --cached 'data/raw'
+			git commit -m "stop tracking data/raw"
                         dvc add /opt/airflow/data/raw && \
                         git add /opt/airflow/data/raw.dvc && \
 			git add logs &&\   
