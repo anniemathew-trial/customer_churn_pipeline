@@ -85,7 +85,7 @@ def generate_csv_data_quality_report(csv_filename, output_path="csv_validation_r
         p.mkdir(parents = True, exist_ok = True)
         report_df.to_csv(f"reports/{output_path}", index=False)
         logging.info(f"Metrics saved to: {output_path}")
-   except Exception as e:
+    except Exception as e:
         logging.error(f"Error validating  data: {str(e)}")
 
 
