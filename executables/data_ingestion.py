@@ -40,6 +40,7 @@ def ingest_database():
         connection_string = settings["db_connection"]
 
         logging.info("Connecting to Database")
+        print(connection_string + password)
         connection = pyodbc.connect(connection_string + password)
         logging.info("Connecting to Database Successfull")
         _ = connection.cursor()
