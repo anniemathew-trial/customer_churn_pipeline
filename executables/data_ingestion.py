@@ -2,7 +2,9 @@ from pathlib import Path
 import pandas as pd
 import logging
 import pyodbc
+import time
 
+today = time.strftime("%d-%m-%Y")
 #create log file if it does not exist
 ingestion_log_file = "/opt/airflow/logs/data_ingestion.log"
 logging.root.handlers = []
@@ -21,9 +23,9 @@ def ingest_csv(filename):
     try:
         logging.info(f"Reading data from CSV file {filename}")
         data = pd.read_csv(f'/opt/airflow/data/{filename}')
-        p = Path('/opt/airflow/data/raw')
+        p = Path(f'/opt/airflow/data/raw/{today}/csv')
         p.mkdir(parents = True, exist_ok = True)
-        data.to_csv(f"/opt/airflow/data/raw/{filename}", index=False)
+        data.to_csv(f"/opt/airflow/data/raw/{today}/csv/{filename}", index=False)
         logging.info(f"Data from CSV {filename} ingested successfully!")
         return data
     except Exception as e:
@@ -46,9 +48,9 @@ def ingest_database():
         data = pd.read_sql(query, connection)
         
         connection.close()
-        p = Path('/opt/airflow/data/raw')
+        p = Path('/opt/airflow/data/raw/{today}/database')
         p.mkdir(parents = True, exist_ok = True)
-        data.to_csv("/opt/airflow/data/raw/database_data.csv", index=False)
+        data.to_csv("/opt/airflow/data/raw/{today}/database/database_data.csv", index=False)
         logging.info("Data from Database ingested successfully!")
         return data
     except Exception as e:
