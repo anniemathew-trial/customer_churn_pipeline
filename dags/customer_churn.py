@@ -28,10 +28,10 @@ with DAG(
 			git rm -r --cached /opt/airflow/data/raw/$NOW/csv
 			git rm -r --cached /opt/airflow/data/raw/$NOW/database
 			git commit -m "stop tracking data/raw/$NOW"
-                        dvc add /opt/airflow/data/raw/$NOW/csv/customer_data.csv && \
-                        dvc add /opt/airflow/data/raw/$NOW/database/database_data.csv && \
-                        git add /opt/airflow/data/raw/$NOW/csv/database_data.csv.dvc && \
-                        git add /opt/airflow/data/raw/$NOW/database/database_data.csv.dvc && \
+                        dvc add /opt/airflow/data/raw/$NOW/csv && \
+                        dvc add /opt/airflow/data/raw/$NOW/database && \
+                        git add /opt/airflow/data/raw/$NOW/csv.dvc && \
+                        git add /opt/airflow/data/raw/$NOW/database.dvc && \
 			git add logs &&\
                         git commit -m "Updated raw data version" -a && \
                         dvc push && git push
