@@ -156,3 +156,7 @@
 2025-03-02 10:07:53,401 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/02-03-2025/csv/customer_data.csv'
 2025-03-02 10:13:15,965 : INFO : Starting data transformation for csv.
 2025-03-02 10:13:15,966 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/02-03-2025/csv/customer_data.csv'
+2025-03-02 10:15:58,647 : INFO : Starting data transformation for csv.
+2025-03-02 10:15:58,681 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-02 10:15:58,689 : INFO : Saving data to S3.
+2025-03-02 10:15:58,690 : ERROR : Failed data transformation: Cannot save file into a non-existent directory: '/opt/airflow/data/transformed/02-03-2025/csv'
