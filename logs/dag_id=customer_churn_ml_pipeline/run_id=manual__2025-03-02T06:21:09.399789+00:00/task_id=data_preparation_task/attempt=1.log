@@ -1,0 +1,26 @@
+[2025-03-02T06:21:47.095+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T06:21:09.399789+00:00 [queued]>
+[2025-03-02T06:21:47.105+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T06:21:09.399789+00:00 [queued]>
+[2025-03-02T06:21:47.106+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T06:21:47.123+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_preparation_task> on 2025-03-02 06:21:09.399789+00:00
+[2025-03-02T06:21:47.127+0000] {standard_task_runner.py:57} INFO - Started process 3467 to run task
+[2025-03-02T06:21:47.130+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_preparation_task', 'manual__2025-03-02T06:21:09.399789+00:00', '--job-id', '238', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmp2wxz0g48']
+[2025-03-02T06:21:47.132+0000] {standard_task_runner.py:85} INFO - Job 238: Subtask data_preparation_task
+[2025-03-02T06:21:47.152+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T06:21:47.194+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T06:21:09.399789+00:00 [running]> on host 7e994a0ed489
+[2025-03-02T06:21:47.302+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_preparation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T06:21:09.399789+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T06:21:09.399789+00:00'
+[2025-03-02T06:21:47.303+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T06:21:47.304+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/*** &&\t\t\tpython /opt/***/executables/data_preparation.py &&                         dvc add /opt/***/data/cleaned &&                         git add /opt/***/data/cleaned.dvc && \t\t\tgit add logs &&\\   \n\t\t\tgit add visualization &&                        git commit -m "Updated cleaned data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-02T06:21:47.312+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T06:21:49.711+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-02T06:21:49.711+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_preparation.py", line 11, in <module>
+[2025-03-02T06:21:49.711+0000] {subprocess.py:93} INFO -     with open("settings.json", "r") as file:
+[2025-03-02T06:21:49.712+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: 'settings.json'
+[2025-03-02T06:21:50.038+0000] {subprocess.py:93} INFO - [main 39597be] Updated cleaned data version
+[2025-03-02T06:21:50.039+0000] {subprocess.py:93} INFO -  2 files changed, 15 insertions(+)
+[2025-03-02T06:21:55.545+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T06:21:57.235+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T06:21:57.235+0000] {subprocess.py:93} INFO -    804f4b2..39597be  main -> main
+[2025-03-02T06:21:57.240+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T06:21:57.280+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_preparation_task, execution_date=20250302T062109, start_date=20250302T062147, end_date=20250302T062157
+[2025-03-02T06:21:57.307+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T06:21:57.346+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
