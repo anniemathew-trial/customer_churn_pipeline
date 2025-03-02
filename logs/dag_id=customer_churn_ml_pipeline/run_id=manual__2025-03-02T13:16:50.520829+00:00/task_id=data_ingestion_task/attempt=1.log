@@ -46,3 +46,17 @@
 [2025-03-02T13:17:00.147+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/__pycache__/example_repo.cpython-38.pyc
 [2025-03-02T13:17:00.147+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/__pycache__/test_workflow.cpython-38.pyc
 [2025-03-02T13:17:00.147+0000] {subprocess.py:93} INFO - 
+[2025-03-02T13:17:00.171+0000] {subprocess.py:93} INFO - [main 54702af] Updated data ingestion
+[2025-03-02T13:17:00.172+0000] {subprocess.py:93} INFO -  11 files changed, 536 insertions(+), 88 deletions(-)
+[2025-03-02T13:17:00.172+0000] {subprocess.py:93} INFO -  mode change 100755 => 100644 customer_churn_stats/__init__.py
+[2025-03-02T13:17:00.172+0000] {subprocess.py:93} INFO -  mode change 100755 => 100644 customer_churn_stats/feature_repo/__init__.py
+[2025-03-02T13:17:00.172+0000] {subprocess.py:93} INFO -  mode change 100755 => 100644 customer_churn_stats/feature_repo/__pycache__/__init__.cpython-38.pyc
+[2025-03-02T13:17:00.172+0000] {subprocess.py:93} INFO -  mode change 100755 => 100644 customer_churn_stats/feature_repo/feature_store.yaml
+[2025-03-02T13:17:00.172+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T13:16:50.520829+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-02T13:17:00.172+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T13:16:50.520829+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-02T13:17:02.003+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T13:17:02.004+0000] {subprocess.py:93} INFO -    9357d92..54702af  main -> main
+[2025-03-02T13:17:02.019+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T13:17:02.080+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250302T131650, start_date=20250302T131658, end_date=20250302T131702
+[2025-03-02T13:17:02.134+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T13:17:02.203+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
