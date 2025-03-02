@@ -50,7 +50,7 @@ def ingest_database():
         connection.close()
         p = Path('/opt/airflow/data/raw/{today}/database')
         p.mkdir(parents = True, exist_ok = True)
-        data.to_csv("/opt/airflow/data/raw/{today}/database/database_data.csv", index=False)
+        data.to_csv(f"/opt/airflow/data/raw/{today}/database/database_data.csv", index=False)
         logging.info("Data from Database ingested successfully!")
         return data
     except Exception as e:
