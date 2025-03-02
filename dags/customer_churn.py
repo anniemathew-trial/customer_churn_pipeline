@@ -19,7 +19,7 @@ with DAG(
         task_id="pull_latest_codes",
 	bash_command="cd /opt/airflow && dvc pull && git pull",
     )
-    # Data ingestion and raw data storage to Amazon S3 using DVC
+	
     data_ingestion_task = BashOperator(
         task_id = 'data_ingestion_task',
         bash_command = """python /opt/airflow/executables/data_ingestion.py && \
@@ -123,6 +123,4 @@ with DAG(
                         """
     )
 
-pull_task >> data_ingestion_task >> raw_data_storage_task >> data_validation_task
-data_validation_task >> data_preparation_task >> data_transformation_task
-data_transformation_task >> data_storage_task >> feature_store_task >> model_training_task
+pull_task >> data_ingestion_task >> raw_data_storage_task >> data_validation_task >> data_preparation_task >> data_transformation_task >> data_storage_task >> feature_store_task >> model_training_task
