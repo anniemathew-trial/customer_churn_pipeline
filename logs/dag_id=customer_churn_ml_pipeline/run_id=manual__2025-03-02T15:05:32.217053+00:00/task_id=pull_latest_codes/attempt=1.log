@@ -1,0 +1,31 @@
+[2025-03-02T15:08:21.181+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.pull_latest_codes manual__2025-03-02T15:05:32.217053+00:00 [queued]>
+[2025-03-02T15:08:21.199+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.pull_latest_codes manual__2025-03-02T15:05:32.217053+00:00 [queued]>
+[2025-03-02T15:08:21.199+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T15:08:21.228+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): pull_latest_codes> on 2025-03-02 15:05:32.217053+00:00
+[2025-03-02T15:08:21.234+0000] {standard_task_runner.py:57} INFO - Started process 383 to run task
+[2025-03-02T15:08:21.239+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'pull_latest_codes', 'manual__2025-03-02T15:05:32.217053+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmppl8i1wsj']
+[2025-03-02T15:08:21.244+0000] {standard_task_runner.py:85} INFO - Job 33: Subtask pull_latest_codes
+[2025-03-02T15:08:21.279+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T15:08:21.357+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.pull_latest_codes manual__2025-03-02T15:05:32.217053+00:00 [running]> on host 157237bff8f7
+[2025-03-02T15:08:21.560+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='pull_latest_codes' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T15:05:32.217053+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T15:05:32.217053+00:00'
+[2025-03-02T15:08:21.562+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T15:08:21.563+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/*** && dvc pull && git pull']
+[2025-03-02T15:08:21.577+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T15:08:27.607+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T15:08:29.232+0000] {subprocess.py:93} INFO - From https://github.com/anniemathew-trial/customer_churn_pipeline
+[2025-03-02T15:08:29.233+0000] {subprocess.py:93} INFO -    c5d8e8f..4af5bd7  main       -> origin/main
+[2025-03-02T15:08:29.282+0000] {subprocess.py:93} INFO - error: Your local changes to the following files would be overwritten by merge:
+[2025-03-02T15:08:29.283+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/feature_store.yaml
+[2025-03-02T15:08:29.283+0000] {subprocess.py:93} INFO - Please commit your changes or stash them before you merge.
+[2025-03-02T15:08:29.283+0000] {subprocess.py:93} INFO - Aborting
+[2025-03-02T15:08:29.283+0000] {subprocess.py:93} INFO - Updating c5d8e8f..4af5bd7
+[2025-03-02T15:08:29.284+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T15:08:29.308+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T15:08:29.315+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=pull_latest_codes, execution_date=20250302T150532, start_date=20250302T150821, end_date=20250302T150829
+[2025-03-02T15:08:29.340+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 33 for task pull_latest_codes (Bash command failed. The command returned a non-zero exit code 1.; 383)
+[2025-03-02T15:08:29.349+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T15:08:29.390+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
