@@ -6,9 +6,13 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 import logging
+import json
 
+with open("settings.json", "r") as file:
+        settings = json.load(file)
+today = time.strftime("%d-%m-%Y")
 #create log file if it does not exist
-data_preparation_log_file = "/opt/airflow/logs/data_preparation.log"
+ingestion_log_file = f"{settings["logging_base_path"]}/logs/data_preparation.log"
 logging.root.handlers = []
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_preparation_log_file)
 
@@ -20,12 +24,23 @@ console.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
+
+def upload_file(file_name, bucket, object_name=None):
+    
+    if object_name is None:
+        object_name = file_name
+    s3_client = boto3.client(
+        's3', 
+        aws_access_key_id = settings["id"],
+        aws_secret_access_key = settings["key"],
+        region_name='us-east-1')
+    _ = s3_client.upload_file(file_name, bucket, object_name)
     
 def prepare_csv_data(output_path="customer_data.csv"):
     try:
         logging.info("Starting data preparation for csv.")
         # Read data from Amazon S3 bucket
-        df = pd.read_csv('data/raw/customer_data.csv')
+        df = pd.read_csv(f'data/raw/{today}/csv/customer_data.csv')
         
         logging.info("Handling 'Tenure', 'Balance', 'EstimatedSalary' empty data")
         numeric_columns = ['Tenure', 'Balance', 'EstimatedSalary'];
@@ -51,10 +66,12 @@ def prepare_csv_data(output_path="customer_data.csv"):
         p.mkdir(parents = True, exist_ok = True)
             
         logging.info("Saving data to S3.")
-        df.to_csv(f"data/cleaned/{output_path}", index=False)
-        
-        
-        logging.info("Saving report to S3.")
+        cleaned_file_path = "data/cleaned/{today}/csv/{output_path}"
+        df.to_csv(cleaned_file_path, index=False)       
+        s3_client = boto3.client('s3', region_name='us-east-1')
+        bucket_name = "dmmlassignmentbucket"
+        s3_key = f"data/cleaned/{today}/csv/{output_path}"
+        upload_file(cleaned_file_path, bucket_name, s3_key)        
         generate_report(df)
     except Exception as e:
         logging.error(f"Error in preparing data{str(e)}") 
