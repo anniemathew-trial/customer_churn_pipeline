@@ -320,3 +320,5 @@
 2025-03-02 10:28:31,225 : ERROR : Error storing data: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib '{ODBC Driver 17 for SQL Server};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=customer_churn_db;UID=sa;PWD=NewPASS1234' : file not found (0) (SQLDriverConnect)")
 2025-03-02 10:35:11,623 : INFO : Connecting to Database
 2025-03-02 10:35:11,625 : ERROR : Error storing data: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib '{ODBC Driver 17 for SQL Server};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=customer_churn_db;UID=sa;PWD=NewPASS1234' : file not found (0) (SQLDriverConnect)")
+2025-03-02 10:37:48,847 : INFO : Connecting to Database
+2025-03-02 10:37:48,850 : ERROR : Error storing data: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib '{ODBC Driver 17 for SQL Server};SERVER=dmml_customer_churn_setup-sqlserver-1,1433;DATABASE=customer_churn_db;UID=sa;PWD=NewPASS1234' : file not found (0) (SQLDriverConnect)")
