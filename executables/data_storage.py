@@ -1,6 +1,7 @@
 import pandas as pd
 import logging
 import pyodbc
+import json
 
 
 #create log file if it does not exist
@@ -17,13 +18,13 @@ logging.getLogger("").addHandler(console)
 def data_storage(csv_filename):
     try:
         
-        server = "dmml_customer_churn_setup-sqlserver-1,1433"
-        database = "dmml_assignment"
-        username = "sa"
-        password = "NewPASS1234"
+        with open("settings.json", "r") as file:
+            settings = json.load(file)
+        password = settings["sql_pwd"]
+        connection_string = settings["db_connection"]
 
         logging.info("Connecting to Database")
-        connection = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
+        connection = pyodbc.connect(connection_string + password)
         logging.info("Connecting to Database Successfull")
         cursor = connection.cursor()
 
