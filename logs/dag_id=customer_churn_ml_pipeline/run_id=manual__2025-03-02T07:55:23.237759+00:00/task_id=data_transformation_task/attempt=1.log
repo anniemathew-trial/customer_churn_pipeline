@@ -12,3 +12,14 @@
 [2025-03-02T07:55:39.661+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/*** &&                        dvc pull /opt/***/data/cleaned\n                        python /opt/***/executables/data_transformation.py &&                         dvc add /opt/***/data/transformed &&                         git add /opt/***/data/transformed.dvc && \t\t\tgit add logs &&                        git commit -m "Updated transformed data version" -a &&                         dvc push && git push\n                    ']
 [2025-03-02T07:55:39.776+0000] {subprocess.py:86} INFO - Output:
 [2025-03-02T07:55:49.916+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T07:55:59.702+0000] {subprocess.py:93} INFO - 2025-03-02 07:55:59,701 : INFO : Starting data preparation for csv.
+[2025-03-02T07:55:59.798+0000] {subprocess.py:93} INFO - 2025-03-02 07:55:59,797 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+[2025-03-02T07:55:59.840+0000] {subprocess.py:93} INFO - 2025-03-02 07:55:59,840 : INFO : Saving data to S3.
+[2025-03-02T07:56:08.512+0000] {subprocess.py:93} INFO - 
+[2025-03-02T07:56:08.513+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-03-02T07:56:08.514+0000] {subprocess.py:93} INFO - 
+[2025-03-02T07:56:08.514+0000] {subprocess.py:93} INFO - 	git add data/transformed.dvc
+[2025-03-02T07:56:08.515+0000] {subprocess.py:93} INFO - 
+[2025-03-02T07:56:08.516+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-03-02T07:56:08.517+0000] {subprocess.py:93} INFO - 
+[2025-03-02T07:56:08.517+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true

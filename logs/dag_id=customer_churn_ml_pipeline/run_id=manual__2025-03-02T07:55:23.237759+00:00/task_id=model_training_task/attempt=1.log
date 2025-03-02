@@ -11,3 +11,13 @@
 [2025-03-02T07:55:39.976+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-03-02T07:55:39.988+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t    \t\tcd /opt/***\n       \t\t\t    python /opt/***/executables/model_training.py && \t      \t\t    git add logs &&\t      \t\t    git add mlruns &&                            git commit -m "Trained model version" -a && \\    \n\t\t\t    git push\n                        ']
 [2025-03-02T07:55:40.032+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T07:56:08.376+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:64: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-02T07:56:08.377+0000] {subprocess.py:93} INFO -   @validator("togetherai_api_key", pre=True)
+[2025-03-02T07:56:08.377+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:372: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-02T07:56:08.378+0000] {subprocess.py:93} INFO -   @root_validator(skip_on_failure=True)
+[2025-03-02T07:56:08.378+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/pydantic/_internal/_config.py:267: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-02T07:56:08.379+0000] {subprocess.py:93} INFO -   warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+[2025-03-02T07:56:08.380+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:08,375 : INFO : Starting model training
+[2025-03-02T07:56:08.419+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:08,418 : INFO : Registry cache expired, so refreshing
+[2025-03-02T07:56:08.443+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:08,442 : INFO : Getting data
+[2025-03-02T07:56:08.444+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:08,444 : INFO : Start and End Range: 1 to 1000
