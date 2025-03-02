@@ -74,7 +74,7 @@ def prepare_csv_data(output_path="customer_data.csv"):
         logging.info("Connected to s3")        
         bucket_name = "dmmlassignmentbucket"
         s3_key = f"{cleaned_file_path}/{output_path}"
-        upload_file(cleaned_file_path, bucket_name, s3_key)  
+        upload_file(f"{settings['raw_data_path']}/{cleaned_file_path}/{output_path}", bucket_name, s3_key)  
         logging.info("File uploaded to S3")     
         
         generate_report(df)
