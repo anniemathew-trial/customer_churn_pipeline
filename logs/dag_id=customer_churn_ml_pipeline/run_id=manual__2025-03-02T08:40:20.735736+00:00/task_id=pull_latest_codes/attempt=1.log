@@ -11,3 +11,22 @@
 [2025-03-02T08:40:22.403+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-03-02T08:40:22.404+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/*** && dvc pull && git pull']
 [2025-03-02T08:40:22.416+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T08:40:25.753+0000] {subprocess.py:93} INFO - D       data/cleaned/
+[2025-03-02T08:40:25.755+0000] {subprocess.py:93} INFO - 1 file deleted
+[2025-03-02T08:40:25.953+0000] {subprocess.py:93} INFO - hint: Pulling without specifying how to reconcile divergent branches is
+[2025-03-02T08:40:25.954+0000] {subprocess.py:93} INFO - hint: discouraged. You can squelch this message by running one of the following
+[2025-03-02T08:40:25.954+0000] {subprocess.py:93} INFO - hint: commands sometime before your next pull:
+[2025-03-02T08:40:25.954+0000] {subprocess.py:93} INFO - hint:
+[2025-03-02T08:40:25.955+0000] {subprocess.py:93} INFO - hint:   git config pull.rebase false  # merge (the default strategy)
+[2025-03-02T08:40:25.955+0000] {subprocess.py:93} INFO - hint:   git config pull.rebase true   # rebase
+[2025-03-02T08:40:25.955+0000] {subprocess.py:93} INFO - hint:   git config pull.ff only       # fast-forward only
+[2025-03-02T08:40:25.955+0000] {subprocess.py:93} INFO - hint:
+[2025-03-02T08:40:25.955+0000] {subprocess.py:93} INFO - hint: You can replace "git config" with "git config --global" to set a default
+[2025-03-02T08:40:25.956+0000] {subprocess.py:93} INFO - hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+[2025-03-02T08:40:25.956+0000] {subprocess.py:93} INFO - hint: or --ff-only on the command line to override the configured default per
+[2025-03-02T08:40:25.956+0000] {subprocess.py:93} INFO - hint: invocation.
+[2025-03-02T08:40:26.845+0000] {subprocess.py:93} INFO - Already up to date.
+[2025-03-02T08:40:26.852+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:40:26.958+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=pull_latest_codes, execution_date=20250302T084020, start_date=20250302T084022, end_date=20250302T084026
+[2025-03-02T08:40:27.056+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:40:27.183+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

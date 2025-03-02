@@ -13,3 +13,7 @@
 [2025-03-02T08:40:22.383+0000] {subprocess.py:86} INFO - Output:
 [2025-03-02T08:40:25.148+0000] {subprocess.py:93} INFO - WARNING: failed to collect 'workspace', skipping
 [2025-03-02T08:40:25.149+0000] {subprocess.py:93} INFO - ERROR: failed to pull data from the cloud - '/opt/***/data/raw' does not exist as an output or a stage name in 'dvc.yaml': 'dvc.yaml' does not exist
+[2025-03-02T08:40:27.198+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-02T08:40:27.199+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_validation.py", line 12, in <module>
+[2025-03-02T08:40:27.205+0000] {subprocess.py:93} INFO -     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_validation_log_file)
+[2025-03-02T08:40:27.206+0000] {subprocess.py:93} INFO - NameError: name 'data_validation_log_file' is not defined

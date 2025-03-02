@@ -14,3 +14,12 @@
 [2025-03-02T08:40:24.061+0000] {subprocess.py:93} INFO - WARNING: failed to collect 'workspace', skipping
 [2025-03-02T08:40:24.061+0000] {subprocess.py:93} INFO - ERROR: failed to pull data from the cloud - '/opt/***/data/transformed' does not exist as an output or a stage name in 'dvc.yaml': 'dvc.yaml' does not exist
 [2025-03-02T08:40:25.205+0000] {subprocess.py:93} INFO - 2025-03-02 08:40:25,205 : ERROR : Error storing data: [Errno 2] No such file or directory: 'settings.json'
+[2025-03-02T08:40:25.357+0000] {subprocess.py:93} INFO - [main fa176af] Updated stored data version
+[2025-03-02T08:40:25.358+0000] {subprocess.py:93} INFO -  8 files changed, 139 insertions(+)
+[2025-03-02T08:40:25.358+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-02T08:40:25.358+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=data_storage_task/attempt=1.log
+[2025-03-02T08:40:25.358+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=data_transformation_task/attempt=1.log
+[2025-03-02T08:40:25.359+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-02T08:40:25.359+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=feature_store_task/attempt=1.log
+[2025-03-02T08:40:25.359+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-02T08:40:25.359+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T08:40:20.735736+00:00/task_id=pull_latest_codes/attempt=1.log
