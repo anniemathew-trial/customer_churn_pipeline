@@ -24,7 +24,7 @@ logging.getLogger("").addHandler(console)
 def ingest_csv(filename):
     try:
         logging.info(f"Reading data from CSV file {filename}")
-        data = pd.read_csv(f"{settings['raw_data_path']}/data/{filename}')
+        data = pd.read_csv(f"{settings['raw_data_path']}/data/{filename}")
         p = Path(f'/opt/airflow/data/raw/{today}/csv')
         p.mkdir(parents = True, exist_ok = True)
         data.to_csv(f"/opt/airflow/data/raw/{today}/csv/{filename}", index=False)
