@@ -21,7 +21,7 @@ def data_storage(csv_filename):
         with open("settings.json", "r") as file:
             settings = json.load(file)
         password = settings["sql_pwd"]
-        connection_string = settings["db_connection"]
+        connection_string = settings["db_connection_storage"]
 
         logging.info("Connecting to Database")
         connection = pyodbc.connect(connection_string + password)
