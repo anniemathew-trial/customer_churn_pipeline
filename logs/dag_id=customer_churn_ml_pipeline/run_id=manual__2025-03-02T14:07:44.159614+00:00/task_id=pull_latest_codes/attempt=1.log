@@ -1,0 +1,37 @@
+[2025-03-02T14:07:45.353+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.pull_latest_codes manual__2025-03-02T14:07:44.159614+00:00 [queued]>
+[2025-03-02T14:07:45.362+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.pull_latest_codes manual__2025-03-02T14:07:44.159614+00:00 [queued]>
+[2025-03-02T14:07:45.362+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T14:07:45.377+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): pull_latest_codes> on 2025-03-02 14:07:44.159614+00:00
+[2025-03-02T14:07:45.381+0000] {standard_task_runner.py:57} INFO - Started process 4276 to run task
+[2025-03-02T14:07:45.384+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'pull_latest_codes', 'manual__2025-03-02T14:07:44.159614+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpmzscx4q_']
+[2025-03-02T14:07:45.387+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask pull_latest_codes
+[2025-03-02T14:07:45.406+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T14:07:45.445+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.pull_latest_codes manual__2025-03-02T14:07:44.159614+00:00 [running]> on host 157237bff8f7
+[2025-03-02T14:07:45.541+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='pull_latest_codes' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T14:07:44.159614+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T14:07:44.159614+00:00'
+[2025-03-02T14:07:45.542+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T14:07:45.543+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/*** && dvc pull && git pull']
+[2025-03-02T14:07:45.551+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T14:08:03.546+0000] {subprocess.py:93} INFO - A       data/transformed/
+[2025-03-02T14:08:03.546+0000] {subprocess.py:93} INFO - A       data/raw/
+[2025-03-02T14:08:03.547+0000] {subprocess.py:93} INFO - A       data/cleaned/
+[2025-03-02T14:08:03.550+0000] {subprocess.py:93} INFO - 3 files added and 7 files fetched
+[2025-03-02T14:08:04.903+0000] {subprocess.py:93} INFO - There is no tracking information for the current branch.
+[2025-03-02T14:08:04.903+0000] {subprocess.py:93} INFO - Please specify which branch you want to merge with.
+[2025-03-02T14:08:04.904+0000] {subprocess.py:93} INFO - See git-pull(1) for details.
+[2025-03-02T14:08:04.904+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:08:04.904+0000] {subprocess.py:93} INFO -     git pull <remote> <branch>
+[2025-03-02T14:08:04.904+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:08:04.904+0000] {subprocess.py:93} INFO - If you wish to set tracking information for this branch you can do so with:
+[2025-03-02T14:08:04.905+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:08:04.905+0000] {subprocess.py:93} INFO -     git branch --set-upstream-to=origin/<branch> main
+[2025-03-02T14:08:04.905+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:08:04.905+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T14:08:04.931+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T14:08:04.940+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=pull_latest_codes, execution_date=20250302T140744, start_date=20250302T140745, end_date=20250302T140804
+[2025-03-02T14:08:04.965+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 4 for task pull_latest_codes (Bash command failed. The command returned a non-zero exit code 1.; 4276)
+[2025-03-02T14:08:04.985+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T14:08:05.038+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
