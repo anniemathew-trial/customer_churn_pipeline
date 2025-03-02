@@ -18,3 +18,9 @@
 [2025-03-02T08:01:01.139+0000] {subprocess.py:93} INFO - [main c0bd307] Updated cleaned data version
 [2025-03-02T08:01:01.141+0000] {subprocess.py:93} INFO -  4 files changed, 67 insertions(+)
 [2025-03-02T08:01:21.954+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-02T08:01:27.590+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T08:01:27.592+0000] {subprocess.py:93} INFO -    769d2bb..75c734f  main -> main
+[2025-03-02T08:01:27.595+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T08:01:27.938+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_preparation_task, execution_date=20250301T080000, start_date=20250302T080047, end_date=20250302T080127
+[2025-03-02T08:01:28.142+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T08:01:28.431+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

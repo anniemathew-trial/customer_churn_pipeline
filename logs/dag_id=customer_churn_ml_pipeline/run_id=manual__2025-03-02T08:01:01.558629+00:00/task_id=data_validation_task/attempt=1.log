@@ -20,3 +20,5 @@
 [2025-03-02T08:01:26.681+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_validation.py", line 74, in generate_csv_data_quality_report
 [2025-03-02T08:01:26.682+0000] {subprocess.py:93} INFO -     report_df = pd.DataFrame(report_data, columns=[
 [2025-03-02T08:01:26.683+0000] {subprocess.py:93} INFO - UnboundLocalError: local variable 'report_data' referenced before assignment
+[2025-03-02T08:01:27.321+0000] {subprocess.py:93} INFO - [main 19375ab] Updated validation
+[2025-03-02T08:01:27.322+0000] {subprocess.py:93} INFO -  4 files changed, 20 insertions(+)
