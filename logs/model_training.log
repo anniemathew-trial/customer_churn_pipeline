@@ -854,3 +854,7 @@ tags.mlflow.log-model.history    [{"run_id": "30a1116e1c3f468db3d1a757ec74b4c5".
 Name: 11, dtype: object
 2025-03-02 08:02:39,572 : INFO : Registering best model runs:/30a1116e1c3f468db3d1a757ec74b4c5/RandomForest_model
 2025-03-02 08:02:39,691 : INFO : Completed model training & registration !!
+2025-03-02 11:38:04,498 : INFO : Starting model training
+2025-03-02 11:38:04,519 : INFO : Registry cache expired, so refreshing
+2025-03-02 11:38:04,530 : INFO : Getting data
+2025-03-02 11:38:04,531 : INFO : Start and End Range: 1 to 1000
