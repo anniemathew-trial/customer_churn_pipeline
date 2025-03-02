@@ -2,9 +2,12 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import logging
+import json
 
+with open("/opt/airflow/executables/settings.json", "r") as file:
+        settings = json.load(file)
 #create log file if it does not exist
-data_validation_log_file = "/opt/airflow/logs/data_validation.log"
+data_transformation_log_file = f"{settings['logging_base_path']}/logs/data_validation.log"
 logging.root.handlers = []
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=data_validation_log_file)
 
@@ -16,7 +19,7 @@ console.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
-
+    
 def generate_csv_data_quality_report(csv_filename, output_path="csv_validation_report.csv"):
     try:
         logging.info("Starting data validation")
