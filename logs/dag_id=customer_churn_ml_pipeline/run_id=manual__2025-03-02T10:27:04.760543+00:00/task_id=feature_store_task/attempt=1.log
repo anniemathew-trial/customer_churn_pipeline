@@ -1,0 +1,75 @@
+[2025-03-02T10:28:39.607+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.feature_store_task manual__2025-03-02T10:27:04.760543+00:00 [queued]>
+[2025-03-02T10:28:39.622+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.feature_store_task manual__2025-03-02T10:27:04.760543+00:00 [queued]>
+[2025-03-02T10:28:39.623+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T10:28:39.644+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): feature_store_task> on 2025-03-02 10:27:04.760543+00:00
+[2025-03-02T10:28:39.650+0000] {standard_task_runner.py:57} INFO - Started process 11598 to run task
+[2025-03-02T10:28:39.653+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'feature_store_task', 'manual__2025-03-02T10:27:04.760543+00:00', '--job-id', '162', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpz2cou4qe']
+[2025-03-02T10:28:39.657+0000] {standard_task_runner.py:85} INFO - Job 162: Subtask feature_store_task
+[2025-03-02T10:28:39.683+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T10:28:39.745+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.feature_store_task manual__2025-03-02T10:27:04.760543+00:00 [running]> on host 9113a5746a05
+[2025-03-02T10:28:39.893+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='feature_store_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T10:27:04.760543+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T10:27:04.760543+00:00'
+[2025-03-02T10:28:39.894+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T10:28:39.895+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/***/customer_churn_stats/feature_repo &&                         feast apply &&                         feast materialize-incremental $(date -u +\'%Y-%m-%dT%H:%M:%S\') && \t\t\tgit add logs &&    \t\t\tgit status &&                         git commit -m "Updated feature store" -a &&                         git push\n                    ']
+[2025-03-02T10:28:39.907+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T10:28:46.399+0000] {subprocess.py:93} INFO - 2025-03-02 10:28:46,398 : INFO : Connecting to Database
+[2025-03-02T10:28:46.401+0000] {subprocess.py:93} INFO - 2025-03-02 10:28:46,401 : INFO : Data collection from database failed {str(e)}!!
+[2025-03-02T10:28:46.401+0000] {subprocess.py:93} INFO - 2025-03-02 10:28:46,401 : INFO : Declaring an entity for the dataset
+[2025-03-02T10:28:46.402+0000] {subprocess.py:93} INFO - 2025-03-02 10:28:46,401 : INFO : Declaring the source for raw feature data
+[2025-03-02T10:28:46.402+0000] {subprocess.py:93} INFO - 2025-03-02 10:28:46,402 : INFO : Defining the features in a feature view
+[2025-03-02T10:28:46.404+0000] {subprocess.py:93} INFO - 2025-03-02 10:28:46,404 : INFO : Feature view creation successfull!!
+[2025-03-02T10:28:47.067+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-02T10:28:47.067+0000] {subprocess.py:93} INFO -   File "/home/***/.local/bin/feast", line 8, in <module>
+[2025-03-02T10:28:47.067+0000] {subprocess.py:93} INFO -     sys.exit(cli())
+[2025-03-02T10:28:47.068+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 1157, in __call__
+[2025-03-02T10:28:47.068+0000] {subprocess.py:93} INFO -     return self.main(*args, **kwargs)
+[2025-03-02T10:28:47.068+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 1078, in main
+[2025-03-02T10:28:47.068+0000] {subprocess.py:93} INFO -     rv = self.invoke(ctx)
+[2025-03-02T10:28:47.069+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 1688, in invoke
+[2025-03-02T10:28:47.069+0000] {subprocess.py:93} INFO -     return _process_result(sub_ctx.command.invoke(sub_ctx))
+[2025-03-02T10:28:47.069+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 1434, in invoke
+[2025-03-02T10:28:47.069+0000] {subprocess.py:93} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2025-03-02T10:28:47.070+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 783, in invoke
+[2025-03-02T10:28:47.070+0000] {subprocess.py:93} INFO -     return __callback(*args, **kwargs)
+[2025-03-02T10:28:47.070+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/decorators.py", line 33, in new_func
+[2025-03-02T10:28:47.070+0000] {subprocess.py:93} INFO -     return f(get_current_context(), *args, **kwargs)
+[2025-03-02T10:28:47.070+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/cli.py", line 491, in apply_total_command
+[2025-03-02T10:28:47.070+0000] {subprocess.py:93} INFO -     apply_total(repo_config, repo, skip_source_validation)
+[2025-03-02T10:28:47.071+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/usage.py", line 288, in wrapper
+[2025-03-02T10:28:47.071+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2025-03-02T10:28:47.071+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/repo_operations.py", line 358, in apply_total
+[2025-03-02T10:28:47.071+0000] {subprocess.py:93} INFO -     apply_total_with_repo_instance(
+[2025-03-02T10:28:47.072+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/repo_operations.py", line 308, in apply_total_with_repo_instance
+[2025-03-02T10:28:47.072+0000] {subprocess.py:93} INFO -     registry_diff, infra_diff, new_infra = store.plan(repo)
+[2025-03-02T10:28:47.072+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/usage.py", line 299, in wrapper
+[2025-03-02T10:28:47.072+0000] {subprocess.py:93} INFO -     raise exc.with_traceback(traceback)
+[2025-03-02T10:28:47.072+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/usage.py", line 288, in wrapper
+[2025-03-02T10:28:47.072+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2025-03-02T10:28:47.073+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/feature_store.py", line 726, in plan
+[2025-03-02T10:28:47.073+0000] {subprocess.py:93} INFO -     self._make_inferences(
+[2025-03-02T10:28:47.073+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/feature_store.py", line 590, in _make_inferences
+[2025-03-02T10:28:47.073+0000] {subprocess.py:93} INFO -     update_data_sources_with_inferred_event_timestamp_col(
+[2025-03-02T10:28:47.073+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/inference.py", line 72, in update_data_sources_with_inferred_event_timestamp_col
+[2025-03-02T10:28:47.073+0000] {subprocess.py:93} INFO -     ) in data_source.get_table_column_names_and_types(config):
+[2025-03-02T10:28:47.073+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/infra/offline_stores/file_source.py", line 161, in get_table_column_names_and_types
+[2025-03-02T10:28:47.074+0000] {subprocess.py:93} INFO -     schema = ParquetDataset(path, use_legacy_dataset=False).schema
+[2025-03-02T10:28:47.074+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pyarrow/parquet/core.py", line 1763, in __new__
+[2025-03-02T10:28:47.074+0000] {subprocess.py:93} INFO -     return _ParquetDatasetV2(
+[2025-03-02T10:28:47.074+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pyarrow/parquet/core.py", line 2477, in __init__
+[2025-03-02T10:28:47.074+0000] {subprocess.py:93} INFO -     self._dataset = ds.dataset(path_or_paths, filesystem=filesystem,
+[2025-03-02T10:28:47.074+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pyarrow/dataset.py", line 762, in dataset
+[2025-03-02T10:28:47.074+0000] {subprocess.py:93} INFO -     return _filesystem_dataset(source, **kwargs)
+[2025-03-02T10:28:47.075+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pyarrow/dataset.py", line 445, in _filesystem_dataset
+[2025-03-02T10:28:47.075+0000] {subprocess.py:93} INFO -     fs, paths_or_selector = _ensure_single_source(source, filesystem)
+[2025-03-02T10:28:47.075+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/pyarrow/dataset.py", line 421, in _ensure_single_source
+[2025-03-02T10:28:47.075+0000] {subprocess.py:93} INFO -     raise FileNotFoundError(path)
+[2025-03-02T10:28:47.075+0000] {subprocess.py:93} INFO - FileNotFoundError: data/customer_features.parq
+[2025-03-02T10:28:47.381+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T10:28:47.399+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T10:28:47.403+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=feature_store_task, execution_date=20250302T102704, start_date=20250302T102839, end_date=20250302T102847
+[2025-03-02T10:28:47.422+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 162 for task feature_store_task (Bash command failed. The command returned a non-zero exit code 1.; 11598)
+[2025-03-02T10:28:47.438+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T10:28:47.471+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
