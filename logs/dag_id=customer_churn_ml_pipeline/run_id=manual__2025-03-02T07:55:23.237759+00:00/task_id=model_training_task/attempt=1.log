@@ -74,3 +74,36 @@
 [2025-03-02T07:56:35.324+0000] {subprocess.py:93} INFO - 2025/03/02 07:56:35 INFO mlflow.tracking._tracking_service.client: 🏃 View run LogisticRegression at: http://localhost:5000/#/experiments/0/runs/513480195d30480a9f49215563303901.
 [2025-03-02T07:56:35.325+0000] {subprocess.py:93} INFO - 2025/03/02 07:56:35 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
 [2025-03-02T07:56:35.345+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:35,344 : INFO : Training model SVM
+[2025-03-02T07:56:43.858+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:43,858 : INFO : Predicting model SVM
+[2025-03-02T07:56:44.199+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:44,199 : INFO : Calculating accuracy SVM
+[2025-03-02T07:56:48.152+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+[2025-03-02T07:56:48.152+0000] {subprocess.py:93} INFO -   _warn_prf(average, modifier, msg_start, len(result))
+[2025-03-02T07:56:48.152+0000] {subprocess.py:93} INFO - 2025/03/02 07:56:48 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-02T07:56:48.220+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:48,220 : INFO : Logged model SVM
+[2025-03-02T07:56:48.234+0000] {subprocess.py:93} INFO - 2025/03/02 07:56:48 INFO mlflow.tracking._tracking_service.client: 🏃 View run SVM at: http://localhost:5000/#/experiments/0/runs/a6e21687fc1a4c35917a4df2f799387b.
+[2025-03-02T07:56:48.234+0000] {subprocess.py:93} INFO - 2025/03/02 07:56:48 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-02T07:56:48.245+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:48,244 : INFO : Starting best model registration
+[2025-03-02T07:56:48.245+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:48,245 : INFO : Finding Best model
+[2025-03-02T07:56:48.301+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:48,300 : INFO : Selected best model : run_id                                            30a1116e1c3f468db3d1a757ec74b4c5
+[2025-03-02T07:56:48.301+0000] {subprocess.py:93} INFO - experiment_id                                                                    0
+[2025-03-02T07:56:48.302+0000] {subprocess.py:93} INFO - status                                                                    FINISHED
+[2025-03-02T07:56:48.302+0000] {subprocess.py:93} INFO - artifact_uri                     mlflow-artifacts:/0/30a1116e1c3f468db3d1a757ec...
+[2025-03-02T07:56:48.302+0000] {subprocess.py:93} INFO - start_time                                        2025-03-02 07:54:10.649000+00:00
+[2025-03-02T07:56:48.302+0000] {subprocess.py:93} INFO - end_time                                          2025-03-02 07:54:18.565000+00:00
+[2025-03-02T07:56:48.303+0000] {subprocess.py:93} INFO - metrics.f1_score                                                          0.852665
+[2025-03-02T07:56:48.303+0000] {subprocess.py:93} INFO - metrics.accuracy                                                          0.947749
+[2025-03-02T07:56:48.303+0000] {subprocess.py:93} INFO - metrics.recall                                                            0.774929
+[2025-03-02T07:56:48.303+0000] {subprocess.py:93} INFO - metrics.precision                                                         0.947735
+[2025-03-02T07:56:48.303+0000] {subprocess.py:93} INFO - params.model_type                                                     RandomForest
+[2025-03-02T07:56:48.304+0000] {subprocess.py:93} INFO - tags.mlflow.source.git.commit             270c05278af3e38b6ddcaa5daf34ed7ef881fcdb
+[2025-03-02T07:56:48.304+0000] {subprocess.py:93} INFO - tags.mlflow.user                                                           ***
+[2025-03-02T07:56:48.304+0000] {subprocess.py:93} INFO - tags.mlflow.log-model.history    [{"run_id": "30a1116e1c3f468db3d1a757ec74b4c5"...
+[2025-03-02T07:56:48.304+0000] {subprocess.py:93} INFO - tags.mlflow.source.type                                                      LOCAL
+[2025-03-02T07:56:48.304+0000] {subprocess.py:93} INFO - tags.mlflow.runName                                                   RandomForest
+[2025-03-02T07:56:48.304+0000] {subprocess.py:93} INFO - tags.mlflow.source.name                 /opt/***/executables/model_training.py
+[2025-03-02T07:56:48.305+0000] {subprocess.py:93} INFO - Name: 5, dtype: object
+[2025-03-02T07:56:48.305+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:48,301 : INFO : Registering best model runs:/30a1116e1c3f468db3d1a757ec74b4c5/RandomForest_model
+[2025-03-02T07:56:48.378+0000] {subprocess.py:93} INFO - Registered model 'Best_ML_Model' already exists. Creating a new version of this model...
+[2025-03-02T07:56:48.379+0000] {subprocess.py:93} INFO - 2025/03/02 07:56:48 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: Best_ML_Model, version 3
+[2025-03-02T07:56:48.379+0000] {subprocess.py:93} INFO - Created version '3' of model 'Best_ML_Model'.
+[2025-03-02T07:56:48.379+0000] {subprocess.py:93} INFO - 2025-03-02 07:56:48,378 : INFO : Completed model training & registration !!
