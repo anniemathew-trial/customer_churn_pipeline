@@ -1,0 +1,45 @@
+[2025-03-02T09:38:47.908+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T09:38:10.694799+00:00 [queued]>
+[2025-03-02T09:38:47.925+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T09:38:10.694799+00:00 [queued]>
+[2025-03-02T09:38:47.925+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-02T09:38:47.949+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_preparation_task> on 2025-03-02 09:38:10.694799+00:00
+[2025-03-02T09:38:47.955+0000] {standard_task_runner.py:57} INFO - Started process 7283 to run task
+[2025-03-02T09:38:47.959+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_preparation_task', 'manual__2025-03-02T09:38:10.694799+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpqeuh92lh']
+[2025-03-02T09:38:47.963+0000] {standard_task_runner.py:85} INFO - Job 84: Subtask data_preparation_task
+[2025-03-02T09:38:47.994+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-02T09:38:48.083+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-02T09:38:10.694799+00:00 [running]> on host 9113a5746a05
+[2025-03-02T09:38:48.203+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_preparation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-02T09:38:10.694799+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-02T09:38:10.694799+00:00'
+[2025-03-02T09:38:48.204+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-02T09:38:48.205+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/*** &&\t\t\tpython /opt/***/executables/data_preparation.py &&                         dvc add /opt/***/data/cleaned &&                         git add /opt/***/data/cleaned.dvc && \t\t\tgit add logs && \\   \n\t\t\tgit add visualization &&    \t\t\tgit status &&                         git commit -m "Updated cleaned data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-02T09:38:48.214+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T09:38:50.601+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-02T09:38:50.601+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_preparation.py", line 13, in <module>
+[2025-03-02T09:38:50.602+0000] {subprocess.py:93} INFO -     today = time.strftime("%d-%m-%Y")
+[2025-03-02T09:38:50.602+0000] {subprocess.py:93} INFO - NameError: name 'time' is not defined
+[2025-03-02T09:38:50.885+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-02T09:38:50.885+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-02T09:38:50.885+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:38:50.886+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-02T09:38:50.886+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-02T09:38:50.886+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:38:10.694799+00:00/task_id=data_preparation_task/
+[2025-03-02T09:38:50.886+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:38:10.694799+00:00/task_id=data_validation_task/
+[2025-03-02T09:38:50.887+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:38:50.887+0000] {subprocess.py:93} INFO - nothing added to commit but untracked files present (use "git add" to track)
+[2025-03-02T09:38:50.902+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-02T09:38:50.902+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-02T09:38:50.903+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:38:50.903+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-02T09:38:50.903+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-02T09:38:50.903+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:38:10.694799+00:00/task_id=data_preparation_task/
+[2025-03-02T09:38:50.903+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T09:38:10.694799+00:00/task_id=data_validation_task/
+[2025-03-02T09:38:50.903+0000] {subprocess.py:93} INFO - 
+[2025-03-02T09:38:50.904+0000] {subprocess.py:93} INFO - nothing added to commit but untracked files present (use "git add" to track)
+[2025-03-02T09:38:50.904+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-03-02T09:38:50.923+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-03-02T09:38:50.927+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=customer_churn_ml_pipeline, task_id=data_preparation_task, execution_date=20250302T093810, start_date=20250302T093847, end_date=20250302T093850
+[2025-03-02T09:38:50.946+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 84 for task data_preparation_task (Bash command failed. The command returned a non-zero exit code 1.; 7283)
+[2025-03-02T09:38:50.985+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-03-02T09:38:51.041+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
