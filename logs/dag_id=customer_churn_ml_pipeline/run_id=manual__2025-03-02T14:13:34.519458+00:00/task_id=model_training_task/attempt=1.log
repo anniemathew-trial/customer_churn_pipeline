@@ -41,3 +41,13 @@
 [2025-03-02T14:16:57.862+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
 [2025-03-02T14:16:57.863+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
 [2025-03-02T14:16:57.863+0000] {subprocess.py:93} INFO - 
+[2025-03-02T14:16:57.880+0000] {subprocess.py:93} INFO - [main c5d8e8f] Trained model version
+[2025-03-02T14:16:57.880+0000] {subprocess.py:93} INFO -  3 files changed, 60 insertions(+)
+[2025-03-02T14:16:57.880+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-02T14:13:34.519458+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-02T14:16:57.880+0000] {subprocess.py:93} INFO - /bin/bash: line 3:  : command not found
+[2025-03-02T14:17:00.276+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-02T14:17:00.276+0000] {subprocess.py:93} INFO -    f970cbb..c5d8e8f  main -> main
+[2025-03-02T14:17:00.281+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-02T14:17:00.322+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=model_training_task, execution_date=20250302T141334, start_date=20250302T141649, end_date=20250302T141700
+[2025-03-02T14:17:00.345+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-02T14:17:00.369+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
