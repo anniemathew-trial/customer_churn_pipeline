@@ -4,9 +4,11 @@ import pandas as pd
 import numpy as np
 import logging
 import json
+import time
 
 with open("/opt/airflow/executables/settings.json", "r") as file:
         settings = json.load(file)
+today = time.strftime("%d-%m-%Y")
 #create log file if it does not exist
 data_transformation_log_file = f"{settings['logging_base_path']}/logs/data_transformation.log"
 logging.root.handlers = []
@@ -34,9 +36,9 @@ def upload_file(file_name, bucket, object_name=None):
         
 def data_transformation(output_path="customer_data.csv"):
     try:
-        logging.info("Starting data preparation for csv.")
-        # Read data from Amazon S3 bucket
-        df = pd.read_csv('data/cleaned/customer_data.csv')
+        logging.info("Starting data transformation for csv.")
+        data_path = f"{settings['raw_data_path']}/data/cleaned/{today}/csv/{output_path}"
+        df = pd.read_csv(data_path)
 
         df.loc[df.HasCrCard == 0, 'HasCrCard'] = -1
         df.loc[df.IsActiveMember == 0, 'IsActiveMember'] = -1
