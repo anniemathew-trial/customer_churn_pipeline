@@ -6,7 +6,7 @@ import json
 with open("settings.json", "r") as file:
         settings = json.load(file)
 #create log file if it does not exist
-ingestion_log_file = f"{settings["logging_base_path"]}\\logs\\data_ingestion.log"
+ingestion_log_file = f"{settings['logging_base_path']}\\logs\\data_ingestion.log"
 logging.root.handlers = []
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO , filename=ingestion_log_file)
 
@@ -37,14 +37,14 @@ try:
         bucket_name = "dmmlassignmentbucket"
         file_name = "customer_data.csv"
         s3_key = f"data/raw/{today}/csv/{file_name}"
-        data_path = f"{settings["raw_data_path"]}/data/raw/{today}/csv/{file_name}"
+        data_path = f"{settings['raw_data_path']}/data/raw/{today}/csv/{file_name}"
         upload_file(data_path, bucket_name, s3_key)
         logging.info("Upload completed for CSV.")
 
         logging.info("Starting Raw Data upload for Database")
         file_name = "database_data.csv"
         s3_key = f"data/raw/{today}/database/{file_name}"
-        data_path = f"{settings["raw_data_path"]}/data/raw/{today}/database/{file_name}"
+        data_path = f"{settings['raw_data_path']}/data/raw/{today}/database/{file_name}"
         upload_file(data_path, bucket_name, s3_key)
         logging.info("Upload completed for database.")
 except Exception as e:
