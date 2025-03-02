@@ -74,13 +74,13 @@ def data_transformation(output_path="customer_data.csv"):
               
         logging.info("Saving data to S3.")
         transformed_file_path = f"data/transformed/{today}/csv"
-        p = Path(cleaned_file_path)
+        p = Path(transformed_file_path)
         p.mkdir(parents = True, exist_ok = True)
         df.to_csv(f"{settings['raw_data_path']}/{transformed_file_path}/{output_path}", index=False)       
         s3_client = boto3.client('s3', region_name='us-east-1')
         bucket_name = "dmmlassignmentbucket"
         s3_key = f"{transformed_file_path}/{output_path}"
-        upload_file(transformed_file_path, bucket_name, s3_key)        
+        upload_file(f"{settings['raw_data_path']}/{transformed_file_path}/{output_path}", bucket_name, s3_key)        
 
     except Exception as e:
         logging.error(f"Failed data transformation: {str(e)}")
