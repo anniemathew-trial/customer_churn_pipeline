@@ -33,13 +33,13 @@ def ingest_csv(filename):
         
 def ingest_database():
     try:
-        server = "dmml_customer_churn_setup-sqlserver-1,1433"
-        database = "dmml_assignment"
-        username = "sa"
-        password = "NewPASS1234"
+        with open("settings.json", "r") as file:
+            settings = json.load(file)
+        password = settings["sql_pwd"]
+        connection_string = settings["db_connection"]
 
         logging.info("Connecting to Database")
-        connection = pyodbc.connect(f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
+        connection = pyodbc.connect(connection_string + password)
         logging.info("Connecting to Database Successfull")
         _ = connection.cursor()
         
