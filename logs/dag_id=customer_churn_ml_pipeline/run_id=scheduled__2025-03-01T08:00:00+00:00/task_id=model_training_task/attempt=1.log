@@ -52,3 +52,25 @@
 [2025-03-02T08:01:46.267+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:46,254 : INFO : received feature data
 [2025-03-02T08:01:46.292+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:46,291 : INFO : Models defined
 [2025-03-02T08:01:46.295+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:46,293 : INFO : Training model RandomForest
+[2025-03-02T08:01:51.284+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:51,284 : INFO : Predicting model RandomForest
+[2025-03-02T08:01:51.368+0000] {subprocess.py:93} INFO - 2025-03-02 08:01:51,367 : INFO : Calculating accuracy RandomForest
+[2025-03-02T08:02:02.491+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:02 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-02T08:02:02.934+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:02,934 : INFO : Logged model RandomForest
+[2025-03-02T08:02:03.053+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:03 INFO mlflow.tracking._tracking_service.client: 🏃 View run RandomForest at: http://localhost:5000/#/experiments/0/runs/202c30480fa045aaab10c7cbcbb6e727.
+[2025-03-02T08:02:03.054+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:03 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-02T08:02:03.089+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:03,089 : INFO : Training model LogisticRegression
+[2025-03-02T08:02:04.395+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+[2025-03-02T08:02:04.395+0000] {subprocess.py:93} INFO - STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+[2025-03-02T08:02:04.396+0000] {subprocess.py:93} INFO - 
+[2025-03-02T08:02:04.396+0000] {subprocess.py:93} INFO - Increase the number of iterations (max_iter) or scale the data as shown in:
+[2025-03-02T08:02:04.397+0000] {subprocess.py:93} INFO -     https://scikit-learn.org/stable/modules/preprocessing.html
+[2025-03-02T08:02:04.397+0000] {subprocess.py:93} INFO - Please also refer to the documentation for alternative solver options:
+[2025-03-02T08:02:04.398+0000] {subprocess.py:93} INFO -     https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+[2025-03-02T08:02:04.398+0000] {subprocess.py:93} INFO -   n_iter_i = _check_optimize_result(
+[2025-03-02T08:02:04.398+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:04,394 : INFO : Predicting model LogisticRegression
+[2025-03-02T08:02:04.407+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:04,407 : INFO : Calculating accuracy LogisticRegression
+[2025-03-02T08:02:13.722+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:13 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-02T08:02:13.842+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:13,842 : INFO : Logged model LogisticRegression
+[2025-03-02T08:02:13.866+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:13 INFO mlflow.tracking._tracking_service.client: 🏃 View run LogisticRegression at: http://localhost:5000/#/experiments/0/runs/a4e93c132d5a47e4acc941a678ba64b6.
+[2025-03-02T08:02:13.866+0000] {subprocess.py:93} INFO - 2025/03/02 08:02:13 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-02T08:02:13.885+0000] {subprocess.py:93} INFO - 2025-03-02 08:02:13,885 : INFO : Training model SVM

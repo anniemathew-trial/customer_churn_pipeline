@@ -11,3 +11,15 @@
 [2025-03-02T08:01:07.762+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-03-02T08:01:07.775+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/***/customer_churn_stats/feature_repo &&                         feast apply &&                         feast materialize-incremental $(date -u +\'%Y-%m-%dT%H:%M:%S\') &&                         git commit -m "Updated feature store" -a &&                         git push\n                    ']
 [2025-03-02T08:01:07.998+0000] {subprocess.py:86} INFO - Output:
+[2025-03-02T08:02:01.126+0000] {subprocess.py:93} INFO -    Id  CreditScore  ...  BalanceAgeRatio               CreatedOn
+[2025-03-02T08:02:01.126+0000] {subprocess.py:93} INFO - 0   1          619  ...              0.0 2025-02-28 17:11:17.357
+[2025-03-02T08:02:01.127+0000] {subprocess.py:93} INFO - 1   2          608  ...           2044.0 2025-02-28 17:11:17.360
+[2025-03-02T08:02:01.127+0000] {subprocess.py:93} INFO - 2   3          502  ...           3801.0 2025-02-28 17:11:17.367
+[2025-03-02T08:02:01.128+0000] {subprocess.py:93} INFO - 3   4          699  ...              0.0 2025-02-28 17:11:17.370
+[2025-03-02T08:02:01.129+0000] {subprocess.py:93} INFO - 4   5          850  ...           2919.0 2025-02-28 17:11:17.373
+[2025-03-02T08:02:01.130+0000] {subprocess.py:93} INFO - 
+[2025-03-02T08:02:01.130+0000] {subprocess.py:93} INFO - [5 rows x 18 columns]
+[2025-03-02T08:02:01.131+0000] {subprocess.py:93} INFO - No changes to registry
+[2025-03-02T08:02:01.131+0000] {subprocess.py:93} INFO - No changes to infrastructure
+[2025-03-02T08:02:01.135+0000] {subprocess.py:93} INFO - /opt/***/customer_churn_stats/feature_repo/feature_store.py:21: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-03-02T08:02:01.136+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
