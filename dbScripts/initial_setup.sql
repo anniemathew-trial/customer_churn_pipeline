@@ -25,7 +25,10 @@ BEGIN
 		[CreditScoreTenureRatio] [decimal] NOT NULL, 
 		[TenureAgeRatio] [decimal] NOT NULL, 
 		[BalanceSEstimatedalaryRatio] [decimal] NOT NULL, 
-		[BalanceAgeRatio] [decimal] NOT NULL
+		[BalanceAgeRatio] [decimal] NOT NULL,
+		[CreatedOn] [datetime] NOT NULL DEFAULT GETUTCDATE(),
+		[DataSource] [varchar(250) NOT NULL,
+		[Type] varchar(50) NOT NULL,
 	)
 END
 
