@@ -2396,3 +2396,6 @@
 2025-03-03 16:36:54,065 : ERROR : Error in preparing data'tenure'
 2025-03-03 16:36:54,066 : INFO : Starting data preparation for database_data.csv.
 2025-03-03 16:36:54,066 : ERROR : Error in preparing data[Errno 2] No such file or directory: '/opt/airflow/data/raw/fintech2/03-03-2025/database/database_data.csv'
+2025-03-03 16:40:42,832 : INFO : Starting data preparation for customer_data.csv.
+2025-03-03 16:40:42,851 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 16:40:42,852 : ERROR : Error in preparing data'tenure'
