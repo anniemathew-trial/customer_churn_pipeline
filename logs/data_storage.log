@@ -648,3 +648,19 @@
 2025-03-03 21:15:49,969 : INFO : Inserting data to database
 2025-03-03 21:15:55,078 : INFO : Executed script successfully !!
 2025-03-03 21:15:55,079 : INFO : Connection closed !!
+2025-03-03 21:20:16,629 : INFO : Starting data storage for customer_data.csv
+2025-03-03 21:20:16,629 : INFO : Connecting to Database
+2025-03-03 21:20:16,657 : INFO : Connecting to Database Successfull
+2025-03-03 21:20:16,657 : INFO : Reading insert script template
+2025-03-03 21:20:16,657 : INFO : Executing script to Database
+2025-03-03 21:20:16,657 : INFO : Inserting data to database
+2025-03-03 21:20:23,025 : INFO : Executed script successfully !!
+2025-03-03 21:20:23,026 : INFO : Connection closed !!
+2025-03-03 21:20:23,029 : INFO : Starting data storage for database_data.csv
+2025-03-03 21:20:23,029 : INFO : Connecting to Database
+2025-03-03 21:20:23,042 : INFO : Connecting to Database Successfull
+2025-03-03 21:20:23,042 : INFO : Reading insert script template
+2025-03-03 21:20:23,042 : INFO : Executing script to Database
+2025-03-03 21:20:23,043 : INFO : Inserting data to database
+2025-03-03 21:20:29,466 : INFO : Executed script successfully !!
+2025-03-03 21:20:29,467 : INFO : Connection closed !!
