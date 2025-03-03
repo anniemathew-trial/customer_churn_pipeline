@@ -22,10 +22,10 @@ formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
     
-def generate_data_quality_report(filename, source, output_path="validation_report.csv")
+def generate_data_quality_report(filename, type, source, output_path="validation_report.csv")
     try:
         logging.info(f"Starting data validation for {filename}")
-        data_path = f"{settings['raw_data_path']}/data/raw/{today}/{source}/{filename}"
+        data_path = f"{settings['raw_data_path']}/data/raw/{source}/{today}/{type}/{filename}"
         df = pd.read_csv(data_path)
         report_data = []
         logging.info("Running validation on data received from S3")
@@ -90,11 +90,11 @@ def generate_data_quality_report(filename, source, output_path="validation_repor
 
         p = Path('reports')
         p.mkdir(parents = True, exist_ok = True)
-        report_df.to_csv(f"reports/{output_path}", index=False)
+        report_df.to_csv(f"reports/{source}/{output_path}", index=False)
         logging.info(f"Metrics saved to: {output_path}")
     except Exception as e:
         logging.error(f"Error validating  data: {str(e)}")
 
 
-generate_data_quality_report("customer_data.csv", "csv")
-generate_data_quality_report("database_data.csv", "database")
+generate_data_quality_report("customer_data.csv", "csv, "fintech1")
+generate_data_quality_report("database_data.csv", "database", "fintech2")
