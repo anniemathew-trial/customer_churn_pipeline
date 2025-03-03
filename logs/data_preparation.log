@@ -2770,3 +2770,69 @@
 2025-03-03 20:46:15,363 : INFO : Generating histogram for column HasCrCard.
 2025-03-03 20:46:15,441 : ERROR : Error in creating reportnumpy boolean subtract, the `-` operator, is not supported, use the bitwise_xor, the `^` operator, or the logical_xor function instead.
 2025-03-03 20:46:15,442 : ERROR : Error in preparing datanumpy boolean subtract, the `-` operator, is not supported, use the bitwise_xor, the `^` operator, or the logical_xor function instead.
+2025-03-03 21:14:09,955 : INFO : Starting data preparation for customer_data.csv.
+2025-03-03 21:14:09,995 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 21:14:10,001 : INFO : Handling 'Age' empty data
+2025-03-03 21:14:10,004 : INFO : Dropping 'Age' less than 18 and greater than 110
+2025-03-03 21:14:10,011 : INFO : Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values
+2025-03-03 21:14:10,014 : INFO : Handling 'Balance', 'EstimatedSalary' empty data with mean
+2025-03-03 21:14:10,015 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+2025-03-03 21:14:10,018 : INFO : Making 'Geography', 'Gender', 'HasCrCard', 'IsActiveMember' as categorical
+2025-03-03 21:14:10,037 : INFO : Saving data to S3.
+2025-03-03 21:14:10,037 : INFO : Directory created at /opt/airflow/data/cleaned/fintech1/03-03-2025/csv
+2025-03-03 21:14:10,412 : INFO : Connected to s3
+2025-03-03 21:14:13,224 : INFO : File uploaded to S3
+2025-03-03 21:14:13,225 : INFO : Creating Pie chart
+2025-03-03 21:14:13,293 : INFO : Generating histogram for column CreditScore.
+2025-03-03 21:14:13,447 : INFO : Generating histogram for column Geography.
+2025-03-03 21:14:13,650 : INFO : Generating histogram for column Gender.
+2025-03-03 21:14:13,748 : INFO : Generating histogram for column Age.
+2025-03-03 21:14:13,889 : INFO : Generating histogram for column Tenure.
+2025-03-03 21:14:14,046 : INFO : Generating histogram for column Balance.
+2025-03-03 21:14:14,243 : INFO : Generating histogram for column NumOfProducts.
+2025-03-03 21:14:14,432 : INFO : Generating histogram for column HasCrCard.
+2025-03-03 21:14:14,620 : INFO : Generating histogram for column IsActiveMember.
+2025-03-03 21:14:14,803 : INFO : Generating histogram for column EstimatedSalary.
+2025-03-03 21:14:15,014 : INFO : Generating histogram for column Exited.
+2025-03-03 21:14:15,372 : INFO : Generating histogram for relation of Exited with Categorical data.
+2025-03-03 21:14:15,837 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:15,863 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:15,962 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:15,985 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,052 : INFO : Generating box plots for relation of Exited with non Categorical data.
+2025-03-03 21:14:16,297 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,323 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,446 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,469 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,591 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,620 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,728 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,750 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,838 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:16,856 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:17,052 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:17,069 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 21:14:17,497 : INFO : Saved pdf in /opt/airflow/visualization/fintech1/03-03-2025/csv/plots.pdf
+2025-03-03 21:14:17,535 : INFO : Starting data preparation for database_data.csv.
+2025-03-03 21:14:17,558 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 21:14:17,561 : INFO : Handling 'Age' empty data
+2025-03-03 21:14:17,563 : INFO : Dropping 'Age' less than 18 and greater than 110
+2025-03-03 21:14:17,566 : INFO : Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values
+2025-03-03 21:14:17,569 : INFO : Handling 'Balance', 'EstimatedSalary' empty data with mean
+2025-03-03 21:14:17,569 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+2025-03-03 21:14:17,570 : INFO : Making 'Geography', 'Gender', 'HasCrCard', 'IsActiveMember' as categorical
+2025-03-03 21:14:17,579 : INFO : Saving data to S3.
+2025-03-03 21:14:17,579 : INFO : Directory created at /opt/airflow/data/cleaned/fintech2/03-03-2025/database
+2025-03-03 21:14:17,661 : INFO : Connected to s3
+2025-03-03 21:14:20,678 : INFO : File uploaded to S3
+2025-03-03 21:14:20,680 : INFO : Creating Pie chart
+2025-03-03 21:14:20,759 : INFO : Generating histogram for column CreditScore.
+2025-03-03 21:14:20,876 : INFO : Generating histogram for column Geography.
+2025-03-03 21:14:20,981 : INFO : Generating histogram for column Gender.
+2025-03-03 21:14:21,079 : INFO : Generating histogram for column Age.
+2025-03-03 21:14:21,177 : INFO : Generating histogram for column Tenure.
+2025-03-03 21:14:21,294 : INFO : Generating histogram for column Balance.
+2025-03-03 21:14:21,412 : INFO : Generating histogram for column NumOfProducts.
+2025-03-03 21:14:21,547 : INFO : Generating histogram for column HasCrCard.
+2025-03-03 21:14:21,590 : ERROR : Error in creating reportnumpy boolean subtract, the `-` operator, is not supported, use the bitwise_xor, the `^` operator, or the logical_xor function instead.
+2025-03-03 21:14:21,590 : ERROR : Error in preparing datanumpy boolean subtract, the `-` operator, is not supported, use the bitwise_xor, the `^` operator, or the logical_xor function instead.
