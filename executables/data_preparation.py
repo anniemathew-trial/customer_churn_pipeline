@@ -44,14 +44,7 @@ def prepare_data(filename,type, source, output_path):
         data_path = f"{settings['raw_data_path']}/data/raw/{source}/{today}/{type}/{output_path}"
         df = pd.read_csv(data_path)
         
-        logging.info("Dropping 'Tenure' less than 0 and greater than 80")
-        df.loc[(df['Tenure'] >= 0) & (df['Tenure'] < 80)].reset_index(drop=True)
         
-        logging.info("Handling 'Age' empty data")
-        df['Age'] = df['Age'].fillna(df['Tenure'] + 18) 
-        
-        logging.info("Dropping 'Age' less than 18 and greater than 110")
-        df.loc[(df['Age'] >= 18) & (df['Age'] < 110)].reset_index(drop=True)
         
         logging.info("Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values")
         df.loc[(df['EstimatedSalary'] > 0) & (df['CreditScore'] > 0)].reset_index(drop=True)
@@ -63,7 +56,24 @@ def prepare_data(filename,type, source, output_path):
                 df[col] = df[col].str.strip()
                 df[col] = df[col].replace('', np.nan)
                 df[col] = pd.to_numeric(df[col])
-                df[col] = df[col].fillna(df[col].median(skipna=True)) 
+                df[col] = df[col].fillna(df[col].median(skipna=True))
+
+        logging.info("Handling 'Tenure', 'Age' empty data with tenure + 18 in age and droping tenure with 0 values & negative values")
+        numeric_columns = ['Age', 'Tenure'];
+        for col in numeric_columns:
+            if not pd.api.types.is_numeric_dtype(df[col]):
+                df[col] = df[col].str.strip()
+                df[col] = df[col].replace('', np.nan)
+                df[col] = pd.to_numeric(df[col])
+
+        logging.info("Dropping 'Tenure' less than 0 and greater than 80")
+        df.loc[(df['Tenure'] >= 0) & (df['Tenure'] < 80)].reset_index(drop=True)
+        
+        logging.info("Handling 'Age' empty data")
+        df['Age'] = df['Age'].fillna(df['Tenure'] + 18) 
+        
+        logging.info("Dropping 'Age' less than 18 and greater than 110")
+        df.loc[(df['Age'] >= 18) & (df['Age'] < 110)].reset_index(drop=True)
                
             
         logging.info("Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required")
