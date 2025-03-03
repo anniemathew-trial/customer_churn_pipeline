@@ -96,7 +96,7 @@ def generate_report(data, source, type, pdf_filename = "plots.pdf"):
         file_path = f"{settings['raw_data_path']}/visualization/{source}/{today}/{type}"
         p = Path(file_path)
         p.mkdir(parents = True, exist_ok = True)
-        with PdfPages(file_path) as pdf:
+        with PdfPages(f"{file_path}/{pdf_filename}") as pdf:
             logging.info("Creating Pie chart")            
             labels = 'Exited', 'Retained'
             sizes = [data.Exited[data['Exited']==1].count(), data.Exited[data['Exited']==0].count()]
