@@ -2373,3 +2373,9 @@
 2025-03-02 15:36:35,722 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2025-03-02 15:36:35,741 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2025-03-02 15:36:36,096 : INFO : Saved pdf in visualization/plots.pdf
+2025-03-03 12:41:01,791 : INFO : Starting data preparation for customer_data.csv.
+2025-03-03 12:41:01,815 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 12:41:01,816 : ERROR : Error in preparing data'tenure'
+2025-03-03 12:41:01,817 : INFO : Starting data preparation for database_data.csv.
+2025-03-03 12:41:01,840 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 12:41:01,840 : ERROR : Error in preparing data'tenure'
