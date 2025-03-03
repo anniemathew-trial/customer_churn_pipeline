@@ -1,0 +1,153 @@
+[2025-03-03T23:01:13.260+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-03T22:58:48.778104+00:00 [queued]>
+[2025-03-03T23:01:13.270+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-03T22:58:48.778104+00:00 [queued]>
+[2025-03-03T23:01:13.270+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-03T23:01:13.289+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): model_training_task> on 2025-03-03 22:58:48.778104+00:00
+[2025-03-03T23:01:13.294+0000] {standard_task_runner.py:57} INFO - Started process 4976 to run task
+[2025-03-03T23:01:13.297+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'model_training_task', 'manual__2025-03-03T22:58:48.778104+00:00', '--job-id', '217', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmp92klguyo']
+[2025-03-03T23:01:13.300+0000] {standard_task_runner.py:85} INFO - Job 217: Subtask model_training_task
+[2025-03-03T23:01:13.321+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-03T23:01:13.363+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-03T22:58:48.778104+00:00 [running]> on host 157237bff8f7
+[2025-03-03T23:01:13.473+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='model_training_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-03T22:58:48.778104+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-03T22:58:48.778104+00:00'
+[2025-03-03T23:01:13.474+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-03T23:01:13.475+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t    \t\tcd /opt/***\n       \t\t\t    python /opt/***/executables/model_training.py && \t      \t\t    git add logs && \t      \t\t    git add mlruns && \t        \t    git status &&                             git commit -m "Trained model version" -a && \\    \n\t\t\t    git push\n                        ']
+[2025-03-03T23:01:13.483+0000] {subprocess.py:86} INFO - Output:
+[2025-03-03T23:01:19.737+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:64: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-03T23:01:19.738+0000] {subprocess.py:93} INFO -   @validator("togetherai_api_key", pre=True)
+[2025-03-03T23:01:19.738+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:372: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-03T23:01:19.738+0000] {subprocess.py:93} INFO -   @root_validator(skip_on_failure=True)
+[2025-03-03T23:01:19.739+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/pydantic/_internal/_config.py:267: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-03T23:01:19.739+0000] {subprocess.py:93} INFO -   warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+[2025-03-03T23:01:19.739+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:19,737 : INFO : Starting model training
+[2025-03-03T23:01:19.762+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:19,762 : INFO : Registry cache expired, so refreshing
+[2025-03-03T23:01:19.772+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:19,771 : INFO : Getting data
+[2025-03-03T23:01:19.773+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:19,772 : INFO : Start and End Range: 1 to 1000
+[2025-03-03T23:01:20.168+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:20,167 : INFO : Data fetched: 999
+[2025-03-03T23:01:20.168+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:20,168 : INFO : New Start and End Range: 1001 to 2000
+[2025-03-03T23:01:20.168+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:20,168 : INFO : Start and End Range: 1001 to 2000
+[2025-03-03T23:01:20.432+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:20,432 : INFO : Data fetched: 999
+[2025-03-03T23:01:20.432+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:20,432 : INFO : New Start and End Range: 3001 to 4000
+[2025-03-03T23:01:20.433+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:20,432 : INFO : Start and End Range: 3001 to 4000
+[2025-03-03T23:01:20.779+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:20,778 : INFO : Data fetched: 999
+[2025-03-03T23:01:20.779+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:20,779 : INFO : New Start and End Range: 7001 to 8000
+[2025-03-03T23:01:20.779+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:20,779 : INFO : Start and End Range: 7001 to 8000
+[2025-03-03T23:01:21.030+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,029 : INFO : Data fetched: 999
+[2025-03-03T23:01:21.030+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,030 : INFO : New Start and End Range: 15001 to 16000
+[2025-03-03T23:01:21.030+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,030 : INFO : Start and End Range: 15001 to 16000
+[2025-03-03T23:01:21.358+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,357 : INFO : Data fetched: 999
+[2025-03-03T23:01:21.358+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,358 : INFO : New Start and End Range: 31001 to 32000
+[2025-03-03T23:01:21.358+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,358 : INFO : Start and End Range: 31001 to 32000
+[2025-03-03T23:01:21.599+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,598 : INFO : Data fetched: 999
+[2025-03-03T23:01:21.599+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,598 : INFO : New Start and End Range: 63001 to 64000
+[2025-03-03T23:01:21.599+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,599 : INFO : Start and End Range: 63001 to 64000
+[2025-03-03T23:01:21.670+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,670 : INFO : Reached End of Data
+[2025-03-03T23:01:21.673+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,673 : INFO : Stoping at Start and End Range: 63001 to 64000
+[2025-03-03T23:01:21.673+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,673 : INFO : Created feature data
+[2025-03-03T23:01:21.674+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,673 : INFO : Total Data fetched: 6
+[2025-03-03T23:01:21.677+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,677 : INFO : received feature data
+[2025-03-03T23:01:21.680+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,680 : INFO : Models defined
+[2025-03-03T23:01:21.681+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:21,681 : INFO : Training model RandomForest
+[2025-03-03T23:01:22.903+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:22,902 : INFO : Predicting model RandomForest
+[2025-03-03T23:01:22.933+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:22,932 : INFO : Calculating accuracy RandomForest
+[2025-03-03T23:01:27.650+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:27 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-03T23:01:27.778+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:27,778 : INFO : Logged model RandomForest
+[2025-03-03T23:01:27.811+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:27 INFO mlflow.tracking._tracking_service.client: 🏃 View run RandomForest at: http://localhost:5000/#/experiments/0/runs/8a1e316a4c7849fda1879b06bdf6ee6d.
+[2025-03-03T23:01:27.811+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:27 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-03T23:01:27.820+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:27,819 : INFO : Training model LogisticRegression
+[2025-03-03T23:01:28.399+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+[2025-03-03T23:01:28.400+0000] {subprocess.py:93} INFO - STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+[2025-03-03T23:01:28.400+0000] {subprocess.py:93} INFO - 
+[2025-03-03T23:01:28.401+0000] {subprocess.py:93} INFO - Increase the number of iterations (max_iter) or scale the data as shown in:
+[2025-03-03T23:01:28.401+0000] {subprocess.py:93} INFO -     https://scikit-learn.org/stable/modules/preprocessing.html
+[2025-03-03T23:01:28.401+0000] {subprocess.py:93} INFO - Please also refer to the documentation for alternative solver options:
+[2025-03-03T23:01:28.402+0000] {subprocess.py:93} INFO -     https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+[2025-03-03T23:01:28.402+0000] {subprocess.py:93} INFO -   n_iter_i = _check_optimize_result(
+[2025-03-03T23:01:28.402+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:28,399 : INFO : Predicting model LogisticRegression
+[2025-03-03T23:01:28.417+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:28,417 : INFO : Calculating accuracy LogisticRegression
+[2025-03-03T23:01:32.465+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:32 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-03T23:01:32.515+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:32,515 : INFO : Logged model LogisticRegression
+[2025-03-03T23:01:32.526+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:32 INFO mlflow.tracking._tracking_service.client: 🏃 View run LogisticRegression at: http://localhost:5000/#/experiments/0/runs/20708fd34585495c92bbce233ff60abe.
+[2025-03-03T23:01:32.527+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:32 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-03T23:01:32.534+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:32,533 : INFO : Training model SVM
+[2025-03-03T23:01:35.787+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:35,787 : INFO : Predicting model SVM
+[2025-03-03T23:01:35.928+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:35,928 : INFO : Calculating accuracy SVM
+[2025-03-03T23:01:39.721+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/sklearn/metrics/_classification.py:1471: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+[2025-03-03T23:01:39.721+0000] {subprocess.py:93} INFO -   _warn_prf(average, modifier, msg_start, len(result))
+[2025-03-03T23:01:39.721+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:39 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-03-03T23:01:39.780+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:39,780 : INFO : Logged model SVM
+[2025-03-03T23:01:39.793+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:39 INFO mlflow.tracking._tracking_service.client: 🏃 View run SVM at: http://localhost:5000/#/experiments/0/runs/5142e289fdc741c8ba2895b0d0a45574.
+[2025-03-03T23:01:39.794+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:39 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://localhost:5000/#/experiments/0.
+[2025-03-03T23:01:39.801+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:39,801 : INFO : Starting best model registration
+[2025-03-03T23:01:39.802+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:39,801 : INFO : Finding Best model
+[2025-03-03T23:01:39.837+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:39,837 : INFO : Selected best model : run_id                                            df756cd394c04ed58f2e498ffc4aa4a3
+[2025-03-03T23:01:39.838+0000] {subprocess.py:93} INFO - experiment_id                                                                    0
+[2025-03-03T23:01:39.838+0000] {subprocess.py:93} INFO - status                                                                    FINISHED
+[2025-03-03T23:01:39.838+0000] {subprocess.py:93} INFO - artifact_uri                     mlflow-artifacts:/0/df756cd394c04ed58f2e498ffc...
+[2025-03-03T23:01:39.838+0000] {subprocess.py:93} INFO - start_time                                        2025-03-03 22:23:08.766000+00:00
+[2025-03-03T23:01:39.838+0000] {subprocess.py:93} INFO - end_time                                          2025-03-03 22:23:14.178000+00:00
+[2025-03-03T23:01:39.839+0000] {subprocess.py:93} INFO - metrics.f1_score                                                          0.637681
+[2025-03-03T23:01:39.839+0000] {subprocess.py:93} INFO - metrics.precision                                                         0.790419
+[2025-03-03T23:01:39.839+0000] {subprocess.py:93} INFO - metrics.recall                                                            0.534413
+[2025-03-03T23:01:39.839+0000] {subprocess.py:93} INFO - metrics.accuracy                                                          0.874896
+[2025-03-03T23:01:39.839+0000] {subprocess.py:93} INFO - params.model_type                                                     RandomForest
+[2025-03-03T23:01:39.839+0000] {subprocess.py:93} INFO - tags.mlflow.user                                                           ***
+[2025-03-03T23:01:39.839+0000] {subprocess.py:93} INFO - tags.mlflow.runName                                                   RandomForest
+[2025-03-03T23:01:39.840+0000] {subprocess.py:93} INFO - tags.mlflow.source.name                 /opt/***/executables/model_training.py
+[2025-03-03T23:01:39.840+0000] {subprocess.py:93} INFO - tags.mlflow.log-model.history    [{"run_id": "df756cd394c04ed58f2e498ffc4aa4a3"...
+[2025-03-03T23:01:39.840+0000] {subprocess.py:93} INFO - tags.mlflow.source.git.commit             1698bdb3d35ea0ec114c13613a2c1a2caf009edf
+[2025-03-03T23:01:39.840+0000] {subprocess.py:93} INFO - tags.mlflow.source.type                                                      LOCAL
+[2025-03-03T23:01:39.840+0000] {subprocess.py:93} INFO - Name: 5, dtype: object
+[2025-03-03T23:01:39.840+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:39,837 : INFO : Registering best model runs:/df756cd394c04ed58f2e498ffc4aa4a3/RandomForest_model
+[2025-03-03T23:01:39.907+0000] {subprocess.py:93} INFO - Registered model 'Best_ML_Model' already exists. Creating a new version of this model...
+[2025-03-03T23:01:39.908+0000] {subprocess.py:93} INFO - 2025/03/03 23:01:39 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: Best_ML_Model, version 2
+[2025-03-03T23:01:39.908+0000] {subprocess.py:93} INFO - Created version '2' of model 'Best_ML_Model'.
+[2025-03-03T23:01:39.908+0000] {subprocess.py:93} INFO - 2025-03-03 23:01:39,907 : INFO : Completed model training & registration !!
+[2025-03-03T23:01:40.826+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-03T23:01:40.826+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-03T23:01:40.826+0000] {subprocess.py:93} INFO - 
+[2025-03-03T23:01:40.826+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-03T23:01:40.826+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-03T23:01:40.827+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T22:58:48.778104+00:00/task_id=feature_store_task/attempt=1.log
+[2025-03-03T23:01:40.827+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T22:58:48.778104+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-03T23:01:40.827+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-03T23:01:40.827+0000] {subprocess.py:93} INFO - 	modified:   logs/model_training.log
+[2025-03-03T23:01:40.827+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-03/customer_churn.py.log
+[2025-03-03T23:01:40.827+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/MLmodel
+[2025-03-03T23:01:40.828+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/conda.yaml
+[2025-03-03T23:01:40.828+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/model.pkl
+[2025-03-03T23:01:40.828+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/python_env.yaml
+[2025-03-03T23:01:40.828+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/requirements.txt
+[2025-03-03T23:01:40.828+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/MLmodel
+[2025-03-03T23:01:40.828+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/conda.yaml
+[2025-03-03T23:01:40.828+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/model.pkl
+[2025-03-03T23:01:40.828+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/python_env.yaml
+[2025-03-03T23:01:40.828+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/requirements.txt
+[2025-03-03T23:01:40.829+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/MLmodel
+[2025-03-03T23:01:40.829+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/conda.yaml
+[2025-03-03T23:01:40.829+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/model.pkl
+[2025-03-03T23:01:40.829+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/python_env.yaml
+[2025-03-03T23:01:40.829+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/requirements.txt
+[2025-03-03T23:01:40.829+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/meta.yaml
+[2025-03-03T23:01:40.829+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/metrics/accuracy
+[2025-03-03T23:01:40.830+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/metrics/f1_score
+[2025-03-03T23:01:40.830+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/metrics/precision
+[2025-03-03T23:01:40.830+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/metrics/recall
+[2025-03-03T23:01:40.830+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/params/model_type
+[2025-03-03T23:01:40.830+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.log-model.history
+[2025-03-03T23:01:40.830+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.runName
+[2025-03-03T23:01:40.831+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.source.git.commit
+[2025-03-03T23:01:40.831+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.source.name
+[2025-03-03T23:01:40.831+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.source.type
+[2025-03-03T23:01:40.831+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.user
+[2025-03-03T23:01:40.831+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/meta.yaml
+[2025-03-03T23:01:40.831+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/metrics/accuracy
+[2025-03-03T23:01:40.832+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/metrics/f1_score
+[2025-03-03T23:01:40.832+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/metrics/precision
+[2025-03-03T23:01:40.832+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/metrics/recall
+[2025-03-03T23:01:40.832+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/params/model_type
+[2025-03-03T23:01:40.832+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.log-model.history
+[2025-03-03T23:01:40.833+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.runName
+[2025-03-03T23:01:40.833+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.source.git.commit
+[2025-03-03T23:01:40.833+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.source.name
+[2025-03-03T23:01:40.833+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.source.type
+[2025-03-03T23:01:40.833+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.user
+[2025-03-03T23:01:40.833+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/meta.yaml
