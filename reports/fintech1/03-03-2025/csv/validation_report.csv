@@ -6,10 +6,10 @@ CreditScore,int64,0,0.0,461,-1.0,850.0,650.4668,652.0,1 rows have 'CreditScore' 
 Geography,object,0,0.0,3,,,,,
 Gender,object,0,0.0,2,,,,,
 Age,int64,0,0.0,70,18.0,92.0,38.9218,37.0,
-Tenure,int64,0,0.0,12,0.0,150.0,5.0276,5.0,
+Tenure,object,4,0.04,14,,,,,
 Balance,float64,0,0.0,6382,-178718.19,250898.09,76367.575066,97089.635,
 NumOfProducts,int64,0,0.0,4,1.0,4.0,1.5302,1.0,
 HasCrCard,int64,0,0.0,2,0.0,1.0,0.7055,1.0,
 IsActiveMember,int64,0,0.0,2,0.0,1.0,0.5151,1.0,
-EstimatedSalary,float64,0,0.0,9999,-38433.35,199992.48,100082.553211,100193.915,1 rows have 'EstimatedSalary' < 0.
+EstimatedSalary,float64,0,0.0,9999,-171413.66,199992.48,99899.878371,100134.325,10 rows have 'EstimatedSalary' < 0.
 Exited,int64,0,0.0,2,0.0,1.0,0.2037,0.0,
