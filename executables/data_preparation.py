@@ -44,8 +44,8 @@ def prepare_data(filename,type, source, output_path):
         data_path = f"{settings['raw_data_path']}/data/raw/{source}/{today}/{type}/{output_path}"
         df = pd.read_csv(data_path)
         
-        logging.info("Dropping 'Tenure' less than 0 and greater than 110 * 12")
-        df.loc[(df['Tenure'] >= 0) & (df['Tenure'] < 110 * 12)].reset_index(drop=True)
+        logging.info("Dropping 'Tenure' less than 0 and greater than 80")
+        df.loc[(df['Tenure'] >= 0) & (df['Tenure'] < 80)].reset_index(drop=True)
         
         logging.info("Handling 'Age' empty data")
         df['Age'] = df['Age'].fillna(df['Tenure'] + 18) 
