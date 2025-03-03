@@ -2638,3 +2638,69 @@
 2025-03-03 17:16:31,937 : INFO : Saved pdf in /opt/airflow/visualization/fintech1/03-03-2025/csv/plots.pdf
 2025-03-03 17:16:31,981 : INFO : Starting data preparation for database_data.csv.
 2025-03-03 17:16:31,982 : ERROR : Error in preparing data[Errno 2] No such file or directory: '/opt/airflow/data/raw/fintech2/03-03-2025/database/database_data.csv'
+2025-03-03 17:25:25,459 : INFO : Starting data preparation for customer_data.csv.
+2025-03-03 17:25:25,483 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 17:25:25,486 : INFO : Handling 'Age' empty data
+2025-03-03 17:25:25,487 : INFO : Dropping 'Age' less than 18 and greater than 110
+2025-03-03 17:25:25,490 : INFO : Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values
+2025-03-03 17:25:25,493 : INFO : Handling 'Balance', 'EstimatedSalary' empty data with mean
+2025-03-03 17:25:25,493 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+2025-03-03 17:25:25,495 : INFO : Making 'Geography', 'Gender', 'HasCrCard', 'IsActiveMember' as categorical
+2025-03-03 17:25:25,503 : INFO : Saving data to S3.
+2025-03-03 17:25:25,503 : INFO : Directory created at /opt/airflow/data/cleaned/fintech1/03-03-2025/csv
+2025-03-03 17:25:25,780 : INFO : Connected to s3
+2025-03-03 17:25:28,456 : INFO : File uploaded to S3
+2025-03-03 17:25:28,459 : INFO : Creating Pie chart
+2025-03-03 17:25:28,529 : INFO : Generating histogram for column CreditScore.
+2025-03-03 17:25:28,659 : INFO : Generating histogram for column Geography.
+2025-03-03 17:25:28,886 : INFO : Generating histogram for column Gender.
+2025-03-03 17:25:29,069 : INFO : Generating histogram for column Age.
+2025-03-03 17:25:29,291 : INFO : Generating histogram for column Tenure.
+2025-03-03 17:25:29,471 : INFO : Generating histogram for column Balance.
+2025-03-03 17:25:29,646 : INFO : Generating histogram for column NumOfProducts.
+2025-03-03 17:25:29,811 : INFO : Generating histogram for column HasCrCard.
+2025-03-03 17:25:29,997 : INFO : Generating histogram for column IsActiveMember.
+2025-03-03 17:25:30,230 : INFO : Generating histogram for column EstimatedSalary.
+2025-03-03 17:25:30,458 : INFO : Generating histogram for column Exited.
+2025-03-03 17:25:30,674 : INFO : Generating histogram for relation of Exited with Categorical data.
+2025-03-03 17:25:30,992 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,008 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,075 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,090 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,136 : INFO : Generating box plots for relation of Exited with non Categorical data.
+2025-03-03 17:25:31,302 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,320 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,443 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,470 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,576 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,593 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,680 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,698 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,785 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,801 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:31,984 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:32,002 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 17:25:32,408 : INFO : Saved pdf in /opt/airflow/visualization/fintech1/03-03-2025/csv/plots.pdf
+2025-03-03 17:25:32,452 : INFO : Starting data preparation for database_data.csv.
+2025-03-03 17:25:32,473 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 17:25:32,476 : INFO : Handling 'Age' empty data
+2025-03-03 17:25:32,477 : INFO : Dropping 'Age' less than 18 and greater than 110
+2025-03-03 17:25:32,480 : INFO : Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values
+2025-03-03 17:25:32,482 : INFO : Handling 'Balance', 'EstimatedSalary' empty data with mean
+2025-03-03 17:25:32,483 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+2025-03-03 17:25:32,484 : INFO : Making 'Geography', 'Gender', 'HasCrCard', 'IsActiveMember' as categorical
+2025-03-03 17:25:32,496 : INFO : Saving data to S3.
+2025-03-03 17:25:32,498 : INFO : Directory created at /opt/airflow/data/cleaned/fintech2/03-03-2025/database
+2025-03-03 17:25:32,576 : INFO : Connected to s3
+2025-03-03 17:25:35,163 : INFO : File uploaded to S3
+2025-03-03 17:25:35,166 : INFO : Creating Pie chart
+2025-03-03 17:25:35,216 : INFO : Generating histogram for column CreditScore.
+2025-03-03 17:25:35,302 : INFO : Generating histogram for column Geography.
+2025-03-03 17:25:35,380 : INFO : Generating histogram for column Gender.
+2025-03-03 17:25:35,469 : INFO : Generating histogram for column Age.
+2025-03-03 17:25:35,575 : INFO : Generating histogram for column Tenure.
+2025-03-03 17:25:35,690 : INFO : Generating histogram for column Balance.
+2025-03-03 17:25:35,833 : INFO : Generating histogram for column NumOfProducts.
+2025-03-03 17:25:35,977 : INFO : Generating histogram for column HasCrCard.
+2025-03-03 17:25:36,029 : ERROR : Error in creating reportnumpy boolean subtract, the `-` operator, is not supported, use the bitwise_xor, the `^` operator, or the logical_xor function instead.
+2025-03-03 17:25:36,029 : ERROR : Error in preparing datanumpy boolean subtract, the `-` operator, is not supported, use the bitwise_xor, the `^` operator, or the logical_xor function instead.
