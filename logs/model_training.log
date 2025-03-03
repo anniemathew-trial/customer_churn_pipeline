@@ -1015,3 +1015,36 @@ tags.mlflow.source.name                 /opt/airflow/executables/model_training.
 Name: 2, dtype: object
 2025-03-02 15:38:15,927 : INFO : Registering best model runs:/b4551c0812294a568fb83c77c6905af9/RandomForest_model
 2025-03-02 15:38:15,995 : INFO : Completed model training & registration !!
+2025-03-03 12:50:19,214 : INFO : Starting model training
+2025-03-03 12:50:19,235 : INFO : Registry cache expired, so refreshing
+2025-03-03 12:50:19,246 : INFO : Getting data
+2025-03-03 12:50:19,247 : INFO : Start and End Range: 1 to 1000
+2025-03-03 12:50:19,908 : INFO : Data fetched: 999
+2025-03-03 12:50:19,908 : INFO : New Start and End Range: 1001 to 2000
+2025-03-03 12:50:19,909 : INFO : Start and End Range: 1001 to 2000
+2025-03-03 12:50:20,298 : INFO : Data fetched: 999
+2025-03-03 12:50:20,299 : INFO : New Start and End Range: 3001 to 4000
+2025-03-03 12:50:20,299 : INFO : Start and End Range: 3001 to 4000
+2025-03-03 12:50:20,837 : INFO : Data fetched: 999
+2025-03-03 12:50:20,838 : INFO : New Start and End Range: 7001 to 8000
+2025-03-03 12:50:20,838 : INFO : Start and End Range: 7001 to 8000
+2025-03-03 12:50:21,301 : INFO : Data fetched: 999
+2025-03-03 12:50:21,302 : INFO : New Start and End Range: 15001 to 16000
+2025-03-03 12:50:21,303 : INFO : Start and End Range: 15001 to 16000
+2025-03-03 12:50:21,906 : INFO : Data fetched: 999
+2025-03-03 12:50:21,906 : INFO : New Start and End Range: 31001 to 32000
+2025-03-03 12:50:21,907 : INFO : Start and End Range: 31001 to 32000
+2025-03-03 12:50:22,085 : INFO : Reached End of Data
+2025-03-03 12:50:22,088 : INFO : Stoping at Start and End Range: 31001 to 32000
+2025-03-03 12:50:22,088 : INFO : Created feature data
+2025-03-03 12:50:22,088 : INFO : Total Data fetched: 5
+2025-03-03 12:50:22,091 : INFO : received feature data
+2025-03-03 12:50:22,096 : INFO : Models defined
+2025-03-03 12:50:22,097 : INFO : Training model RandomForest
+2025-03-03 12:50:23,267 : INFO : Predicting model RandomForest
+2025-03-03 12:50:23,296 : INFO : Calculating accuracy RandomForest
+2025-03-03 12:50:23,480 : WARNING : Retrying (JitteredRetry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bcd90>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 12:50:27,486 : WARNING : Retrying (JitteredRetry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bc220>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 12:50:35,491 : WARNING : Retrying (JitteredRetry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bc0a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 12:50:51,494 : WARNING : Retrying (JitteredRetry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bc430>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 12:51:23,522 : WARNING : Retrying (JitteredRetry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bc880>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create

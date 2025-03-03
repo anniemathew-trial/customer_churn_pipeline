@@ -1,0 +1,71 @@
+[2025-03-03T12:50:11.931+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-03T12:48:27.320795+00:00 [queued]>
+[2025-03-03T12:50:11.942+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-03T12:48:27.320795+00:00 [queued]>
+[2025-03-03T12:50:11.942+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-03T12:50:11.961+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): model_training_task> on 2025-03-03 12:48:27.320795+00:00
+[2025-03-03T12:50:11.972+0000] {standard_task_runner.py:57} INFO - Started process 1655 to run task
+[2025-03-03T12:50:11.978+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'model_training_task', 'manual__2025-03-03T12:48:27.320795+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpyikdahej']
+[2025-03-03T12:50:11.982+0000] {standard_task_runner.py:85} INFO - Job 89: Subtask model_training_task
+[2025-03-03T12:50:12.009+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-03T12:50:12.055+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.model_training_task manual__2025-03-03T12:48:27.320795+00:00 [running]> on host 157237bff8f7
+[2025-03-03T12:50:12.169+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='model_training_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-03T12:48:27.320795+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-03T12:48:27.320795+00:00'
+[2025-03-03T12:50:12.171+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-03T12:50:12.172+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t    \t\tcd /opt/***\n       \t\t\t    python /opt/***/executables/model_training.py && \t      \t\t    git add logs && \t      \t\t    git add mlruns && \t        \t    git status &&                             git commit -m "Trained model version" -a && \\    \n\t\t\t    git push\n                        ']
+[2025-03-03T12:50:12.182+0000] {subprocess.py:86} INFO - Output:
+[2025-03-03T12:50:19.215+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:64: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-03T12:50:19.215+0000] {subprocess.py:93} INFO -   @validator("togetherai_api_key", pre=True)
+[2025-03-03T12:50:19.215+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/mlflow/gateway/config.py:372: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-03T12:50:19.216+0000] {subprocess.py:93} INFO -   @root_validator(skip_on_failure=True)
+[2025-03-03T12:50:19.216+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.8/site-packages/pydantic/_internal/_config.py:267: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.4/migration/
+[2025-03-03T12:50:19.216+0000] {subprocess.py:93} INFO -   warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+[2025-03-03T12:50:19.216+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:19,214 : INFO : Starting model training
+[2025-03-03T12:50:19.236+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:19,235 : INFO : Registry cache expired, so refreshing
+[2025-03-03T12:50:19.247+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:19,246 : INFO : Getting data
+[2025-03-03T12:50:19.248+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:19,247 : INFO : Start and End Range: 1 to 1000
+[2025-03-03T12:50:19.908+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:19,908 : INFO : Data fetched: 999
+[2025-03-03T12:50:19.909+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:19,908 : INFO : New Start and End Range: 1001 to 2000
+[2025-03-03T12:50:19.909+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:19,909 : INFO : Start and End Range: 1001 to 2000
+[2025-03-03T12:50:20.299+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:20,298 : INFO : Data fetched: 999
+[2025-03-03T12:50:20.299+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:20,299 : INFO : New Start and End Range: 3001 to 4000
+[2025-03-03T12:50:20.299+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:20,299 : INFO : Start and End Range: 3001 to 4000
+[2025-03-03T12:50:20.838+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:20,837 : INFO : Data fetched: 999
+[2025-03-03T12:50:20.838+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:20,838 : INFO : New Start and End Range: 7001 to 8000
+[2025-03-03T12:50:20.838+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:20,838 : INFO : Start and End Range: 7001 to 8000
+[2025-03-03T12:50:21.302+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:21,301 : INFO : Data fetched: 999
+[2025-03-03T12:50:21.303+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:21,302 : INFO : New Start and End Range: 15001 to 16000
+[2025-03-03T12:50:21.303+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:21,303 : INFO : Start and End Range: 15001 to 16000
+[2025-03-03T12:50:21.907+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:21,906 : INFO : Data fetched: 999
+[2025-03-03T12:50:21.907+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:21,906 : INFO : New Start and End Range: 31001 to 32000
+[2025-03-03T12:50:21.907+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:21,907 : INFO : Start and End Range: 31001 to 32000
+[2025-03-03T12:50:22.085+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:22,085 : INFO : Reached End of Data
+[2025-03-03T12:50:22.088+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:22,088 : INFO : Stoping at Start and End Range: 31001 to 32000
+[2025-03-03T12:50:22.089+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:22,088 : INFO : Created feature data
+[2025-03-03T12:50:22.089+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:22,088 : INFO : Total Data fetched: 5
+[2025-03-03T12:50:22.092+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:22,091 : INFO : received feature data
+[2025-03-03T12:50:22.097+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:22,096 : INFO : Models defined
+[2025-03-03T12:50:22.097+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:22,097 : INFO : Training model RandomForest
+[2025-03-03T12:50:23.268+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:23,267 : INFO : Predicting model RandomForest
+[2025-03-03T12:50:23.296+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:23,296 : INFO : Calculating accuracy RandomForest
+[2025-03-03T12:50:23.480+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:23,480 : WARNING : Retrying (JitteredRetry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bcd90>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+[2025-03-03T12:50:27.487+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:27,486 : WARNING : Retrying (JitteredRetry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bc220>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+[2025-03-03T12:50:35.492+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:35,491 : WARNING : Retrying (JitteredRetry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bc0a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+[2025-03-03T12:50:51.495+0000] {subprocess.py:93} INFO - 2025-03-03 12:50:51,494 : WARNING : Retrying (JitteredRetry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bc430>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+[2025-03-03T12:51:23.522+0000] {subprocess.py:93} INFO - 2025-03-03 12:51:23,522 : WARNING : Retrying (JitteredRetry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa780bc880>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+[2025-03-03T12:51:23.523+0000] {subprocess.py:93} INFO - Error in model training: API request to http://localhost:5000/api/2.0/mlflow/runs/create failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/create (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7faa78139730>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-03-03T12:51:24.101+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-03T12:51:24.102+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-03T12:51:24.102+0000] {subprocess.py:93} INFO - 
+[2025-03-03T12:51:24.102+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-03T12:51:24.102+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-03T12:51:24.102+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T12:48:27.320795+00:00/task_id=feature_store_task/attempt=1.log
+[2025-03-03T12:51:24.102+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T12:48:27.320795+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-03T12:51:24.102+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-03T12:51:24.103+0000] {subprocess.py:93} INFO - 	modified:   logs/model_training.log
+[2025-03-03T12:51:24.103+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-03/customer_churn.py.log
+[2025-03-03T12:51:24.103+0000] {subprocess.py:93} INFO - 
+[2025-03-03T12:51:24.103+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-03T12:51:24.103+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-03T12:51:24.103+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
+[2025-03-03T12:51:24.103+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-03T12:51:24.103+0000] {subprocess.py:93} INFO - 	models/
+[2025-03-03T12:51:24.103+0000] {subprocess.py:93} INFO - 	online.db
+[2025-03-03T12:51:24.104+0000] {subprocess.py:93} INFO - 
