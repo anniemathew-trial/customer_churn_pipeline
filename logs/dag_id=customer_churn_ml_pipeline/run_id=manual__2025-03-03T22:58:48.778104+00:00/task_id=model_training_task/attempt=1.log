@@ -151,3 +151,87 @@
 [2025-03-03T23:01:40.833+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.source.type
 [2025-03-03T23:01:40.833+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.user
 [2025-03-03T23:01:40.833+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/meta.yaml
+[2025-03-03T23:01:40.834+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/metrics/accuracy
+[2025-03-03T23:01:40.834+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/metrics/f1_score
+[2025-03-03T23:01:40.834+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/metrics/precision
+[2025-03-03T23:01:40.834+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/metrics/recall
+[2025-03-03T23:01:40.834+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/params/model_type
+[2025-03-03T23:01:40.834+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.log-model.history
+[2025-03-03T23:01:40.834+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.runName
+[2025-03-03T23:01:40.834+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.source.git.commit
+[2025-03-03T23:01:40.835+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.source.name
+[2025-03-03T23:01:40.835+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.source.type
+[2025-03-03T23:01:40.835+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.user
+[2025-03-03T23:01:40.835+0000] {subprocess.py:93} INFO - 	modified:   mlruns/mlruns/mlruns/models/Best_ML_Model/meta.yaml
+[2025-03-03T23:01:40.835+0000] {subprocess.py:93} INFO - 	new file:   mlruns/mlruns/mlruns/models/Best_ML_Model/version-2/meta.yaml
+[2025-03-03T23:01:40.835+0000] {subprocess.py:93} INFO - 
+[2025-03-03T23:01:40.835+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-03T23:01:40.836+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-03T23:01:40.836+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
+[2025-03-03T23:01:40.836+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-03T23:01:40.836+0000] {subprocess.py:93} INFO - 	models/
+[2025-03-03T23:01:40.836+0000] {subprocess.py:93} INFO - 	online.db
+[2025-03-03T23:01:40.836+0000] {subprocess.py:93} INFO - 
+[2025-03-03T23:01:40.904+0000] {subprocess.py:93} INFO - [main 4ad9c9a] Trained model version
+[2025-03-03T23:01:40.904+0000] {subprocess.py:93} INFO -  58 files changed, 561 insertions(+), 1 deletion(-)
+[2025-03-03T23:01:40.904+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T22:58:48.778104+00:00/task_id=feature_store_task/attempt=1.log
+[2025-03-03T23:01:40.905+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T22:58:48.778104+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-03T23:01:40.905+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/MLmodel
+[2025-03-03T23:01:40.905+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/conda.yaml
+[2025-03-03T23:01:40.905+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/model.pkl
+[2025-03-03T23:01:40.905+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/python_env.yaml
+[2025-03-03T23:01:40.905+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/20708fd34585495c92bbce233ff60abe/artifacts/LogisticRegression_model/requirements.txt
+[2025-03-03T23:01:40.906+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/MLmodel
+[2025-03-03T23:01:40.906+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/conda.yaml
+[2025-03-03T23:01:40.906+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/model.pkl
+[2025-03-03T23:01:40.906+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/python_env.yaml
+[2025-03-03T23:01:40.906+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/5142e289fdc741c8ba2895b0d0a45574/artifacts/SVM_model/requirements.txt
+[2025-03-03T23:01:40.907+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/MLmodel
+[2025-03-03T23:01:40.907+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/conda.yaml
+[2025-03-03T23:01:40.907+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/model.pkl
+[2025-03-03T23:01:40.907+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/python_env.yaml
+[2025-03-03T23:01:40.907+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlartifacts/0/8a1e316a4c7849fda1879b06bdf6ee6d/artifacts/RandomForest_model/requirements.txt
+[2025-03-03T23:01:40.908+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/meta.yaml
+[2025-03-03T23:01:40.908+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/metrics/accuracy
+[2025-03-03T23:01:40.908+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/metrics/f1_score
+[2025-03-03T23:01:40.908+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/metrics/precision
+[2025-03-03T23:01:40.908+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/metrics/recall
+[2025-03-03T23:01:40.908+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/params/model_type
+[2025-03-03T23:01:40.908+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.log-model.history
+[2025-03-03T23:01:40.909+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.runName
+[2025-03-03T23:01:40.909+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.source.git.commit
+[2025-03-03T23:01:40.909+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.source.name
+[2025-03-03T23:01:40.909+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.source.type
+[2025-03-03T23:01:40.909+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/20708fd34585495c92bbce233ff60abe/tags/mlflow.user
+[2025-03-03T23:01:40.909+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/meta.yaml
+[2025-03-03T23:01:40.909+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/metrics/accuracy
+[2025-03-03T23:01:40.910+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/metrics/f1_score
+[2025-03-03T23:01:40.910+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/metrics/precision
+[2025-03-03T23:01:40.910+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/metrics/recall
+[2025-03-03T23:01:40.910+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/params/model_type
+[2025-03-03T23:01:40.910+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.log-model.history
+[2025-03-03T23:01:40.910+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.runName
+[2025-03-03T23:01:40.910+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.source.git.commit
+[2025-03-03T23:01:40.911+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.source.name
+[2025-03-03T23:01:40.911+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.source.type
+[2025-03-03T23:01:40.911+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/5142e289fdc741c8ba2895b0d0a45574/tags/mlflow.user
+[2025-03-03T23:01:40.911+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/meta.yaml
+[2025-03-03T23:01:40.911+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/metrics/accuracy
+[2025-03-03T23:01:40.911+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/metrics/f1_score
+[2025-03-03T23:01:40.912+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/metrics/precision
+[2025-03-03T23:01:40.912+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/metrics/recall
+[2025-03-03T23:01:40.912+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/params/model_type
+[2025-03-03T23:01:40.912+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.log-model.history
+[2025-03-03T23:01:40.913+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.runName
+[2025-03-03T23:01:40.913+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.source.git.commit
+[2025-03-03T23:01:40.913+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.source.name
+[2025-03-03T23:01:40.913+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.source.type
+[2025-03-03T23:01:40.913+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/0/8a1e316a4c7849fda1879b06bdf6ee6d/tags/mlflow.user
+[2025-03-03T23:01:40.914+0000] {subprocess.py:93} INFO -  create mode 100644 mlruns/mlruns/mlruns/models/Best_ML_Model/version-2/meta.yaml
+[2025-03-03T23:01:40.914+0000] {subprocess.py:93} INFO - /bin/bash: line 3:  : command not found
+[2025-03-03T23:01:44.856+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-03T23:01:44.856+0000] {subprocess.py:93} INFO -    1fc1f5b..4ad9c9a  main -> main
+[2025-03-03T23:01:44.862+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-03T23:01:44.908+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=model_training_task, execution_date=20250303T225848, start_date=20250303T230113, end_date=20250303T230144
+[2025-03-03T23:01:44.945+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-03T23:01:44.971+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
