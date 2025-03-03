@@ -35,10 +35,10 @@ def upload_file(file_name, bucket, object_name=None):
         region_name='us-east-1')
     _ = s3_client.upload_file(file_name, bucket, object_name)
         
-def data_transformation(filename, source):
+def data_transformation(filename, type, source):
     try:
         logging.info("Starting data transformation for csv.")
-        data_path = f"{settings['raw_data_path']}/data/cleaned/{today}/{source}/{filename}"
+        data_path = f"{settings['raw_data_path']}/data/cleaned/{source}/{today}/{type}/{filename}"
         df = pd.read_csv(data_path)
 
         df.loc[df.HasCrCard == 0, 'HasCrCard'] = -1
@@ -73,7 +73,7 @@ def data_transformation(filename, source):
         df[['Tenure', 'Balance', 'EstimatedSalary']] = scaler.fit_transform(df[['Tenure', 'Balance', 'EstimatedSalary']]) 
               
         logging.info("Saving data to S3.")
-        transformed_file_path = f"data/transformed/{today}/{source}"
+        transformed_file_path = f"data/transformed/{source}/{today}/{type}"
         p = Path(transformed_file_path)
         p.mkdir(parents = True, exist_ok = True)
         df.to_csv(f"{settings['raw_data_path']}/{transformed_file_path}/{filename}", index=False)       
@@ -85,5 +85,5 @@ def data_transformation(filename, source):
     except Exception as e:
         logging.error(f"Failed data transformation: {str(e)}")
     
-data_transformation("customer_data.csv", "csv")
-data_transformation("database_data.csv", "database")
+data_transformation("customer_data.csv", "csv", "fintech1")
+data_transformation("database_data.csv", "database", "fintech2")
