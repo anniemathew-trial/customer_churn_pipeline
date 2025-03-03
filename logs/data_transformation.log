@@ -259,3 +259,8 @@
 2025-03-03 17:07:31,320 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/fintech1/03-03-2025/csv/customer_data.csv'
 2025-03-03 17:07:31,320 : INFO : Starting data transformation for csv.
 2025-03-03 17:07:31,320 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/fintech2/03-03-2025/database/database_data.csv'
+2025-03-03 17:14:53,671 : INFO : Starting data transformation for csv.
+2025-03-03 17:14:53,705 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-03 17:14:53,713 : INFO : Saving data to S3.
+2025-03-03 17:14:56,748 : INFO : Starting data transformation for csv.
+2025-03-03 17:14:56,749 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/fintech2/03-03-2025/database/database_data.csv'
