@@ -85,5 +85,5 @@ def data_transformation(filename, source):
     except Exception as e:
         logging.error(f"Failed data transformation: {str(e)}")
     
-data_transformation("customer_data.csv")
-data_transformation("database_data.csv")
+data_transformation("customer_data.csv", "csv")
+data_transformation("database_data.csv", "database")
