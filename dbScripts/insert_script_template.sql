@@ -2,4 +2,4 @@ INSERT INTO customers (CreditScore,	Age, Tenure, Balance, NumOfProducts, HasCrCa
 	EstimatedSalary, Exited, Geography_Germany,Geography_Spain,Gender_Male,  CreditScoreTenureRatio, 
 	TenureAgeRatio, BalanceSEstimatedalaryRatio, BalanceAgeRatio, DataSource, Type
 )
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?)
