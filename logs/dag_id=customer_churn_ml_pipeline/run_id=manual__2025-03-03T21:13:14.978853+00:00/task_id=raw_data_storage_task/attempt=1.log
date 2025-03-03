@@ -50,3 +50,7 @@
 [2025-03-03T21:13:36.165+0000] {subprocess.py:93} INFO - 	models/
 [2025-03-03T21:13:36.165+0000] {subprocess.py:93} INFO - 	online.db
 [2025-03-03T21:13:36.165+0000] {subprocess.py:93} INFO - 
+[2025-03-03T21:13:36.214+0000] {subprocess.py:93} INFO - [main fc62759] Updated raw data storage
+[2025-03-03T21:13:36.214+0000] {subprocess.py:93} INFO -  7 files changed, 101 insertions(+), 2 deletions(-)
+[2025-03-03T21:13:36.215+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T21:13:14.978853+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-03T21:13:36.215+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T21:13:16.985115+00:00/task_id=raw_data_storage_task/attempt=1.log

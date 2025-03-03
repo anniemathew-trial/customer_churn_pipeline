@@ -14,3 +14,25 @@
 [2025-03-03T21:13:31.062+0000] {subprocess.py:93} INFO - 2025-03-03 21:13:31,062 : INFO : Starting Raw Data upload for CSV
 [2025-03-03T21:13:34.035+0000] {subprocess.py:93} INFO - 2025-03-03 21:13:34,035 : INFO : Upload completed for CSV.
 [2025-03-03T21:13:34.036+0000] {subprocess.py:93} INFO - 2025-03-03 21:13:34,035 : INFO : Starting Raw Data upload for Database
+[2025-03-03T21:13:36.623+0000] {subprocess.py:93} INFO - 2025-03-03 21:13:36,623 : INFO : Upload completed for database.
+[2025-03-03T21:13:36.730+0000] {subprocess.py:93} INFO - fatal: pathspec 'opt/***/data/raw' did not match any files
+[2025-03-03T21:13:41.179+0000] {subprocess.py:93} INFO - ERROR: Unable to acquire lock. Most likely another DVC process is running or was terminated abruptly. Check the page <https://dvc.org/doc/user-guide/troubleshooting#lock-issue> for other possible reasons and to learn how to resolve this.
+[2025-03-03T21:13:41.368+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-03T21:13:41.369+0000] {subprocess.py:93} INFO - Your branch is ahead of 'origin/main' by 1 commit.
+[2025-03-03T21:13:41.369+0000] {subprocess.py:93} INFO -   (use "git push" to publish your local commits)
+[2025-03-03T21:13:41.369+0000] {subprocess.py:93} INFO - 
+[2025-03-03T21:13:41.370+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-03T21:13:41.370+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-03T21:13:41.370+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-03T21:13:41.370+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T21:13:14.978853+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-03T21:13:41.371+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T21:13:16.985115+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-03T21:13:41.371+0000] {subprocess.py:93} INFO - 	modified:   logs/raw_data_storage.log
+[2025-03-03T21:13:41.371+0000] {subprocess.py:93} INFO - 
+[2025-03-03T21:13:41.371+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-03T21:13:41.371+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-03T21:13:41.372+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
+[2025-03-03T21:13:41.372+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-03T21:13:41.372+0000] {subprocess.py:93} INFO - 	models/
+[2025-03-03T21:13:41.372+0000] {subprocess.py:93} INFO - 	online.db
+[2025-03-03T21:13:41.372+0000] {subprocess.py:93} INFO - 
+[2025-03-03T21:13:41.372+0000] {subprocess.py:93} INFO - no changes added to commit (use "git add" and/or "git commit -a")
