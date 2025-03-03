@@ -2,14 +2,14 @@ Column,Data Type,Missing Count,Missing Percentage,Unique Count,Min,Max,Mean,Medi
 RowNumber,int64,0,0.0,10000,1.0,10000.0,5000.5,5000.5,
 CustomerId,int64,0,0.0,10000,15565701.0,15815690.0,15690940.5694,15690738.0,
 Surname,object,0,0.0,2932,,,,,
-CreditScore,int64,0,0.0,460,350.0,850.0,650.5288,652.0,
+CreditScore,int64,0,0.0,461,-1.0,850.0,650.4668,652.0,1 rows have 'CreditScore' < 0.
 Geography,object,0,0.0,3,,,,,
 Gender,object,0,0.0,2,,,,,
 Age,int64,0,0.0,70,18.0,92.0,38.9218,37.0,
-Tenure,int64,0,0.0,11,0.0,10.0,5.0128,5.0,
-Balance,float64,0,0.0,6382,0.0,250898.09,76485.889288,97198.54000000001,
+Tenure,int64,0,0.0,12,0.0,150.0,5.0276,5.0,
+Balance,float64,0,0.0,6382,-178718.19,250898.09,76367.575066,97089.635,
 NumOfProducts,int64,0,0.0,4,1.0,4.0,1.5302,1.0,
 HasCrCard,int64,0,0.0,2,0.0,1.0,0.7055,1.0,
 IsActiveMember,int64,0,0.0,2,0.0,1.0,0.5151,1.0,
-EstimatedSalary,float64,0,0.0,9999,11.58,199992.48,100090.239881,100193.915,
+EstimatedSalary,float64,0,0.0,9999,-38433.35,199992.48,100082.553211,100193.915,1 rows have 'EstimatedSalary' < 0.
 Exited,int64,0,0.0,2,0.0,1.0,0.2037,0.0,
