@@ -88,9 +88,9 @@ def generate_data_quality_report(filename, type, source, output_path="validation
 
         logging.info("Saving metrics to S3")
 
-        p = Path('reports')
+        p = Path('reports/{source}/{today}/{type}')
         p.mkdir(parents = True, exist_ok = True)
-        report_df.to_csv(f"reports/{source}/{output_path}", index=False)
+        report_df.to_csv(f"reports/{source}/{today}/{type}/{output_path}", index=False)
         logging.info(f"Metrics saved to: {output_path}")
     except Exception as e:
         logging.error(f"Error validating  data: {str(e)}")
