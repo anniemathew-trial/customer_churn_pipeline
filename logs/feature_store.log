@@ -284,3 +284,11 @@
 2025-03-03 21:16:12,350 : INFO : Declaring the source for raw feature data
 2025-03-03 21:16:12,351 : INFO : Defining the features in a feature view
 2025-03-03 21:16:12,356 : INFO : Feature view creation successfull!!
+2025-03-03 21:20:44,725 : INFO : Connecting to Database
+2025-03-03 21:20:44,745 : INFO : Connecting to Database Successfull
+2025-03-03 21:20:44,746 : INFO : Reading data from database.
+2025-03-03 21:20:46,316 : INFO : Data collection from database successfull!!
+2025-03-03 21:20:46,316 : INFO : Declaring an entity for the dataset
+2025-03-03 21:20:46,317 : INFO : Declaring the source for raw feature data
+2025-03-03 21:20:46,319 : INFO : Defining the features in a feature view
+2025-03-03 21:20:46,321 : INFO : Feature view creation successfull!!
