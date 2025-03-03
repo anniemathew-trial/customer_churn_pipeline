@@ -1,0 +1,44 @@
+[2025-03-03T16:56:17.676+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-03T16:55:51.033917+00:00 [queued]>
+[2025-03-03T16:56:17.688+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-03T16:55:51.033917+00:00 [queued]>
+[2025-03-03T16:56:17.688+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-03T16:56:17.705+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_validation_task> on 2025-03-03 16:55:51.033917+00:00
+[2025-03-03T16:56:17.710+0000] {standard_task_runner.py:57} INFO - Started process 5734 to run task
+[2025-03-03T16:56:17.713+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_validation_task', 'manual__2025-03-03T16:55:51.033917+00:00', '--job-id', '120', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmppt55015_']
+[2025-03-03T16:56:17.716+0000] {standard_task_runner.py:85} INFO - Job 120: Subtask data_validation_task
+[2025-03-03T16:56:17.738+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-03T16:56:17.784+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-03T16:55:51.033917+00:00 [running]> on host 157237bff8f7
+[2025-03-03T16:56:17.904+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_validation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-03T16:55:51.033917+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-03T16:55:51.033917+00:00'
+[2025-03-03T16:56:17.905+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-03T16:56:17.906+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/*** &&                        dvc pull /opt/***/data/raw\n                        python /opt/***/executables/data_validation.py && \t\t\tgit add logs && \\   \n\t\t\tgit add reports &&    \t\t\tgit status &&                         git commit -m "Updated validation" -a &&                         dvc push && git push\n                    ']
+[2025-03-03T16:56:17.916+0000] {subprocess.py:86} INFO - Output:
+[2025-03-03T16:56:21.576+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-03T16:56:22.011+0000] {subprocess.py:93} INFO -   File "/opt/***/executables/data_validation.py", line 25
+[2025-03-03T16:56:22.012+0000] {subprocess.py:93} INFO -     def generate_data_quality_report(filename, type, source, output_path="validation_report.csv")
+[2025-03-03T16:56:22.012+0000] {subprocess.py:93} INFO -                                                                                                 ^
+[2025-03-03T16:56:22.012+0000] {subprocess.py:93} INFO - SyntaxError: invalid syntax
+[2025-03-03T16:56:22.039+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-03T16:56:22.040+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-03T16:56:22.040+0000] {subprocess.py:93} INFO - 
+[2025-03-03T16:56:22.040+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-03T16:56:22.040+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-03T16:56:22.040+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-03T16:56:22.040+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T16:55:51.033917+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-03T16:56:22.041+0000] {subprocess.py:93} INFO - 
+[2025-03-03T16:56:22.041+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-03T16:56:22.041+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-03T16:56:22.041+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
+[2025-03-03T16:56:22.041+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-03T16:56:22.041+0000] {subprocess.py:93} INFO - 	logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T16:55:51.033917+00:00/task_id=data_validation_task/
+[2025-03-03T16:56:22.042+0000] {subprocess.py:93} INFO - 	models/
+[2025-03-03T16:56:22.042+0000] {subprocess.py:93} INFO - 	online.db
+[2025-03-03T16:56:22.042+0000] {subprocess.py:93} INFO - 
+[2025-03-03T16:56:22.042+0000] {subprocess.py:93} INFO - no changes added to commit (use "git add" and/or "git commit -a")
+[2025-03-03T16:56:22.056+0000] {subprocess.py:93} INFO - [main 6743dd4] Updated validation
+[2025-03-03T16:56:22.056+0000] {subprocess.py:93} INFO -  1 file changed, 10 insertions(+)
+[2025-03-03T16:56:27.280+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-03T16:56:29.080+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-03T16:56:29.080+0000] {subprocess.py:93} INFO -    70605b0..6743dd4  main -> main
+[2025-03-03T16:56:29.087+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-03T16:56:29.127+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_validation_task, execution_date=20250303T165551, start_date=20250303T165617, end_date=20250303T165629
+[2025-03-03T16:56:29.172+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-03T16:56:29.206+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
