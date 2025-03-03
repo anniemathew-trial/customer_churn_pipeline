@@ -29810,3 +29810,5 @@ File Path                              PID  Runtime      # DAGs    # Errors  Las
 -----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
 /opt/airflow/dags/customer_churn.py    406  0.00s             1           0  0.15s           2025-03-03T20:45:16
 ================================================================================
+[2025-03-03T20:46:14.161+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-03-03T20:46:14.163+0000] {manager.py:758} INFO - There are 1 files in /opt/airflow/dags
