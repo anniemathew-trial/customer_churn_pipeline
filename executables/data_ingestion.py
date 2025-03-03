@@ -33,6 +33,7 @@ def ingest_csv(filename, source):
         return data
     except Exception as e:
         logging.error(f"Error ingesting CSV: {str(e)}")
+        raise e
         
 def ingest_database(source):
     try:
@@ -56,6 +57,7 @@ def ingest_database(source):
         return data
     except Exception as e:
         logging.error(f"Error ingesting database: {str(e)}")
+        raise e
         
 filename = 'customer_data.csv';
 csv_data = ingest_csv(filename, "fintech1")
