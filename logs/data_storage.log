@@ -504,3 +504,17 @@
 2025-03-03 16:37:29,114 : INFO : Executing script to Database
 2025-03-03 16:37:29,114 : INFO : Inserting data to database
 2025-03-03 16:37:29,115 : ERROR : Error storing data: [Errno 2] No such file or directory: '/opt/airflow/data/transformed/fintech2/03-03-2025/database/database_data.csv'
+2025-03-03 16:41:12,889 : INFO : Starting data storage for customer_data.csv
+2025-03-03 16:41:12,890 : INFO : Connecting to Database
+2025-03-03 16:41:12,916 : INFO : Connecting to Database Successfull
+2025-03-03 16:41:12,917 : INFO : Reading insert script template
+2025-03-03 16:41:12,917 : INFO : Executing script to Database
+2025-03-03 16:41:12,917 : INFO : Inserting data to database
+2025-03-03 16:41:12,918 : ERROR : Error storing data: [Errno 2] No such file or directory: '/opt/airflow/data/transformed/fintech1/03-03-2025/csv/customer_data.csv'
+2025-03-03 16:41:12,918 : INFO : Starting data storage for database_data.csv
+2025-03-03 16:41:12,919 : INFO : Connecting to Database
+2025-03-03 16:41:12,933 : INFO : Connecting to Database Successfull
+2025-03-03 16:41:12,933 : INFO : Reading insert script template
+2025-03-03 16:41:12,933 : INFO : Executing script to Database
+2025-03-03 16:41:12,933 : INFO : Inserting data to database
+2025-03-03 16:41:12,934 : ERROR : Error storing data: [Errno 2] No such file or directory: '/opt/airflow/data/transformed/fintech2/03-03-2025/database/database_data.csv'
