@@ -269,3 +269,9 @@
 2025-03-03 17:16:46,279 : INFO : Saving data to S3.
 2025-03-03 17:16:49,327 : INFO : Starting data transformation for csv.
 2025-03-03 17:16:49,329 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/fintech2/03-03-2025/database/database_data.csv'
+2025-03-03 17:25:48,483 : INFO : Starting data transformation for csv.
+2025-03-03 17:25:48,515 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-03 17:25:48,522 : INFO : Saving data to S3.
+2025-03-03 17:25:51,448 : INFO : Starting data transformation for csv.
+2025-03-03 17:25:51,474 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-03 17:25:51,479 : INFO : Saving data to S3.
