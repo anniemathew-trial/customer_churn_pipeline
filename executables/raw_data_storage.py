@@ -49,4 +49,3 @@ try:
         logging.info("Upload completed for database.")
 except Exception as e:
         logging.error(f"Failed Raw Data Storage in S3 {str(e)}")
-upload_file()

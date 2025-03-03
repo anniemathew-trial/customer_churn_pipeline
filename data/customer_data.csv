@@ -1,5 +1,5 @@
 RowNumber,CustomerId,Surname,CreditScore,Geography,Gender,Age,Tenure,Balance,NumOfProducts,HasCrCard,IsActiveMember,EstimatedSalary,Exited
-1,15634602,Hargrave,619,France,Female,42,2,0,1,1,1,101348.88,1
+1,15634602,Hargrave,-1,France,Female,42,2,0,1,1,1,101348.88,1
 2,15647311,Hill,608,Spain,Female,41,1,83807.86,1,0,1,112542.58,0
 3,15619304,Onio,502,France,Female,42,8,159660.8,3,1,0,113931.57,1
 4,15701354,Boni,699,France,Female,39,1,0,2,0,0,93826.63,0
@@ -8,13 +8,13 @@ RowNumber,CustomerId,Surname,CreditScore,Geography,Gender,Age,Tenure,Balance,Num
 7,15592531,Bartlett,822,France,Male,50,7,0,2,1,1,10062.8,0
 8,15656148,Obinna,376,Germany,Female,29,4,115046.74,4,1,0,119346.88,1
 9,15792365,He,501,France,Male,44,4,142051.07,2,0,1,74940.5,0
-10,15592389,H?,684,France,Male,27,2,134603.88,1,1,1,71725.73,0
+10,15592389,H?,684,France,Male,27,150,134603.88,1,1,1,71725.73,0
 11,15767821,Bearce,528,France,Male,31,6,102016.72,2,0,0,80181.12,0
 12,15737173,Andrews,497,Spain,Male,24,3,0,2,1,0,76390.01,0
 13,15632264,Kay,476,France,Female,34,10,0,2,1,0,26260.98,0
 14,15691483,Chin,549,France,Female,25,5,0,2,0,0,190857.79,0
 15,15600882,Scott,635,Spain,Female,35,7,0,2,1,1,65951.65,0
-16,15643966,Goforth,616,Germany,Male,45,3,143129.41,2,0,1,64327.26,0
+16,15643966,Goforth,616,Germany,Male,45,3,-143129.41,2,0,1,64327.26,0
 17,15737452,Romeo,653,Germany,Male,58,1,132602.88,1,1,0,5097.67,1
 18,15788218,Henderson,549,Spain,Female,24,9,0,2,1,1,14406.41,0
 19,15661507,Muldrow,587,Spain,Male,45,6,0,1,0,0,158684.81,0
@@ -26,7 +26,7 @@ RowNumber,CustomerId,Surname,CreditScore,Geography,Gender,Age,Tenure,Balance,Num
 25,15625047,Yen,846,France,Female,38,5,0,1,1,1,187616.16,0
 26,15738191,Maclean,577,France,Male,25,3,0,2,0,1,124508.29,0
 27,15736816,Young,756,Germany,Male,36,2,136815.64,1,1,1,170041.95,0
-28,15700772,Nebechi,571,France,Male,44,9,0,2,0,0,38433.35,0
+28,15700772,Nebechi,571,France,Male,44,9,0,2,0,0,-38433.35,0
 29,15728693,McWilliams,574,Germany,Female,43,3,141349.43,1,1,1,100187.43,0
 30,15656300,Lucciano,411,France,Male,29,0,59697.17,2,1,1,53483.21,0
 31,15589475,Azikiwe,591,Spain,Female,39,3,0,3,1,0,140469.38,1
@@ -74,7 +74,7 @@ RowNumber,CustomerId,Surname,CreditScore,Geography,Gender,Age,Tenure,Balance,Num
 73,15812518,Palermo,657,Spain,Female,37,0,163607.18,1,0,1,44203.55,0
 74,15779052,Ballard,604,Germany,Female,25,5,157780.84,2,1,1,58426.81,0
 75,15770811,Wallace,519,France,Male,36,9,0,2,0,1,145562.4,0
-76,15780961,Cavenagh,735,France,Female,21,1,178718.19,2,1,0,22388,0
+76,15780961,Cavenagh,735,France,Female,21,1,-178718.19,2,1,0,22388,0
 77,15614049,Hu,664,France,Male,55,8,0,2,1,1,139161.64,0
 78,15662085,Read,678,France,Female,32,9,0,1,1,1,148210.64,0
 79,15575185,Bushell,757,Spain,Male,33,5,77253.22,1,0,1,194239.63,0
@@ -133,8 +133,8 @@ RowNumber,CustomerId,Surname,CreditScore,Geography,Gender,Age,Tenure,Balance,Num
 132,15718369,Kaodilinakachukwu,795,Germany,Female,33,9,130862.43,1,1,1,114935.21,0
 133,15677871,Cocci,687,France,Male,38,9,122570.87,1,1,1,35608.88,0
 134,15642004,Alekseeva,686,France,Male,25,1,0,2,0,1,16459.37,0
-135,15712543,Chinweike,789,Germany,Male,39,7,124828.46,2,1,1,124411.08,0
-136,15584518,Arthur,589,Germany,Female,50,5,144895.05,2,1,1,34941.23,0
+135,15712543,Chinweike,789,Germany,Male,39,7,-124828.46,2,1,1,124411.08,0
+136,15584518,Arthur,589,Germany,Female,50,5,-144895.05,2,1,1,34941.23,0
 137,15802381,Li,461,Germany,Female,34,5,63663.93,1,0,1,167784.28,0
 138,15610156,Ma,637,France,Male,40,2,133463.1,1,0,1,93165.34,0
 139,15594408,Chia,584,Spain,Female,48,2,213146.2,1,1,0,75161.25,1
