@@ -38,10 +38,10 @@ def upload_file(file_name, bucket, object_name=None):
         region_name='us-east-1')
     _ = s3_client.upload_file(file_name, bucket, object_name)
     
-def prepare_data(filename, source, output_path):
+def prepare_data(filename,type, source, output_path):
     try:
         logging.info(f"Starting data preparation for {filename}.")
-        data_path = f"{settings['raw_data_path']}/data/raw/{today}/{source}/{output_path}"
+        data_path = f"{settings['raw_data_path']}/data/raw/{source}/{today}/{type}/{output_path}"
         df = pd.read_csv(data_path)
         
         logging.info("Dropping 'Tenure' less than 0 and greater than 110 * 12")
@@ -74,7 +74,7 @@ def prepare_data(filename, source, output_path):
         df[categorical_columns] = df[categorical_columns].astype('category')
            
         logging.info("Saving data to S3.")
-        cleaned_file_path = f"data/cleaned/{today}/{source}"
+        cleaned_file_path = f"data/cleaned/{source}/{today}/{type}"
         p = Path(f"{settings['raw_data_path']}/{cleaned_file_path}")
         p.mkdir(parents = True, exist_ok = True)
         logging.info(f"Directory created at {settings['raw_data_path']}/{cleaned_file_path}")
@@ -86,15 +86,16 @@ def prepare_data(filename, source, output_path):
         upload_file(f"{settings['raw_data_path']}/{cleaned_file_path}/{output_path}", bucket_name, s3_key)  
         logging.info("File uploaded to S3")     
         
-        generate_report(df)
+        generate_report(df, source, type)
     except Exception as e:
         logging.error(f"Error in preparing data{str(e)}") 
     
-def generate_report(data, pdf_filename = "visualization/plots.pdf"):   
+def generate_report(data, source, type, pdf_filename = "plots.pdf"):   
     try:
-        p = Path(f"{settings['raw_data_path']}/visualization")
+        file_path = f"{settings['raw_data_path']}/visualization/{source}/{today}/{type}"
+        p = Path(file_path)
         p.mkdir(parents = True, exist_ok = True)
-        with PdfPages(pdf_filename) as pdf:
+        with PdfPages(file_path) as pdf:
             logging.info("Creating Pie chart")            
             labels = 'Exited', 'Retained'
             sizes = [data.Exited[data['Exited']==1].count(), data.Exited[data['Exited']==0].count()]
@@ -136,11 +137,11 @@ def generate_report(data, pdf_filename = "visualization/plots.pdf"):
             
             pdf.savefig()
             plt.close()
-            logging.info(f'Saved pdf in {pdf_filename}')
+            logging.info(f'Saved pdf in {file_path}/{pdf_filename}')
     except Exception as e:
         logging.error(f"Error in creating report{str(e)}")
         
 
 
-prepare_data("customer_data.csv", "csv", "customer_data.csv")
-prepare_data("database_data.csv", "database", "database_data.csv")
+prepare_data("customer_data.csv", "csv", "fintech1", "customer_data.csv")
+prepare_data("database_data.csv", "database", "fintech2", "database_data.csv")
