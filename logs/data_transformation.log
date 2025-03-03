@@ -231,3 +231,7 @@
 2025-03-02 15:36:52,791 : INFO : Starting data transformation for csv.
 2025-03-02 15:36:52,818 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
 2025-03-02 15:36:52,825 : INFO : Saving data to S3.
+2025-03-03 12:49:28,675 : INFO : Starting data transformation for csv.
+2025-03-03 12:49:28,677 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/03-03-2025/csv/customer_data.csv'
+2025-03-03 12:49:28,678 : INFO : Starting data transformation for csv.
+2025-03-03 12:49:28,678 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/03-03-2025/database/database_data.csv'
