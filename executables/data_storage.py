@@ -18,9 +18,9 @@ console.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
-def data_storage(csv_filename):
+def data_storage(filename, source):
     try:
-        
+        logging.info(f"Starting data storage for {filename}")
         with open("/opt/airflow/executables/settings.json", "r") as file:
             settings = json.load(file)
         password = settings["sql_pwd"]
@@ -50,7 +50,7 @@ def data_storage(csv_filename):
             insert_script = file.read()
 
         logging.info("Inserting data to database")
-        data_path = f"{settings['raw_data_path']}/data/transformed/{today}/csv/{csv_filename}"
+        data_path = f"{settings['raw_data_path']}/data/transformed/{today}/{source}/{filename}"
         df = pd.read_csv(data_path)
         data_tuples = df.to_records(index=False).tolist()
 
@@ -68,6 +68,6 @@ def data_storage(csv_filename):
     except Exception as e:
         logging.error(f"Error storing data: {str(e)}")
 
-
-data_storage("customer_data.csv")
+data_storage("customer_data.csv", "csv")
+data_storage("database_data.csv", "database")
 
