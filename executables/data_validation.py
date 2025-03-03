@@ -22,10 +22,10 @@ formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
     
-def generate_csv_data_quality_report(csv_filename, output_path="csv_validation_report.csv"):
+def generate_data_quality_report(filename, source, output_path="validation_report.csv")
     try:
-        logging.info("Starting data validation")
-        data_path = f"{settings['raw_data_path']}/data/raw/{today}/csv/{csv_filename}"
+        logging.info(f"Starting data validation for {filename}")
+        data_path = f"{settings['raw_data_path']}/data/raw/{today}/{source}/{filename}"
         df = pd.read_csv(data_path)
         report_data = []
         logging.info("Running validation on data received from S3")
@@ -44,18 +44,25 @@ def generate_csv_data_quality_report(csv_filename, output_path="csv_validation_r
                 max_val = df[col].max()
                 mean_val = df[col].mean()
                 median_val = df[col].median()
-                max_allowed_value = 100
-                iqr = df[col].quantile(0.75) - df[col].quantile(0.25)
-                potential_outlier1 = df[df[col] < iqr*-3.5]
-                potential_outlier2 = df[df[col] > iqr*3.5]
-                if not (potential_outlier1.empty & potential_outlier2.empty):
-                    remarks += f"{col} has {len(potential_outlier1) + len(potential_outlier2)} potential outlier rows."
-                
-                if col == 'tenure':
-                    max_allowed_value = 80  # Example
-                invalid_data = df[df[col] > max_allowed_value]
-                if not invalid_data.empty:
-                    remarks += f"{len(invalid_data)} rows have '{col}' > {max_allowed_value}."
+                if col == 'tenure' or col == 'age':
+                    max_allowed_value = 110 * 12                        
+                    min_allowed_value = 0 
+                    if col == 'age':
+                        min_allowed_value = 18
+                    invalid_data = df[df[col] > max_allowed_value]
+                    if not invalid_data.empty:
+                        remarks += f"{len(invalid_data)} rows have '{col}' > {max_allowed_value}."
+                    invalid_data = df[df[col] < min_allowed_value]
+                    if not invalid_data.empty:
+                        remarks += f"{len(invalid_data)} rows have '{col}' < {min_allowed_value}."
+                if col == 'EstimatedSalary' or col == 'CreditScore':
+                    min_allowed_value = 0 
+                    invalid_data = df[df[col] < min_allowed_value]
+                    if not invalid_data.empty:
+                        remarks += f"{len(invalid_data)} rows have '{col}' < {min_allowed_value}."
+                    sus_data = df[df[col] == min_allowed_value]
+                    if not sus_data.empty:
+                        remarks += f"{len(invalid_data)} rows have '{col}' == {min_allowed_value}."
                 
                     
                 report_data.append([col, data_type, missing_count, missing_percentage, unique_count, min_val, max_val, mean_val, median_val, remarks])
@@ -89,4 +96,5 @@ def generate_csv_data_quality_report(csv_filename, output_path="csv_validation_r
         logging.error(f"Error validating  data: {str(e)}")
 
 
-generate_csv_data_quality_report("customer_data.csv")
+generate_data_quality_report("customer_data.csv", "csv")
+generate_data_quality_report("database_data.csv", "database")
