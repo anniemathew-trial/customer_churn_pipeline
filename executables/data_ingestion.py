@@ -22,19 +22,19 @@ formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
 
-def ingest_csv(filename):
+def ingest_csv(filename, source):
     try:
         logging.info(f"Reading data from CSV file {filename}")
         data = pd.read_csv(f"{settings['raw_data_path']}/data/{filename}")
-        p = Path(f'/opt/airflow/data/raw/{today}/csv')
+        p = Path(f'/opt/airflow/data/raw/{source}/{today}/csv')
         p.mkdir(parents = True, exist_ok = True)
-        data.to_csv(f"/opt/airflow/data/raw/{today}/csv/{filename}", index=False)
+        data.to_csv(f"/opt/airflow/data/raw/{source}/{today}/csv/{filename}", index=False)
         logging.info(f"Data from CSV {filename} ingested successfully!")
         return data
     except Exception as e:
         logging.error(f"Error ingesting CSV: {str(e)}")
         
-def ingest_database():
+def ingest_database(source):
     try:
         password = settings["sql_pwd"]
         connection_string = settings["db_connection"]
@@ -49,9 +49,9 @@ def ingest_database():
         data = pd.read_sql(query, connection)
         
         connection.close()
-        p = Path(f'/opt/airflow/data/raw/{today}/database')
+        p = Path(f'/opt/airflow/data/raw/{source}/{today}/database')
         p.mkdir(parents = True, exist_ok = True)
-        data.to_csv(f"/opt/airflow/data/raw/{today}/database/database_data.csv", index=False)
+        data.to_csv(f"/opt/airflow/data/raw/{source}/{today}/database/database_data.csv", index=False)
         logging.info("Data from Database ingested successfully!")
         return data
     except Exception as e:
