@@ -38,24 +38,33 @@ def upload_file(file_name, bucket, object_name=None):
         region_name='us-east-1')
     _ = s3_client.upload_file(file_name, bucket, object_name)
     
-def prepare_csv_data(output_path="customer_data.csv"):
+def prepare_data(filename, source, output_path):
     try:
-        logging.info("Starting data preparation for csv.")
-        data_path = f"{settings['raw_data_path']}/data/raw/{today}/csv/{output_path}"
+        logging.info(f"Starting data preparation for {filename}.")
+        data_path = f"{settings['raw_data_path']}/data/raw/{today}/{source}/{output_path}"
         df = pd.read_csv(data_path)
         
-        logging.info("Handling 'Tenure', 'Balance', 'EstimatedSalary' empty data")
-        numeric_columns = ['Tenure', 'Balance', 'EstimatedSalary'];
+        logging.info("Dropping 'Tenure' less than 0 and greater than 110 * 12")
+        df.loc[(df['tenure'] >= 0) & (df['tenure'] < 110 * 12)].reset_index(drop=True)
+        
+        logging.info("Handling 'Age' empty data")
+        df['Age'] = df['Age'].fillna(df['Tenure'] + 18) 
+        
+        logging.info("Dropping 'Age' less than 18 and greater than 110")
+        df.loc[(df['Age'] >= 18) & (df['Age'] < 110)].reset_index(drop=True)
+        
+        logging.info("Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values")
+        df.loc[(df['EstimatedSalary'] > 0) & (df['CreditScore'] > 0)].reset_index(drop=True)
+        
+        logging.info("Handling 'Balance', 'EstimatedSalary' empty data with mean")
+        numeric_columns = ['Balance', 'EstimatedSalary'];
         for col in numeric_columns:
             if not pd.api.types.is_numeric_dtype(df[col]):
                 df[col] = df[col].str.strip()
                 df[col] = df[col].replace('', np.nan)
                 df[col] = pd.to_numeric(df[col])
                 df[col] = df[col].fillna(df[col].median(skipna=True)) 
-        
-        logging.info("Handling 'Age' empty data")
-        df['Age'] = df['Age'].fillna(df['Tenure'] + 18) 
-        
+               
             
         logging.info("Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required")
         df = df.drop(["RowNumber", "CustomerId", "Surname"], axis = 1)
@@ -65,7 +74,7 @@ def prepare_csv_data(output_path="customer_data.csv"):
         df[categorical_columns] = df[categorical_columns].astype('category')
            
         logging.info("Saving data to S3.")
-        cleaned_file_path = f"data/cleaned/{today}/csv"
+        cleaned_file_path = f"data/cleaned/{today}/{source}"
         p = Path(f"{settings['raw_data_path']}/{cleaned_file_path}")
         p.mkdir(parents = True, exist_ok = True)
         logging.info(f"Directory created at {settings['raw_data_path']}/{cleaned_file_path}")
@@ -133,4 +142,5 @@ def generate_report(data, pdf_filename = "visualization/plots.pdf"):
         
 
 
-prepare_csv_data("customer_data.csv")
+prepare_data("customer_data.csv", "csv", "customer_data.csv")
+prepare_data("database_data.csv", "database", "database_data.csv")
