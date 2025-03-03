@@ -2839,3 +2839,6 @@
 2025-03-03 21:19:38,671 : INFO : Starting data preparation for customer_data.csv.
 2025-03-03 21:19:38,694 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
 2025-03-03 21:19:38,694 : ERROR : Error in preparing data'>=' not supported between instances of 'str' and 'int'
+2025-03-03 22:21:54,860 : INFO : Starting data preparation for customer_data.csv.
+2025-03-03 22:21:54,892 : INFO : Dropping 'Tenure' less than 0 and greater than 80
+2025-03-03 22:21:54,893 : ERROR : Error in preparing data'>=' not supported between instances of 'str' and 'int'
