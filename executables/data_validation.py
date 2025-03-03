@@ -22,7 +22,7 @@ formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
     
-def generate_data_quality_report(filename, type, source, output_path="validation_report.csv")
+def generate_data_quality_report(filename, type, source, output_path="validation_report.csv"):
     try:
         logging.info(f"Starting data validation for {filename}")
         data_path = f"{settings['raw_data_path']}/data/raw/{source}/{today}/{type}/{filename}"
