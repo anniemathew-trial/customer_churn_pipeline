@@ -323,3 +323,9 @@
 2025-03-03 23:31:17,008 : INFO : Starting data transformation for csv.
 2025-03-03 23:31:17,034 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
 2025-03-03 23:31:17,039 : INFO : Saving data to S3.
+2025-03-03 23:34:03,256 : INFO : Starting data transformation for csv.
+2025-03-03 23:34:03,294 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-03 23:34:03,302 : INFO : Saving data to S3.
+2025-03-03 23:34:06,450 : INFO : Starting data transformation for csv.
+2025-03-03 23:34:06,510 : INFO : Scaling 'Tenure', 'Balance', 'EstimatedSalary'.
+2025-03-03 23:34:06,525 : INFO : Saving data to S3.
