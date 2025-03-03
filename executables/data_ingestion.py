@@ -61,4 +61,4 @@ def ingest_database(source):
         
 filename = 'customer_data.csv';
 csv_data = ingest_csv(filename, "fintech1")
-database_data = ingest_database("fintect2")
+database_data = ingest_database("fintech2")
