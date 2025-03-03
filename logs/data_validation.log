@@ -350,3 +350,15 @@
 2025-03-03 17:16:14,498 : ERROR : Error validating  data: Cannot save file into a non-existent directory: 'reports/fintech1/03-03-2025/csv'
 2025-03-03 17:16:14,499 : INFO : Starting data validation for database_data.csv
 2025-03-03 17:16:14,499 : ERROR : Error validating  data: [Errno 2] No such file or directory: '/opt/airflow/data/raw/fintech2/03-03-2025/database/database_data.csv'
+2025-03-03 17:18:02,638 : INFO : Starting data validation for customer_data.csv
+2025-03-03 17:18:02,653 : INFO : Running validation on data received from S3
+2025-03-03 17:18:02,685 : INFO : Saving metrics to S3
+2025-03-03 17:18:02,686 : ERROR : Error validating  data: Cannot save file into a non-existent directory: 'reports/fintech1/03-03-2025/csv'
+2025-03-03 17:18:02,687 : INFO : Starting data validation for database_data.csv
+2025-03-03 17:18:02,687 : ERROR : Error validating  data: [Errno 2] No such file or directory: '/opt/airflow/data/raw/fintech2/03-03-2025/database/database_data.csv'
+2025-03-03 17:20:28,533 : INFO : Starting data validation for customer_data.csv
+2025-03-03 17:20:28,547 : INFO : Running validation on data received from S3
+2025-03-03 17:20:28,574 : INFO : Saving metrics to S3
+2025-03-03 17:20:28,576 : INFO : Metrics saved to: validation_report.csv
+2025-03-03 17:20:28,576 : INFO : Starting data validation for database_data.csv
+2025-03-03 17:20:28,577 : ERROR : Error validating  data: [Errno 2] No such file or directory: '/opt/airflow/data/raw/fintech2/03-03-2025/database/database_data.csv'
