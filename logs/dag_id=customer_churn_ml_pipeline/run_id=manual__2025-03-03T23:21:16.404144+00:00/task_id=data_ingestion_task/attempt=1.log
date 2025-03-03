@@ -1,0 +1,39 @@
+[2025-03-03T23:21:41.220+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-03T23:21:16.404144+00:00 [queued]>
+[2025-03-03T23:21:41.237+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-03T23:21:16.404144+00:00 [queued]>
+[2025-03-03T23:21:41.237+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-03T23:21:41.260+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_ingestion_task> on 2025-03-03 23:21:16.404144+00:00
+[2025-03-03T23:21:41.267+0000] {standard_task_runner.py:57} INFO - Started process 5411 to run task
+[2025-03-03T23:21:41.273+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_ingestion_task', 'manual__2025-03-03T23:21:16.404144+00:00', '--job-id', '220', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpggfslvyo']
+[2025-03-03T23:21:41.278+0000] {standard_task_runner.py:85} INFO - Job 220: Subtask data_ingestion_task
+[2025-03-03T23:21:41.315+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-03T23:21:41.384+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-03T23:21:16.404144+00:00 [running]> on host 157237bff8f7
+[2025-03-03T23:21:41.553+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_ingestion_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-03T23:21:16.404144+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-03T23:21:16.404144+00:00'
+[2025-03-03T23:21:41.554+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-03T23:21:41.555+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/executables/data_ingestion.py && \t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/*** && \t\t\tgit add logs &&    \t\t\tgit status &&                         git commit -m "Updated data ingestion" -a &&                         git push\n                    ']
+[2025-03-03T23:21:41.568+0000] {subprocess.py:86} INFO - Output:
+[2025-03-03T23:21:43.881+0000] {subprocess.py:93} INFO - 2025-03-03 23:21:43,879 : INFO : Reading data from CSV file customer_data.csv
+[2025-03-03T23:21:44.054+0000] {subprocess.py:93} INFO - 2025-03-03 23:21:44,054 : INFO : Data from CSV customer_data.csv ingested successfully!
+[2025-03-03T23:21:44.055+0000] {subprocess.py:93} INFO - 2025-03-03 23:21:44,054 : INFO : Connecting to Database
+[2025-03-03T23:21:44.114+0000] {subprocess.py:93} INFO - 2025-03-03 23:21:44,113 : INFO : Connecting to Database Successfull
+[2025-03-03T23:21:44.114+0000] {subprocess.py:93} INFO - 2025-03-03 23:21:44,113 : INFO : Reading data from database.
+[2025-03-03T23:21:44.662+0000] {subprocess.py:93} INFO - /opt/***/executables/data_ingestion.py:50: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-03-03T23:21:44.663+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
+[2025-03-03T23:21:44.664+0000] {subprocess.py:93} INFO - 2025-03-03 23:21:44,662 : INFO : Data from Database ingested successfully!
+[2025-03-03T23:21:44.961+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-03T23:21:44.961+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-03T23:21:44.962+0000] {subprocess.py:93} INFO - 
+[2025-03-03T23:21:44.962+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-03T23:21:44.962+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-03T23:21:44.963+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T23:21:16.404144+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-03T23:21:44.963+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T23:21:16.404144+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-03T23:21:44.963+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-03T23:21:44.963+0000] {subprocess.py:93} INFO - 	modified:   logs/data_ingestion.log
+[2025-03-03T23:21:44.964+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-03/customer_churn.py.log
+[2025-03-03T23:21:44.964+0000] {subprocess.py:93} INFO - 
+[2025-03-03T23:21:44.964+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-03T23:21:44.964+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-03T23:21:44.964+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
+[2025-03-03T23:21:44.965+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-03T23:21:44.965+0000] {subprocess.py:93} INFO - 	models/
+[2025-03-03T23:21:44.965+0000] {subprocess.py:93} INFO - 	online.db
+[2025-03-03T23:21:44.965+0000] {subprocess.py:93} INFO - 
