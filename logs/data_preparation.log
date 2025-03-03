@@ -2413,3 +2413,48 @@
 2025-03-03 16:44:24,930 : INFO : File uploaded to S3
 2025-03-03 16:44:24,933 : ERROR : Error in creating report[Errno 21] Is a directory: '/opt/airflow/visualization/fintech1/03-03-2025/csv'
 2025-03-03 16:44:24,933 : ERROR : Error in preparing data[Errno 21] Is a directory: '/opt/airflow/visualization/fintech1/03-03-2025/csv'
+2025-03-03 16:56:32,881 : INFO : Starting data preparation for customer_data.csv.
+2025-03-03 16:56:32,902 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 16:56:32,905 : INFO : Handling 'Age' empty data
+2025-03-03 16:56:32,906 : INFO : Dropping 'Age' less than 18 and greater than 110
+2025-03-03 16:56:32,908 : INFO : Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values
+2025-03-03 16:56:32,910 : INFO : Handling 'Balance', 'EstimatedSalary' empty data with mean
+2025-03-03 16:56:32,910 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+2025-03-03 16:56:32,912 : INFO : Making 'Geography', 'Gender', 'HasCrCard', 'IsActiveMember' as categorical
+2025-03-03 16:56:32,919 : INFO : Saving data to S3.
+2025-03-03 16:56:32,920 : INFO : Directory created at /opt/airflow/data/cleaned/fintech1/03-03-2025/csv
+2025-03-03 16:56:33,101 : INFO : Connected to s3
+2025-03-03 16:56:35,720 : INFO : File uploaded to S3
+2025-03-03 16:56:35,721 : INFO : Creating Pie chart
+2025-03-03 16:56:35,788 : INFO : Generating histogram for column CreditScore.
+2025-03-03 16:56:35,900 : INFO : Generating histogram for column Geography.
+2025-03-03 16:56:36,081 : INFO : Generating histogram for column Gender.
+2025-03-03 16:56:36,185 : INFO : Generating histogram for column Age.
+2025-03-03 16:56:36,331 : INFO : Generating histogram for column Tenure.
+2025-03-03 16:56:36,485 : INFO : Generating histogram for column Balance.
+2025-03-03 16:56:36,693 : INFO : Generating histogram for column NumOfProducts.
+2025-03-03 16:56:36,865 : INFO : Generating histogram for column HasCrCard.
+2025-03-03 16:56:37,057 : INFO : Generating histogram for column IsActiveMember.
+2025-03-03 16:56:37,237 : INFO : Generating histogram for column EstimatedSalary.
+2025-03-03 16:56:37,436 : INFO : Generating histogram for column Exited.
+2025-03-03 16:56:37,653 : INFO : Generating histogram for relation of Exited with Categorical data.
+2025-03-03 16:56:37,989 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,008 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,079 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,097 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,149 : INFO : Generating box plots for relation of Exited with non Categorical data.
+2025-03-03 16:56:38,336 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,355 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,446 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,465 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,569 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,592 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,683 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,704 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,793 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:38,810 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:39,009 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:39,032 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-03 16:56:39,543 : INFO : Saved pdf in /opt/airflow/visualization/fintech1/03-03-2025/csv/plots.pdf
+2025-03-03 16:56:39,610 : INFO : Starting data preparation for database_data.csv.
+2025-03-03 16:56:39,610 : ERROR : Error in preparing data[Errno 2] No such file or directory: '/opt/airflow/data/raw/fintech2/03-03-2025/database/database_data.csv'
