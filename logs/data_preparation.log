@@ -2379,3 +2379,9 @@
 2025-03-03 12:41:01,817 : INFO : Starting data preparation for database_data.csv.
 2025-03-03 12:41:01,840 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
 2025-03-03 12:41:01,840 : ERROR : Error in preparing data'tenure'
+2025-03-03 12:44:24,192 : INFO : Starting data preparation for customer_data.csv.
+2025-03-03 12:44:24,214 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 12:44:24,214 : ERROR : Error in preparing data'tenure'
+2025-03-03 12:44:24,215 : INFO : Starting data preparation for database_data.csv.
+2025-03-03 12:44:24,234 : INFO : Dropping 'Tenure' less than 0 and greater than 110 * 12
+2025-03-03 12:44:24,235 : ERROR : Error in preparing data'tenure'
