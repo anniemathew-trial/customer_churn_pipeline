@@ -472,3 +472,21 @@
 2025-03-02 15:37:12,676 : INFO : Inserting data to database
 2025-03-02 15:37:18,599 : INFO : Executed script successfully !!
 2025-03-02 15:37:18,600 : INFO : Connection closed !!
+2025-03-03 12:49:46,116 : INFO : Starting data storage for customer_data.csv
+2025-03-03 12:49:46,118 : INFO : Connecting to Database
+2025-03-03 12:49:46,185 : INFO : Connecting to Database Successfull
+2025-03-03 12:49:46,185 : INFO : Reading Initial DB Setup Script
+2025-03-03 12:49:46,187 : INFO : Executing script to Database
+2025-03-03 12:49:46,229 : INFO : Executed script successfully !!
+2025-03-03 12:49:46,229 : INFO : Reading insert script template
+2025-03-03 12:49:46,230 : INFO : Inserting data to database
+2025-03-03 12:49:46,231 : ERROR : Error storing data: [Errno 2] No such file or directory: '/opt/airflow/data/transformed/03-03-2025/csv/customer_data.csv'
+2025-03-03 12:49:46,232 : INFO : Starting data storage for database_data.csv
+2025-03-03 12:49:46,232 : INFO : Connecting to Database
+2025-03-03 12:49:46,248 : INFO : Connecting to Database Successfull
+2025-03-03 12:49:46,248 : INFO : Reading Initial DB Setup Script
+2025-03-03 12:49:46,249 : INFO : Executing script to Database
+2025-03-03 12:49:46,250 : INFO : Executed script successfully !!
+2025-03-03 12:49:46,251 : INFO : Reading insert script template
+2025-03-03 12:49:46,251 : INFO : Inserting data to database
+2025-03-03 12:49:46,251 : ERROR : Error storing data: [Errno 2] No such file or directory: '/opt/airflow/data/transformed/03-03-2025/database/database_data.csv'
