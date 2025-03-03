@@ -239,3 +239,7 @@
 2025-03-03 16:37:13,772 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/fintech1/03-03-2025/csv/customer_data.csv'
 2025-03-03 16:37:13,773 : INFO : Starting data transformation for csv.
 2025-03-03 16:37:13,773 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/fintech2/03-03-2025/database/database_data.csv'
+2025-03-03 16:40:57,471 : INFO : Starting data transformation for csv.
+2025-03-03 16:40:57,473 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/fintech1/03-03-2025/csv/customer_data.csv'
+2025-03-03 16:40:57,473 : INFO : Starting data transformation for csv.
+2025-03-03 16:40:57,473 : ERROR : Failed data transformation: [Errno 2] No such file or directory: '/opt/airflow/data/cleaned/fintech2/03-03-2025/database/database_data.csv'
