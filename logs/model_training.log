@@ -1213,3 +1213,36 @@ Name: 2, dtype: object
 2025-03-03 17:08:33,418 : WARNING : Retrying (JitteredRetry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd45f538c70>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
 2025-03-03 17:08:49,434 : WARNING : Retrying (JitteredRetry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd45f538e80>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
 2025-03-03 17:09:21,440 : WARNING : Retrying (JitteredRetry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd45f545340>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 17:26:48,538 : INFO : Starting model training
+2025-03-03 17:26:48,555 : INFO : Registry cache expired, so refreshing
+2025-03-03 17:26:48,565 : INFO : Getting data
+2025-03-03 17:26:48,566 : INFO : Start and End Range: 1 to 1000
+2025-03-03 17:26:48,937 : INFO : Data fetched: 999
+2025-03-03 17:26:48,937 : INFO : New Start and End Range: 1001 to 2000
+2025-03-03 17:26:48,938 : INFO : Start and End Range: 1001 to 2000
+2025-03-03 17:26:49,192 : INFO : Data fetched: 999
+2025-03-03 17:26:49,192 : INFO : New Start and End Range: 3001 to 4000
+2025-03-03 17:26:49,193 : INFO : Start and End Range: 3001 to 4000
+2025-03-03 17:26:49,547 : INFO : Data fetched: 999
+2025-03-03 17:26:49,548 : INFO : New Start and End Range: 7001 to 8000
+2025-03-03 17:26:49,548 : INFO : Start and End Range: 7001 to 8000
+2025-03-03 17:26:49,878 : INFO : Data fetched: 999
+2025-03-03 17:26:49,878 : INFO : New Start and End Range: 15001 to 16000
+2025-03-03 17:26:49,879 : INFO : Start and End Range: 15001 to 16000
+2025-03-03 17:26:50,262 : INFO : Data fetched: 999
+2025-03-03 17:26:50,262 : INFO : New Start and End Range: 31001 to 32000
+2025-03-03 17:26:50,262 : INFO : Start and End Range: 31001 to 32000
+2025-03-03 17:26:50,372 : INFO : Reached End of Data
+2025-03-03 17:26:50,376 : INFO : Stoping at Start and End Range: 31001 to 32000
+2025-03-03 17:26:50,376 : INFO : Created feature data
+2025-03-03 17:26:50,376 : INFO : Total Data fetched: 5
+2025-03-03 17:26:50,381 : INFO : received feature data
+2025-03-03 17:26:50,385 : INFO : Models defined
+2025-03-03 17:26:50,386 : INFO : Training model RandomForest
+2025-03-03 17:26:51,610 : INFO : Predicting model RandomForest
+2025-03-03 17:26:51,636 : INFO : Calculating accuracy RandomForest
+2025-03-03 17:26:51,799 : WARNING : Retrying (JitteredRetry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f98a9834160>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 17:26:55,805 : WARNING : Retrying (JitteredRetry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f98a9834640>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 17:27:03,814 : WARNING : Retrying (JitteredRetry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f98a9834a00>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 17:27:19,832 : WARNING : Retrying (JitteredRetry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f98a9834a60>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 17:27:51,865 : WARNING : Retrying (JitteredRetry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f98a98481f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
