@@ -1318,3 +1318,65 @@ Name: 2, dtype: object
 2025-03-03 21:21:42,987 : WARNING : Retrying (JitteredRetry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb3c606bc70>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
 2025-03-03 21:21:59,003 : WARNING : Retrying (JitteredRetry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb3c606be80>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
 2025-03-03 21:22:31,035 : WARNING : Retrying (JitteredRetry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb3c6075340>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/2.0/mlflow/runs/create
+2025-03-03 22:23:05,323 : INFO : Starting model training
+2025-03-03 22:23:05,343 : INFO : Registry cache expired, so refreshing
+2025-03-03 22:23:05,355 : INFO : Getting data
+2025-03-03 22:23:05,356 : INFO : Start and End Range: 1 to 1000
+2025-03-03 22:23:05,757 : INFO : Data fetched: 999
+2025-03-03 22:23:05,758 : INFO : New Start and End Range: 1001 to 2000
+2025-03-03 22:23:05,758 : INFO : Start and End Range: 1001 to 2000
+2025-03-03 22:23:06,055 : INFO : Data fetched: 999
+2025-03-03 22:23:06,055 : INFO : New Start and End Range: 3001 to 4000
+2025-03-03 22:23:06,055 : INFO : Start and End Range: 3001 to 4000
+2025-03-03 22:23:06,414 : INFO : Data fetched: 999
+2025-03-03 22:23:06,414 : INFO : New Start and End Range: 7001 to 8000
+2025-03-03 22:23:06,414 : INFO : Start and End Range: 7001 to 8000
+2025-03-03 22:23:06,662 : INFO : Data fetched: 999
+2025-03-03 22:23:06,662 : INFO : New Start and End Range: 15001 to 16000
+2025-03-03 22:23:06,663 : INFO : Start and End Range: 15001 to 16000
+2025-03-03 22:23:07,029 : INFO : Data fetched: 999
+2025-03-03 22:23:07,030 : INFO : New Start and End Range: 31001 to 32000
+2025-03-03 22:23:07,030 : INFO : Start and End Range: 31001 to 32000
+2025-03-03 22:23:07,309 : INFO : Data fetched: 999
+2025-03-03 22:23:07,309 : INFO : New Start and End Range: 63001 to 64000
+2025-03-03 22:23:07,309 : INFO : Start and End Range: 63001 to 64000
+2025-03-03 22:23:07,390 : INFO : Reached End of Data
+2025-03-03 22:23:07,393 : INFO : Stoping at Start and End Range: 63001 to 64000
+2025-03-03 22:23:07,393 : INFO : Created feature data
+2025-03-03 22:23:07,393 : INFO : Total Data fetched: 6
+2025-03-03 22:23:07,397 : INFO : received feature data
+2025-03-03 22:23:07,401 : INFO : Models defined
+2025-03-03 22:23:07,401 : INFO : Training model RandomForest
+2025-03-03 22:23:08,625 : INFO : Predicting model RandomForest
+2025-03-03 22:23:08,656 : INFO : Calculating accuracy RandomForest
+2025-03-03 22:23:14,157 : INFO : Logged model RandomForest
+2025-03-03 22:23:14,204 : INFO : Training model LogisticRegression
+2025-03-03 22:23:15,737 : INFO : Predicting model LogisticRegression
+2025-03-03 22:23:15,760 : INFO : Calculating accuracy LogisticRegression
+2025-03-03 22:23:20,247 : INFO : Logged model LogisticRegression
+2025-03-03 22:23:20,265 : INFO : Training model SVM
+2025-03-03 22:23:23,453 : INFO : Predicting model SVM
+2025-03-03 22:23:23,601 : INFO : Calculating accuracy SVM
+2025-03-03 22:23:27,928 : INFO : Logged model SVM
+2025-03-03 22:23:27,953 : INFO : Starting best model registration
+2025-03-03 22:23:27,953 : INFO : Finding Best model
+2025-03-03 22:23:27,983 : INFO : Selected best model : run_id                                            df756cd394c04ed58f2e498ffc4aa4a3
+experiment_id                                                                    0
+status                                                                    FINISHED
+artifact_uri                     mlflow-artifacts:/0/df756cd394c04ed58f2e498ffc...
+start_time                                        2025-03-03 22:23:08.766000+00:00
+end_time                                          2025-03-03 22:23:14.178000+00:00
+metrics.f1_score                                                          0.637681
+metrics.accuracy                                                          0.874896
+metrics.precision                                                         0.790419
+metrics.recall                                                            0.534413
+params.model_type                                                     RandomForest
+tags.mlflow.source.git.commit             1698bdb3d35ea0ec114c13613a2c1a2caf009edf
+tags.mlflow.user                                                           airflow
+tags.mlflow.log-model.history    [{"run_id": "df756cd394c04ed58f2e498ffc4aa4a3"...
+tags.mlflow.source.name                 /opt/airflow/executables/model_training.py
+tags.mlflow.source.type                                                      LOCAL
+tags.mlflow.runName                                                   RandomForest
+Name: 2, dtype: object
+2025-03-03 22:23:27,984 : INFO : Registering best model runs:/df756cd394c04ed58f2e498ffc4aa4a3/RandomForest_model
+2025-03-03 22:23:28,058 : INFO : Completed model training & registration !!
