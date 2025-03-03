@@ -18,7 +18,7 @@ console.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
 console.setFormatter(formatter)
 logging.getLogger("").addHandler(console)
-def data_storage(filename, source):
+def data_storage(filename,type, source):
     try:
         logging.info(f"Starting data storage for {filename}")
         with open("/opt/airflow/executables/settings.json", "r") as file:
@@ -30,12 +30,6 @@ def data_storage(filename, source):
         connection = pyodbc.connect(connection_string + password)
         logging.info("Connecting to Database Successfull")
         cursor = connection.cursor()
-
-        logging.info("Reading Initial DB Setup Script")
-
-        sql_file_path = 'dbScripts/initial_setup.sql'
-        with open(sql_file_path, 'r') as file:
-            sql_script = file.read()
 
         logging.info("Executing script to Database")
 
@@ -50,7 +44,7 @@ def data_storage(filename, source):
             insert_script = file.read()
 
         logging.info("Inserting data to database")
-        data_path = f"{settings['raw_data_path']}/data/transformed/{today}/{source}/{filename}"
+        data_path = f"{settings['raw_data_path']}/data/transformed/{source}/{today}/{type}/{filename}"
         df = pd.read_csv(data_path)
         data_tuples = df.to_records(index=False).tolist()
 
@@ -68,6 +62,6 @@ def data_storage(filename, source):
     except Exception as e:
         logging.error(f"Error storing data: {str(e)}")
 
-data_storage("customer_data.csv", "csv")
-data_storage("database_data.csv", "database")
+data_storage("customer_data.csv", "csv", "fintech1")
+data_storage("database_data.csv", "database", "fintech2")
 
