@@ -43,3 +43,12 @@
 [2025-03-03T17:08:10.272+0000] {subprocess.py:93} INFO - 	../../models/
 [2025-03-03T17:08:10.272+0000] {subprocess.py:93} INFO - 	../../online.db
 [2025-03-03T17:08:10.272+0000] {subprocess.py:93} INFO - 
+[2025-03-03T17:08:10.285+0000] {subprocess.py:93} INFO - [main 6037eec] Updated feature store
+[2025-03-03T17:08:10.286+0000] {subprocess.py:93} INFO -  3 files changed, 63 insertions(+)
+[2025-03-03T17:08:10.286+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-03T17:06:22.394275+00:00/task_id=feature_store_task/attempt=1.log
+[2025-03-03T17:08:11.634+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-03T17:08:11.635+0000] {subprocess.py:93} INFO -    aed708a..6037eec  main -> main
+[2025-03-03T17:08:11.647+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-03T17:08:11.694+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=feature_store_task, execution_date=20250303T170622, start_date=20250303T170757, end_date=20250303T170811
+[2025-03-03T17:08:11.724+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-03T17:08:11.753+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
