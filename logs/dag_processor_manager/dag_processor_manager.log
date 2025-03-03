@@ -29156,3 +29156,25 @@ File Path                            PID    Runtime      # DAGs    # Errors  Las
 -----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
 /opt/airflow/dags/customer_churn.py                           1           0  0.14s           2025-03-03T16:58:26
 ================================================================================
+[2025-03-03T16:59:00.925+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/customer_churn.py                           1           0  0.16s           2025-03-03T16:58:57
+================================================================================
+[2025-03-03T16:59:27.019+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
+[2025-03-03T17:04:15.613+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2025-03-03T17:04:15.622+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-03-03T17:04:15.622+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-03-03T17:04:15.622+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-03-03T17:04:15.624+0000] {manager.py:758} INFO - There are 1 files in /opt/airflow/dags
+[2025-03-03T17:04:15.703+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/customer_churn.py   6399  0.03s             0           0
+================================================================================
