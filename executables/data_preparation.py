@@ -79,9 +79,14 @@ def prepare_data(filename,type, source, output_path):
         logging.info("Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required")
         df = df.drop(["RowNumber", "CustomerId", "Surname"], axis = 1)
         
-        logging.info("Making 'Geography', 'Gender', 'HasCrCard', 'IsActiveMember' as categorical")
-        categorical_columns = ['Geography', 'Gender', 'HasCrCard', 'IsActiveMember']
+        logging.info("Making 'Geography', 'Gender' as categorical")
+        categorical_columns = ['Geography', 'Gender']
         df[categorical_columns] = df[categorical_columns].astype('category')
+
+        logging.info("Making 'HasCrCard', 'IsActiveMember', 'Exited' as integers")
+        df['HasCrCard'] = df['HasCrCard'].astype(int) 
+        df['IsActiveMember'] = df['IsActiveMember'].astype(int) 
+        df['Exited'] = df['Exited'].astype(int) 
            
         logging.info("Saving data to S3.")
         cleaned_file_path = f"data/cleaned/{source}/{today}/{type}"
