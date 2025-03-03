@@ -362,3 +362,11 @@
 2025-03-03 17:20:28,576 : INFO : Metrics saved to: validation_report.csv
 2025-03-03 17:20:28,576 : INFO : Starting data validation for database_data.csv
 2025-03-03 17:20:28,577 : ERROR : Error validating  data: [Errno 2] No such file or directory: '/opt/airflow/data/raw/fintech2/03-03-2025/database/database_data.csv'
+2025-03-03 17:25:12,776 : INFO : Starting data validation for customer_data.csv
+2025-03-03 17:25:12,801 : INFO : Running validation on data received from S3
+2025-03-03 17:25:12,856 : INFO : Saving metrics to S3
+2025-03-03 17:25:12,860 : INFO : Metrics saved to: validation_report.csv
+2025-03-03 17:25:12,860 : INFO : Starting data validation for database_data.csv
+2025-03-03 17:25:12,885 : INFO : Running validation on data received from S3
+2025-03-03 17:25:12,939 : INFO : Saving metrics to S3
+2025-03-03 17:25:12,941 : INFO : Metrics saved to: validation_report.csv
