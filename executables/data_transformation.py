@@ -35,17 +35,16 @@ def upload_file(file_name, bucket, object_name=None):
         region_name='us-east-1')
     _ = s3_client.upload_file(file_name, bucket, object_name)
         
-def data_transformation(output_path="customer_data.csv"):
+def data_transformation(filename, source):
     try:
         logging.info("Starting data transformation for csv.")
-        data_path = f"{settings['raw_data_path']}/data/cleaned/{today}/csv/{output_path}"
+        data_path = f"{settings['raw_data_path']}/data/cleaned/{today}/{source}/{filename}"
         df = pd.read_csv(data_path)
 
         df.loc[df.HasCrCard == 0, 'HasCrCard'] = -1
         df.loc[df.IsActiveMember == 0, 'IsActiveMember'] = -1
         #One-Hot encoding for Categorical Variables
-        df = pd.get_dummies(df, columns=['Geography', 'Gender'], drop_first=True)
-        
+        df = pd.get_dummies(df, columns=['Geography', 'Gender'], drop_first=True)    
         
 
         #Feature creation
@@ -74,16 +73,17 @@ def data_transformation(output_path="customer_data.csv"):
         df[['Tenure', 'Balance', 'EstimatedSalary']] = scaler.fit_transform(df[['Tenure', 'Balance', 'EstimatedSalary']]) 
               
         logging.info("Saving data to S3.")
-        transformed_file_path = f"data/transformed/{today}/csv"
+        transformed_file_path = f"data/transformed/{today}/{source}"
         p = Path(transformed_file_path)
         p.mkdir(parents = True, exist_ok = True)
-        df.to_csv(f"{settings['raw_data_path']}/{transformed_file_path}/{output_path}", index=False)       
+        df.to_csv(f"{settings['raw_data_path']}/{transformed_file_path}/{filename}", index=False)       
         s3_client = boto3.client('s3', region_name='us-east-1')
         bucket_name = "dmmlassignmentbucket"
-        s3_key = f"{transformed_file_path}/{output_path}"
-        upload_file(f"{settings['raw_data_path']}/{transformed_file_path}/{output_path}", bucket_name, s3_key)        
+        s3_key = f"{transformed_file_path}/{filename}"
+        upload_file(f"{settings['raw_data_path']}/{transformed_file_path}/{filename}", bucket_name, s3_key)        
 
     except Exception as e:
         logging.error(f"Failed data transformation: {str(e)}")
     
-data_transformation()
+data_transformation("customer_data.csv")
+data_transformation("database_data.csv")
