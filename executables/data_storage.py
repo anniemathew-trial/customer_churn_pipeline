@@ -31,21 +31,19 @@ def data_storage(filename,type, source):
         logging.info("Connecting to Database Successfull")
         cursor = connection.cursor()
 
-        logging.info("Executing script to Database")
-
-        cursor.execute(sql_script)
-
-        connection.commit()
-        logging.info("Executed script successfully !!")
 
         logging.info("Reading insert script template")
         script_file_path = 'dbScripts/insert_script_template.sql'
+        logging.info("Executing script to Database")
+            
         with open(script_file_path, 'r') as file:
             insert_script = file.read()
 
         logging.info("Inserting data to database")
         data_path = f"{settings['raw_data_path']}/data/transformed/{source}/{today}/{type}/{filename}"
         df = pd.read_csv(data_path)
+        df['DataSource'] = source
+        df['Type'] = type
         data_tuples = df.to_records(index=False).tolist()
 
         cursor.executemany(insert_script, data_tuples)
