@@ -96,5 +96,5 @@ def generate_data_quality_report(filename, type, source, output_path="validation
         logging.error(f"Error validating  data: {str(e)}")
 
 
-generate_data_quality_report("customer_data.csv", "csv, "fintech1")
+generate_data_quality_report("customer_data.csv", "csv", "fintech1")
 generate_data_quality_report("database_data.csv", "database", "fintech2")
