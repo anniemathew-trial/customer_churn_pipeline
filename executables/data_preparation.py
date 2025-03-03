@@ -89,6 +89,7 @@ def prepare_data(filename,type, source, output_path):
         generate_report(df, source, type)
     except Exception as e:
         logging.error(f"Error in preparing data{str(e)}") 
+        raise e
     
 def generate_report(data, source, type, pdf_filename = "plots.pdf"):   
     try:
@@ -140,6 +141,7 @@ def generate_report(data, source, type, pdf_filename = "plots.pdf"):
             logging.info(f'Saved pdf in {file_path}/{pdf_filename}')
     except Exception as e:
         logging.error(f"Error in creating report{str(e)}")
+        raise e
         
 
 
