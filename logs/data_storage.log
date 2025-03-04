@@ -800,3 +800,18 @@
 2025-03-04 01:36:12,114 : INFO : Inserting data to database
 2025-03-04 01:36:20,629 : INFO : Executed script successfully !!
 2025-03-04 01:36:20,631 : INFO : Connection closed !!
+2025-03-04 08:01:41,710 : INFO : Starting data storage for customer_data.csv
+2025-03-04 08:01:41,710 : INFO : Connecting to Database
+2025-03-04 08:01:41,736 : INFO : Connecting to Database Successfull
+2025-03-04 08:01:41,736 : INFO : Reading insert script template
+2025-03-04 08:01:41,736 : INFO : Executing script to Database
+2025-03-04 08:01:41,736 : INFO : Inserting data to database
+2025-03-04 08:01:41,859 : ERROR : Error storing data: ('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Parameter 6 (""): The supplied value is not a valid instance of data type float. Check the source data for invalid values. An example of an invalid value is data of numeric type with scale greater than precision. (8023) (SQLExecDirectW)')
+2025-03-04 08:01:41,862 : INFO : Starting data storage for database_data.csv
+2025-03-04 08:01:41,862 : INFO : Connecting to Database
+2025-03-04 08:01:41,876 : INFO : Connecting to Database Successfull
+2025-03-04 08:01:41,876 : INFO : Reading insert script template
+2025-03-04 08:01:41,876 : INFO : Executing script to Database
+2025-03-04 08:01:41,876 : INFO : Inserting data to database
+2025-03-04 08:01:47,900 : INFO : Executed script successfully !!
+2025-03-04 08:01:47,901 : INFO : Connection closed !!
