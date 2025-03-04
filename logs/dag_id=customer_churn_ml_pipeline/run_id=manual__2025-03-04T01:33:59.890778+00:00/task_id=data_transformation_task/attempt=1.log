@@ -44,3 +44,13 @@
 [2025-03-04T01:35:53.580+0000] {subprocess.py:93} INFO - 	models/
 [2025-03-04T01:35:53.580+0000] {subprocess.py:93} INFO - 	online.db
 [2025-03-04T01:35:53.581+0000] {subprocess.py:93} INFO - 
+[2025-03-04T01:35:53.674+0000] {subprocess.py:93} INFO - [main a6cbd7e] Updated transformed data version
+[2025-03-04T01:35:53.675+0000] {subprocess.py:93} INFO -  5 files changed, 77 insertions(+)
+[2025-03-04T01:35:53.675+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-04T01:33:59.890778+00:00/task_id=data_transformation_task/attempt=1.log
+[2025-03-04T01:36:00.249+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-04T01:36:02.621+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-04T01:36:02.621+0000] {subprocess.py:93} INFO -    44906fa..a6cbd7e  main -> main
+[2025-03-04T01:36:02.627+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-04T01:36:02.704+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_transformation_task, execution_date=20250304T013359, start_date=20250304T013533, end_date=20250304T013602
+[2025-03-04T01:36:02.780+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-04T01:36:02.833+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
