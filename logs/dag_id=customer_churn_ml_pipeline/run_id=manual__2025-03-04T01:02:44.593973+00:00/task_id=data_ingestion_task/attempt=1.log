@@ -38,3 +38,14 @@
 [2025-03-04T01:03:55.359+0000] {subprocess.py:93} INFO - 	models/
 [2025-03-04T01:03:55.359+0000] {subprocess.py:93} INFO - 	online.db
 [2025-03-04T01:03:55.359+0000] {subprocess.py:93} INFO - 
+[2025-03-04T01:03:55.446+0000] {subprocess.py:93} INFO - [main 5367ab2] Updated data ingestion
+[2025-03-04T01:03:55.447+0000] {subprocess.py:93} INFO -  6 files changed, 98 insertions(+), 1 deletion(-)
+[2025-03-04T01:03:55.447+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-04T01:02:44.593973+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-04T01:03:55.447+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-04T01:02:44.593973+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-04T01:03:55.447+0000] {subprocess.py:93} INFO -  create mode 100644 logs/scheduler/2025-03-04/customer_churn.py.log
+[2025-03-04T01:03:57.072+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-04T01:03:57.072+0000] {subprocess.py:93} INFO -    bce2824..5367ab2  main -> main
+[2025-03-04T01:03:57.079+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-04T01:03:57.130+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250304T010244, start_date=20250304T010351, end_date=20250304T010357
+[2025-03-04T01:03:57.186+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-04T01:03:57.273+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
