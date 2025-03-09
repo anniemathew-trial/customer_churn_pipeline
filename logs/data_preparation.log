@@ -4170,3 +4170,93 @@
 2025-03-09 11:42:48,955 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2025-03-09 11:42:48,973 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2025-03-09 11:42:49,370 : INFO : Saved pdf in /opt/airflow/visualization/fintech2/09-03-2025/database/plots.pdf
+2025-03-09 11:45:30,812 : INFO : Starting data preparation for customer_data.csv.
+2025-03-09 11:45:30,834 : INFO : Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values
+2025-03-09 11:45:30,837 : INFO : Handling 'Balance', 'EstimatedSalary' empty data with mean
+2025-03-09 11:45:30,838 : INFO : Handling 'Tenure', 'Age' empty data with tenure + 18 in age and droping tenure with 0 values & negative values
+2025-03-09 11:45:30,849 : INFO : Dropping 'Tenure' less than 0 and greater than 80
+2025-03-09 11:45:30,852 : INFO : Handling 'Age' empty data
+2025-03-09 11:45:30,853 : INFO : Dropping 'Age' less than 18 and greater than 110
+2025-03-09 11:45:30,856 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+2025-03-09 11:45:30,857 : INFO : Making 'Geography', 'Gender' as categorical
+2025-03-09 11:45:30,863 : INFO : Making 'HasCrCard', 'IsActiveMember', 'Exited' as integers
+2025-03-09 11:45:30,864 : INFO : Saving data to S3.
+2025-03-09 11:45:30,865 : INFO : Directory created at /opt/airflow/data/cleaned/fintech1/09-03-2025/csv
+2025-03-09 11:45:31,054 : INFO : Connected to s3
+2025-03-09 11:45:33,618 : INFO : File uploaded to S3
+2025-03-09 11:45:33,619 : INFO : Creating Pie chart
+2025-03-09 11:45:33,684 : INFO : Generating histogram for column CreditScore.
+2025-03-09 11:45:33,886 : INFO : Generating histogram for column Geography.
+2025-03-09 11:45:34,084 : INFO : Generating histogram for column Gender.
+2025-03-09 11:45:34,210 : INFO : Generating histogram for column Age.
+2025-03-09 11:45:34,415 : INFO : Generating histogram for column Tenure.
+2025-03-09 11:45:34,623 : INFO : Generating histogram for column Balance.
+2025-03-09 11:45:34,860 : INFO : Generating histogram for column NumOfProducts.
+2025-03-09 11:45:35,084 : INFO : Generating histogram for column HasCrCard.
+2025-03-09 11:45:35,295 : INFO : Generating histogram for column IsActiveMember.
+2025-03-09 11:45:35,495 : INFO : Generating histogram for column EstimatedSalary.
+2025-03-09 11:45:35,717 : INFO : Generating histogram for column Exited.
+2025-03-09 11:45:35,962 : INFO : Generating histogram for relation of Exited with Categorical data.
+2025-03-09 11:45:36,418 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:36,439 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:36,536 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:36,557 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:36,625 : INFO : Generating box plots for relation of Exited with non Categorical data.
+2025-03-09 11:45:36,888 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:36,909 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,030 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,050 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,163 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,183 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,298 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,318 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,419 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,436 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,645 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:37,667 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:38,183 : INFO : Saved pdf in /opt/airflow/visualization/fintech1/09-03-2025/csv/plots.pdf
+2025-03-09 11:45:38,228 : INFO : Starting data preparation for database_data.csv.
+2025-03-09 11:45:38,252 : INFO : Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values
+2025-03-09 11:45:38,256 : INFO : Handling 'Balance', 'EstimatedSalary' empty data with mean
+2025-03-09 11:45:38,257 : INFO : Handling 'Tenure', 'Age' empty data with tenure + 18 in age and droping tenure with 0 values & negative values
+2025-03-09 11:45:38,257 : INFO : Dropping 'Tenure' less than 0 and greater than 80
+2025-03-09 11:45:38,261 : INFO : Handling 'Age' empty data
+2025-03-09 11:45:38,262 : INFO : Dropping 'Age' less than 18 and greater than 110
+2025-03-09 11:45:38,265 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+2025-03-09 11:45:38,267 : INFO : Making 'Geography', 'Gender' as categorical
+2025-03-09 11:45:38,273 : INFO : Making 'HasCrCard', 'IsActiveMember', 'Exited' as integers
+2025-03-09 11:45:38,275 : INFO : Saving data to S3.
+2025-03-09 11:45:38,276 : INFO : Directory created at /opt/airflow/data/cleaned/fintech2/09-03-2025/database
+2025-03-09 11:45:38,377 : INFO : Connected to s3
+2025-03-09 11:45:42,000 : INFO : File uploaded to S3
+2025-03-09 11:45:42,002 : INFO : Creating Pie chart
+2025-03-09 11:45:42,070 : INFO : Generating histogram for column CreditScore.
+2025-03-09 11:45:42,159 : INFO : Generating histogram for column Geography.
+2025-03-09 11:45:42,228 : INFO : Generating histogram for column Gender.
+2025-03-09 11:45:42,308 : INFO : Generating histogram for column Age.
+2025-03-09 11:45:42,414 : INFO : Generating histogram for column Tenure.
+2025-03-09 11:45:42,510 : INFO : Generating histogram for column Balance.
+2025-03-09 11:45:42,610 : INFO : Generating histogram for column NumOfProducts.
+2025-03-09 11:45:42,735 : INFO : Generating histogram for column HasCrCard.
+2025-03-09 11:45:42,872 : INFO : Generating histogram for column IsActiveMember.
+2025-03-09 11:45:43,046 : INFO : Generating histogram for column EstimatedSalary.
+2025-03-09 11:45:43,230 : INFO : Generating histogram for column Exited.
+2025-03-09 11:45:43,431 : INFO : Generating histogram for relation of Exited with Categorical data.
+2025-03-09 11:45:43,912 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:43,933 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,046 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,067 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,131 : INFO : Generating box plots for relation of Exited with non Categorical data.
+2025-03-09 11:45:44,473 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,490 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,589 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,607 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,715 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,732 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,826 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,843 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,935 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:44,950 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:45,038 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:45,054 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-03-09 11:45:45,494 : INFO : Saved pdf in /opt/airflow/visualization/fintech2/09-03-2025/database/plots.pdf

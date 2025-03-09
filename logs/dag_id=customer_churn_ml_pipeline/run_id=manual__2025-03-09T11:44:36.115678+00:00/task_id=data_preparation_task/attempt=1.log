@@ -1,0 +1,138 @@
+[2025-03-09T11:45:27.807+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-09T11:44:36.115678+00:00 [queued]>
+[2025-03-09T11:45:27.820+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-09T11:44:36.115678+00:00 [queued]>
+[2025-03-09T11:45:27.820+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-09T11:45:27.840+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_preparation_task> on 2025-03-09 11:44:36.115678+00:00
+[2025-03-09T11:45:27.844+0000] {standard_task_runner.py:57} INFO - Started process 4196 to run task
+[2025-03-09T11:45:27.848+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_preparation_task', 'manual__2025-03-09T11:44:36.115678+00:00', '--job-id', '334', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpaqthe7hi']
+[2025-03-09T11:45:27.850+0000] {standard_task_runner.py:85} INFO - Job 334: Subtask data_preparation_task
+[2025-03-09T11:45:27.878+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-09T11:45:27.932+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_preparation_task manual__2025-03-09T11:44:36.115678+00:00 [running]> on host 157237bff8f7
+[2025-03-09T11:45:28.066+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_preparation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-09T11:44:36.115678+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-09T11:44:36.115678+00:00'
+[2025-03-09T11:45:28.067+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-09T11:45:28.068+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/*** &&\t\t\tpython /opt/***/executables/data_preparation.py &&                         dvc add /opt/***/data/cleaned &&                         git add /opt/***/data/cleaned.dvc && \t\t\tgit add logs && \\   \n\t\t\tgit add visualization &&    \t\t\tgit status &&                         git commit -m "Updated cleaned data version" -a &&                         dvc push && git push\n                    ']
+[2025-03-09T11:45:28.077+0000] {subprocess.py:86} INFO - Output:
+[2025-03-09T11:45:30.813+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,812 : INFO : Starting data preparation for customer_data.csv.
+[2025-03-09T11:45:30.834+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,834 : INFO : Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values
+[2025-03-09T11:45:30.838+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,837 : INFO : Handling 'Balance', 'EstimatedSalary' empty data with mean
+[2025-03-09T11:45:30.838+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,838 : INFO : Handling 'Tenure', 'Age' empty data with tenure + 18 in age and droping tenure with 0 values & negative values
+[2025-03-09T11:45:30.849+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,849 : INFO : Dropping 'Tenure' less than 0 and greater than 80
+[2025-03-09T11:45:30.852+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,852 : INFO : Handling 'Age' empty data
+[2025-03-09T11:45:30.853+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,853 : INFO : Dropping 'Age' less than 18 and greater than 110
+[2025-03-09T11:45:30.856+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,856 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+[2025-03-09T11:45:30.858+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,857 : INFO : Making 'Geography', 'Gender' as categorical
+[2025-03-09T11:45:30.863+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,863 : INFO : Making 'HasCrCard', 'IsActiveMember', 'Exited' as integers
+[2025-03-09T11:45:30.865+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,864 : INFO : Saving data to S3.
+[2025-03-09T11:45:30.865+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:30,865 : INFO : Directory created at /opt/***/data/cleaned/fintech1/09-03-2025/csv
+[2025-03-09T11:45:31.054+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:31,054 : INFO : Connected to s3
+[2025-03-09T11:45:33.619+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:33,618 : INFO : File uploaded to S3
+[2025-03-09T11:45:33.619+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:33,619 : INFO : Creating Pie chart
+[2025-03-09T11:45:33.684+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:33,684 : INFO : Generating histogram for column CreditScore.
+[2025-03-09T11:45:33.886+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:33,886 : INFO : Generating histogram for column Geography.
+[2025-03-09T11:45:34.084+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:34,084 : INFO : Generating histogram for column Gender.
+[2025-03-09T11:45:34.210+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:34,210 : INFO : Generating histogram for column Age.
+[2025-03-09T11:45:34.415+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:34,415 : INFO : Generating histogram for column Tenure.
+[2025-03-09T11:45:34.623+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:34,623 : INFO : Generating histogram for column Balance.
+[2025-03-09T11:45:34.860+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:34,860 : INFO : Generating histogram for column NumOfProducts.
+[2025-03-09T11:45:35.084+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:35,084 : INFO : Generating histogram for column HasCrCard.
+[2025-03-09T11:45:35.295+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:35,295 : INFO : Generating histogram for column IsActiveMember.
+[2025-03-09T11:45:35.496+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:35,495 : INFO : Generating histogram for column EstimatedSalary.
+[2025-03-09T11:45:35.717+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:35,717 : INFO : Generating histogram for column Exited.
+[2025-03-09T11:45:35.962+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:35,962 : INFO : Generating histogram for relation of Exited with Categorical data.
+[2025-03-09T11:45:36.418+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:36,418 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:36.439+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:36,439 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:36.537+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:36,536 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:36.558+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:36,557 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:36.625+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:36,625 : INFO : Generating box plots for relation of Exited with non Categorical data.
+[2025-03-09T11:45:36.889+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:36,888 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:36.909+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:36,909 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.031+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,030 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.050+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,050 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.164+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,163 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.183+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,183 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.299+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,298 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.319+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,318 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.419+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,419 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.436+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,436 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.645+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,645 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:37.667+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:37,667 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:38.183+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,183 : INFO : Saved pdf in /opt/***/visualization/fintech1/09-03-2025/csv/plots.pdf
+[2025-03-09T11:45:38.228+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,228 : INFO : Starting data preparation for database_data.csv.
+[2025-03-09T11:45:38.252+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,252 : INFO : Dropping 'Estimated Salary' & 'Credit Score' with 0 & negative values
+[2025-03-09T11:45:38.257+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,256 : INFO : Handling 'Balance', 'EstimatedSalary' empty data with mean
+[2025-03-09T11:45:38.257+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,257 : INFO : Handling 'Tenure', 'Age' empty data with tenure + 18 in age and droping tenure with 0 values & negative values
+[2025-03-09T11:45:38.258+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,257 : INFO : Dropping 'Tenure' less than 0 and greater than 80
+[2025-03-09T11:45:38.261+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,261 : INFO : Handling 'Age' empty data
+[2025-03-09T11:45:38.262+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,262 : INFO : Dropping 'Age' less than 18 and greater than 110
+[2025-03-09T11:45:38.266+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,265 : INFO : Droping 'Surname' as it may lead to profiling, 'RowNumber', 'CustomerId' as it is not required
+[2025-03-09T11:45:38.268+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,267 : INFO : Making 'Geography', 'Gender' as categorical
+[2025-03-09T11:45:38.274+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,273 : INFO : Making 'HasCrCard', 'IsActiveMember', 'Exited' as integers
+[2025-03-09T11:45:38.275+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,275 : INFO : Saving data to S3.
+[2025-03-09T11:45:38.276+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,276 : INFO : Directory created at /opt/***/data/cleaned/fintech2/09-03-2025/database
+[2025-03-09T11:45:38.378+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:38,377 : INFO : Connected to s3
+[2025-03-09T11:45:42.001+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,000 : INFO : File uploaded to S3
+[2025-03-09T11:45:42.003+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,002 : INFO : Creating Pie chart
+[2025-03-09T11:45:42.070+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,070 : INFO : Generating histogram for column CreditScore.
+[2025-03-09T11:45:42.159+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,159 : INFO : Generating histogram for column Geography.
+[2025-03-09T11:45:42.229+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,228 : INFO : Generating histogram for column Gender.
+[2025-03-09T11:45:42.308+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,308 : INFO : Generating histogram for column Age.
+[2025-03-09T11:45:42.414+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,414 : INFO : Generating histogram for column Tenure.
+[2025-03-09T11:45:42.511+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,510 : INFO : Generating histogram for column Balance.
+[2025-03-09T11:45:42.610+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,610 : INFO : Generating histogram for column NumOfProducts.
+[2025-03-09T11:45:42.735+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,735 : INFO : Generating histogram for column HasCrCard.
+[2025-03-09T11:45:42.873+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:42,872 : INFO : Generating histogram for column IsActiveMember.
+[2025-03-09T11:45:43.046+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:43,046 : INFO : Generating histogram for column EstimatedSalary.
+[2025-03-09T11:45:43.230+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:43,230 : INFO : Generating histogram for column Exited.
+[2025-03-09T11:45:43.431+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:43,431 : INFO : Generating histogram for relation of Exited with Categorical data.
+[2025-03-09T11:45:43.913+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:43,912 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:43.933+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:43,933 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.046+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,046 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.067+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,067 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.132+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,131 : INFO : Generating box plots for relation of Exited with non Categorical data.
+[2025-03-09T11:45:44.473+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,473 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.491+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,490 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.590+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,589 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.608+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,607 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.716+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,715 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.733+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,732 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.826+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,826 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.843+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,843 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.935+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,935 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:44.951+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:44,950 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:45.038+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:45,038 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:45.054+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:45,054 : INFO : Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+[2025-03-09T11:45:45.494+0000] {subprocess.py:93} INFO - 2025-03-09 11:45:45,494 : INFO : Saved pdf in /opt/***/visualization/fintech2/09-03-2025/database/plots.pdf
+[2025-03-09T11:45:48.011+0000] {subprocess.py:93} INFO - 
+[2025-03-09T11:45:48.012+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-03-09T11:45:48.012+0000] {subprocess.py:93} INFO - 
+[2025-03-09T11:45:48.012+0000] {subprocess.py:93} INFO - 	git add data/cleaned.dvc
+[2025-03-09T11:45:48.012+0000] {subprocess.py:93} INFO - 
+[2025-03-09T11:45:48.012+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-03-09T11:45:48.013+0000] {subprocess.py:93} INFO - 
+[2025-03-09T11:45:48.013+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
+[2025-03-09T11:45:48.328+0000] {subprocess.py:93} INFO - /bin/bash: line 2:  : command not found
+[2025-03-09T11:45:48.358+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-09T11:45:48.359+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-09T11:45:48.359+0000] {subprocess.py:93} INFO - 
+[2025-03-09T11:45:48.359+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-09T11:45:48.360+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-09T11:45:48.360+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T11:44:36.115678+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-09T11:45:48.360+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T11:44:36.115678+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-09T11:45:48.360+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-09T11:45:48.360+0000] {subprocess.py:93} INFO - 	modified:   logs/data_preparation.log
+[2025-03-09T11:45:48.360+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-09/customer_churn.py.log
+[2025-03-09T11:45:48.361+0000] {subprocess.py:93} INFO - 	modified:   visualization/fintech1/09-03-2025/csv/plots.pdf
+[2025-03-09T11:45:48.361+0000] {subprocess.py:93} INFO - 	modified:   visualization/fintech2/09-03-2025/database/plots.pdf
+[2025-03-09T11:45:48.361+0000] {subprocess.py:93} INFO - 
+[2025-03-09T11:45:48.361+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-09T11:45:48.361+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-09T11:45:48.361+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-09T11:45:48.362+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T11:44:36.115678+00:00/task_id=data_preparation_task/attempt=1.log
+[2025-03-09T11:45:48.362+0000] {subprocess.py:93} INFO - 
+[2025-03-09T11:45:48.362+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-09T11:45:48.362+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-09T11:45:48.362+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
+[2025-03-09T11:45:48.362+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-09T11:45:48.363+0000] {subprocess.py:93} INFO - 	mlartifacts/
+[2025-03-09T11:45:48.363+0000] {subprocess.py:93} INFO - 	models/
+[2025-03-09T11:45:48.363+0000] {subprocess.py:93} INFO - 	online.db
+[2025-03-09T11:45:48.363+0000] {subprocess.py:93} INFO - 
