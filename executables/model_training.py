@@ -4,7 +4,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.svm import SVC
 from pathlib import Path
 import pandas as pd
 import logging
@@ -87,9 +86,7 @@ def train_log_models():
     models = { 
               "RandomForest" : RandomForestClassifier(n_estimators=100),
               "LinearRegression" : LogisticRegression(),
-              "DecisionTree" : DecisionTreeClassifier(max_depth=4),
-              "SVM" : SVC(kernel='linear'),
-              
+              "DecisionTree" : DecisionTreeClassifier(max_depth=4),              
               }
     
     p = Path('models')
