@@ -338,3 +338,7 @@
 2025-03-09 18:01:57,907 : INFO : Upload completed for CSV.
 2025-03-09 18:01:57,907 : INFO : Starting Raw Data upload for Database
 2025-03-09 18:02:00,720 : INFO : Upload completed for database.
+2025-03-09 18:25:41,660 : INFO : Starting Raw Data upload for CSV
+2025-03-09 18:25:49,125 : INFO : Upload completed for CSV.
+2025-03-09 18:25:49,126 : INFO : Starting Raw Data upload for Database
+2025-03-09 18:25:51,918 : INFO : Upload completed for database.

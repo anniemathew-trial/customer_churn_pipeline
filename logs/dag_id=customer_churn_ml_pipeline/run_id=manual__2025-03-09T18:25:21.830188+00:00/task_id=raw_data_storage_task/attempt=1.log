@@ -1,0 +1,50 @@
+[2025-03-09T18:25:39.662+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.raw_data_storage_task manual__2025-03-09T18:25:21.830188+00:00 [queued]>
+[2025-03-09T18:25:39.681+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.raw_data_storage_task manual__2025-03-09T18:25:21.830188+00:00 [queued]>
+[2025-03-09T18:25:39.682+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-09T18:25:39.708+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): raw_data_storage_task> on 2025-03-09 18:25:21.830188+00:00
+[2025-03-09T18:25:39.715+0000] {standard_task_runner.py:57} INFO - Started process 16061 to run task
+[2025-03-09T18:25:39.719+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'raw_data_storage_task', 'manual__2025-03-09T18:25:21.830188+00:00', '--job-id', '450', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpifmd7wx1']
+[2025-03-09T18:25:39.723+0000] {standard_task_runner.py:85} INFO - Job 450: Subtask raw_data_storage_task
+[2025-03-09T18:25:39.755+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-09T18:25:39.827+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.raw_data_storage_task manual__2025-03-09T18:25:21.830188+00:00 [running]> on host 157237bff8f7
+[2025-03-09T18:25:40.020+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='raw_data_storage_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-09T18:25:21.830188+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-09T18:25:21.830188+00:00'
+[2025-03-09T18:25:40.023+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-09T18:25:40.024+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/*** &&                        python /opt/***/executables/raw_data_storage.py && \t\t\tgit rm -r --cached \'opt/***/data/raw\' && \t\t\tgit commit -m "stop tracking data/raw"\n                        dvc add /opt/***/data/raw &&                         git add /opt/***/data/raw.dvc && \t\t\tgit add logs &&\\   \n   \t\t\tgit status &&                         git commit -m "Updated raw data storage" -a &&                         dvc push && git push\n                    ']
+[2025-03-09T18:25:40.040+0000] {subprocess.py:86} INFO - Output:
+[2025-03-09T18:25:41.660+0000] {subprocess.py:93} INFO - 2025-03-09 18:25:41,660 : INFO : Starting Raw Data upload for CSV
+[2025-03-09T18:25:49.126+0000] {subprocess.py:93} INFO - 2025-03-09 18:25:49,125 : INFO : Upload completed for CSV.
+[2025-03-09T18:25:49.126+0000] {subprocess.py:93} INFO - 2025-03-09 18:25:49,126 : INFO : Starting Raw Data upload for Database
+[2025-03-09T18:25:51.918+0000] {subprocess.py:93} INFO - 2025-03-09 18:25:51,918 : INFO : Upload completed for database.
+[2025-03-09T18:25:52.066+0000] {subprocess.py:93} INFO - fatal: pathspec 'opt/***/data/raw' did not match any files
+[2025-03-09T18:25:56.525+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:25:56.526+0000] {subprocess.py:93} INFO - To track the changes with git, run:
+[2025-03-09T18:25:56.526+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:25:56.527+0000] {subprocess.py:93} INFO - 	git add data/raw.dvc
+[2025-03-09T18:25:56.527+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:25:56.528+0000] {subprocess.py:93} INFO - To enable auto staging, run:
+[2025-03-09T18:25:56.528+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:25:56.528+0000] {subprocess.py:93} INFO - 	dvc config core.autostage true
+[2025-03-09T18:25:57.137+0000] {subprocess.py:93} INFO - /bin/bash: line 3:  : command not found
+[2025-03-09T18:25:57.180+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-09T18:25:57.181+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-09T18:25:57.181+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:25:57.181+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-09T18:25:57.182+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-09T18:25:57.182+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T18:25:21.830188+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-09T18:25:57.183+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T18:25:21.830188+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-09T18:25:57.183+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-09T18:25:57.183+0000] {subprocess.py:93} INFO - 	modified:   logs/raw_data_storage.log
+[2025-03-09T18:25:57.184+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-09/customer_churn.py.log
+[2025-03-09T18:25:57.184+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:25:57.184+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-09T18:25:57.185+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-09T18:25:57.185+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-09T18:25:57.186+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T18:25:21.830188+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-09T18:25:57.186+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:25:57.186+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-09T18:25:57.187+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-09T18:25:57.187+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
+[2025-03-09T18:25:57.188+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-09T18:25:57.188+0000] {subprocess.py:93} INFO - 	mlartifacts/
+[2025-03-09T18:25:57.188+0000] {subprocess.py:93} INFO - 	online.db
+[2025-03-09T18:25:57.189+0000] {subprocess.py:93} INFO - 
