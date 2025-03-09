@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/ca7189f070814c2485115a11d7a5371f/artifacts
+deleted_time: 1741545178380
 end_time: 1741539667794
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: ca7189f070814c2485115a11d7a5371f
 run_name: RandomForest
 run_uuid: ca7189f070814c2485115a11d7a5371f

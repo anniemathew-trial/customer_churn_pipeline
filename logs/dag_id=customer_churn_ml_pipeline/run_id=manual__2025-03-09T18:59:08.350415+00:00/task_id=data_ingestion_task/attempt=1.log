@@ -1,0 +1,58 @@
+[2025-03-09T18:59:18.991+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-09T18:59:08.350415+00:00 [queued]>
+[2025-03-09T18:59:19.036+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-09T18:59:08.350415+00:00 [queued]>
+[2025-03-09T18:59:19.037+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-09T18:59:19.095+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_ingestion_task> on 2025-03-09 18:59:08.350415+00:00
+[2025-03-09T18:59:19.105+0000] {standard_task_runner.py:57} INFO - Started process 16980 to run task
+[2025-03-09T18:59:19.114+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_ingestion_task', 'manual__2025-03-09T18:59:08.350415+00:00', '--job-id', '458', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmp6edsd1mq']
+[2025-03-09T18:59:19.120+0000] {standard_task_runner.py:85} INFO - Job 458: Subtask data_ingestion_task
+[2025-03-09T18:59:19.184+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-09T18:59:19.304+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_ingestion_task manual__2025-03-09T18:59:08.350415+00:00 [running]> on host 157237bff8f7
+[2025-03-09T18:59:19.601+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_ingestion_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-09T18:59:08.350415+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-09T18:59:08.350415+00:00'
+[2025-03-09T18:59:19.603+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-09T18:59:19.605+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/executables/data_ingestion.py && \t\t\tNOW=$(date \'+%d-%m-%Y\') &&\t\t\tcd /opt/*** && \t\t\tgit add logs &&    \t\t\tgit status &&                         git commit -m "Updated data ingestion" -a &&                         git push\n                    ']
+[2025-03-09T18:59:19.627+0000] {subprocess.py:86} INFO - Output:
+[2025-03-09T18:59:21.284+0000] {subprocess.py:93} INFO - 2025-03-09 18:59:21,283 : INFO : Reading data from CSV file customer_data.csv
+[2025-03-09T18:59:21.419+0000] {subprocess.py:93} INFO - 2025-03-09 18:59:21,419 : INFO : Data from CSV customer_data.csv ingested successfully!
+[2025-03-09T18:59:21.420+0000] {subprocess.py:93} INFO - 2025-03-09 18:59:21,419 : INFO : Connecting to Database
+[2025-03-09T18:59:21.445+0000] {subprocess.py:93} INFO - 2025-03-09 18:59:21,445 : INFO : Connecting to Database Successfull
+[2025-03-09T18:59:21.446+0000] {subprocess.py:93} INFO - 2025-03-09 18:59:21,445 : INFO : Reading data from database.
+[2025-03-09T18:59:22.120+0000] {subprocess.py:93} INFO - /opt/***/executables/data_ingestion.py:50: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2025-03-09T18:59:22.121+0000] {subprocess.py:93} INFO -   data = pd.read_sql(query, connection)
+[2025-03-09T18:59:22.121+0000] {subprocess.py:93} INFO - 2025-03-09 18:59:22,120 : INFO : Data from Database ingested successfully!
+[2025-03-09T18:59:22.543+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-09T18:59:22.543+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-09T18:59:22.544+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:59:22.544+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-09T18:59:22.545+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-09T18:59:22.545+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T18:25:21.830188+00:00/task_id=model_training_task/attempt=1.log
+[2025-03-09T18:59:22.545+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T18:59:08.350415+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-09T18:59:22.546+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T18:59:08.350415+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-09T18:59:22.546+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-09T18:59:22.547+0000] {subprocess.py:93} INFO - 	modified:   logs/data_ingestion.log
+[2025-03-09T18:59:22.547+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-09/customer_churn.py.log
+[2025-03-09T18:59:22.547+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:59:22.548+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-09T18:59:22.548+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-09T18:59:22.549+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-09T18:59:22.549+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/02cf6e6206f844d1ba80a33e9129d0ec/meta.yaml
+[2025-03-09T18:59:22.549+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/0300696d92964aad844a80c848d9b6f7/meta.yaml
+[2025-03-09T18:59:22.550+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/1e2f838d0fa649f48b1c41e9ee1e2098/meta.yaml
+[2025-03-09T18:59:22.550+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/1ed2dabdc7184ae7b77595e57daaba4b/meta.yaml
+[2025-03-09T18:59:22.550+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/1f854d21c4fb473d9b0f6e7c4f11fbaa/meta.yaml
+[2025-03-09T18:59:22.551+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/2428ae54236c4dc5ac70531d2223aa46/meta.yaml
+[2025-03-09T18:59:22.551+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/3c0a810ba9124437adcb303ae030a6bb/meta.yaml
+[2025-03-09T18:59:22.551+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/4408ef919ab942e894dec1146e649c25/meta.yaml
+[2025-03-09T18:59:22.551+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/4670ea9ac5774a62a0288c9d9cd091d4/meta.yaml
+[2025-03-09T18:59:22.552+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/48d6bd1aea8d43c0acd5a07e34588973/meta.yaml
+[2025-03-09T18:59:22.552+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/4eda4d07bfb34e6e8697f37d7c214214/meta.yaml
+[2025-03-09T18:59:22.552+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/5cc7c0afae3f417b94f4570427642181/meta.yaml
+[2025-03-09T18:59:22.552+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/6581ae032c7d466c8ec1f92c47964bc3/meta.yaml
+[2025-03-09T18:59:22.553+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/66cf6ae6220b4aaf9cbf2d1d42a9ea6a/meta.yaml
+[2025-03-09T18:59:22.554+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/6a76efe1e21942c2afa2846663b6c0e3/meta.yaml
+[2025-03-09T18:59:22.554+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/6a895ee32d0a45bfab27c6fb1675f976/meta.yaml
+[2025-03-09T18:59:22.555+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/6cbd1eda3cbb4ff49b6a6879f1662961/meta.yaml
+[2025-03-09T18:59:22.555+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/6de7158268e44a1db7db69ad50aa9de4/meta.yaml
+[2025-03-09T18:59:22.555+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/709d12f32eac46a3a486b4f309d3e165/meta.yaml
+[2025-03-09T18:59:22.556+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/72c31b1924424738b6bd8ad1ed97f606/meta.yaml
+[2025-03-09T18:59:22.556+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/72d7ced9a0ae41b397628902747ff53e/meta.yaml
+[2025-03-09T18:59:22.557+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/78dfb46cce5b4219be7a9e711a2e24a3/meta.yaml

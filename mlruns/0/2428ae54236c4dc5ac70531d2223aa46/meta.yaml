@@ -1,8 +1,9 @@
 artifact_uri: mlflow-artifacts:/0/2428ae54236c4dc5ac70531d2223aa46/artifacts
+deleted_time: 1741545178253
 end_time: 1741520153884
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 2428ae54236c4dc5ac70531d2223aa46
 run_name: LinearRegression
 run_uuid: 2428ae54236c4dc5ac70531d2223aa46
