@@ -1938,3 +1938,31 @@ tags.mlflow.runName                                                   RandomFore
 Name: 23, dtype: object
 2025-03-04 08:02:35,578 : INFO : Registering best model runs:/a60d3cac7c7146ef8222f4694fe2f085/RandomForest_model
 2025-03-04 08:02:35,658 : INFO : Completed model training & registration !!
+2025-03-09 10:58:35,177 : INFO : Starting model training
+2025-03-09 10:58:35,198 : INFO : Registry cache expired, so refreshing
+2025-03-09 10:58:35,207 : INFO : Getting data
+2025-03-09 10:58:35,208 : INFO : Start and End Range: 1 to 1000
+2025-03-09 10:58:35,880 : INFO : Data fetched: 999
+2025-03-09 10:58:35,880 : INFO : New Start and End Range: 1001 to 2000
+2025-03-09 10:58:35,881 : INFO : Start and End Range: 1001 to 2000
+2025-03-09 10:58:36,332 : INFO : Data fetched: 999
+2025-03-09 10:58:36,332 : INFO : New Start and End Range: 3001 to 4000
+2025-03-09 10:58:36,333 : INFO : Start and End Range: 3001 to 4000
+2025-03-09 10:58:37,024 : INFO : Data fetched: 999
+2025-03-09 10:58:37,024 : INFO : New Start and End Range: 7001 to 8000
+2025-03-09 10:58:37,025 : INFO : Start and End Range: 7001 to 8000
+2025-03-09 10:58:37,668 : INFO : Data fetched: 999
+2025-03-09 10:58:37,669 : INFO : New Start and End Range: 15001 to 16000
+2025-03-09 10:58:37,669 : INFO : Start and End Range: 15001 to 16000
+2025-03-09 10:58:38,510 : INFO : Data fetched: 999
+2025-03-09 10:58:38,511 : INFO : New Start and End Range: 31001 to 32000
+2025-03-09 10:58:38,511 : INFO : Start and End Range: 31001 to 32000
+2025-03-09 10:58:39,203 : INFO : Data fetched: 999
+2025-03-09 10:58:39,203 : INFO : New Start and End Range: 63001 to 64000
+2025-03-09 10:58:39,204 : INFO : Start and End Range: 63001 to 64000
+2025-03-09 10:58:39,322 : INFO : Reached End of Data
+2025-03-09 10:58:39,327 : INFO : Stoping at Start and End Range: 63001 to 64000
+2025-03-09 10:58:39,327 : INFO : Created feature data
+2025-03-09 10:58:39,328 : INFO : Total Data fetched: 6
+2025-03-09 10:58:39,339 : INFO : received feature data
+2025-03-09 10:58:39,349 : INFO : Models defined
