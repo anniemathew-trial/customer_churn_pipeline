@@ -395,3 +395,9 @@
 2025-03-09 12:20:26,694 : INFO : Starting data transformation for csv.
 2025-03-09 12:20:26,724 : INFO : Scaling 'Balance', 'EstimatedSalary'.
 2025-03-09 12:20:26,730 : INFO : Saving data to S3.
+2025-03-09 12:25:16,686 : INFO : Starting data transformation for csv.
+2025-03-09 12:25:16,718 : INFO : Scaling 'Balance', 'EstimatedSalary'.
+2025-03-09 12:25:16,724 : INFO : Saving data to S3.
+2025-03-09 12:25:27,642 : INFO : Starting data transformation for csv.
+2025-03-09 12:25:27,686 : INFO : Scaling 'Balance', 'EstimatedSalary'.
+2025-03-09 12:25:27,692 : INFO : Saving data to S3.
