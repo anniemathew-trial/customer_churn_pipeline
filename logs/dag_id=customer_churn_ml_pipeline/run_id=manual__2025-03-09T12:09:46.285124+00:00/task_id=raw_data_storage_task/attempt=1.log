@@ -47,3 +47,13 @@
 [2025-03-09T12:10:13.096+0000] {subprocess.py:93} INFO - 	models/
 [2025-03-09T12:10:13.096+0000] {subprocess.py:93} INFO - 	online.db
 [2025-03-09T12:10:13.097+0000] {subprocess.py:93} INFO - 
+[2025-03-09T12:10:13.107+0000] {subprocess.py:93} INFO - [main 0c9ef39] Updated raw data storage
+[2025-03-09T12:10:13.107+0000] {subprocess.py:93} INFO -  3 files changed, 63 insertions(+)
+[2025-03-09T12:10:13.107+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T12:09:46.285124+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-09T12:10:18.664+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-09T12:10:20.197+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-09T12:10:20.207+0000] {subprocess.py:93} INFO -    75dee1c..0c9ef39  main -> main
+[2025-03-09T12:10:20.214+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-09T12:10:20.255+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=raw_data_storage_task, execution_date=20250309T120946, start_date=20250309T121002, end_date=20250309T121020
+[2025-03-09T12:10:20.308+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-09T12:10:20.350+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
