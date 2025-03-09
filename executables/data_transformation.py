@@ -68,9 +68,9 @@ def data_transformation(filename, type, source):
         df['BalanceAgeRatio'] = df['BalanceAgeRatio'].fillna(0)
         df['BalanceAgeRatio'] = df['BalanceAgeRatio'].astype('float')
         
-        logging.info("Scaling 'Tenure', 'Balance', 'EstimatedSalary'.")
+        logging.info("Scaling 'Balance', 'EstimatedSalary'.")
         scaler = StandardScaler()
-        df[['Tenure', 'Balance', 'EstimatedSalary']] = scaler.fit_transform(df[['Tenure', 'Balance', 'EstimatedSalary']]) 
+        df[['Balance', 'EstimatedSalary']] = scaler.fit_transform(df[['Balance', 'EstimatedSalary']]) 
               
         logging.info("Saving data to S3.")
         transformed_file_path = f"data/transformed/{source}/{today}/{type}"
