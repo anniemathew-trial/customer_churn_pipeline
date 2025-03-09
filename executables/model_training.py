@@ -78,6 +78,7 @@ def train_log_models():
     logging.info("received feature data")
     x = data.drop('Exited', axis=1)  # Features (all columns except 'Exited')
     y = data['Exited']  # Target variable ('Exited' column)
+    y = y.astype(int)
     x_train, x_test, y_train, y_test = train_test_split(
     x, y, test_size=0.2, random_state=42)  # 0.2 represents 20% test size
     logging.info("Models defined")
