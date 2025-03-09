@@ -1,0 +1,82 @@
+[2025-03-09T17:00:25.141+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.feature_store_task manual__2025-03-09T16:57:40.995662+00:00 [queued]>
+[2025-03-09T17:00:25.161+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.feature_store_task manual__2025-03-09T16:57:40.995662+00:00 [queued]>
+[2025-03-09T17:00:25.161+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-09T17:00:25.190+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): feature_store_task> on 2025-03-09 16:57:40.995662+00:00
+[2025-03-09T17:00:25.197+0000] {standard_task_runner.py:57} INFO - Started process 11803 to run task
+[2025-03-09T17:00:25.201+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'feature_store_task', 'manual__2025-03-09T16:57:40.995662+00:00', '--job-id', '401', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmpxg_pakq0']
+[2025-03-09T17:00:25.205+0000] {standard_task_runner.py:85} INFO - Job 401: Subtask feature_store_task
+[2025-03-09T17:00:25.238+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-09T17:00:25.305+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.feature_store_task manual__2025-03-09T16:57:40.995662+00:00 [running]> on host 157237bff8f7
+[2025-03-09T17:00:25.483+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='feature_store_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-09T16:57:40.995662+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-09T16:57:40.995662+00:00'
+[2025-03-09T17:00:25.485+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-09T17:00:25.486+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/***/customer_churn_stats/feature_repo &&                         feast apply &&                         feast materialize-incremental $(date -u +\'%Y-%m-%dT%H:%M:%S\') &&       \t\t\tgit add /opt/***/logs\n   \t\t\tgit status &&                         git commit -m "Updated feature store" -a &&                         git push\n                    ']
+[2025-03-09T17:00:25.498+0000] {subprocess.py:86} INFO - Output:
+[2025-03-09T17:00:34.999+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-03-09T17:00:34.999+0000] {subprocess.py:93} INFO -   File "/home/***/.local/bin/feast", line 8, in <module>
+[2025-03-09T17:00:35.000+0000] {subprocess.py:93} INFO -     sys.exit(cli())
+[2025-03-09T17:00:35.000+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 1157, in __call__
+[2025-03-09T17:00:35.000+0000] {subprocess.py:93} INFO -     return self.main(*args, **kwargs)
+[2025-03-09T17:00:35.001+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 1078, in main
+[2025-03-09T17:00:35.001+0000] {subprocess.py:93} INFO -     rv = self.invoke(ctx)
+[2025-03-09T17:00:35.001+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 1688, in invoke
+[2025-03-09T17:00:35.001+0000] {subprocess.py:93} INFO -     return _process_result(sub_ctx.command.invoke(sub_ctx))
+[2025-03-09T17:00:35.002+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 1434, in invoke
+[2025-03-09T17:00:35.002+0000] {subprocess.py:93} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2025-03-09T17:00:35.002+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/core.py", line 783, in invoke
+[2025-03-09T17:00:35.002+0000] {subprocess.py:93} INFO -     return __callback(*args, **kwargs)
+[2025-03-09T17:00:35.003+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/click/decorators.py", line 33, in new_func
+[2025-03-09T17:00:35.003+0000] {subprocess.py:93} INFO -     return f(get_current_context(), *args, **kwargs)
+[2025-03-09T17:00:35.003+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/cli.py", line 491, in apply_total_command
+[2025-03-09T17:00:35.004+0000] {subprocess.py:93} INFO -     apply_total(repo_config, repo, skip_source_validation)
+[2025-03-09T17:00:35.004+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/usage.py", line 299, in wrapper
+[2025-03-09T17:00:35.004+0000] {subprocess.py:93} INFO -     raise exc.with_traceback(traceback)
+[2025-03-09T17:00:35.004+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/usage.py", line 288, in wrapper
+[2025-03-09T17:00:35.005+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2025-03-09T17:00:35.005+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/repo_operations.py", line 357, in apply_total
+[2025-03-09T17:00:35.005+0000] {subprocess.py:93} INFO -     project, registry, repo, store = _prepare_registry_and_repo(repo_config, repo_path)
+[2025-03-09T17:00:35.006+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/repo_operations.py", line 236, in _prepare_registry_and_repo
+[2025-03-09T17:00:35.006+0000] {subprocess.py:93} INFO -     repo = parse_repo(repo_path)
+[2025-03-09T17:00:35.006+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/feast/repo_operations.py", line 122, in parse_repo
+[2025-03-09T17:00:35.007+0000] {subprocess.py:93} INFO -     module = importlib.import_module(module_path)
+[2025-03-09T17:00:35.007+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[2025-03-09T17:00:35.007+0000] {subprocess.py:93} INFO -     return _bootstrap._gcd_import(name[level:], package, level)
+[2025-03-09T17:00:35.008+0000] {subprocess.py:93} INFO -   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[2025-03-09T17:00:35.008+0000] {subprocess.py:93} INFO -   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[2025-03-09T17:00:35.008+0000] {subprocess.py:93} INFO -   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[2025-03-09T17:00:35.009+0000] {subprocess.py:93} INFO -   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[2025-03-09T17:00:35.009+0000] {subprocess.py:93} INFO -   File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+[2025-03-09T17:00:35.009+0000] {subprocess.py:93} INFO -   File "<frozen importlib._bootstrap_external>", line 976, in get_code
+[2025-03-09T17:00:35.009+0000] {subprocess.py:93} INFO -   File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+[2025-03-09T17:00:35.010+0000] {subprocess.py:93} INFO -   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2025-03-09T17:00:35.010+0000] {subprocess.py:93} INFO -   File "/opt/***/customer_churn_stats/feature_repo/feature_store.py", line 79
+[2025-03-09T17:00:35.010+0000] {subprocess.py:93} INFO -     Field(name="BalanceAgeRatio", dtype=Float64, , description="ratio of balance and age"),
+[2025-03-09T17:00:35.010+0000] {subprocess.py:93} INFO -                                                  ^
+[2025-03-09T17:00:35.011+0000] {subprocess.py:93} INFO - SyntaxError: invalid syntax
+[2025-03-09T17:00:35.413+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-09T17:00:35.414+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-09T17:00:35.414+0000] {subprocess.py:93} INFO - 
+[2025-03-09T17:00:35.415+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-09T17:00:35.415+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-09T17:00:35.415+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-09T17:00:35.416+0000] {subprocess.py:93} INFO - 	modified:   ../../logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T16:57:40.995662+00:00/task_id=data_storage_task/attempt=1.log
+[2025-03-09T17:00:35.416+0000] {subprocess.py:93} INFO - 	modified:   ../../logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-09T17:00:35.416+0000] {subprocess.py:93} INFO - 	modified:   ../../logs/scheduler/2025-03-09/customer_churn.py.log
+[2025-03-09T17:00:35.416+0000] {subprocess.py:93} INFO - 
+[2025-03-09T17:00:35.417+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-09T17:00:35.417+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-09T17:00:35.417+0000] {subprocess.py:93} INFO - 	data/online_store.db
+[2025-03-09T17:00:35.417+0000] {subprocess.py:93} INFO - 	data/registry.db
+[2025-03-09T17:00:35.418+0000] {subprocess.py:93} INFO - 	../../logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T16:57:40.995662+00:00/task_id=feature_store_task/
+[2025-03-09T17:00:35.418+0000] {subprocess.py:93} INFO - 	../../mlartifacts/
+[2025-03-09T17:00:35.418+0000] {subprocess.py:93} INFO - 	../../models/
+[2025-03-09T17:00:35.418+0000] {subprocess.py:93} INFO - 	../../online.db
+[2025-03-09T17:00:35.419+0000] {subprocess.py:93} INFO - 
+[2025-03-09T17:00:35.419+0000] {subprocess.py:93} INFO - no changes added to commit (use "git add" and/or "git commit -a")
+[2025-03-09T17:00:35.682+0000] {subprocess.py:93} INFO - [main 9c6c942] Updated feature store
+[2025-03-09T17:00:35.682+0000] {subprocess.py:93} INFO -  3 files changed, 25 insertions(+)
+[2025-03-09T17:00:37.302+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-09T17:00:37.302+0000] {subprocess.py:93} INFO -    3e2cb0d..9c6c942  main -> main
+[2025-03-09T17:00:37.311+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-09T17:00:37.388+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=feature_store_task, execution_date=20250309T165740, start_date=20250309T170025, end_date=20250309T170037
+[2025-03-09T17:00:37.454+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-09T17:00:37.516+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
