@@ -2939,3 +2939,65 @@ tags.mlflow.runName                                                   RandomFore
 Name: 38, dtype: object
 2025-03-09 17:48:27,847 : INFO : Registering best model runs:/d372010ed55142098d35f880b4b7339f/RandomForest_model
 2025-03-09 17:48:27,919 : INFO : Completed model training & registration !!
+2025-03-09 17:55:07,252 : INFO : Starting model training
+2025-03-09 17:55:07,283 : INFO : Registry cache expired, so refreshing
+2025-03-09 17:55:07,298 : INFO : Getting data
+2025-03-09 17:55:07,299 : INFO : Start and End Range: 1 to 1000
+2025-03-09 17:55:07,851 : INFO : Data fetched: 999
+2025-03-09 17:55:07,851 : INFO : New Start and End Range: 1001 to 2000
+2025-03-09 17:55:07,851 : INFO : Start and End Range: 1001 to 2000
+2025-03-09 17:55:08,238 : INFO : Data fetched: 999
+2025-03-09 17:55:08,238 : INFO : New Start and End Range: 3001 to 4000
+2025-03-09 17:55:08,238 : INFO : Start and End Range: 3001 to 4000
+2025-03-09 17:55:08,703 : INFO : Data fetched: 999
+2025-03-09 17:55:08,704 : INFO : New Start and End Range: 7001 to 8000
+2025-03-09 17:55:08,704 : INFO : Start and End Range: 7001 to 8000
+2025-03-09 17:55:09,079 : INFO : Data fetched: 999
+2025-03-09 17:55:09,079 : INFO : New Start and End Range: 15001 to 16000
+2025-03-09 17:55:09,079 : INFO : Start and End Range: 15001 to 16000
+2025-03-09 17:55:09,557 : INFO : Data fetched: 999
+2025-03-09 17:55:09,557 : INFO : New Start and End Range: 31001 to 32000
+2025-03-09 17:55:09,558 : INFO : Start and End Range: 31001 to 32000
+2025-03-09 17:55:09,969 : INFO : Data fetched: 999
+2025-03-09 17:55:09,969 : INFO : New Start and End Range: 63001 to 64000
+2025-03-09 17:55:09,969 : INFO : Start and End Range: 63001 to 64000
+2025-03-09 17:55:10,085 : INFO : Reached End of Data
+2025-03-09 17:55:10,089 : INFO : Stoping at Start and End Range: 63001 to 64000
+2025-03-09 17:55:10,089 : INFO : Created feature data
+2025-03-09 17:55:10,089 : INFO : Total Data fetched: 6
+2025-03-09 17:55:10,096 : INFO : received feature data
+2025-03-09 17:55:10,101 : INFO : Models defined
+2025-03-09 17:55:10,102 : INFO : Training model RandomForest
+2025-03-09 17:55:11,849 : INFO : Predicting model RandomForest
+2025-03-09 17:55:11,902 : INFO : Calculating accuracy RandomForest
+2025-03-09 17:55:20,573 : INFO : Logged model RandomForest
+2025-03-09 17:55:20,629 : INFO : Training model LinearRegression
+2025-03-09 17:55:21,040 : INFO : Predicting model LinearRegression
+2025-03-09 17:55:21,051 : INFO : Calculating accuracy LinearRegression
+2025-03-09 17:55:26,825 : INFO : Logged model LinearRegression
+2025-03-09 17:55:26,852 : INFO : Training model DecisionTree
+2025-03-09 17:55:26,886 : INFO : Predicting model DecisionTree
+2025-03-09 17:55:26,890 : INFO : Calculating accuracy DecisionTree
+2025-03-09 17:55:34,272 : INFO : Logged model DecisionTree
+2025-03-09 17:55:34,371 : INFO : Starting best model registration
+2025-03-09 17:55:34,372 : INFO : Finding Best model
+2025-03-09 17:55:35,459 : INFO : Selected best model : run_id                                            d372010ed55142098d35f880b4b7339f
+experiment_id                                                                    0
+status                                                                    FINISHED
+artifact_uri                     mlflow-artifacts:/0/d372010ed55142098d35f880b4...
+start_time                                        2025-03-09 11:35:45.395000+00:00
+end_time                                          2025-03-09 11:35:50.125000+00:00
+metrics.recall                                                            0.554656
+metrics.f1_score                                                          0.652381
+metrics.accuracy                                                          0.878232
+metrics.precision                                                         0.791908
+params.model_type                                                     RandomForest
+tags.mlflow.source.git.commit             c7be44594672bffe451ff8b64c27676ce66f5d44
+tags.mlflow.runName                                                   RandomForest
+tags.mlflow.user                                                           airflow
+tags.mlflow.source.type                                                      LOCAL
+tags.mlflow.log-model.history    [{"run_id": "d372010ed55142098d35f880b4b7339f"...
+tags.mlflow.source.name                              executables/model_training.py
+Name: 41, dtype: object
+2025-03-09 17:55:35,461 : INFO : Registering best model runs:/d372010ed55142098d35f880b4b7339f/RandomForest_model
+2025-03-09 17:55:35,742 : INFO : Completed model training & registration !!
