@@ -570,3 +570,11 @@
 2025-03-09 16:58:32,956 : INFO : Running validation on data received from S3
 2025-03-09 16:58:33,100 : INFO : Saving metrics to S3
 2025-03-09 16:58:33,104 : INFO : Metrics saved to: validation_report.csv
+2025-03-09 17:13:24,610 : INFO : Starting data validation for customer_data.csv
+2025-03-09 17:13:24,653 : INFO : Running validation on data received from S3
+2025-03-09 17:13:24,769 : INFO : Saving metrics to S3
+2025-03-09 17:13:24,773 : INFO : Metrics saved to: validation_report.csv
+2025-03-09 17:13:24,774 : INFO : Starting data validation for database_data.csv
+2025-03-09 17:13:24,814 : INFO : Running validation on data received from S3
+2025-03-09 17:13:24,921 : INFO : Saving metrics to S3
+2025-03-09 17:13:24,924 : INFO : Metrics saved to: validation_report.csv
