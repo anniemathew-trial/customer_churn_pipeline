@@ -56,3 +56,45 @@
 [2025-03-09T18:59:22.556+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/72c31b1924424738b6bd8ad1ed97f606/meta.yaml
 [2025-03-09T18:59:22.556+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/72d7ced9a0ae41b397628902747ff53e/meta.yaml
 [2025-03-09T18:59:22.557+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/78dfb46cce5b4219be7a9e711a2e24a3/meta.yaml
+[2025-03-09T18:59:22.557+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/82545e54d84341bb9fff755fd23136e5/meta.yaml
+[2025-03-09T18:59:22.558+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/8853e12a30fd42dcbe54c70f3ee5a902/meta.yaml
+[2025-03-09T18:59:22.558+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/8b9022453af44de386d146a48a9da90d/meta.yaml
+[2025-03-09T18:59:22.558+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/8c0f16cce0ed4183a2d483f56a941883/meta.yaml
+[2025-03-09T18:59:22.559+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/970193bd7c6445ec995a4562d3ffdf8b/meta.yaml
+[2025-03-09T18:59:22.559+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/99335cc5ed91470fb5be770691e53a80/meta.yaml
+[2025-03-09T18:59:22.559+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/b0c108eb50f34f989a06d9757a745734/meta.yaml
+[2025-03-09T18:59:22.559+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/b7d064f6298c4a948f6e7493b94fd10a/meta.yaml
+[2025-03-09T18:59:22.560+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/bb006d02ad5444de9a8fdbc3d85b7f00/meta.yaml
+[2025-03-09T18:59:22.560+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/bd320bda64ca4f3798521ad0e101f9f6/meta.yaml
+[2025-03-09T18:59:22.560+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/bdf0858443144132aaa37af668cdfb45/meta.yaml
+[2025-03-09T18:59:22.561+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/ca7189f070814c2485115a11d7a5371f/meta.yaml
+[2025-03-09T18:59:22.561+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/cc961d60be2f4ac8aa1d951ffce27494/meta.yaml
+[2025-03-09T18:59:22.561+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/d372010ed55142098d35f880b4b7339f/meta.yaml
+[2025-03-09T18:59:22.561+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/d4acc07e7cbc41d88a6a2a471275451a/meta.yaml
+[2025-03-09T18:59:22.562+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/ddfd423fddca41588fb4a4a5e7071330/meta.yaml
+[2025-03-09T18:59:22.562+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/e1793fde0d164a11a66520aad97b3d74/meta.yaml
+[2025-03-09T18:59:22.562+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/e504ce83715b4a878643e2b6a1afee0a/meta.yaml
+[2025-03-09T18:59:22.563+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/e747839013c5447280bca905cec5694d/meta.yaml
+[2025-03-09T18:59:22.563+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/ec578aef29c94a80b987ea5333f145ab/meta.yaml
+[2025-03-09T18:59:22.564+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/efa8545976c74d5397c9c6b20ac2f134/meta.yaml
+[2025-03-09T18:59:22.564+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/f6ec5813e0d2496ab1aab0cdf0e24daa/meta.yaml
+[2025-03-09T18:59:22.565+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/f9a183d242154c0f89781bedf6513353/meta.yaml
+[2025-03-09T18:59:22.566+0000] {subprocess.py:93} INFO - 	modified:   mlruns/0/ffd1c19dfa7a43779b24bedaff3a7cea/meta.yaml
+[2025-03-09T18:59:22.566+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:59:22.567+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-09T18:59:22.567+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-09T18:59:22.567+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
+[2025-03-09T18:59:22.568+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-09T18:59:22.568+0000] {subprocess.py:93} INFO - 	mlartifacts/
+[2025-03-09T18:59:22.568+0000] {subprocess.py:93} INFO - 	online.db
+[2025-03-09T18:59:22.569+0000] {subprocess.py:93} INFO - 
+[2025-03-09T18:59:22.763+0000] {subprocess.py:93} INFO - [main 88737cc] Updated data ingestion
+[2025-03-09T18:59:22.764+0000] {subprocess.py:93} INFO -  52 files changed, 1183 insertions(+), 46 deletions(-)
+[2025-03-09T18:59:22.765+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T18:59:08.350415+00:00/task_id=data_ingestion_task/attempt=1.log
+[2025-03-09T18:59:22.765+0000] {subprocess.py:93} INFO -  create mode 100644 logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T18:59:08.350415+00:00/task_id=pull_latest_codes/attempt=1.log
+[2025-03-09T18:59:24.648+0000] {subprocess.py:93} INFO - To https://github.com/anniemathew-trial/customer_churn_pipeline.git
+[2025-03-09T18:59:24.648+0000] {subprocess.py:93} INFO -    5ecfb87..88737cc  main -> main
+[2025-03-09T18:59:24.654+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-03-09T18:59:24.702+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=customer_churn_ml_pipeline, task_id=data_ingestion_task, execution_date=20250309T185908, start_date=20250309T185918, end_date=20250309T185924
+[2025-03-09T18:59:24.767+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-03-09T18:59:24.814+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
