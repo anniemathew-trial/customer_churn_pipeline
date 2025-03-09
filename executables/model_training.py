@@ -85,7 +85,7 @@ def train_log_models():
     
     models = { 
               "RandomForest" : RandomForestClassifier(n_estimators=100),
-              "LinearRegression" : LogisticRegression(),
+              "LogisticRegression" : LogisticRegression(),
               "DecisionTree" : DecisionTreeClassifier(max_depth=4),              
               }
     
