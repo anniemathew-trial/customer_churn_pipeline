@@ -2,7 +2,7 @@ from feast import FeatureStore
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVR
 from pathlib import Path
 import pandas as pd
@@ -76,16 +76,16 @@ def retrieve_data_from_feast():
 def train_log_models():
     data = retrieve_data_from_feast();
     logging.info("received feature data")
-    x = data.drop('Exited', axis=1)  # Features (all columns except 'Amount')
-    y = data['Exited']  # Target variable ('Amount' column)
+    x = data.drop('Exited', axis=1)  # Features (all columns except 'Exited')
+    y = data['Exited']  # Target variable ('Exited' column)
     x_train, x_test, y_train, y_test = train_test_split(
     x, y, test_size=0.2, random_state=42)  # 0.2 represents 20% test size
     logging.info("Models defined")
     
     models = { 
               "RandomForest" : RandomForestClassifier(n_estimators=100),
-              "LogisticRegression" : LogisticRegression(),
-              "SVM" : SVR(probability=True),
+              "LinearRegression" : LinearRegression(),
+              "SVM" : SVC(probability=True),
               
               }
     
