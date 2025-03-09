@@ -2022,3 +2022,176 @@ Name: 23, dtype: object
 2025-03-09 11:23:43,714 : INFO : Total Data fetched: 6
 2025-03-09 11:23:43,719 : INFO : received feature data
 2025-03-09 11:23:43,726 : INFO : Models defined
+2025-03-09 11:26:20,595 : INFO : Starting model training
+2025-03-09 11:26:20,614 : INFO : Registry cache expired, so refreshing
+2025-03-09 11:26:20,624 : INFO : Getting data
+2025-03-09 11:26:20,624 : INFO : Start and End Range: 1 to 1000
+2025-03-09 11:26:21,008 : INFO : Data fetched: 999
+2025-03-09 11:26:21,008 : INFO : New Start and End Range: 1001 to 2000
+2025-03-09 11:26:21,008 : INFO : Start and End Range: 1001 to 2000
+2025-03-09 11:26:21,362 : INFO : Data fetched: 999
+2025-03-09 11:26:21,362 : INFO : New Start and End Range: 3001 to 4000
+2025-03-09 11:26:21,363 : INFO : Start and End Range: 3001 to 4000
+2025-03-09 11:26:21,803 : INFO : Data fetched: 999
+2025-03-09 11:26:21,804 : INFO : New Start and End Range: 7001 to 8000
+2025-03-09 11:26:21,804 : INFO : Start and End Range: 7001 to 8000
+2025-03-09 11:26:22,164 : INFO : Data fetched: 999
+2025-03-09 11:26:22,164 : INFO : New Start and End Range: 15001 to 16000
+2025-03-09 11:26:22,165 : INFO : Start and End Range: 15001 to 16000
+2025-03-09 11:26:22,684 : INFO : Data fetched: 999
+2025-03-09 11:26:22,685 : INFO : New Start and End Range: 31001 to 32000
+2025-03-09 11:26:22,685 : INFO : Start and End Range: 31001 to 32000
+2025-03-09 11:26:23,196 : INFO : Data fetched: 999
+2025-03-09 11:26:23,197 : INFO : New Start and End Range: 63001 to 64000
+2025-03-09 11:26:23,197 : INFO : Start and End Range: 63001 to 64000
+2025-03-09 11:26:23,327 : INFO : Reached End of Data
+2025-03-09 11:26:23,335 : INFO : Stoping at Start and End Range: 63001 to 64000
+2025-03-09 11:26:23,335 : INFO : Created feature data
+2025-03-09 11:26:23,336 : INFO : Total Data fetched: 6
+2025-03-09 11:26:23,344 : INFO : received feature data
+2025-03-09 11:26:23,352 : INFO : Models defined
+2025-03-09 11:26:23,352 : INFO : Training model RandomForest
+2025-03-09 11:26:25,054 : INFO : Predicting model RandomForest
+2025-03-09 11:26:25,092 : INFO : Calculating accuracy RandomForest
+2025-03-09 11:26:30,726 : INFO : Logged model RandomForest
+2025-03-09 11:26:30,761 : INFO : Training model LinearRegression
+2025-03-09 11:26:30,776 : INFO : Predicting model LinearRegression
+2025-03-09 11:26:30,793 : INFO : Calculating accuracy LinearRegression
+2025-03-09 11:28:41,918 : INFO : Starting model training
+2025-03-09 11:28:41,935 : INFO : Registry cache expired, so refreshing
+2025-03-09 11:28:41,945 : INFO : Getting data
+2025-03-09 11:28:41,945 : INFO : Start and End Range: 1 to 1000
+2025-03-09 11:28:42,306 : INFO : Data fetched: 999
+2025-03-09 11:28:42,307 : INFO : New Start and End Range: 1001 to 2000
+2025-03-09 11:28:42,307 : INFO : Start and End Range: 1001 to 2000
+2025-03-09 11:28:42,590 : INFO : Data fetched: 999
+2025-03-09 11:28:42,591 : INFO : New Start and End Range: 3001 to 4000
+2025-03-09 11:28:42,591 : INFO : Start and End Range: 3001 to 4000
+2025-03-09 11:28:43,059 : INFO : Data fetched: 999
+2025-03-09 11:28:43,060 : INFO : New Start and End Range: 7001 to 8000
+2025-03-09 11:28:43,060 : INFO : Start and End Range: 7001 to 8000
+2025-03-09 11:28:43,405 : INFO : Data fetched: 999
+2025-03-09 11:28:43,405 : INFO : New Start and End Range: 15001 to 16000
+2025-03-09 11:28:43,405 : INFO : Start and End Range: 15001 to 16000
+2025-03-09 11:28:43,809 : INFO : Data fetched: 999
+2025-03-09 11:28:43,810 : INFO : New Start and End Range: 31001 to 32000
+2025-03-09 11:28:43,810 : INFO : Start and End Range: 31001 to 32000
+2025-03-09 11:28:44,092 : INFO : Data fetched: 999
+2025-03-09 11:28:44,092 : INFO : New Start and End Range: 63001 to 64000
+2025-03-09 11:28:44,101 : INFO : Start and End Range: 63001 to 64000
+2025-03-09 11:28:44,188 : INFO : Reached End of Data
+2025-03-09 11:28:44,191 : INFO : Stoping at Start and End Range: 63001 to 64000
+2025-03-09 11:28:44,191 : INFO : Created feature data
+2025-03-09 11:28:44,192 : INFO : Total Data fetched: 6
+2025-03-09 11:28:44,197 : INFO : received feature data
+2025-03-09 11:28:44,202 : INFO : Models defined
+2025-03-09 11:28:44,202 : INFO : Training model RandomForest
+2025-03-09 11:28:45,637 : INFO : Predicting model RandomForest
+2025-03-09 11:28:45,676 : INFO : Calculating accuracy RandomForest
+2025-03-09 11:28:50,956 : INFO : Logged model RandomForest
+2025-03-09 11:28:50,996 : INFO : Training model LinearRegression
+2025-03-09 11:28:51,003 : INFO : Predicting model LinearRegression
+2025-03-09 11:28:51,010 : INFO : Calculating accuracy LinearRegression
+2025-03-09 11:32:06,164 : INFO : Starting model training
+2025-03-09 11:32:06,184 : INFO : Registry cache expired, so refreshing
+2025-03-09 11:32:06,194 : INFO : Getting data
+2025-03-09 11:32:06,194 : INFO : Start and End Range: 1 to 1000
+2025-03-09 11:32:06,581 : INFO : Data fetched: 999
+2025-03-09 11:32:06,581 : INFO : New Start and End Range: 1001 to 2000
+2025-03-09 11:32:06,582 : INFO : Start and End Range: 1001 to 2000
+2025-03-09 11:32:06,885 : INFO : Data fetched: 999
+2025-03-09 11:32:06,885 : INFO : New Start and End Range: 3001 to 4000
+2025-03-09 11:32:06,885 : INFO : Start and End Range: 3001 to 4000
+2025-03-09 11:32:07,250 : INFO : Data fetched: 999
+2025-03-09 11:32:07,251 : INFO : New Start and End Range: 7001 to 8000
+2025-03-09 11:32:07,251 : INFO : Start and End Range: 7001 to 8000
+2025-03-09 11:32:07,539 : INFO : Data fetched: 999
+2025-03-09 11:32:07,539 : INFO : New Start and End Range: 15001 to 16000
+2025-03-09 11:32:07,540 : INFO : Start and End Range: 15001 to 16000
+2025-03-09 11:32:07,883 : INFO : Data fetched: 999
+2025-03-09 11:32:07,883 : INFO : New Start and End Range: 31001 to 32000
+2025-03-09 11:32:07,884 : INFO : Start and End Range: 31001 to 32000
+2025-03-09 11:32:08,139 : INFO : Data fetched: 999
+2025-03-09 11:32:08,139 : INFO : New Start and End Range: 63001 to 64000
+2025-03-09 11:32:08,140 : INFO : Start and End Range: 63001 to 64000
+2025-03-09 11:32:08,218 : INFO : Reached End of Data
+2025-03-09 11:32:08,222 : INFO : Stoping at Start and End Range: 63001 to 64000
+2025-03-09 11:32:08,222 : INFO : Created feature data
+2025-03-09 11:32:08,222 : INFO : Total Data fetched: 6
+2025-03-09 11:32:08,226 : INFO : received feature data
+2025-03-09 11:32:08,230 : INFO : Models defined
+2025-03-09 11:32:08,230 : INFO : Training model RandomForest
+2025-03-09 11:32:09,417 : INFO : Predicting model RandomForest
+2025-03-09 11:32:09,446 : INFO : Calculating accuracy RandomForest
+2025-03-09 11:32:14,305 : INFO : Logged model RandomForest
+2025-03-09 11:32:14,359 : INFO : Training model LinearRegression
+2025-03-09 11:32:15,312 : INFO : Predicting model LinearRegression
+2025-03-09 11:32:15,330 : INFO : Calculating accuracy LinearRegression
+2025-03-09 11:32:19,625 : INFO : Logged model LinearRegression
+2025-03-09 11:32:19,644 : INFO : Training model DecisionTree
+2025-03-09 11:32:19,667 : INFO : Predicting model DecisionTree
+2025-03-09 11:32:19,670 : INFO : Calculating accuracy DecisionTree
+2025-03-09 11:32:23,195 : INFO : Logged model DecisionTree
+2025-03-09 11:32:23,219 : INFO : Starting best model registration
+2025-03-09 11:32:23,219 : INFO : Finding Best model
+2025-03-09 11:32:23,263 : INFO : Selected best model : run_id                                            ec578aef29c94a80b987ea5333f145ab
+experiment_id                                                                    0
+status                                                                    FINISHED
+artifact_uri                     mlflow-artifacts:/0/ec578aef29c94a80b987ea5333...
+start_time                                        2025-03-09 11:28:45.811000+00:00
+end_time                                          2025-03-09 11:28:50.977000+00:00
+metrics.precision                                                         0.819876
+metrics.recall                                                            0.534413
+metrics.accuracy                                                            0.8799
+metrics.f1_score                                                          0.647059
+params.model_type                                                     RandomForest
+tags.mlflow.log-model.history    [{"run_id": "ec578aef29c94a80b987ea5333f145ab"...
+tags.mlflow.source.type                                                      LOCAL
+tags.mlflow.source.name                              executables/model_training.py
+tags.mlflow.user                                                           airflow
+tags.mlflow.source.git.commit             dbcb7e095b98fcfa216d7c9c7fe52937675d93a8
+tags.mlflow.runName                                                   RandomForest
+Name: 3, dtype: object
+2025-03-09 11:32:23,264 : INFO : Registering best model runs:/ec578aef29c94a80b987ea5333f145ab/RandomForest_model
+2025-03-09 11:32:23,340 : INFO : Completed model training & registration !!
+2025-03-09 11:35:40,817 : INFO : Starting model training
+2025-03-09 11:35:40,837 : INFO : Registry cache expired, so refreshing
+2025-03-09 11:35:40,846 : INFO : Getting data
+2025-03-09 11:35:40,847 : INFO : Start and End Range: 1 to 1000
+2025-03-09 11:35:41,236 : INFO : Data fetched: 999
+2025-03-09 11:35:41,236 : INFO : New Start and End Range: 1001 to 2000
+2025-03-09 11:35:41,236 : INFO : Start and End Range: 1001 to 2000
+2025-03-09 11:35:41,540 : INFO : Data fetched: 999
+2025-03-09 11:35:41,540 : INFO : New Start and End Range: 3001 to 4000
+2025-03-09 11:35:41,541 : INFO : Start and End Range: 3001 to 4000
+2025-03-09 11:35:42,024 : INFO : Data fetched: 999
+2025-03-09 11:35:42,024 : INFO : New Start and End Range: 7001 to 8000
+2025-03-09 11:35:42,025 : INFO : Start and End Range: 7001 to 8000
+2025-03-09 11:35:42,393 : INFO : Data fetched: 999
+2025-03-09 11:35:42,393 : INFO : New Start and End Range: 15001 to 16000
+2025-03-09 11:35:42,394 : INFO : Start and End Range: 15001 to 16000
+2025-03-09 11:35:42,824 : INFO : Data fetched: 999
+2025-03-09 11:35:42,824 : INFO : New Start and End Range: 31001 to 32000
+2025-03-09 11:35:42,825 : INFO : Start and End Range: 31001 to 32000
+2025-03-09 11:35:43,320 : INFO : Data fetched: 999
+2025-03-09 11:35:43,321 : INFO : New Start and End Range: 63001 to 64000
+2025-03-09 11:35:43,321 : INFO : Start and End Range: 63001 to 64000
+2025-03-09 11:35:43,476 : INFO : Reached End of Data
+2025-03-09 11:35:43,481 : INFO : Stoping at Start and End Range: 63001 to 64000
+2025-03-09 11:35:43,481 : INFO : Created feature data
+2025-03-09 11:35:43,481 : INFO : Total Data fetched: 6
+2025-03-09 11:35:43,491 : INFO : received feature data
+2025-03-09 11:35:43,500 : INFO : Models defined
+2025-03-09 11:35:43,500 : INFO : Training model RandomForest
+2025-03-09 11:35:45,229 : INFO : Predicting model RandomForest
+2025-03-09 11:35:45,268 : INFO : Calculating accuracy RandomForest
+2025-03-09 11:35:50,078 : INFO : Logged model RandomForest
+2025-03-09 11:35:50,145 : INFO : Training model LinearRegression
+2025-03-09 11:35:50,217 : INFO : Predicting model LinearRegression
+2025-03-09 11:35:50,222 : INFO : Calculating accuracy LinearRegression
+2025-03-09 11:35:53,883 : INFO : Logged model LinearRegression
+2025-03-09 11:35:53,903 : INFO : Training model DecisionTree
+2025-03-09 11:35:53,928 : INFO : Predicting model DecisionTree
+2025-03-09 11:35:53,931 : INFO : Calculating accuracy DecisionTree
+2025-03-09 11:35:57,469 : INFO : Logged model DecisionTree
+2025-03-09 11:35:57,497 : INFO : Training model SVM
