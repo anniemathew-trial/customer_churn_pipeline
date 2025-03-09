@@ -1,0 +1,46 @@
+[2025-03-09T17:19:04.014+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-09T17:18:26.149113+00:00 [queued]>
+[2025-03-09T17:19:04.034+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-09T17:18:26.149113+00:00 [queued]>
+[2025-03-09T17:19:04.034+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-03-09T17:19:04.059+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): data_validation_task> on 2025-03-09 17:18:26.149113+00:00
+[2025-03-09T17:19:04.065+0000] {standard_task_runner.py:57} INFO - Started process 12932 to run task
+[2025-03-09T17:19:04.070+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_churn_ml_pipeline', 'data_validation_task', 'manual__2025-03-09T17:18:26.149113+00:00', '--job-id', '415', '--raw', '--subdir', 'DAGS_FOLDER/customer_churn.py', '--cfg-path', '/tmp/tmprty_cn6q']
+[2025-03-09T17:19:04.074+0000] {standard_task_runner.py:85} INFO - Job 415: Subtask data_validation_task
+[2025-03-09T17:19:04.105+0000] {logging_mixin.py:154} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-03-09T17:19:04.173+0000] {task_command.py:416} INFO - Running <TaskInstance: customer_churn_ml_pipeline.data_validation_task manual__2025-03-09T17:18:26.149113+00:00 [running]> on host 157237bff8f7
+[2025-03-09T17:19:04.349+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='customer_churn_ml_pipeline' AIRFLOW_CTX_TASK_ID='data_validation_task' AIRFLOW_CTX_EXECUTION_DATE='2025-03-09T17:18:26.149113+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-09T17:18:26.149113+00:00'
+[2025-03-09T17:19:04.350+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-03-09T17:19:04.351+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n\t\t\tcd /opt/*** &&                        dvc pull /opt/***/data/raw\n                        python /opt/***/executables/data_validation.py && \t\t\tgit add logs && \\   \n\t\t\tgit add reports &&    \t\t\tgit status &&                         git commit -m "Updated validation" -a &&                         dvc push && git push\n                    ']
+[2025-03-09T17:19:04.364+0000] {subprocess.py:86} INFO - Output:
+[2025-03-09T17:19:09.233+0000] {subprocess.py:93} INFO - Everything is up to date.
+[2025-03-09T17:19:11.397+0000] {subprocess.py:93} INFO - 2025-03-09 17:19:11,397 : INFO : Starting data validation for customer_data.csv
+[2025-03-09T17:19:11.442+0000] {subprocess.py:93} INFO - 2025-03-09 17:19:11,442 : INFO : Running validation on data received from S3
+[2025-03-09T17:19:11.560+0000] {subprocess.py:93} INFO - 2025-03-09 17:19:11,560 : INFO : Saving metrics to S3
+[2025-03-09T17:19:11.564+0000] {subprocess.py:93} INFO - 2025-03-09 17:19:11,563 : INFO : Metrics saved to: validation_report.csv
+[2025-03-09T17:19:11.564+0000] {subprocess.py:93} INFO - 2025-03-09 17:19:11,564 : INFO : Starting data validation for database_data.csv
+[2025-03-09T17:19:11.609+0000] {subprocess.py:93} INFO - 2025-03-09 17:19:11,608 : INFO : Running validation on data received from S3
+[2025-03-09T17:19:11.696+0000] {subprocess.py:93} INFO - 2025-03-09 17:19:11,695 : INFO : Saving metrics to S3
+[2025-03-09T17:19:11.699+0000] {subprocess.py:93} INFO - 2025-03-09 17:19:11,698 : INFO : Metrics saved to: validation_report.csv
+[2025-03-09T17:19:12.148+0000] {subprocess.py:93} INFO - /bin/bash: line 3:  : command not found
+[2025-03-09T17:19:12.229+0000] {subprocess.py:93} INFO - On branch main
+[2025-03-09T17:19:12.230+0000] {subprocess.py:93} INFO - Your branch is up to date with 'origin/main'.
+[2025-03-09T17:19:12.230+0000] {subprocess.py:93} INFO - 
+[2025-03-09T17:19:12.231+0000] {subprocess.py:93} INFO - Changes to be committed:
+[2025-03-09T17:19:12.231+0000] {subprocess.py:93} INFO -   (use "git restore --staged <file>..." to unstage)
+[2025-03-09T17:19:12.232+0000] {subprocess.py:93} INFO - 	new file:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T17:18:26.149113+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-09T17:19:12.232+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T17:18:26.149113+00:00/task_id=raw_data_storage_task/attempt=1.log
+[2025-03-09T17:19:12.233+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_processor_manager/dag_processor_manager.log
+[2025-03-09T17:19:12.233+0000] {subprocess.py:93} INFO - 	modified:   logs/data_validation.log
+[2025-03-09T17:19:12.234+0000] {subprocess.py:93} INFO - 	modified:   logs/scheduler/2025-03-09/customer_churn.py.log
+[2025-03-09T17:19:12.234+0000] {subprocess.py:93} INFO - 
+[2025-03-09T17:19:12.234+0000] {subprocess.py:93} INFO - Changes not staged for commit:
+[2025-03-09T17:19:12.235+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to update what will be committed)
+[2025-03-09T17:19:12.235+0000] {subprocess.py:93} INFO -   (use "git restore <file>..." to discard changes in working directory)
+[2025-03-09T17:19:12.236+0000] {subprocess.py:93} INFO - 	modified:   logs/dag_id=customer_churn_ml_pipeline/run_id=manual__2025-03-09T17:18:26.149113+00:00/task_id=data_validation_task/attempt=1.log
+[2025-03-09T17:19:12.236+0000] {subprocess.py:93} INFO - 
+[2025-03-09T17:19:12.237+0000] {subprocess.py:93} INFO - Untracked files:
+[2025-03-09T17:19:12.238+0000] {subprocess.py:93} INFO -   (use "git add <file>..." to include in what will be committed)
+[2025-03-09T17:19:12.238+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/online_store.db
+[2025-03-09T17:19:12.240+0000] {subprocess.py:93} INFO - 	customer_churn_stats/feature_repo/data/registry.db
+[2025-03-09T17:19:12.242+0000] {subprocess.py:93} INFO - 	mlartifacts/
+[2025-03-09T17:19:12.243+0000] {subprocess.py:93} INFO - 	online.db
+[2025-03-09T17:19:12.243+0000] {subprocess.py:93} INFO - 
