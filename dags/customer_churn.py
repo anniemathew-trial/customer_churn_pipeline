@@ -125,6 +125,7 @@ with DAG(
        			    python /opt/airflow/executables/model_training.py && \
 	      		    git add logs && \
 	      		    git add mlruns && \
+	     		    git add models
 	        	    git status && \
                             git commit -m "Trained model version" -a && \    
 			    git push
