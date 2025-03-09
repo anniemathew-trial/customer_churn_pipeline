@@ -1966,3 +1966,31 @@ Name: 23, dtype: object
 2025-03-09 10:58:39,328 : INFO : Total Data fetched: 6
 2025-03-09 10:58:39,339 : INFO : received feature data
 2025-03-09 10:58:39,349 : INFO : Models defined
+2025-03-09 11:11:57,338 : INFO : Starting model training
+2025-03-09 11:11:57,365 : INFO : Registry cache expired, so refreshing
+2025-03-09 11:11:57,380 : INFO : Getting data
+2025-03-09 11:11:57,381 : INFO : Start and End Range: 1 to 1000
+2025-03-09 11:11:57,927 : INFO : Data fetched: 999
+2025-03-09 11:11:57,927 : INFO : New Start and End Range: 1001 to 2000
+2025-03-09 11:11:57,928 : INFO : Start and End Range: 1001 to 2000
+2025-03-09 11:11:58,301 : INFO : Data fetched: 999
+2025-03-09 11:11:58,301 : INFO : New Start and End Range: 3001 to 4000
+2025-03-09 11:11:58,302 : INFO : Start and End Range: 3001 to 4000
+2025-03-09 11:11:58,772 : INFO : Data fetched: 999
+2025-03-09 11:11:58,772 : INFO : New Start and End Range: 7001 to 8000
+2025-03-09 11:11:58,774 : INFO : Start and End Range: 7001 to 8000
+2025-03-09 11:11:59,135 : INFO : Data fetched: 999
+2025-03-09 11:11:59,136 : INFO : New Start and End Range: 15001 to 16000
+2025-03-09 11:11:59,136 : INFO : Start and End Range: 15001 to 16000
+2025-03-09 11:11:59,647 : INFO : Data fetched: 999
+2025-03-09 11:11:59,647 : INFO : New Start and End Range: 31001 to 32000
+2025-03-09 11:11:59,648 : INFO : Start and End Range: 31001 to 32000
+2025-03-09 11:12:00,034 : INFO : Data fetched: 999
+2025-03-09 11:12:00,034 : INFO : New Start and End Range: 63001 to 64000
+2025-03-09 11:12:00,034 : INFO : Start and End Range: 63001 to 64000
+2025-03-09 11:12:00,144 : INFO : Reached End of Data
+2025-03-09 11:12:00,147 : INFO : Stoping at Start and End Range: 63001 to 64000
+2025-03-09 11:12:00,147 : INFO : Created feature data
+2025-03-09 11:12:00,147 : INFO : Total Data fetched: 6
+2025-03-09 11:12:00,153 : INFO : received feature data
+2025-03-09 11:12:00,159 : INFO : Models defined
