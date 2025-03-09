@@ -3,7 +3,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
+from sklearn.svm import SVR
 from pathlib import Path
 import pandas as pd
 import logging
@@ -85,7 +85,7 @@ def train_log_models():
     models = { 
               "RandomForest" : RandomForestClassifier(n_estimators=100),
               "LogisticRegression" : LogisticRegression(),
-              "SVM" : SVC(probability=True),
+              "SVM" : SVR(probability=True),
               
               }
     
